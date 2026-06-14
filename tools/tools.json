@@ -41,6 +41,8 @@
       "description": "Three decades of net foreign investment into Indian markets — financial-year, calendar-year and monthly net flows, charted (1992–2026).",
       "url": "fii-flows/",
       "tag": "Data",
+      "logoDark": "assets/logos/fii-flows-dark.png",
+      "logoLight": "assets/logos/fii-flows-light.png",
       "icon": "FII"
     }
   ]

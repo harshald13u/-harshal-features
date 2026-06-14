@@ -7,8 +7,8 @@
     </filter>
   </defs>
   <rect width="1200" height="620" rx="42" fill="#ebe5d7"/>
-  <circle cx="960" cy="-80" r="380" fill="#b8852b" opacity=".11"/>
-  <circle cx="80" cy="650" r="420" fill="#b8852b" opacity=".11"/>
+  <circle cx="960" cy="-80" r="380" fill="#b8852b"/>
+  <circle cx="80" cy="650" r="420" fill="#b8852b"/>
   <g filter="url(#shadow)">
     <rect x="85" y="90" width="1030" height="430" rx="34" fill="#f7f2e8" stroke="#1a3458" stroke-opacity=".16" stroke-width="2"/>
     <g transform="translate(170 95)" fill="#0e0c0a" stroke="#b8852b" stroke-width="18">

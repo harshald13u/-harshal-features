@@ -1516,7 +1516,7 @@ const $ = id => document.getElementById(id);
       if (D.hidden) { el.textContent = fmt(target); return; }
       if (t0 === null) t0 = now;
       var p = Math.min(1, (now - t0) / dur);
-      var e = 1 - Math.pow(1 - p, 3);
+      var e = (p >= 1) ? 1 : 1 - Math.pow(2, -10 * p); /* easeOutExpo: fast sweep, silky settle */
       el.textContent = fmt(target * e);
       if (p < 1) W.requestAnimationFrame(step);
       else el.textContent = fmt(target);
@@ -1530,6 +1530,7 @@ const $ = id => document.getElementById(id);
     if (!el) return;
     el.style.fontVariantNumeric = 'tabular-nums';
     el.classList.add('hd-tnum');
+    if (hasIO && W.requestAnimationFrame) { el.textContent = decimals ? (0).toFixed(decimals) : '0'; } /* start at 0: no final-value flash */
     onView(el, function () { tween(el, target, decimals, dur); });
   }
 
@@ -1546,7 +1547,8 @@ const $ = id => document.getElementById(id);
       if (isNaN(val)) return;
       el.style.fontVariantNumeric = 'tabular-nums';
       el.classList.add('hd-tnum');
-      onView(el, function () { tween(el, val, dec, 1000); });
+      if (hasIO && W.requestAnimationFrame) { el.textContent = dec ? (0).toFixed(dec) : '0'; }
+      onView(el, function () { tween(el, val, dec, 1100); });
     });
   }
 
@@ -2310,7 +2312,7 @@ function renderSpecialFeatures() {
   const listEl = document.getElementById('sf-modal-list');
   const n = SPECIAL_FEATURES.length;
   if (countEl) countEl.textContent = n;
-  if (countEl && window.HDTM) HDTM.count(countEl, n, 0, 900);
+  if (countEl && window.HDTM) HDTM.count(countEl, n, 0, 650);
   if (!listEl) return;
   if (!n) {
     listEl.innerHTML = '<div style="font-size:12px;color:var(--txt-mut);padding:14px;text-align:center;">No special features yet</div>';
@@ -3051,7 +3053,7 @@ function render(rows, file) {
   CURRENT_FILE = file;
 
   $('kpi-unique').textContent = unique.length;
-  if (window.HDTM) HDTM.count($('kpi-unique'), unique.length, 0, 1000);
+  if (window.HDTM) HDTM.count($('kpi-unique'), unique.length, 0, 1100);
   $('kpi-sub').textContent = '';
 
   renderRecentTiles();
@@ -3068,7 +3070,7 @@ function render(rows, file) {
   {
     const epCount = unique.filter(r => getTopic((r['Heading Of The Article'] || r.Heading) || '') === 'Press / E-papers').length;
     $('kpi-epaper').textContent = String(epCount);
-    if (window.HDTM) HDTM.count($('kpi-epaper'), epCount, 0, 1000);
+    if (window.HDTM) HDTM.count($('kpi-epaper'), epCount, 0, 850);
     $('kpi-epaper-label').innerHTML = `e-papers<br><span style="font-size:10px;color:#9CA3AF">tap to view &middot; print &amp; PDF</span>`;
   }
 

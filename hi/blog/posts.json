@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "spacex-ipo-1-75-trillion-explained",
+      "title": "Three companies, one ticker: what you’re actually buying in the SpaceX IPO",
+      "topic": "stock-market",
+      "date": "2026-06-16",
+      "excerpt": "SpaceX is the biggest IPO ever, yet under 7% of its $1.75 trillion price is backed by profit. The three very different companies hiding inside one ticker.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/spacex-ipo-1-75-trillion-explained/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/spacex-ipo-1-75-trillion-explained/"
+    },
+    {
       "slug": "iran-israel-us-war-2026-explained",
       "title": "The 2026 Iran War: one unsigned page stands between the world and cheaper oil",
       "topic": "geopolitics",

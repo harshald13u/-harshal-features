@@ -460,4 +460,40 @@
       <image:caption>Harshal Dasani</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://harshaldasani.pages.dev/hi/photos/</loc>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://harshaldasani.pages.dev/hi/photos/"/>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://harshaldasani.pages.dev/photos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://harshaldasani.pages.dev/photos/"/>
+  </url>
+  <url>
+    <loc>https://harshaldasani.pages.dev/hi/legal/disclaimer/</loc>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://harshaldasani.pages.dev/hi/legal/disclaimer/"/>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://harshaldasani.pages.dev/legal/disclaimer/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://harshaldasani.pages.dev/legal/disclaimer/"/>
+  </url>
+  <url>
+    <loc>https://harshaldasani.pages.dev/hi/legal/privacy/</loc>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://harshaldasani.pages.dev/hi/legal/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://harshaldasani.pages.dev/legal/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://harshaldasani.pages.dev/legal/privacy/"/>
+  </url>
+  <url>
+    <loc>https://harshaldasani.pages.dev/hi/legal/terms/</loc>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://harshaldasani.pages.dev/hi/legal/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://harshaldasani.pages.dev/legal/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://harshaldasani.pages.dev/legal/terms/"/>
+  </url>
 </urlset>

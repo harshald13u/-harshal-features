@@ -56,4 +56,15 @@
       <news:title>Three companies, one ticker: what you’re actually buying in the SpaceX IPO</news:title>
     </news:news>
   </url>
+  <url>
+    <loc>https://harshaldasani.pages.dev/blog/posts/kospi-2026-korea-rally-reform-explained/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Harshal Dasani</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-06-16T09:00:00+05:30</news:publication_date>
+      <news:title>Two engines behind Korea’s 100% year: reform, a chip mania, and a mirror for India</news:title>
+    </news:news>
+  </url>
 </urlset>

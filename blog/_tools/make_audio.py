@@ -72,10 +72,13 @@ async def _synth_chunks(paras, voice, out_path):
 
 def main():
     slug=sys.argv[1]
-    asyncio.run(_synth_chunks(en_text(slug), VOICE["en"], f"{ROOT}/blog/posts/{slug}/audio.mp3"))
-    print("EN audio ->", f"blog/posts/{slug}/audio.mp3")
-    asyncio.run(_synth_chunks(hi_text(slug), VOICE["hi"], f"{ROOT}/hi/blog/posts/{slug}/audio.mp3"))
-    print("HI audio ->", f"hi/blog/posts/{slug}/audio.mp3")
+    only=sys.argv[2] if len(sys.argv) > 2 else None  # optional: "en" or "hi" (each fits a short shell window)
+    if only in (None, "en"):
+        asyncio.run(_synth_chunks(en_text(slug), VOICE["en"], f"{ROOT}/blog/posts/{slug}/audio.mp3"))
+        print("EN audio ->", f"blog/posts/{slug}/audio.mp3")
+    if only in (None, "hi"):
+        asyncio.run(_synth_chunks(hi_text(slug), VOICE["hi"], f"{ROOT}/hi/blog/posts/{slug}/audio.mp3"))
+        print("HI audio ->", f"hi/blog/posts/{slug}/audio.mp3")
 
 if __name__ == "__main__":
     main()

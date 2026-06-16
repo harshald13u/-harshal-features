@@ -521,4 +521,14 @@
       <image:caption>Harshal Dasani</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://harshaldasani.pages.dev/blog/posts/kospi-2026-korea-rally-reform-explained/</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://harshaldasani.pages.dev/blog/posts/kospi-2026-korea-rally-reform-explained/cover.jpg</image:loc>
+      <image:title>Korea’s KOSPI rally is powered by reform hopes and AI memory-chip momentum.</image:title>
+    </image:image>
+  </url>
 </urlset>

@@ -1839,7 +1839,7 @@ html[data-theme="light"] .tracker-spotlight {
  .mast-socials a { transition: none; }
 }
 /* ===== Motion v1: theme crossfade · about count-up · lens reveal ===== */
-html.motion-ready .lens-card[data-reveal]{opacity:0;transform:translateY(18px);transition-property:opacity,transform!important;transition-duration:.6s!important;transition-timing-function:cubic-bezier(.4,0,.2,1)!important;}
+html.motion-ready .lens-card[data-reveal]{opacity:0;transform:translateY(18px);transition-property:opacity,transform!important;transition-duration:.95s!important;transition-timing-function:cubic-bezier(.22,1,.36,1)!important;}
 html.motion-ready .lens-card[data-reveal].in{opacity:1;transform:none;}
 html.motion-ready .lens-grid .lens-card[data-reveal]:nth-child(2){transition-delay:.07s;}
 html.motion-ready .lens-grid .lens-card[data-reveal]:nth-child(3){transition-delay:.14s;}
@@ -2272,8 +2272,8 @@ function toggleTheme(){
     var target = parseInt(el.getAttribute('data-count')||'0',10);
     var suf = el.getAttribute('data-suffix')||'';
     
-    var start=performance.now(), dur=1400;
-    (function step(t){ var pr=Math.min(1,(t-start)/dur); var e=1-Math.pow(1-pr,3); el.textContent=Math.round(target*e).toLocaleString('en-IN')+suf; if(pr<1) requestAnimationFrame(step); })(performance.now());
+    var start=performance.now(), dur=1700;
+    (function step(t){ var pr=Math.min(1,(t-start)/dur); var e=1-Math.pow(1-pr,4); el.textContent=Math.round(target*e).toLocaleString('en-IN')+suf; if(pr<1) requestAnimationFrame(step); })(performance.now());
    });
   }
   if ('IntersectionObserver' in window){

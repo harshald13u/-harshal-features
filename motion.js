@@ -16,12 +16,12 @@
     var target=parseFloat(el.getAttribute('data-count')||'0');
     var pre=el.getAttribute('data-prefix')||'';
     var suf=el.getAttribute('data-suffix')||'';
-    var dur=parseInt(el.getAttribute('data-dur')||'1200',10);
+    var dur=parseInt(el.getAttribute('data-dur')||'1600',10);
     var t0=performance.now();
     function step(now){
       if(document.hidden){ el.textContent=pre+fmtNum(target,el)+suf; return; }
       var p=Math.min(1,(now-t0)/dur);
-      var e=1-Math.pow(1-p,3);
+      var e=1-Math.pow(1-p,4);
       el.textContent=pre+fmtNum(target*e,el)+suf;
       if(p<1) requestAnimationFrame(step);
     }

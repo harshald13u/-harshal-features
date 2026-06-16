@@ -114,7 +114,12 @@
 <!-- Bing Webmaster Tools verification — paste the content value once you have it -->
 <!-- <meta name="msvalidate.01" content="PASTE_VERIFICATION_TOKEN_HERE"> -->
 
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script>
+function ensureXLSX(){ if(window.XLSX) return Promise.resolve(); if(window.__xlsxP) return window.__xlsxP;
+  window.__xlsxP=new Promise(function(res,rej){var s=document.createElement('script');
+    s.src='https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js'; s.onload=res; s.onerror=rej; document.head.appendChild(s);});
+  return window.__xlsxP; }
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -1689,7 +1694,7 @@ function setStatus(msg, cls='') {
 }
 
 function setupAccessMode() {
-  document.body.classList.toggle('can-pick-file', !!window.XLSX);
+  document.body.classList.toggle('can-pick-file', true);
   const note = $('access-mode-note');
   const accessCopy = $('access-copy');
   if (HAS_PERSISTENT_FILE_PICKER) {
@@ -2016,10 +2021,7 @@ async function processFile(file, options = {}) {
   $('btn-refresh').style.display = '';
   $('btn-disconnect').style.display = '';
   try {
-    if (!window.XLSX) {
-      setStatus('Could not load the Excel reader. Connect to the internet and reopen the dashboard.', 'error');
-      return;
-    }
+    try { await ensureXLSX(); } catch(e){ setStatus('Could not load the Excel reader. Connect to the internet and try again.', 'error'); return; }
     const buf = await file.arrayBuffer();
     const wb = XLSX.read(buf, { type: 'array', cellDates: true });
     if (!wb.SheetNames.includes('All')) {

@@ -627,7 +627,7 @@ def article_jsonld(title, excerpt, slug, topic, date_str, canonical, light_cover
     keywords_list = [k.strip() for k in focus_keywords.split(",") if k.strip()] if focus_keywords else []
 
     article = {
-        "@type": "BlogPosting",
+        "@type": "NewsArticle",
         "@id": f"{canonical}#article",
         "headline": title[:110],
         "alternativeHeadline": title,
@@ -781,14 +781,17 @@ def upsert_sitemap_post(sitemap_path, post_url, today, image_url=None, image_cap
 
 
 def upsert_news_sitemap(news_sitemap_path, post_url, title, date_str, language="en"):
-    """Maintain a rolling 48-hour Google News sitemap.
+    """Maintain a rolling Google News sitemap — only articles from the last 2 days.
 
-    Strategy: rebuild from scratch each call — only keep <url> blocks whose news:publication_date
-    is within the last 48 hours from now.
+    Google News sitemaps must list only fresh articles (~48h). We rebuild each call:
+    keep existing entries whose news:publication_date is within the last 2 days,
+    drop anything older (and any prior entry for this same URL), then add this post.
     """
     if not os.path.exists(news_sitemap_path):
         print(f"[news-sitemap] WARN: {news_sitemap_path} not found, skipping")
         return
+    from datetime import datetime, timedelta
+    cutoff = (datetime.now() - timedelta(days=2)).strftime("%Y-%m-%d")
     xml = open(news_sitemap_path, "r", encoding="utf-8").read()
     pub_iso = f"{date_str}T09:00:00+05:30"
     new_entry = f"""  <url>
@@ -803,17 +806,20 @@ def upsert_news_sitemap(news_sitemap_path, post_url, title, date_str, language="
     </news:news>
   </url>
 """
-    # Drop the empty comment placeholder if present
-    xml = re.sub(r"<!--[^>]*?Auto-populated[^>]*?-->", "", xml)
-    # Strip existing entry for the same URL
-    xml = re.sub(
-        r"\s*<url>\s*<loc>" + re.escape(post_url) + r"</loc>[\s\S]*?</url>",
-        "",
-        xml,
-    )
-    # Insert before </urlset>
-    xml = xml.replace("</urlset>", new_entry + "</urlset>")
-    open(news_sitemap_path, "w", encoding="utf-8").write(xml)
+    kept = []
+    for blk in re.findall(r"<url>[\s\S]*?</url>", xml):
+        loc = re.search(r"<loc>(.*?)</loc>", blk)
+        if loc and loc.group(1) == post_url:
+            continue  # replaced by fresh entry below
+        dm = re.search(r"<news:publication_date>(\d{4}-\d{2}-\d{2})", blk)
+        if dm and dm.group(1) < cutoff:
+            continue  # older than 2 days -> drop
+        kept.append("  " + blk.strip() + "\n")
+    head = ('<?xml version="1.0" encoding="UTF-8"?>\n'
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n'
+            '        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">\n')
+    out = head + new_entry + "".join(kept) + "</urlset>\n"
+    open(news_sitemap_path, "w", encoding="utf-8").write(out)
 
 
 # ---------------------------------------------------------------------------
@@ -1149,7 +1155,7 @@ strong{{color:var(--ink);font-weight:700}}
 </style>
 </head>
 <body>
-<main class="page" itemscope itemtype="https://schema.org/BlogPosting">
+<main class="page" itemscope itemtype="https://schema.org/NewsArticle">
   <nav class="crumb" aria-label="Breadcrumb"><a class="crumb-back" href="../../">&larr; Back to Blogs</a><span class="crumb-right"><span class="crumb-trail"><a href="../../../">Harshal Dasani</a> &middot; <a href="../../">Blogs</a> &middot; <span>{topic_label}</span></span><button class="theme-toggle" aria-label="Toggle light / dark theme" title="Toggle theme" type="button" onclick="(function(){{var c=document.documentElement.getAttribute('data-theme')||'dark';var n=c==='light'?'dark':'light';document.documentElement.setAttribute('data-theme',n);try{{localStorage.setItem('hd-theme',n)}}catch(e){{}}}})()"><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></button></span></nav>
   <span class="topic-pill">{topic_label}</span>
   <h1 itemprop="headline">{title_html}</h1>

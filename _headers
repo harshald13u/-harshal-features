@@ -36,3 +36,6 @@
   Cache-Control: public, max-age=2592000
 /*.ttf
   Cache-Control: public, max-age=2592000
+
+/*.mp3
+  Cache-Control: public, max-age=3600, must-revalidate

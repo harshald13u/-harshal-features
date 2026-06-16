@@ -45,3 +45,37 @@
     els.forEach(function(el){ io.observe(el); });
   });
 })();
+
+/* v4: cursor 3D tilt + gold gloss + magnetic buttons (fine pointers only). */
+(function(){
+  if(!window.matchMedia || !matchMedia('(hover:hover) and (pointer:fine)').matches) return;
+  var TILT='.lens-card,.latest-card,.tile,.post-card,.ipo-card,.snap-card,.snap-feature,.sf-card,.sf-img-card,.photo,.tool-card,.stat-card,.wl-card';
+  var MAG='.ts-cta,.btn,.btn-gold,.kit-btn,.dl-btn';
+  function tilt(el){
+    el.classList.add('hd-tilt');
+    el.addEventListener('pointermove',function(e){
+      var r=el.getBoundingClientRect(); if(!r.width) return;
+      var px=(e.clientX-r.left)/r.width, py=(e.clientY-r.top)/r.height;
+      el.style.setProperty('transform','perspective(700px) rotateX('+((0.5-py)*7).toFixed(2)+'deg) rotateY('+((px-0.5)*9).toFixed(2)+'deg) translateY(-3px)','important');
+      el.style.setProperty('--gx',(px*100).toFixed(1)+'%');
+      el.style.setProperty('--gy',(py*100).toFixed(1)+'%');
+      el.style.setProperty('--gloss','1');
+    });
+    el.addEventListener('pointerleave',function(){ el.style.removeProperty('transform'); el.style.setProperty('--gloss','0'); });
+  }
+  function mag(el){
+    el.classList.add('hd-magnetic');
+    el.addEventListener('pointermove',function(e){
+      var r=el.getBoundingClientRect(); if(!r.width) return;
+      el.style.setProperty('transform','translate('+((e.clientX-r.left-r.width/2)*0.3).toFixed(1)+'px,'+((e.clientY-r.top-r.height/2)*0.4).toFixed(1)+'px)','important');
+    });
+    el.addEventListener('pointerleave',function(){ el.style.removeProperty('transform'); });
+  }
+  function scan(){
+    document.querySelectorAll(TILT).forEach(function(el){ if(!el.__hdt){ el.__hdt=1; tilt(el); } });
+    document.querySelectorAll(MAG).forEach(function(el){ if(!el.__hdm){ el.__hdm=1; mag(el); } });
+  }
+  if(document.readyState!=='loading') scan(); else document.addEventListener('DOMContentLoaded',scan);
+  window.addEventListener('load',function(){ setTimeout(scan,400); setTimeout(scan,1500); });
+  window.hdScanInteractive=scan;
+})();

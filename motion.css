@@ -15,3 +15,13 @@ html.motion-ready [data-draw]{stroke-dasharray:1;stroke-dashoffset:1;
   transition:stroke-dashoffset 1.7s var(--hd-ease)!important;transition-delay:var(--rd,0s)!important;}
 html.motion-ready [data-draw].in{stroke-dashoffset:0!important;}
 [data-count]{font-variant-numeric:tabular-nums;}
+
+/* v4: cursor 3D tilt + gold gloss, and magnetic buttons (fine-pointer devices only) */
+@media (hover:hover) and (pointer:fine){
+  html.motion-ready .hd-tilt{position:relative;transform-style:preserve-3d;
+    transition:opacity var(--hd-dur) var(--hd-ease),transform .45s var(--hd-ease),filter var(--hd-dur) var(--hd-ease)!important;}
+  html.motion-ready .hd-tilt::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:4;
+    background:radial-gradient(180px circle at var(--gx,50%) var(--gy,50%),rgba(240,210,138,.28),transparent 60%);
+    opacity:var(--gloss,0);transition:opacity .35s var(--hd-ease);}
+  html.motion-ready .hd-magnetic{transition:transform .45s var(--hd-ease),background-color .3s ease,color .3s ease,border-color .3s ease!important;}
+}

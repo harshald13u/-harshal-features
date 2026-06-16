@@ -1143,8 +1143,8 @@ strong{{color:var(--ink);font-weight:700}}
 /* safe-area toggle fix */
 
 /* "Harshal Dasani" name = always clickable home link (uniform across site) */
-.name-home{color:inherit;text-decoration:none;border-bottom:1px solid transparent;transition:color .15s ease,border-color .15s ease}
-.name-home:hover,.name-home:focus{color:var(--accent);border-bottom-color:var(--accent);text-decoration:none}
+.name-home{{color:inherit;text-decoration:none;border-bottom:1px solid transparent;transition:color .15s ease,border-color .15s ease}}
+.name-home:hover,.name-home:focus{{color:var(--accent);border-bottom-color:var(--accent);text-decoration:none}}
 @media print{{.theme-toggle,.share{{display:none}}}}
 </style>
 </head>

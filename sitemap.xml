@@ -496,4 +496,14 @@
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://harshaldasani.pages.dev/legal/terms/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://harshaldasani.pages.dev/legal/terms/"/>
   </url>
+  <url>
+    <loc>https://harshaldasani.pages.dev/blog/posts/spacex-ipo-1-75-trillion-explained/</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://harshaldasani.pages.dev/blog/posts/spacex-ipo-1-75-trillion-explained/cover.jpg</image:loc>
+      <image:title>SpaceX IPO prices launch cash flows, Starlink scale and a Starship-AI future.</image:title>
+    </image:image>
+  </url>
 </urlset>

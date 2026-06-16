@@ -51,6 +51,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link rel="stylesheet" href="../tools.css">
+<link rel="stylesheet" href="/motion.css">
 <script defer src="../tools.js"></script>
 
 <!-- JSON-LD: WebApplication -->
@@ -225,7 +226,7 @@
   <div class="cgt-grid">
 
     <!-- LEFT: INPUTS -->
-    <div class="panel" id="cgt-inputs" role="form" aria-label="Capital gains tax inputs">
+    <div class="panel" data-reveal id="cgt-inputs" role="form" aria-label="Capital gains tax inputs">
       <h2 class="panel-title">Inputs</h2>
 
       <!-- Asset type -->
@@ -332,7 +333,7 @@
     </div><!-- end panel inputs -->
 
     <!-- RIGHT: RESULTS -->
-    <div class="panel" id="cgt-results" role="region" aria-label="Capital gains tax results" aria-live="polite">
+    <div class="panel" data-reveal id="cgt-results" role="region" aria-label="Capital gains tax results" aria-live="polite">
       <h2 class="panel-title">Results</h2>
 
       <!-- Classification badge -->
@@ -381,7 +382,7 @@
     </div><!-- end panel results -->
 
     <!-- Important notes (third block — fills the space below inputs) -->
-    <div class="panel" id="cgt-notes">
+    <div class="panel" data-reveal id="cgt-notes">
       <h2 class="cgt-notes-title">Important notes (read before filing)</h2>
       <ul class="note-list">
         <li><strong>₹1.25L exemption is LTCG-only:</strong> The annual ₹1.25 lakh exemption (Sec 112A) applies exclusively to Long-Term Capital Gains on equity. It does NOT reduce STCG — every rupee of short-term gain is taxable at 20%.</li>
@@ -585,6 +586,7 @@ document.addEventListener('DOMContentLoaded', function () {
       document.getElementById('stat-grid').querySelector('.is-gold').classList.remove('is-neg');
 
       buildBreakdown(gain, 0, 0, 0, 0, 0, costBasis, isLongTerm, cessOn, 0);
+      if (window.hdPulse) { [statGain, statTaxable, statTax, statNet, statEff].forEach(function (el) { hdPulse(el); }); }
       return;
     }
 
@@ -631,6 +633,7 @@ document.addEventListener('DOMContentLoaded', function () {
     statEff.textContent = formatPct(effRate, 2);
 
     buildBreakdown(gain, taxBase, taxBeforeCess, cessAmount, totalTax, netGain, costBasis, isLongTerm, cessOn, appliedExemption);
+    if (window.hdPulse) { [statGain, statTaxable, statTax, statNet, statEff].forEach(function (el) { hdPulse(el); }); }
   }
 
   function buildBreakdown(gain, taxBase, taxBeforeCess, cessAmount, totalTax, netGain, costBasis, isLongTerm, cessOn, appliedExemption) {
@@ -756,6 +759,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 
+  <script src="/motion.js" defer></script>
   <script src="/lang-switch.js" defer></script>
 </body>
 </html>

@@ -116,6 +116,7 @@ svg{display:block;width:100%;height:auto;} text{font-family:'Inter',sans-serif;}
 </style>
 <script>(function(){function a(){try{var t=localStorage.getItem('hd-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);}catch(e){}}a();window.addEventListener('pageshow',a);})();</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"FII/DII Daily & Monthly Activity — Indian Cash Market","description":"Daily (2024-2026) and monthly (2006-2026) Foreign and Domestic Institutional Investor net buy/sell activity in the Indian cash market, compiled from NSE/BSE public data.","creator":{"@type":"Person","name":"Harshal Dasani","url":"https://harshaldasani.pages.dev/"},"temporalCoverage":"2006-04/2026-06","license":"https://creativecommons.org/licenses/by/4.0/","isAccessibleForFree":true,"distribution":[{"@type":"DataDownload","encodingFormat":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","contentUrl":"https://harshaldasani.pages.dev/fii-dii/FII_DII_History.xlsx"},{"@type":"DataDownload","encodingFormat":"text/csv","contentUrl":"https://harshaldasani.pages.dev/fii-dii/fii_dii_history.csv"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://harshaldasani.pages.dev/"},{"@type":"ListItem","position":2,"name":"FII / DII","item":"https://harshaldasani.pages.dev/fii-dii/"}]}</script>
+<link rel="stylesheet" href="/motion.css">
 </head>
 <body>
 <main id="main" class="page">
@@ -129,8 +130,8 @@ svg{display:block;width:100%;height:auto;} text{font-family:'Inter',sans-serif;}
   </header>
 
   <section class="blog-hero">
-    <h1 class="blog-title">FII / DII गतिविधि।</h1>
-    <p class="blog-sub">भारतीय बाज़ारों को कौन चला रहा है — विदेशी बनाम घरेलू संस्थाएँ, ₹ करोड़ में। दैनिक अस्थायी कैश प्रवाह, खींचतान और रुझान। सरल भाषा में।</p>
+    <h1 class="blog-title" data-reveal>FII / DII गतिविधि।</h1>
+    <p class="blog-sub" data-reveal style="--rd:.08s">भारतीय बाज़ारों को कौन चला रहा है — विदेशी बनाम घरेलू संस्थाएँ, ₹ करोड़ में। दैनिक अस्थायी कैश प्रवाह, खींचतान और रुझान। सरल भाषा में।</p>
   </section>
   <hr class="tools-divider">
 
@@ -141,7 +142,7 @@ svg{display:block;width:100%;height:auto;} text{font-family:'Inter',sans-serif;}
 
   <div class="tug" id="tug"></div>
 
-  <div class="sec">
+  <div class="sec" data-reveal>
     <div class="sec-head"><h2 class="sec-title" id="barTitle">दैनिक शुद्ध प्रवाह</h2>
       <div class="legend"><span><i style="background:var(--fii)"></i>FII / FPI</span><span><i style="background:var(--dii)"></i>DII</span></div></div>
     <div class="period-seg" id="periodSeg" role="tablist" aria-label="Aggregation period">
@@ -155,7 +156,7 @@ svg{display:block;width:100%;height:auto;} text{font-family:'Inter',sans-serif;}
 
   <div class="stats" id="stats"></div>
 
-  <div class="sec">
+  <div class="sec" data-reveal style="--rd:.06s">
     <div class="sec-head"><h2 class="sec-title">संचयी प्रवाह</h2><span class="sec-note" id="cumNote"></span></div>
     <div class="period-seg cum-seg" id="cumSeg" role="tablist" aria-label="Cumulative chart period" style="margin:8px 0 12px;display:flex;flex-wrap:wrap;gap:8px;align-items:center">
       <button type="button" data-cp="daily" class="active" role="tab" aria-selected="true">दैनिक</button>
@@ -170,7 +171,7 @@ svg{display:block;width:100%;height:auto;} text{font-family:'Inter',sans-serif;}
     </div>
     <div class="chart-wrap" style="position:relative"><div id="cumChart"></div><div class="chart-tip" id="cumTip" hidden></div></div>
   </div>
-  <div class="disc"><b>केवल शैक्षिक जानकारी।</b> FII/DII आँकड़े आधिकारिक सार्वजनिक स्रोतों (NSE · Groww से क्रॉस-चेक · FPI के लिए NSDL) से संकलित अस्थायी कैश-मार्केट गतिविधि हैं और इनमें संशोधन हो सकता है। यह पृष्ठ विवरणात्मक बाज़ार डेटा है — निवेश सलाह या अनुशंसा नहीं; पिछले संस्थागत प्रवाह भविष्य के रिटर्न का अनुमान नहीं देते।</div>
+  <div class="disc" data-reveal><b>केवल शैक्षिक जानकारी।</b> FII/DII आँकड़े आधिकारिक सार्वजनिक स्रोतों (NSE · Groww से क्रॉस-चेक · FPI के लिए NSDL) से संकलित अस्थायी कैश-मार्केट गतिविधि हैं और इनमें संशोधन हो सकता है। यह पृष्ठ विवरणात्मक बाज़ार डेटा है — निवेश सलाह या अनुशंसा नहीं; पिछले संस्थागत प्रवाह भविष्य के रिटर्न का अनुमान नहीं देते।</div>
 
   <footer class="blog-footer"><div>&copy; 2026 Harshal Dasani</div><div><a href="/hi/">harshaldasani.pages.dev</a></div></footer>
 </main>
@@ -587,5 +588,6 @@ document.getElementById('periodSeg').addEventListener('click',function(e){
 </script>
 <script>function toggleBlogTheme(){var c=document.documentElement.getAttribute('data-theme')||'dark';var n=c==='light'?'dark':'light';document.documentElement.setAttribute('data-theme',n);try{localStorage.setItem('hd-theme',n);}catch(e){}}</script>
 <script src="/lang-switch.js" defer></script>
+<script src="/motion.js" defer></script>
 </body>
 </html>

@@ -196,3 +196,11 @@ html[data-theme="dark"] .tool-tile { box-shadow: none; }
   .masthead { grid-template-columns: 1fr auto; gap: 10px; }
   .mast-trail { display: none; }
 }
+
+/* ---- result "settled" pulse (self-contained; gentle scale + accent flash) ---- */
+@keyframes hd-val-pulse {
+  0%   { transform: scale(1);    color: var(--accent); }
+  45%  { transform: scale(1.06); color: var(--accent); }
+  100% { transform: scale(1);    color: inherit; }
+}
+.val-pulse { animation: hd-val-pulse .4s cubic-bezier(.4,0,.2,1); will-change: transform; }

@@ -984,6 +984,7 @@ body::after { content: ''; position: fixed; inset: 0; z-index: -1; pointer-event
   ]
 }
 </script>
+<link rel="stylesheet" href="/motion.css">
 </head>
 <body>
 
@@ -1047,18 +1048,18 @@ body::after { content: ''; position: fixed; inset: 0; z-index: -1; pointer-event
   </div>
 
   <div class="static-mobile" id="static-mobile">
-    <section class="snap-card">
+    <section class="snap-card" data-reveal>
       <div class="snap-title"><b>Snapshot dashboard</b> · WhatsApp_Features_Articles.xlsx · 967 links from 15 Apr 2025 to 28 May 2026.</div>
       <div class="snap-kpis">
-        <div class="snap-kpi"><div class="num">967</div><div class="label">unique feature links</div></div>
-        <div class="snap-kpi"><div class="num">157</div><div class="label">publications tracked</div></div>
-        <div class="snap-kpi"><div class="num">7</div><div class="label">languages covered</div></div>
-        <div class="snap-kpi"><div class="num">28 May</div><div class="label">latest feature date</div></div>
+        <div class="snap-kpi" data-reveal style="--rd:.04s"><div class="num" data-count="967">967</div><div class="label">unique feature links</div></div>
+        <div class="snap-kpi" data-reveal style="--rd:.10s"><div class="num" data-count="157">157</div><div class="label">publications tracked</div></div>
+        <div class="snap-kpi" data-reveal style="--rd:.16s"><div class="num" data-count="7">7</div><div class="label">languages covered</div></div>
+        <div class="snap-kpi" data-reveal style="--rd:.22s"><div class="num">28 May</div><div class="label">latest feature date</div></div>
       </div>
       <button type="button" class="mobile-file-action" id="mobile-pick">Choose updated Excel file</button>
     </section>
 
-    <section class="snap-card snap-panel mobile-chart-card">
+    <section class="snap-card snap-panel mobile-chart-card" data-reveal>
       <h3>Interactive coverage chart</h3>
       <div class="mobile-chart-tabs" id="mobile-chart-tabs">
         <button type="button" class="mobile-chart-tab active" data-chart="months">Monthly</button>
@@ -1083,66 +1084,66 @@ body::after { content: ''; position: fixed; inset: 0; z-index: -1; pointer-event
       <div class="mobile-chart-detail" id="mobile-chart-detail"><b>Nov '25</b>: 126 features. Peak month in the current snapshot.</div>
     </section>
 
-    <section class="snap-card snap-panel">
+    <section class="snap-card snap-panel" data-reveal>
       <h3>Language coverage</h3>
       <div class="snap-bars">
-        <div class="snap-row"><div class="snap-name">English</div><div class="snap-track"><div class="snap-fill" style="width:100%"></div></div><div class="snap-val">864</div></div>
-        <div class="snap-row"><div class="snap-name">Hindi</div><div class="snap-track"><div class="snap-fill" style="width:6.6%"></div></div><div class="snap-val">57</div></div>
-        <div class="snap-row"><div class="snap-name">Tamil</div><div class="snap-track"><div class="snap-fill" style="width:2.3%"></div></div><div class="snap-val">20</div></div>
-        <div class="snap-row"><div class="snap-name">Chinese</div><div class="snap-track"><div class="snap-fill" style="width:1.6%"></div></div><div class="snap-val">14</div></div>
-        <div class="snap-row"><div class="snap-name">Telugu</div><div class="snap-track"><div class="snap-fill" style="width:0.6%"></div></div><div class="snap-val">5</div></div>
-        <div class="snap-row"><div class="snap-name">Gujarati</div><div class="snap-track"><div class="snap-fill" style="width:0.6%"></div></div><div class="snap-val">5</div></div>
-        <div class="snap-row"><div class="snap-name">Marathi</div><div class="snap-track"><div class="snap-fill" style="width:0.3%"></div></div><div class="snap-val">2</div></div>
+        <div class="snap-row"><div class="snap-name">English</div><div class="snap-track"><div class="snap-fill" data-fill style="width:100%"></div></div><div class="snap-val">864</div></div>
+        <div class="snap-row"><div class="snap-name">Hindi</div><div class="snap-track"><div class="snap-fill" data-fill style="width:6.6%"></div></div><div class="snap-val">57</div></div>
+        <div class="snap-row"><div class="snap-name">Tamil</div><div class="snap-track"><div class="snap-fill" data-fill style="width:2.3%"></div></div><div class="snap-val">20</div></div>
+        <div class="snap-row"><div class="snap-name">Chinese</div><div class="snap-track"><div class="snap-fill" data-fill style="width:1.6%"></div></div><div class="snap-val">14</div></div>
+        <div class="snap-row"><div class="snap-name">Telugu</div><div class="snap-track"><div class="snap-fill" data-fill style="width:0.6%"></div></div><div class="snap-val">5</div></div>
+        <div class="snap-row"><div class="snap-name">Gujarati</div><div class="snap-track"><div class="snap-fill" data-fill style="width:0.6%"></div></div><div class="snap-val">5</div></div>
+        <div class="snap-row"><div class="snap-name">Marathi</div><div class="snap-track"><div class="snap-fill" data-fill style="width:0.3%"></div></div><div class="snap-val">2</div></div>
       </div>
     </section>
 
-    <section class="snap-card snap-panel">
+    <section class="snap-card snap-panel" data-reveal>
       <h3>Top outlet families</h3>
       <div class="snap-bars">
-        <div class="snap-row"><div class="snap-name">Live Mint</div><div class="snap-track"><div class="snap-fill" style="width:100%"></div></div><div class="snap-val">312</div></div>
-        <div class="snap-row"><div class="snap-name">Moneycontrol</div><div class="snap-track"><div class="snap-fill" style="width:34.3%"></div></div><div class="snap-val">107</div></div>
-        <div class="snap-row"><div class="snap-name">Economic Times</div><div class="snap-track"><div class="snap-fill" style="width:26.3%"></div></div><div class="snap-val">82</div></div>
-        <div class="snap-row"><div class="snap-name">Business Today</div><div class="snap-track"><div class="snap-fill" style="width:11.2%"></div></div><div class="snap-val">35</div></div>
-        <div class="snap-row"><div class="snap-name">Goodreturns</div><div class="snap-track"><div class="snap-fill" style="width:9.6%"></div></div><div class="snap-val">30</div></div>
-        <div class="snap-row"><div class="snap-name">NDTV Profit</div><div class="snap-track"><div class="snap-fill" style="width:9.3%"></div></div><div class="snap-val">29</div></div>
-        <div class="snap-row"><div class="snap-name">TradingView</div><div class="snap-track"><div class="snap-fill" style="width:8%"></div></div><div class="snap-val">25</div></div>
-        <div class="snap-row"><div class="snap-name">Business Standard</div><div class="snap-track"><div class="snap-fill" style="width:6.1%"></div></div><div class="snap-val">19</div></div>
+        <div class="snap-row"><div class="snap-name">Live Mint</div><div class="snap-track"><div class="snap-fill" data-fill style="width:100%"></div></div><div class="snap-val">312</div></div>
+        <div class="snap-row"><div class="snap-name">Moneycontrol</div><div class="snap-track"><div class="snap-fill" data-fill style="width:34.3%"></div></div><div class="snap-val">107</div></div>
+        <div class="snap-row"><div class="snap-name">Economic Times</div><div class="snap-track"><div class="snap-fill" data-fill style="width:26.3%"></div></div><div class="snap-val">82</div></div>
+        <div class="snap-row"><div class="snap-name">Business Today</div><div class="snap-track"><div class="snap-fill" data-fill style="width:11.2%"></div></div><div class="snap-val">35</div></div>
+        <div class="snap-row"><div class="snap-name">Goodreturns</div><div class="snap-track"><div class="snap-fill" data-fill style="width:9.6%"></div></div><div class="snap-val">30</div></div>
+        <div class="snap-row"><div class="snap-name">NDTV Profit</div><div class="snap-track"><div class="snap-fill" data-fill style="width:9.3%"></div></div><div class="snap-val">29</div></div>
+        <div class="snap-row"><div class="snap-name">TradingView</div><div class="snap-track"><div class="snap-fill" data-fill style="width:8%"></div></div><div class="snap-val">25</div></div>
+        <div class="snap-row"><div class="snap-name">Business Standard</div><div class="snap-track"><div class="snap-fill" data-fill style="width:6.1%"></div></div><div class="snap-val">19</div></div>
       </div>
     </section>
 
-    <section class="snap-card snap-panel">
+    <section class="snap-card snap-panel" data-reveal>
       <h3 id="monthly-title">Monthly feature flow</h3>
       <div class="snap-months">
-        <div class="snap-month"><div class="snap-month-bar" style="height:18px"></div><div class="snap-month-label">Jun<br>18</div></div>
-        <div class="snap-month"><div class="snap-month-bar" style="height:71px"></div><div class="snap-month-label">Jul<br>75</div></div>
-        <div class="snap-month"><div class="snap-month-bar" style="height:75px"></div><div class="snap-month-label">Aug<br>79</div></div>
-        <div class="snap-month"><div class="snap-month-bar" style="height:83px"></div><div class="snap-month-label">Sep<br>87</div></div>
-        <div class="snap-month"><div class="snap-month-bar" style="height:62px"></div><div class="snap-month-label">Oct<br>65</div></div>
-        <div class="snap-month"><div class="snap-month-bar" style="height:120px;background:linear-gradient(to top,#ffffff,#ece4d3)"></div><div class="snap-month-label">Nov<br>126</div></div>
-        <div class="snap-month"><div class="snap-month-bar" style="height:99px"></div><div class="snap-month-label">Dec<br>104</div></div>
-        <div class="snap-month"><div class="snap-month-bar" style="height:103px"></div><div class="snap-month-label">Jan<br>108</div></div>
-        <div class="snap-month"><div class="snap-month-bar" style="height:81px"></div><div class="snap-month-label">Feb<br>85</div></div>
-        <div class="snap-month"><div class="snap-month-bar" style="height:63px"></div><div class="snap-month-label">Mar<br>66</div></div>
-        <div class="snap-month"><div class="snap-month-bar" style="height:66px"></div><div class="snap-month-label">Apr<br>69</div></div>
-        <div class="snap-month"><div class="snap-month-bar" style="height:64px"></div><div class="snap-month-label">May<br>67</div></div>
+        <div class="snap-month"><div class="snap-month-bar" data-bar style="height:18px"></div><div class="snap-month-label">Jun<br>18</div></div>
+        <div class="snap-month"><div class="snap-month-bar" data-bar style="height:71px"></div><div class="snap-month-label">Jul<br>75</div></div>
+        <div class="snap-month"><div class="snap-month-bar" data-bar style="height:75px"></div><div class="snap-month-label">Aug<br>79</div></div>
+        <div class="snap-month"><div class="snap-month-bar" data-bar style="height:83px"></div><div class="snap-month-label">Sep<br>87</div></div>
+        <div class="snap-month"><div class="snap-month-bar" data-bar style="height:62px"></div><div class="snap-month-label">Oct<br>65</div></div>
+        <div class="snap-month"><div class="snap-month-bar" data-bar style="height:120px;background:linear-gradient(to top,#ffffff,#ece4d3)"></div><div class="snap-month-label">Nov<br>126</div></div>
+        <div class="snap-month"><div class="snap-month-bar" data-bar style="height:99px"></div><div class="snap-month-label">Dec<br>104</div></div>
+        <div class="snap-month"><div class="snap-month-bar" data-bar style="height:103px"></div><div class="snap-month-label">Jan<br>108</div></div>
+        <div class="snap-month"><div class="snap-month-bar" data-bar style="height:81px"></div><div class="snap-month-label">Feb<br>85</div></div>
+        <div class="snap-month"><div class="snap-month-bar" data-bar style="height:63px"></div><div class="snap-month-label">Mar<br>66</div></div>
+        <div class="snap-month"><div class="snap-month-bar" data-bar style="height:66px"></div><div class="snap-month-label">Apr<br>69</div></div>
+        <div class="snap-month"><div class="snap-month-bar" data-bar style="height:64px"></div><div class="snap-month-label">May<br>67</div></div>
       </div>
     </section>
 
-    <section class="snap-card snap-panel">
+    <section class="snap-card snap-panel" data-reveal>
       <h3>Topics covered</h3>
       <div class="snap-bars">
-        <div class="snap-row"><div class="snap-name">Gold & Silver</div><div class="snap-track"><div class="snap-fill" style="width:100%"></div></div><div class="snap-val">108</div></div>
-        <div class="snap-row"><div class="snap-name">IPO</div><div class="snap-track"><div class="snap-fill" style="width:92.6%"></div></div><div class="snap-val">100</div></div>
-        <div class="snap-row"><div class="snap-name">Indices</div><div class="snap-track"><div class="snap-fill" style="width:76.9%"></div></div><div class="snap-val">83</div></div>
-        <div class="snap-row"><div class="snap-name">Startups</div><div class="snap-track"><div class="snap-fill" style="width:68.5%"></div></div><div class="snap-val">74</div></div>
-        <div class="snap-row"><div class="snap-name">Other</div><div class="snap-track"><div class="snap-fill" style="width:61.1%"></div></div><div class="snap-val">66</div></div>
-        <div class="snap-row"><div class="snap-name">Exchanges</div><div class="snap-track"><div class="snap-fill" style="width:56.5%"></div></div><div class="snap-val">61</div></div>
-        <div class="snap-row"><div class="snap-name">Power & Energy</div><div class="snap-track"><div class="snap-fill" style="width:50.9%"></div></div><div class="snap-val">55</div></div>
-        <div class="snap-row"><div class="snap-name">IT & Tech</div><div class="snap-track"><div class="snap-fill" style="width:45.4%"></div></div><div class="snap-val">49</div></div>
+        <div class="snap-row"><div class="snap-name">Gold & Silver</div><div class="snap-track"><div class="snap-fill" data-fill style="width:100%"></div></div><div class="snap-val">108</div></div>
+        <div class="snap-row"><div class="snap-name">IPO</div><div class="snap-track"><div class="snap-fill" data-fill style="width:92.6%"></div></div><div class="snap-val">100</div></div>
+        <div class="snap-row"><div class="snap-name">Indices</div><div class="snap-track"><div class="snap-fill" data-fill style="width:76.9%"></div></div><div class="snap-val">83</div></div>
+        <div class="snap-row"><div class="snap-name">Startups</div><div class="snap-track"><div class="snap-fill" data-fill style="width:68.5%"></div></div><div class="snap-val">74</div></div>
+        <div class="snap-row"><div class="snap-name">Other</div><div class="snap-track"><div class="snap-fill" data-fill style="width:61.1%"></div></div><div class="snap-val">66</div></div>
+        <div class="snap-row"><div class="snap-name">Exchanges</div><div class="snap-track"><div class="snap-fill" data-fill style="width:56.5%"></div></div><div class="snap-val">61</div></div>
+        <div class="snap-row"><div class="snap-name">Power & Energy</div><div class="snap-track"><div class="snap-fill" data-fill style="width:50.9%"></div></div><div class="snap-val">55</div></div>
+        <div class="snap-row"><div class="snap-name">IT & Tech</div><div class="snap-track"><div class="snap-fill" data-fill style="width:45.4%"></div></div><div class="snap-val">49</div></div>
       </div>
     </section>
 
-    <section class="snap-card snap-panel">
+    <section class="snap-card snap-panel" data-reveal>
       <h3>Latest features</h3>
       <div class="snap-latest">
         <a class="snap-feature" href="https://www.livemint.com/market/stock-market-news/coal-india-ofs-to-open-for-retail-investors-on-friday-should-you-apply-for-maharatna-psu-stock/amp-11779951357033.html" target="_blank" rel="noopener noreferrer"><div class="date">28 May</div><div class="copy"><div class="pub">Live Mint</div><div class="headline">Coal India OFS to open for retail investors on Friday: Should you apply for Maharatna PSU stock?</div></div></a>
@@ -1176,7 +1177,7 @@ body::after { content: ''; position: fixed; inset: 0; z-index: -1; pointer-event
       <div class="tile kpi teal" id="kpi-epaper-tile" role="button" tabindex="0" style="cursor:pointer" onclick="setDrill('topic','Press / E-papers')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();setDrill('topic','Press / E-papers');}"><div class="num" id="kpi-epaper">—</div><div class="label" id="kpi-epaper-label">e-papers</div></div>
     </div>
 
-<div class="panel" style="margin-bottom:14px">
+<div class="panel" data-reveal style="margin-bottom:14px">
       <h3 style="text-align:center;letter-spacing:0.8px;font-size:20px;">As Featured On <span style="color:#d4a64a;font-size:18px;font-weight:600;">★</span></h3>
       <div class="sf-marquee">
       <div class="sf-gallery">
@@ -1257,41 +1258,41 @@ body::after { content: ''; position: fixed; inset: 0; z-index: -1; pointer-event
     <div class="filter-caption" id="filter-caption">Showing <b>all time</b>. Click a window above to filter every panel below.</div>
 
     <div class="panels">
-      <div class="panel">
+      <div class="panel" data-reveal style="--rd:.05s">
         <h3>Language coverage</h3>
         <div id="lang-bars"></div>
         <div class="note" id="lang-note"></div>
       </div>
-      <div class="panel">
+      <div class="panel" data-reveal style="--rd:.13s">
         <h3 id="monthly-title">Monthly feature flow</h3>
         <div class="monthly" id="monthly"></div>
         <div class="note" id="month-note"></div>
       </div>
-      <div class="panel">
+      <div class="panel" data-reveal style="--rd:.21s">
         <h3>Top outlet families</h3>
         <input type="text" id="pub-search" placeholder="🔍 Search publications…" autocomplete="off" aria-label="Search publications" style="width:100%;box-sizing:border-box;padding:8px 12px;margin-bottom:12px;border:1px solid var(--line);border-radius:8px;font-size:12px;color:var(--txt);background:rgba(255,255,255,0.04);outline:none;">
         <div id="pub-bars"></div>
       </div>
-      <div class="panel">
+      <div class="panel" data-reveal style="--rd:.29s">
         <h3>Top journalists</h3>
         <input type="text" id="jrn-search" placeholder="🔍 Search journalists…" autocomplete="off" aria-label="Search journalists" style="width:100%;box-sizing:border-box;padding:8px 12px;margin-bottom:12px;border:1px solid var(--line);border-radius:8px;font-size:12px;color:var(--txt);background:rgba(255,255,255,0.04);outline:none;">
         <div id="jrn-bars"></div>
       </div>
     </div>
 
-    <div class="panel" style="margin-bottom:12px">
+    <div class="panel" data-reveal style="margin-bottom:12px">
       <h3 id="cumulative-title">Cumulative coverage growth</h3>
       <div id="cumulative"></div>
       <div class="note" id="cumulative-note"></div>
     </div>
 
-    <div class="panel" style="margin-bottom:12px">
+    <div class="panel" data-reveal style="margin-bottom:12px">
       <h3>Topics covered</h3>
       <div id="topic-bars"></div>
       <div class="note" id="topic-note"></div>
     </div>
 
-    <div class="tracker-disc" style="margin-top:48px;padding:20px 22px;border:1px solid rgba(212,166,74,0.25);border-radius:12px;background:rgba(212,166,74,0.04);font-size:13px;line-height:1.6;color:var(--txt-mut)">
+    <div class="tracker-disc" data-reveal style="margin-top:48px;padding:20px 22px;border:1px solid rgba(212,166,74,0.25);border-radius:12px;background:rgba(212,166,74,0.04);font-size:13px;line-height:1.6;color:var(--txt-mut)">
       <div style="font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold,#d4a64a);font-weight:700;margin-bottom:10px">Important — please read</div>
       <p style="margin:0 0 10px"><b>Author identity.</b> Harshal Dasani is a markets professional based in India, writing here in a personal capacity. He is not a SEBI-registered research analyst or investment adviser, and this tracker is not published in either capacity.</p>
       <p style="margin:0 0 10px"><b>Educational information only.</b> This page indexes media features and journalist quotes. Nothing on it is investment advice, a research report under SEBI (Research Analysts) Regulations 2014, or a recommendation to buy, sell or hold any security.</p>
@@ -3281,5 +3282,6 @@ async function downloadFilteredPDF() {
 
 
   <script src="/lang-switch.js" defer></script>
+  <script src="/motion.js" defer></script>
 </body>
 </html>

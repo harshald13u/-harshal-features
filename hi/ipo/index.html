@@ -253,6 +253,7 @@ html[data-theme="light"] .ipo-seg button[aria-selected="true"] { color:#fff; }
  ]}
 ]}
 </script>
+<link rel="stylesheet" href="/motion.css">
 </head>
 <body>
 
@@ -268,8 +269,8 @@ html[data-theme="light"] .ipo-seg button[aria-selected="true"] { color:#fff; }
   </header>
 
   <section class="blog-hero">
-    <h1 class="blog-title">हर्षल दसानी, आईपीओ।</h1>
-    <p class="blog-sub">अभी खुले, आने वाले और हाल में सूचीबद्ध भारतीय आईपीओ — आधिकारिक एक्सचेंज डेटा, निवेशक श्रेणी के अनुसार सब्सक्रिप्शन, और एक ईमानदार लिस्टिंग रिकॉर्ड। कोई ग्रे-मार्केट शोर नहीं।</p>
+    <h1 class="blog-title" data-reveal>हर्षल दसानी, आईपीओ।</h1>
+    <p class="blog-sub" data-reveal style="--rd:.08s">अभी खुले, आने वाले और हाल में सूचीबद्ध भारतीय आईपीओ — आधिकारिक एक्सचेंज डेटा, निवेशक श्रेणी के अनुसार सब्सक्रिप्शन, और एक ईमानदार लिस्टिंग रिकॉर्ड। कोई ग्रे-मार्केट शोर नहीं।</p>
   </section>
 
   <hr class="tools-divider">
@@ -277,9 +278,9 @@ html[data-theme="light"] .ipo-seg button[aria-selected="true"] { color:#fff; }
   <div class="ipo-ribbon" id="ipoRibbon">⚙ <b>पूर्वावलोकन / नमूना डेटा</b> — लाइव फीड के उत्तर देने तक उदाहरणात्मक आंकड़े दिखाए गए हैं। आधिकारिक NSE फीड से लाइव डेटा अपने आप लोड हो जाएगा।</div>
 
   <div class="ipo-stats" id="ipoStats">
-    <div class="ipo-stat clickable" data-jump="open" role="button" tabindex="0" aria-label="फ़िल्टर: खुले आईपीओ"><div class="v num" id="sOpen">—</div><div class="l">अभी खुले</div></div>
-    <div class="ipo-stat clickable" data-jump="upcoming" role="button" tabindex="0" aria-label="फ़िल्टर: आने वाले आईपीओ"><div class="v num" id="sUp">—</div><div class="l">आने वाले</div></div>
-    <div class="ipo-stat clickable" data-jump="listed" role="button" tabindex="0" aria-label="फ़िल्टर: हाल में सूचीबद्ध आईपीओ"><div class="v acc num" id="sListed">—</div><div class="l">हाल में सूचीबद्ध</div></div>
+    <div class="ipo-stat clickable" data-jump="open" role="button" tabindex="0" aria-label="फ़िल्टर: खुले आईपीओ" data-reveal style="--rd:.06s"><div class="v num" id="sOpen">—</div><div class="l">अभी खुले</div></div>
+    <div class="ipo-stat clickable" data-jump="upcoming" role="button" tabindex="0" aria-label="फ़िल्टर: आने वाले आईपीओ" data-reveal style="--rd:.12s"><div class="v num" id="sUp">—</div><div class="l">आने वाले</div></div>
+    <div class="ipo-stat clickable" data-jump="listed" role="button" tabindex="0" aria-label="फ़िल्टर: हाल में सूचीबद्ध आईपीओ" data-reveal style="--rd:.18s"><div class="v acc num" id="sListed">—</div><div class="l">हाल में सूचीबद्ध</div></div>
   </div>
 
   <div class="ipo-controls">
@@ -301,7 +302,7 @@ html[data-theme="light"] .ipo-seg button[aria-selected="true"] { color:#fff; }
 
   <p class="ipo-asof" id="ipoAsof"></p>
 
-  <div class="ipo-disc">
+  <div class="ipo-disc" data-reveal>
     <div class="ipo-disc-h">महत्वपूर्ण — यहाँ किसी भी बात पर कार्रवाई करने से पहले पढ़ें</div>
     <p><b>केवल शैक्षिक जानकारी।</b> यह पृष्ठ सामान्य जानकारी और अध्ययन के लिए दिया गया है। यह <b>निवेश सलाह, रिसर्च रिपोर्ट या सिफारिश नहीं है</b>, और <b>इस पर कुछ भी किसी आईपीओ, प्रतिभूति या रणनीति के लिए आवेदन करने, सब्सक्राइब करने, खरीदने, बेचने या परहेज करने का प्रस्ताव या आग्रह नहीं है</b>। यह आपके लक्ष्यों, जोखिम-सहनशीलता या वित्तीय परिस्थितियों के अनुसार नहीं बनाया गया है।</p>
     <ul>
@@ -460,5 +461,6 @@ function toggleBlogTheme(){var c=document.documentElement.getAttribute('data-the
   document.documentElement.setAttribute('data-theme',n);try{localStorage.setItem('hd-theme',n);}catch(e){}}
 </script>
 <script src="/lang-switch.js" defer></script>
+<script src="/motion.js" defer></script>
 </body>
 </html>

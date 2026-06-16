@@ -24,6 +24,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@HarshalDasanii">
 <meta name="theme-color" content="#0e0c0a">
+<link rel="stylesheet" href="/motion.css">
 <link rel="manifest" href="../manifest.json">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <style>
@@ -113,6 +114,11 @@ svg{display:block;width:100%;height:auto;} text{font-family:'Inter',sans-serif;}
 @media(max-width:820px){.page{padding:24px 28px 60px;} .stats{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:560px){.page{padding:18px 18px 50px;} .mast-trail{display:none;} .snap{grid-template-columns:1fr;} .blog-title{font-size:clamp(36px,11vw,54px);} .snap-card .net{font-size:30px;}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+/* chart motion */
+html.motion-ready #barChart .hd-bars{transform:scaleY(0);transition:transform .8s cubic-bezier(.2,.7,.2,1)!important;}
+html.motion-ready #barChart .hd-bars.in{transform:scaleY(1)!important;}
+html.motion-ready #cumChart .hd-line{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.1s ease!important;}
+html.motion-ready #cumChart .hd-line.in{stroke-dashoffset:0!important;}
 </style>
 <script>(function(){function a(){try{var t=localStorage.getItem('hd-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);}catch(e){}}a();window.addEventListener('pageshow',a);})();</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"FII/DII Daily & Monthly Activity — Indian Cash Market","description":"Daily (2024-2026) and monthly (2006-2026) Foreign and Domestic Institutional Investor net buy/sell activity in the Indian cash market, compiled from NSE/BSE public data.","creator":{"@type":"Person","name":"Harshal Dasani","url":"https://harshaldasani.pages.dev/"},"temporalCoverage":"2006-04/2026-06","license":"https://creativecommons.org/licenses/by/4.0/","isAccessibleForFree":true,"distribution":[{"@type":"DataDownload","encodingFormat":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","contentUrl":"https://harshaldasani.pages.dev/fii-dii/FII_DII_History.xlsx"},{"@type":"DataDownload","encodingFormat":"text/csv","contentUrl":"https://harshaldasani.pages.dev/fii-dii/fii_dii_history.csv"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://harshaldasani.pages.dev/"},{"@type":"ListItem","position":2,"name":"FII / DII","item":"https://harshaldasani.pages.dev/fii-dii/"}]}</script>
@@ -136,10 +142,10 @@ svg{display:block;width:100%;height:auto;} text{font-family:'Inter',sans-serif;}
 
   <div class="ribbon" id="ribbon">⚙ <b>Preview / sample data</b> — real recent figures shown until the live feed is connected. Updates automatically once <code>/api/fii-dii</code> is live.</div>
 
-  <div class="snap" id="snap"></div>
+  <div class="snap" id="snap" data-reveal></div>
   <div class="snap-meta" id="snapMeta"></div>
 
-  <div class="tug" id="tug"></div>
+  <div class="tug" id="tug" data-reveal></div>
 
   <div class="sec">
     <div class="sec-head"><h2 class="sec-title" id="barTitle">Daily net flows</h2>
@@ -153,7 +159,7 @@ svg{display:block;width:100%;height:auto;} text{font-family:'Inter',sans-serif;}
     <div class="chart-wrap" style="position:relative"><div id="barChart"></div><div class="chart-tip" id="barTip" hidden></div></div>
   </div>
 
-  <div class="stats" id="stats"></div>
+  <div class="stats" id="stats" data-reveal></div>
 
   <div class="sec">
     <div class="sec-head"><h2 class="sec-title">Cumulative flows</h2><span class="sec-note" id="cumNote"></span></div>
@@ -281,15 +287,15 @@ function renderBars(rows,period){
   const maxAbs=Math.max(...rows.flatMap(d=>[Math.abs(d.fii),Math.abs(d.dii)]))||1;
   const gw=plotW/n, bw=Math.min(9,gw/2-2);
   const sc=v=>v/maxAbs*half;
-  const TT=[]; let bars='';
+  const TT=[]; let vb='', ov='';
   rows.forEach((d,i)=>{
     const cx=padL+gw*i+gw/2;
     const fv=sc(d.fii), dv=sc(d.dii);
-    bars+=`<rect x="${(cx-bw-1).toFixed(1)}" y="${(d.fii>=0?zeroY-fv:zeroY).toFixed(1)}" width="${bw}" height="${Math.max(1,Math.abs(fv)).toFixed(1)}" rx="1.5" fill="var(--fii)"></rect>`;
-    bars+=`<rect x="${(cx+1).toFixed(1)}" y="${(d.dii>=0?zeroY-dv:zeroY).toFixed(1)}" width="${bw}" height="${Math.max(1,Math.abs(dv)).toFixed(1)}" rx="1.5" fill="var(--dii)"></rect>`;
+    vb+=`<rect x="${(cx-bw-1).toFixed(1)}" y="${(d.fii>=0?zeroY-fv:zeroY).toFixed(1)}" width="${bw}" height="${Math.max(1,Math.abs(fv)).toFixed(1)}" rx="1.5" fill="var(--fii)"></rect>`;
+    vb+=`<rect x="${(cx+1).toFixed(1)}" y="${(d.dii>=0?zeroY-dv:zeroY).toFixed(1)}" width="${bw}" height="${Math.max(1,Math.abs(dv)).toFixed(1)}" rx="1.5" fill="var(--dii)"></rect>`;
     const showLbl = n<=14 ? true : (i%Math.ceil(n/8)===0 || i===n-1);
-    if(showLbl) bars+=`<text x="${cx.toFixed(1)}" y="${H-8}" text-anchor="middle" font-size="9" fill="var(--faint)">${periodLabel(d,period)}</text>`;
-    bars+=`<rect class="hit" x="${(padL+gw*i).toFixed(1)}" y="${padT}" width="${gw.toFixed(1)}" height="${plotH}" fill="transparent" data-i="${i}"></rect>`;
+    if(showLbl) ov+=`<text x="${cx.toFixed(1)}" y="${H-8}" text-anchor="middle" font-size="9" fill="var(--faint)">${periodLabel(d,period)}</text>`;
+    ov+=`<rect class="hit" x="${(padL+gw*i).toFixed(1)}" y="${padT}" width="${gw.toFixed(1)}" height="${plotH}" fill="transparent" data-i="${i}"></rect>`;
     TT.push({label:periodLabel(d,period),fii:d.fii,dii:d.dii});
   });
   const gl=v=>`<line x1="${padL}" x2="${W-padR}" y1="${(zeroY-sc(v)).toFixed(1)}" y2="${(zeroY-sc(v)).toFixed(1)}" stroke="var(--rule-soft)"></line>
@@ -298,7 +304,8 @@ function renderBars(rows,period){
   document.getElementById('barChart').innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${period} FII and DII net flows">
     ${gl(step)}${gl(-step)}
     <line x1="${padL}" x2="${W-padR}" y1="${zeroY}" y2="${zeroY}" stroke="var(--rule)" stroke-width="1"></line>
-    ${bars}</svg>`;
+    <g class="hd-bars" style="transform-box:view-box;transform-origin:0 ${zeroY}px">${vb}</g>${ov}</svg>`;
+  (function(){var g=document.querySelector('#barChart .hd-bars'); if(g){ g.getBoundingClientRect(); requestAnimationFrame(function(){g.classList.add('in');}); }})();
   attachBarTip(TT);
 }
 
@@ -456,8 +463,8 @@ function renderCumulative(H){
     <line x1="${padL}" x2="${W-padR}" y1="${zero.toFixed(1)}" y2="${zero.toFixed(1)}" stroke="var(--rule)"></line>
     ${xTickMarks}${xTicks}
     <path d="${area(dp)}" fill="var(--dii-dim)"></path><path d="${area(fp)}" fill="var(--fii-dim)"></path>
-    <path d="${path(dp)}" fill="none" stroke="var(--dii)" stroke-width="2"></path>
-    <path d="${path(fp)}" fill="none" stroke="var(--fii)" stroke-width="2"></path>
+    <path d="${path(dp)}" pathLength="1" class="hd-line" fill="none" stroke="var(--dii)" stroke-width="2"></path>
+    <path d="${path(fp)}" pathLength="1" class="hd-line" fill="none" stroke="var(--fii)" stroke-width="2"></path>
     <circle cx="${x(n-1).toFixed(1)}" cy="${y(dp[n-1]).toFixed(1)}" r="3" fill="var(--dii)"></circle>
     <circle cx="${x(n-1).toFixed(1)}" cy="${y(fp[n-1]).toFixed(1)}" r="3" fill="var(--fii)"></circle>
     <text x="${(x(n-1)+6).toFixed(1)}" y="${(y(dp[n-1])+4).toFixed(1)}" text-anchor="start" font-size="10" font-weight="700" fill="var(--dii)" stroke="var(--bg)" stroke-width="3" paint-order="stroke">DII ${fmtINR(cd).replace('+','')}</text>
@@ -469,6 +476,7 @@ function renderCumulative(H){
     </g>
     ${hits}
   </svg>`;
+  (function(){var ls=document.querySelectorAll('#cumChart .hd-line'); ls.forEach(function(x){x.getBoundingClientRect();}); requestAnimationFrame(function(){ls.forEach(function(x){x.classList.add('in');});});})();
   attachCumTip(H, fp, dp, xs, dys, fys);
 }
 function attachCumTip(H, fp, dp, xs, dys, fys){
@@ -585,6 +593,7 @@ document.getElementById('periodSeg').addEventListener('click',function(e){
 })();
 </script>
 <script>function toggleBlogTheme(){var c=document.documentElement.getAttribute('data-theme')||'dark';var n=c==='light'?'dark':'light';document.documentElement.setAttribute('data-theme',n);try{localStorage.setItem('hd-theme',n);}catch(e){}}</script>
+<script src="/motion.js" defer></script>
 <script src="/lang-switch.js" defer></script>
 </body>
 </html>

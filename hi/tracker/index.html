@@ -983,6 +983,7 @@ body::after { content: ''; position: fixed; inset: 0; z-index: -1; pointer-event
   ]
 }
 </script>
+<link rel="stylesheet" href="/motion.css">
 </head>
 <body>
 
@@ -993,9 +994,9 @@ body::after { content: ''; position: fixed; inset: 0; z-index: -1; pointer-event
   <div class="header">
     <div class="header-left"><a class="header-back" href="https://harshaldasani.pages.dev/">&larr; होम पर वापस</a></div>
     <div class="header-main">
-      <div class="header-kicker">मीडिया इंटेलिजेंस डैशबोर्ड</div>
-      <h1><span class="title-main">Harshal Dasani</span></h1>
-      <div class="header-subtitle">मीडिया फीचर्स · समेकित ट्रैकर</div>
+      <div class="header-kicker" data-reveal>मीडिया इंटेलिजेंस डैशबोर्ड</div>
+      <h1 data-reveal style="--rd:.06s"><span class="title-main">Harshal Dasani</span></h1>
+      <div class="header-subtitle" data-reveal style="--rd:.12s">मीडिया फीचर्स · समेकित ट्रैकर</div>
     </div>
     <div class="header-right">
       <button class="social-link theme-toggle-btn" onclick="toggleTrackerTheme()" aria-label="Toggle light / dark theme" title="Toggle theme" type="button">
@@ -1034,7 +1035,7 @@ body::after { content: ''; position: fixed; inset: 0; z-index: -1; pointer-event
   <input class="file-input" id="file-input" type="file" accept=".xlsx,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
 
   <div id="empty">
-    <div class="empty-state">
+    <div class="empty-state" data-reveal>
       <h2>📊 डैशबोर्ड तैयार है</h2>
       <p>ऊपर <b>एक्सेल फ़ाइल कनेक्ट करें</b> पर क्लिक करें और चुनें<br><code>WhatsApp_Features_Articles.xlsx</code>।</p>
       <p class="device-note" id="access-mode-note">डेस्कटॉप Chrome या Edge पर, पेज फ़ाइल को याद रख सकता है और डिस्क से रिफ्रेश कर सकता है। फ़ोन या iPad पर, हर सत्र में Files से एक्सेल फ़ाइल चुनें।</p>
@@ -1046,18 +1047,18 @@ body::after { content: ''; position: fixed; inset: 0; z-index: -1; pointer-event
   </div>
 
   <div class="static-mobile" id="static-mobile">
-    <section class="snap-card">
+    <section class="snap-card" data-reveal>
       <div class="snap-title"><b>स्नैपशॉट डैशबोर्ड</b> · WhatsApp_Features_Articles.xlsx · 15 अप्रैल 2025 से 28 मई 2026 तक 967 लिंक।</div>
       <div class="snap-kpis">
-        <div class="snap-kpi"><div class="num">967</div><div class="label">अद्वितीय फीचर लिंक</div></div>
-        <div class="snap-kpi"><div class="num">157</div><div class="label">ट्रैक किए गए प्रकाशन</div></div>
-        <div class="snap-kpi"><div class="num">7</div><div class="label">कवर की गई भाषाएँ</div></div>
+        <div class="snap-kpi"><div class="num" data-count="967">967</div><div class="label">अद्वितीय फीचर लिंक</div></div>
+        <div class="snap-kpi"><div class="num" data-count="157">157</div><div class="label">ट्रैक किए गए प्रकाशन</div></div>
+        <div class="snap-kpi"><div class="num" data-count="7">7</div><div class="label">कवर की गई भाषाएँ</div></div>
         <div class="snap-kpi"><div class="num">28 May</div><div class="label">नवीनतम फीचर तिथि</div></div>
       </div>
       <button type="button" class="mobile-file-action" id="mobile-pick">अपडेटेड एक्सेल फ़ाइल चुनें</button>
     </section>
 
-    <section class="snap-card snap-panel mobile-chart-card">
+    <section class="snap-card snap-panel mobile-chart-card" data-reveal>
       <h3>इंटरैक्टिव कवरेज चार्ट</h3>
       <div class="mobile-chart-tabs" id="mobile-chart-tabs">
         <button type="button" class="mobile-chart-tab active" data-chart="months">मासिक</button>
@@ -1082,7 +1083,7 @@ body::after { content: ''; position: fixed; inset: 0; z-index: -1; pointer-event
       <div class="mobile-chart-detail" id="mobile-chart-detail"><b>Nov '25</b>: 126 फीचर्स। वर्तमान स्नैपशॉट में चरम महीना।</div>
     </section>
 
-    <section class="snap-card snap-panel">
+    <section class="snap-card snap-panel" data-reveal>
       <h3>भाषा कवरेज</h3>
       <div class="snap-bars">
         <div class="snap-row"><div class="snap-name">English</div><div class="snap-track"><div class="snap-fill" style="width:100%"></div></div><div class="snap-val">864</div></div>
@@ -1095,7 +1096,7 @@ body::after { content: ''; position: fixed; inset: 0; z-index: -1; pointer-event
       </div>
     </section>
 
-    <section class="snap-card snap-panel">
+    <section class="snap-card snap-panel" data-reveal>
       <h3>शीर्ष आउटलेट परिवार</h3>
       <div class="snap-bars">
         <div class="snap-row"><div class="snap-name">Live Mint</div><div class="snap-track"><div class="snap-fill" style="width:100%"></div></div><div class="snap-val">312</div></div>
@@ -1109,7 +1110,7 @@ body::after { content: ''; position: fixed; inset: 0; z-index: -1; pointer-event
       </div>
     </section>
 
-    <section class="snap-card snap-panel">
+    <section class="snap-card snap-panel" data-reveal>
       <h3 id="monthly-title">मासिक फीचर प्रवाह</h3>
       <div class="snap-months">
         <div class="snap-month"><div class="snap-month-bar" style="height:18px"></div><div class="snap-month-label">Jun<br>18</div></div>
@@ -1127,7 +1128,7 @@ body::after { content: ''; position: fixed; inset: 0; z-index: -1; pointer-event
       </div>
     </section>
 
-    <section class="snap-card snap-panel">
+    <section class="snap-card snap-panel" data-reveal>
       <h3>कवर किए गए विषय</h3>
       <div class="snap-bars">
         <div class="snap-row"><div class="snap-name">Gold & Silver</div><div class="snap-track"><div class="snap-fill" style="width:100%"></div></div><div class="snap-val">108</div></div>
@@ -1141,7 +1142,7 @@ body::after { content: ''; position: fixed; inset: 0; z-index: -1; pointer-event
       </div>
     </section>
 
-    <section class="snap-card snap-panel">
+    <section class="snap-card snap-panel" data-reveal>
       <h3>नवीनतम फीचर्स</h3>
       <div class="snap-latest">
         <a class="snap-feature" href="https://www.livemint.com/market/stock-market-news/coal-india-ofs-to-open-for-retail-investors-on-friday-should-you-apply-for-maharatna-psu-stock/amp-11779951357033.html" target="_blank" rel="noopener noreferrer"><div class="date">28 May</div><div class="copy"><div class="pub">Live Mint</div><div class="headline">Coal India OFS to open for retail investors on Friday: Should you apply for Maharatna PSU stock?</div></div></a>
@@ -1156,7 +1157,7 @@ body::after { content: ''; position: fixed; inset: 0; z-index: -1; pointer-event
   </div>
 
   <div id="dashboard">
-    <div class="kpis">
+    <div class="kpis" data-reveal>
       <div class="tile big">
         <div class="num" id="kpi-unique">—</div>
         <div class="info">
@@ -1175,7 +1176,7 @@ body::after { content: ''; position: fixed; inset: 0; z-index: -1; pointer-event
       <div class="tile kpi teal" id="kpi-epaper-tile" role="button" tabindex="0" style="cursor:pointer" onclick="setDrill('topic','Press / E-papers')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();setDrill('topic','Press / E-papers');}"><div class="num" id="kpi-epaper">—</div><div class="label" id="kpi-epaper-label">ई-पेपर</div></div>
     </div>
 
-<div class="panel" style="margin-bottom:14px">
+<div class="panel" style="margin-bottom:14px" data-reveal>
       <h3 style="text-align:center;letter-spacing:0.8px;font-size:20px;">जैसा कि यहाँ फीचर किया गया <span style="color:#d4a64a;font-size:18px;font-weight:600;">★</span></h3>
       <div class="sf-marquee">
       <div class="sf-gallery">
@@ -1238,7 +1239,7 @@ body::after { content: ''; position: fixed; inset: 0; z-index: -1; pointer-event
     </div>
 
 <div class="latest">
-      <h3>नवीनतम फीचर्स <span class="h-count" id="latest-window">सर्वकालिक</span></h3>
+      <h3 data-reveal>नवीनतम फीचर्स <span class="h-count" id="latest-window">सर्वकालिक</span></h3>
       <input type="text" id="feat-search" placeholder="🔍  कीवर्ड, प्रकाशन या भाषा से सभी फीचर्स खोजें…" autocomplete="off" aria-label="Search all features" />
       <div id="feat-filters" class="feat-filters">
         <label>से <input type="date" id="feat-from"></label>
@@ -1256,35 +1257,35 @@ body::after { content: ''; position: fixed; inset: 0; z-index: -1; pointer-event
     <div class="filter-caption" id="filter-caption"><b>सर्वकालिक</b> दिखा रहे हैं। नीचे हर पैनल को फ़िल्टर करने के लिए ऊपर एक विंडो पर क्लिक करें।</div>
 
     <div class="panels">
-      <div class="panel">
+      <div class="panel" data-reveal>
         <h3>भाषा कवरेज</h3>
         <div id="lang-bars"></div>
         <div class="note" id="lang-note"></div>
       </div>
-      <div class="panel">
+      <div class="panel" data-reveal style="--rd:.06s">
         <h3 id="monthly-title">मासिक फीचर प्रवाह</h3>
         <div class="monthly" id="monthly"></div>
         <div class="note" id="month-note"></div>
       </div>
-      <div class="panel">
+      <div class="panel" data-reveal style="--rd:.12s">
         <h3>शीर्ष आउटलेट परिवार</h3>
         <input type="text" id="pub-search" placeholder="🔍 प्रकाशन खोजें…" autocomplete="off" aria-label="Search publications" style="width:100%;box-sizing:border-box;padding:8px 12px;margin-bottom:12px;border:1px solid var(--line);border-radius:8px;font-size:12px;color:var(--txt);background:rgba(255,255,255,0.04);outline:none;">
         <div id="pub-bars"></div>
       </div>
-      <div class="panel">
+      <div class="panel" data-reveal style="--rd:.18s">
         <h3>शीर्ष पत्रकार</h3>
         <input type="text" id="jrn-search" placeholder="🔍 पत्रकार खोजें…" autocomplete="off" aria-label="Search journalists" style="width:100%;box-sizing:border-box;padding:8px 12px;margin-bottom:12px;border:1px solid var(--line);border-radius:8px;font-size:12px;color:var(--txt);background:rgba(255,255,255,0.04);outline:none;">
         <div id="jrn-bars"></div>
       </div>
     </div>
 
-    <div class="panel" style="margin-bottom:12px">
+    <div class="panel" style="margin-bottom:12px" data-reveal>
       <h3 id="cumulative-title">संचयी कवरेज वृद्धि</h3>
       <div id="cumulative"></div>
       <div class="note" id="cumulative-note"></div>
     </div>
 
-    <div class="panel" style="margin-bottom:12px">
+    <div class="panel" style="margin-bottom:12px" data-reveal>
       <h3>कवर किए गए विषय</h3>
       <div id="topic-bars"></div>
       <div class="note" id="topic-note"></div>
@@ -3200,5 +3201,6 @@ async function downloadFilteredPDF() {
 
 
   <script src="/lang-switch.js" defer></script>
+  <script src="/motion.js" defer></script>
 </body>
 </html>

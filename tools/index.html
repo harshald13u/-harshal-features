@@ -51,6 +51,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/motion.css">
 
 <style>
 :root {
@@ -330,7 +331,7 @@ html[data-theme="light"] .tool-logo-light { display: block; }
   </header>
 
   <section class="blog-hero">
-    <h1 class="blog-title">Harshal Dasani, Tools.</h1>
+    <h1 class="blog-title" data-reveal>Harshal Dasani, Tools.</h1>
     <p class="blog-sub">Calculators and market tools, built to make the numbers simple.</p>
   </section>
 
@@ -370,7 +371,7 @@ html[data-theme="light"] .tool-logo-light { display: block; }
       : '<span class="tool-icon-fallback">'+icon+'</span>';
     var tag = tool.tag ? '<div class="tool-tag">'+escapeHTML(tool.tag)+'</div>' : '';
     var attrs = external ? ' target="_blank" rel="noopener noreferrer"' : '';
-    return '<a class="tool-card" href="'+escapeHTML(url)+'"'+attrs+'>' +
+    return '<a class="tool-card" data-reveal href="'+escapeHTML(url)+'"'+attrs+'>' +
       '<div class="tool-icon">'+logoHTML+'</div>' +
       '<div class="tool-body">' +
         tag +
@@ -390,6 +391,8 @@ html[data-theme="light"] .tool-logo-light { display: block; }
         return;
       }
       grid.innerHTML = tools.map(toolCardHTML).join('');
+      var cards = grid.querySelectorAll('.tool-card');
+      cards.forEach(function (c, i) { c.style.setProperty('--rd', (i * 70) + 'ms'); requestAnimationFrame(function () { c.classList.add('in'); }); });
     })
     .catch(function(){
       document.getElementById('toolsGrid').innerHTML =
@@ -405,6 +408,7 @@ function toggleBlogTheme(){
   try { localStorage.setItem('hd-theme', next); } catch(e) {}
 }
 </script>
+  <script src="/motion.js" defer></script>
   <script src="/lang-switch.js" defer></script>
 </body>
 </html>

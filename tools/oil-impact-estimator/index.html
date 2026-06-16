@@ -46,6 +46,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link rel="stylesheet" href="../tools.css">
+<link rel="stylesheet" href="/motion.css">
 
 <script type="application/ld+json">
 {
@@ -107,7 +108,7 @@
   <div class="tool-grid">
 
     <!-- LEFT: Inputs -->
-    <div class="panel">
+    <div class="panel" data-reveal>
       <p class="panel-title">Inputs</p>
 
       <!-- Brent Price -->
@@ -170,7 +171,7 @@
     </div>
 
     <!-- RIGHT: Outputs -->
-    <div class="panel" aria-live="polite" aria-atomic="true" id="results-panel">
+    <div class="panel" data-reveal aria-live="polite" aria-atomic="true" id="results-panel">
 
       <!-- Stat cards -->
       <div class="stat-grid" id="stat-grid">
@@ -200,7 +201,7 @@
   </div>
 
   <!-- ── Winners / Losers strip ── -->
-  <div style="margin-top:24px;">
+  <div style="margin-top:24px;" data-reveal>
     <p class="panel-title" style="font-family:'Fraunces',serif; font-weight:600; font-size:18px; color:var(--text); margin:0 0 12px;">Sector Impact Snapshot</p>
     <div class="wl-grid">
       <div class="wl-card neg">
@@ -362,6 +363,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     elCardCpi.className = 'stat-card ' + (cpiDeltaBps > 0 ? 'is-neg' : cpiDeltaBps < 0 ? 'is-pos' : '');
 
+    if (window.hdPulse) { hdPulse(elValBill); hdPulse(elValCpi); }
+
 
     /* ── Interpretation line (structural / long-term) ── */
     var bl = Math.round(baseline);
@@ -393,6 +396,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 
+  <script src="/motion.js" defer></script>
   <script src="/lang-switch.js" defer></script>
 </body>
 </html>

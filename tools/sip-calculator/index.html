@@ -50,6 +50,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link rel="stylesheet" href="../tools.css">
+<link rel="stylesheet" href="/motion.css">
 
 <!-- JSON-LD: WebApplication -->
 <script type="application/ld+json">
@@ -183,7 +184,7 @@
   <div class="tool-grid">
 
     <!-- LEFT: inputs -->
-    <div class="panel">
+    <div class="panel" data-reveal>
       <h2 class="panel-title">Your SIP</h2>
 
       <!-- Monthly investment -->
@@ -235,7 +236,7 @@
     </div>
 
     <!-- RIGHT: results -->
-    <div class="panel results-panel" aria-live="polite" aria-atomic="true" id="results-region">
+    <div class="panel results-panel" data-reveal aria-live="polite" aria-atomic="true" id="results-region">
       <h2 class="panel-title">Estimated outcome</h2>
       <div class="stat-grid" id="stat-grid">
         <div class="stat-card" id="card-invested">
@@ -257,7 +258,7 @@
       </div><!-- /results-panel -->
     </div><!-- /tool-grid -->
 
-    <div class="panel chart-panel">
+    <div class="panel chart-panel" data-reveal>
     <div class="chart-head">
       <h2 class="panel-title">Growth over time</h2>
       <div class="chart-legend">
@@ -322,6 +323,11 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('exact-returns').textContent  = formatINR(returns);
     document.getElementById('val-total').textContent     = formatINRShort(fv);
     document.getElementById('exact-total').textContent   = formatINR(fv);
+    if (window.hdPulse) {
+      hdPulse(document.getElementById('val-invested'));
+      hdPulse(document.getElementById('val-returns'));
+      hdPulse(document.getElementById('val-total'));
+    }
 
     /* growth chart */
     drawGrowthChart(P, r, Y);
@@ -445,10 +451,17 @@ document.addEventListener('DOMContentLoaded', function () {
       '<path d="' + areaFVfull + '" fill="url(#gFV)"/>' +
       '<path d="' + areaInv + '" fill="url(#gInv)"/>' +
       '<path d="' + buildPath(invPoints) + '" fill="none" stroke="var(--chart-inv)" stroke-width="1.8" stroke-opacity="0.7" stroke-dasharray="4 3"/>' +
-      '<path d="' + buildPath(fvPoints) + '" fill="none" stroke="var(--gold,#A67D3E)" stroke-width="2.2"/>' +
+      '<path d="' + buildPath(fvPoints) + '" pathLength="1" data-draw fill="none" stroke="var(--gold,#A67D3E)" stroke-width="2.2"/>' +
       hoverLayer;
 
-    document.getElementById('growth-svg').innerHTML = svgContent;
+    var _svgHost = document.getElementById('growth-svg');
+    _svgHost.innerHTML = svgContent;
+    /* line-draw: animate gold path on first render, snap-in on later redraws */
+    var _line = _svgHost.querySelector('[data-draw]');
+    if (_line) {
+      if (!window._sipDrawn) { window._sipDrawn = true; requestAnimationFrame(function () { _line.classList.add('in'); }); }
+      else { _line.classList.add('in'); }
+    }
     window._sipChart = { fvPoints: fvPoints, invPoints: invPoints, maxYears: maxYears, xPos: xPos, yPos: yPos, PAD: PAD, innerW: innerW, W: W };
   }
 
@@ -493,6 +506,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 
+  <script src="/motion.js" defer></script>
   <script src="/lang-switch.js" defer></script>
 </body>
 </html>

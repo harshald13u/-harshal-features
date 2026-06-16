@@ -396,6 +396,7 @@ html[data-theme="light"] .post-cover .cover-dark { opacity: 1; }
  window.addEventListener('pageshow', applyTheme);
 })();
 </script>
+<link rel="stylesheet" href="/motion.css">
 </head>
 <body>
 
@@ -411,11 +412,11 @@ html[data-theme="light"] .post-cover .cover-dark { opacity: 1; }
  </header>
 
  <section class="blog-hero">
- <h1 class="blog-title">Harshal Dasani, Blogs.</h1>
- <p class="blog-sub">Long-form thinking on what's moving markets, commodities, macros and the geopolitics behind the prices.</p>
+ <h1 class="blog-title" data-reveal>Harshal Dasani, Blogs.</h1>
+ <p class="blog-sub" data-reveal style="--rd:.08s">Long-form thinking on what's moving markets, commodities, macros and the geopolitics behind the prices.</p>
  </section>
 
- <nav class="blog-tabs" aria-label="Filter by topic">
+ <nav class="blog-tabs" aria-label="Filter by topic" data-reveal style="--rd:.16s">
  <a href="./" data-topic="all">All</a>
  <a href="?topic=stock-market" data-topic="stock-market">Stock Market</a>
  <a href="?topic=commodities" data-topic="commodities">Commodities</a>
@@ -491,7 +492,7 @@ html[data-theme="light"] .post-cover .cover-dark { opacity: 1; }
  )
  ) : '<div class="post-cover-fallback">'+escapeHTML((post.title||'·').slice(0,1).toUpperCase())+'</div>';
  var topicLbl = TOPIC_LABELS[post.topic] || post.topic || '';
- return '<a class="post-card" href="posts/'+slug+'/">' +
+ return '<a class="post-card" data-reveal href="posts/'+slug+'/">' +
  '<div class="post-cover">'+img+'</div>' +
  '<div class="post-body">' +
  '<div class="post-topic">'+escapeHTML(topicLbl)+'</div>' +
@@ -524,6 +525,24 @@ html[data-theme="light"] .post-cover .cover-dark { opacity: 1; }
  return;
  }
  grid.innerHTML = posts.map(postCardHTML).join('');
+     // Cards are injected after the shared motion engine's initial scan,
+     // so reveal them here: stagger via IntersectionObserver, or show all if unsupported.
+     var newCards = Array.prototype.slice.call(grid.querySelectorAll('.post-card[data-reveal]'));
+     if (!('IntersectionObserver' in window)) {
+       newCards.forEach(function(c){ c.classList.add('in'); });
+     } else {
+       var cardIO = new IntersectionObserver(function(entries){
+         entries.forEach(function(e){
+           if (!e.isIntersecting) return;
+           var card = e.target;
+           var i = newCards.indexOf(card);
+           card.style.setProperty('--rd', ((i % 3) * 70) + 'ms');
+           requestAnimationFrame(function(){ card.classList.add('in'); });
+           cardIO.unobserve(card);
+         });
+       }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+       newCards.forEach(function(c){ cardIO.observe(c); });
+     }
  })
  .catch(function(){
  document.getElementById('postsGrid').innerHTML =
@@ -540,5 +559,6 @@ function toggleBlogTheme(){
 }
 </script>
   <script src="/lang-switch.js" defer></script>
+  <script src="/motion.js" defer></script>
 </body>
 </html>

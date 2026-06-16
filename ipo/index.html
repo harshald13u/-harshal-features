@@ -28,6 +28,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@HarshalDasanii">
 <meta name="theme-color" content="#0e0c0a">
+<link rel="stylesheet" href="/motion.css">
 
 <link rel="manifest" href="../manifest.json">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
@@ -429,9 +430,10 @@ function render(){
   STATE.rendered=rows; g.innerHTML=rows.length?rows.map((i,n)=>card(i,n)).join(''):`<div class="blog-empty"><h2 class="blog-empty-title">Nothing in this view</h2><p class="blog-empty-sub">Try another tab — open, upcoming or recently listed.</p></div>`;
   requestAnimationFrame(()=>{document.querySelectorAll('.ipo-card').forEach((c,n)=>setTimeout(()=>c.classList.add('in'),n*60));
     setTimeout(()=>document.querySelectorAll('.ipo-fill').forEach(f=>f.style.width=f.dataset.w+'%'),160);});
-  document.getElementById('sOpen').textContent=STATE.data.filter(i=>openish(i.status)||(i.status==='listed' && i.dates && window.isFutureListingDate && window.isFutureListingDate(i.dates.listing))).length;
-  document.getElementById('sUp').textContent=STATE.data.filter(i=>i.status==='upcoming').length;
-  document.getElementById('sListed').textContent=STATE.data.filter(i=>i.status==='listed' && !(i.dates && window.isFutureListingDate && window.isFutureListingDate(i.dates.listing))).length;
+  if(!window.hdCountTo){window.hdCountTo=function(el,n){if(!el)return;var prev=parseInt(el.getAttribute('data-v')||'-1',10);el.setAttribute('data-v',n);if(prev===n||document.hidden){el.textContent=n;return;}var from=prev<0?0:prev,t0=performance.now();(function st(now){var p=Math.min(1,(now-t0)/500);var e=1-Math.pow(1-p,3);el.textContent=Math.round(from+(n-from)*e);if(p<1)requestAnimationFrame(st);})(performance.now());};}
+  window.hdCountTo(document.getElementById('sOpen'),STATE.data.filter(i=>openish(i.status)||(i.status==='listed' && i.dates && window.isFutureListingDate && window.isFutureListingDate(i.dates.listing))).length);
+  window.hdCountTo(document.getElementById('sUp'),STATE.data.filter(i=>i.status==='upcoming').length);
+  window.hdCountTo(document.getElementById('sListed'),STATE.data.filter(i=>i.status==='listed' && !(i.dates && window.isFutureListingDate && window.isFutureListingDate(i.dates.listing))).length);
 }
 function boot(data,isSample){
   STATE.data=(data&&(data.ipos||data.items))||[];
@@ -504,6 +506,7 @@ fetch('/api/ipo?nc='+Date.now()).then(r=>r.ok?r.json():Promise.reject()).then(d=
 function toggleBlogTheme(){var c=document.documentElement.getAttribute('data-theme')||'dark';var n=c==='light'?'dark':'light';
   document.documentElement.setAttribute('data-theme',n);try{localStorage.setItem('hd-theme',n);}catch(e){}}
 </script>
+<script src="/motion.js" defer></script>
 <script src="/lang-switch.js" defer></script>
 <script>
 /* === Hardened tab click — bind to each button + delegate; works even if one path fails === */

@@ -94,3 +94,17 @@ function initSegmented(rootSel) {
     });
   });
 }
+
+/* ---- result "settled" pulse helper ----
+   Briefly pulses an element AFTER its value text is set. Does NOT touch the
+   text node or aria-live regions — only toggles a CSS class for ~400ms.
+   Self-contained; safe to call on every result write. */
+window.hdPulse = function (el) {
+  if (!el || !el.classList) return;
+  el.classList.remove('val-pulse');
+  // force reflow so the animation restarts even on rapid successive updates
+  void el.offsetWidth;
+  el.classList.add('val-pulse');
+  var clear = function () { el.classList.remove('val-pulse'); el.removeEventListener('animationend', clear); };
+  el.addEventListener('animationend', clear);
+};

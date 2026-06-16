@@ -48,6 +48,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="../tools.css">
+<link rel="stylesheet" href="/motion.css">
 
 <script type="application/ld+json">
 {
@@ -145,7 +146,7 @@
     <div class="tool-grid">
 
       <!-- Inputs -->
-      <div class="panel">
+      <div class="panel" data-reveal>
         <p class="panel-title">Inputs</p>
 
         <div class="input-row">
@@ -206,7 +207,7 @@
       </div>
 
       <!-- Results -->
-      <div class="panel">
+      <div class="panel" data-reveal>
         <p class="panel-title">Projection</p>
         <div aria-live="polite" aria-atomic="true" id="ls-results">
           <div class="stat-grid">
@@ -238,7 +239,7 @@
     <div class="tool-grid">
 
       <!-- Inputs -->
-      <div class="panel">
+      <div class="panel" data-reveal>
         <p class="panel-title">Inputs</p>
 
         <div class="input-row">
@@ -276,7 +277,7 @@
       </div>
 
       <!-- Results -->
-      <div class="panel">
+      <div class="panel" data-reveal>
         <p class="panel-title">Result</p>
         <div aria-live="polite" aria-atomic="true" id="cagr-results">
           <div class="stat-grid">
@@ -305,7 +306,7 @@
     <div class="tool-grid">
 
       <!-- Cashflow Table Panel -->
-      <div class="panel">
+      <div class="panel" data-reveal>
         <p class="panel-title">Cashflows</p>
         <p class="note">Enter investments as <strong>negative</strong> amounts (money out), redemptions and current value as <strong>positive</strong> (money in).</p>
 
@@ -330,7 +331,7 @@
       </div>
 
       <!-- XIRR Results -->
-      <div class="panel">
+      <div class="panel" data-reveal>
         <p class="panel-title">XIRR Result</p>
         <div aria-live="polite" aria-atomic="true" id="xirr-results">
           <div class="stat-grid">
@@ -453,6 +454,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('ls-gain').textContent = fINRS(gain);
     document.getElementById('ls-fv').textContent = fINRS(fv);
     document.getElementById('ls-fv-exact').textContent = fv >= 1e5 ? fINR(fv) : '';
+    if (window.hdPulse) { hdPulse(document.getElementById('ls-invested')); hdPulse(document.getElementById('ls-gain')); hdPulse(document.getElementById('ls-fv')); }
 
     /* growth chart */
     renderLumpsumChart(P, r, n);
@@ -505,12 +507,18 @@ document.addEventListener('DOMContentLoaded', function () {
       '</linearGradient>' +
       '</defs>' +
       '<path d="' + areaD + '" fill="url(#ls-grad)"/>' +
-      '<path d="' + d + '" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>' +
+      '<path d="' + d + '" pathLength="1" data-draw fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>' +
       /* dots at first, last and midpoint */
       '<circle cx="' + px(0).toFixed(1) + '" cy="' + py(0).toFixed(1) + '" r="3.5" fill="var(--accent)" opacity="0.7"/>' +
       '<circle cx="' + px(pts.length - 1).toFixed(1) + '" cy="' + py(pts.length - 1).toFixed(1) + '" r="4" fill="var(--accent)"/>' +
       labels +
       '</svg>';
+    /* line-draw: animate on first render, snap-in on later redraws */
+    var _lsLine = wrap.querySelector('[data-draw]');
+    if (_lsLine) {
+      if (!window._lsDrawn) { window._lsDrawn = true; requestAnimationFrame(function () { _lsLine.classList.add('in'); }); }
+      else { _lsLine.classList.add('in'); }
+    }
   }
 
   /* bind lumpsum inputs */
@@ -591,6 +599,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('cagr-abs').textContent  = fPct(absRet, 2);
     document.getElementById('cagr-gain').textContent = fINRS(gain);
     document.getElementById('cagr-gain-exact').textContent = Math.abs(gain) >= 1e5 ? fINR(gain) : '';
+    if (window.hdPulse) { hdPulse(document.getElementById('cagr-val')); hdPulse(document.getElementById('cagr-abs')); hdPulse(document.getElementById('cagr-gain')); }
 
     var interpEl = document.getElementById('cagr-interp');
     if (isNeg) {
@@ -782,6 +791,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('xirr-returned').textContent = fINRS(totalReturned);
     document.getElementById('xirr-gain').textContent     = fINRS(netGain);
     document.getElementById('xirr-gain-exact').textContent = Math.abs(netGain) >= 1e5 ? fINR(netGain) : '';
+    if (window.hdPulse) { hdPulse(document.getElementById('xirr-val')); hdPulse(document.getElementById('xirr-invested')); hdPulse(document.getElementById('xirr-returned')); hdPulse(document.getElementById('xirr-gain')); }
 
     if (rate < 0) {
       interpEl.textContent = 'These cashflows imply a loss of ' + fPct(Math.abs(rate), 2) + ' a year. Review your investment dates and amounts.';
@@ -884,6 +894,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 }); /* end DOMContentLoaded */
 </script>
+  <script src="/motion.js" defer></script>
   <script src="/lang-switch.js" defer></script>
 </body>
 </html>

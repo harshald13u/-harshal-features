@@ -1916,6 +1916,7 @@ html[data-theme="light"] .tracker-spotlight {
  ]
 }
 </script>
+<link rel="stylesheet" href="/motion.css">
 </head>
 <body>
 
@@ -1938,18 +1939,18 @@ html[data-theme="light"] .tracker-spotlight {
  <section class="hero">
  <div class="hero-text">
  <h1 class="name" id="name" aria-label="Harshal Dasani">हर्षल दसानी</h1>
- <div class="role-block">
+ <div class="role-block" data-reveal style="--rd:.06s">
  <div class="role-line"><strong>बाज़ार विशेषज्ञ</strong></div>
  <div class="loc-line">मुंबई, भारत</div>
  </div>
- <p class="tagline">यह समझने की कोशिश कि केंद्रीय बैंक, भू-राजनीति, पूँजी प्रवाह और मानव व्यवहार शेयर की कीमतों में कैसे झलकते हैं।</p>
+ <p class="tagline" data-reveal style="--rd:.12s">यह समझने की कोशिश कि केंद्रीय बैंक, भू-राजनीति, पूँजी प्रवाह और मानव व्यवहार शेयर की कीमतों में कैसे झलकते हैं।</p>
  </div>
 
  <div class="hero-right">
- <figure class="hero-photo" id="heroPhoto">
+ <figure class="hero-photo" id="heroPhoto" data-reveal style="--rd:.08s">
  <img src="harshal-dasani.jpg" alt="Harshal Dasani, Markets professional" width="1000" height="516" loading="eager" decoding="async">
  </figure>
- <nav class="hero-tags hero-tags-2" aria-label="Main sections">
+ <nav class="hero-tags hero-tags-2" aria-label="Main sections" data-reveal style="--rd:.16s">
  <a href="/tracker/">मीडिया</a>
  <a href="/hi/blog/">ब्लॉग</a>
  <a href="/hi/tools/">टूल्स</a>
@@ -1959,7 +1960,7 @@ html[data-theme="light"] .tracker-spotlight {
  </nav>
  </div>
 
- <section class="press" id="pressMarquee" aria-label="As featured on">
+ <section class="press" id="pressMarquee" aria-label="As featured on" data-reveal>
  <div class="press-label">प्रमुख प्रकाशनों में</div>
  <div class="press-track">
  
@@ -2006,15 +2007,15 @@ html[data-theme="light"] .tracker-spotlight {
  </section>
  </section>
 
- <section class="about" aria-labelledby="aboutLabel">
+ <section class="about" aria-labelledby="aboutLabel" data-reveal>
  <aside>
  <div class="about-side-label" id="aboutLabel">परिचय</div>
  <div class="about-side-title">चक्रों, मनोविज्ञान और समय का अध्येता।</div>
  <div class="about-stats">
- <div class="about-stat"><div class="about-stat-n">10+</div><div class="about-stat-l">बाज़ार में वर्ष</div></div>
- <div class="about-stat"><div class="about-stat-n">1,000+</div><div class="about-stat-l">मीडिया फ़ीचर्स</div></div>
+ <div class="about-stat"><div class="about-stat-n" data-count="10" data-suffix="+">10+</div><div class="about-stat-l">बाज़ार में वर्ष</div></div>
+ <div class="about-stat"><div class="about-stat-n" data-count="1000" data-suffix="+">1,000+</div><div class="about-stat-l">मीडिया फ़ीचर्स</div></div>
  <div class="about-stat"><div class="about-stat-n stat-narrow">इक्विटी &middot; कमोडिटीज़ &middot; करेंसी</div><div class="about-stat-l">एसेट क्लास</div></div>
- <div class="about-stat"><div class="about-stat-n">20+</div><div class="about-stat-l">कवर किए गए सेक्टर</div></div>
+ <div class="about-stat"><div class="about-stat-n" data-count="20" data-suffix="+">20+</div><div class="about-stat-l">कवर किए गए सेक्टर</div></div>
  <div class="about-stat"><div class="about-stat-n stat-narrow">बिज़नेस हेड</div><div class="about-stat-l"></div></div>
  </div>
  </aside>
@@ -2055,7 +2056,7 @@ html[data-theme="light"] .tracker-spotlight {
  </div>
  </section>
 
- <section class="home-spotlight" aria-labelledby="spotlightTitle">
+ <section class="home-spotlight" aria-labelledby="spotlightTitle" data-reveal>
  <div class="spotlight-head">
  <div>
  <div class="spotlight-kicker">ब्लॉग + मीडिया ट्रैकर</div>
@@ -2156,11 +2157,11 @@ html[data-theme="light"] .tracker-spotlight {
  </div>
  </section>
 
- <div class="social-head">
+ <div class="social-head" data-reveal>
  <span class="social-label">यहाँ भी</span>
  <span class="social-rule"></span>
  </div>
- <nav class="social" aria-label="Social profiles">
+ <nav class="social" aria-label="Social profiles" data-reveal style="--rd:.06s">
  <a class="soc" href="https://www.linkedin.com/in/harshal-dasani-/" target="_blank" rel="noopener noreferrer">
  <span class="soc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5.001zM3 9.5h4v11H3v-11zM10 9.5h3.8v1.55h.05a4.16 4.16 0 0 1 3.75-2.06c4.01 0 4.75 2.64 4.75 6.07v5.94h-4v-5.27c0-1.26-.02-2.88-1.76-2.88-1.76 0-2.03 1.37-2.03 2.79v5.36h-3.96v-11z"/></svg></span>
  <span class="soc-t"><span class="soc-name">LinkedIn</span><span class="soc-meta">प्रोफेशनल</span></span>
@@ -2509,5 +2510,6 @@ function isInteractive(el) {
 })();
 </script>
   <script src="/lang-switch.js" defer></script>
+  <script src="/motion.js" defer></script>
 </body>
 </html>

@@ -1530,7 +1530,15 @@ const $ = id => document.getElementById(id);
     if (!el) return;
     el.style.fontVariantNumeric = 'tabular-nums';
     el.classList.add('hd-tnum');
-    if (hasIO && W.requestAnimationFrame) { el.textContent = decimals ? (0).toFixed(decimals) : '0'; } /* start at 0: no final-value flash */
+    if (hasIO && W.requestAnimationFrame) {
+      el.textContent = decimals ? (0).toFixed(decimals) : '0'; /* start at 0: no final-value flash */
+      W.setTimeout(function () { /* safety: if the tab loaded hidden and never animated, still show the real number */
+        var cur = (el.textContent || '').replace(/,/g, '');
+        if (parseFloat(cur) === 0 && Number(target) !== 0) {
+          el.textContent = decimals ? Number(target).toFixed(decimals) : Math.round(Number(target)).toLocaleString('en-IN');
+        }
+      }, (dur || 1000) + 700);
+    }
     onView(el, function () { tween(el, target, decimals, dur); });
   }
 
@@ -1547,7 +1555,6 @@ const $ = id => document.getElementById(id);
       if (isNaN(val)) return;
       el.style.fontVariantNumeric = 'tabular-nums';
       el.classList.add('hd-tnum');
-      if (hasIO && W.requestAnimationFrame) { el.textContent = dec ? (0).toFixed(dec) : '0'; }
       onView(el, function () { tween(el, val, dec, 1100); });
     });
   }

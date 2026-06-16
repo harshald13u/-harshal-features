@@ -1838,6 +1838,17 @@ html[data-theme="light"] .tracker-spotlight {
  /* .press-track left alone - JS-driven inline transform must win */
  .mast-socials a { transition: none; }
 }
+/* ===== Motion v1: theme crossfade · about count-up · lens reveal ===== */
+html.motion-ready .lens-card[data-reveal]{opacity:0;transform:translateY(18px);transition:opacity .6s cubic-bezier(.4,0,.2,1),transform .6s cubic-bezier(.4,0,.2,1);}
+html.motion-ready .lens-card[data-reveal].in{opacity:1;transform:none;}
+html.motion-ready .lens-grid .lens-card[data-reveal]:nth-child(2){transition-delay:.07s;}
+html.motion-ready .lens-grid .lens-card[data-reveal]:nth-child(3){transition-delay:.14s;}
+html.motion-ready .lens-grid .lens-card[data-reveal]:nth-child(4){transition-delay:.21s;}
+::view-transition-old(root),::view-transition-new(root){animation-duration:.34s;}
+@media (prefers-reduced-motion: reduce){
+  html.motion-ready .lens-card[data-reveal]{opacity:1!important;transform:none!important;transition:none!important;}
+  ::view-transition-old(root),::view-transition-new(root){animation:none!important;}
+}
 </style>
 <script>
 (function(){
@@ -1848,6 +1859,7 @@ html[data-theme="light"] .tracker-spotlight {
  } catch(e) {}
  }
  applyTheme();
+ try{document.documentElement.classList.add('motion-ready');}catch(e){}
  // Re-apply on bfcache restore so back/forward nav keeps the user's choice
  window.addEventListener('pageshow', applyTheme);
 })();
@@ -2014,10 +2026,10 @@ html[data-theme="light"] .tracker-spotlight {
  <div class="about-side-label" id="aboutLabel">About</div>
  <div class="about-side-title">A reader of cycles, psychology, and time.</div>
  <div class="about-stats">
- <div class="about-stat"><div class="about-stat-n">10+</div><div class="about-stat-l">Years in markets</div></div>
- <div class="about-stat"><div class="about-stat-n">1,000+</div><div class="about-stat-l">Media features</div></div>
+ <div class="about-stat"><div class="about-stat-n" data-count="10" data-suffix="+">10+</div><div class="about-stat-l">Years in markets</div></div>
+ <div class="about-stat"><div class="about-stat-n" data-count="1000" data-suffix="+">1,000+</div><div class="about-stat-l">Media features</div></div>
  <div class="about-stat"><div class="about-stat-n stat-narrow">Equity &middot; Commodities &middot; Currencies</div><div class="about-stat-l">Asset classes</div></div>
- <div class="about-stat"><div class="about-stat-n">20+</div><div class="about-stat-l">Sectors covered</div></div>
+ <div class="about-stat"><div class="about-stat-n" data-count="20" data-suffix="+">20+</div><div class="about-stat-l">Sectors covered</div></div>
  <div class="about-stat"><div class="about-stat-n stat-narrow">Business Head</div><div class="about-stat-l">INVasset PMS &amp; AIF</div></div>
  </div>
  </aside>
@@ -2034,19 +2046,19 @@ html[data-theme="light"] .tracker-spotlight {
  <div class="lens-eyebrow">My Market Lens</div>
  <p class="lens-lede">Markets are rarely moved by one factor alone. I look at the intersection of liquidity, policy, valuation, geopolitics and behaviour, because the best signals often appear before the consensus narrative catches up.</p>
  <div class="lens-grid">
- <a class="lens-card" href="blog/?topic=macros" aria-label="Read Harshal Dasani's macro blogs">
+ <a class="lens-card" data-reveal href="blog/?topic=macros" aria-label="Read Harshal Dasani's macro blogs">
  <div class="lens-card-t">Macro</div>
  <div class="lens-card-d">Rates, DXY, bond yields, crude and liquidity</div>
  </a>
- <a class="lens-card" href="blog/?topic=geopolitics" aria-label="Read Harshal Dasani's geopolitics blogs">
+ <a class="lens-card" data-reveal href="blog/?topic=geopolitics" aria-label="Read Harshal Dasani's geopolitics blogs">
  <div class="lens-card-t">Geopolitics</div>
  <div class="lens-card-d">Conflicts, tariffs, supply chains and trade routes</div>
  </a>
- <a class="lens-card" href="blog/?topic=stock-market" aria-label="Read Harshal Dasani's stock market structure blogs">
+ <a class="lens-card" data-reveal href="blog/?topic=stock-market" aria-label="Read Harshal Dasani's stock market structure blogs">
  <div class="lens-card-t">Market Structure</div>
  <div class="lens-card-d">Global markets, Indian markets, FII/DII flows and valuation cycles</div>
  </a>
- <a class="lens-card" href="blog/?topic=commodities" aria-label="Read Harshal Dasani's commodities blogs">
+ <a class="lens-card" data-reveal href="blog/?topic=commodities" aria-label="Read Harshal Dasani's commodities blogs">
  <div class="lens-card-t">Commodities</div>
  <div class="lens-card-d">Gold, silver, energy, metals and supply cycles</div>
  </a>
@@ -2188,10 +2200,14 @@ html[data-theme="light"] .tracker-spotlight {
 <script>
 // Theme toggle, global so the inline onclick can call it
 function toggleTheme(){
- var current = document.documentElement.getAttribute('data-theme') || 'dark';
- var next = current === 'light' ? 'dark' : 'light';
- document.documentElement.setAttribute('data-theme', next);
- try { localStorage.setItem('hd-theme', next); } catch(e) {}
+ var d = document.documentElement;
+ var apply = function(){
+   var next = (d.getAttribute('data-theme')||'dark')==='light' ? 'dark' : 'light';
+   d.setAttribute('data-theme', next);
+   try { localStorage.setItem('hd-theme', next); } catch(e) {}
+ };
+ var rm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ if (document.startViewTransition && !rm) { document.startViewTransition(apply); } else { apply(); }
 }
 (function(){
  var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -2239,6 +2255,35 @@ function toggleTheme(){
  doors.forEach(function(d){ d.classList.add('is-in'); });
  animateCount(counter);
  }
+
+ // Motion v1: lens-card staggered reveal
+ var lensEls = document.querySelectorAll('.lens-card[data-reveal]');
+ if (lensEls.length){
+  if ('IntersectionObserver' in window && !reduced){
+   var lio = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); lio.unobserve(e.target); } }); }, { threshold: 0.18 });
+   lensEls.forEach(function(c){ lio.observe(c); });
+  } else { lensEls.forEach(function(c){ c.classList.add('in'); }); }
+ }
+
+ // Motion v1: About-stats count-up
+ (function(){
+  var wrap = document.querySelector('.about-stats'); if(!wrap) return;
+  var nums = wrap.querySelectorAll('[data-count]');
+  function run(){
+   nums.forEach(function(el){
+    if (el.dataset.done) return; el.dataset.done='1';
+    var target = parseInt(el.getAttribute('data-count')||'0',10);
+    var suf = el.getAttribute('data-suffix')||'';
+    if (reduced){ el.textContent = target.toLocaleString('en-IN')+suf; return; }
+    var start=performance.now(), dur=1400;
+    (function step(t){ var pr=Math.min(1,(t-start)/dur); var e=1-Math.pow(1-pr,3); el.textContent=Math.round(target*e).toLocaleString('en-IN')+suf; if(pr<1) requestAnimationFrame(step); })(performance.now());
+   });
+  }
+  if ('IntersectionObserver' in window){
+   var aio=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ run(); aio.disconnect(); } }); }, { threshold: 0.3 });
+   aio.observe(wrap);
+  } else { run(); }
+ })();
 
  // Live-sync the Media Tracker spotlight: count/avg/latest from tracker data + special-features.json.
  (function(){

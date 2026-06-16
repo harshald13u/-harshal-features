@@ -23,6 +23,12 @@
 <meta property="og:image" content="https://harshaldasani.pages.dev/harshal-dasani.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@HarshalDasanii">
+<meta property="og:locale" content="hi_IN">
+<meta property="og:image:alt" content="Harshal Dasani">
+<meta name="twitter:title" content="FII / DII गतिविधि, Harshal Dasani">
+<meta name="twitter:description" content="भारतीय बाज़ारों में दैनिक विदेशी बनाम घरेलू संस्थागत प्रवाह, सरल भाषा में।">
+<meta name="twitter:image" content="https://harshaldasani.pages.dev/harshal-dasani.jpg">
+<meta name="twitter:creator" content="@HarshalDasanii">
 <meta name="theme-color" content="#0e0c0a">
 <link rel="manifest" href="/manifest.json">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -123,7 +129,7 @@ svg{display:block;width:100%;height:auto;} text{font-family:'Inter',sans-serif;}
   <header class="masthead">
     <div class="mast-meta"><a href="https://harshaldasani.pages.dev/hi/">&larr; होम</a></div>
     <div class="mast-trail"><a href="https://harshaldasani.pages.dev/hi/">Harshal Dasani</a> &middot; <span>FII / DII</span></div>
-    <button class="mast-theme-toggle" onclick="toggleBlogTheme()" aria-label="Toggle light / dark theme" title="Toggle theme" type="button">
+    <button class="mast-theme-toggle" onclick="toggleBlogTheme()" aria-label="लाइट / डार्क थीम बदलें" title="थीम बदलें" type="button">
       <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg>
       <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
     </button>
@@ -145,7 +151,7 @@ svg{display:block;width:100%;height:auto;} text{font-family:'Inter',sans-serif;}
   <div class="sec" data-reveal>
     <div class="sec-head"><h2 class="sec-title" id="barTitle">दैनिक शुद्ध प्रवाह</h2>
       <div class="legend"><span><i style="background:var(--fii)"></i>FII / FPI</span><span><i style="background:var(--dii)"></i>DII</span></div></div>
-    <div class="period-seg" id="periodSeg" role="tablist" aria-label="Aggregation period">
+    <div class="period-seg" id="periodSeg" role="tablist" aria-label="समूहन अवधि">
       <button type="button" data-p="daily" class="active" role="tab" aria-selected="true">दैनिक</button>
       <button type="button" data-p="weekly" role="tab" aria-selected="false">साप्ताहिक</button>
       <button type="button" data-p="monthly" role="tab" aria-selected="false">मासिक</button>
@@ -158,14 +164,14 @@ svg{display:block;width:100%;height:auto;} text{font-family:'Inter',sans-serif;}
 
   <div class="sec" data-reveal style="--rd:.06s">
     <div class="sec-head"><h2 class="sec-title">संचयी प्रवाह</h2><span class="sec-note" id="cumNote"></span></div>
-    <div class="period-seg cum-seg" id="cumSeg" role="tablist" aria-label="Cumulative chart period" style="margin:8px 0 12px;display:flex;flex-wrap:wrap;gap:8px;align-items:center">
+    <div class="period-seg cum-seg" id="cumSeg" role="tablist" aria-label="संचयी चार्ट अवधि" style="margin:8px 0 12px;display:flex;flex-wrap:wrap;gap:8px;align-items:center">
       <button type="button" data-cp="daily" class="active" role="tab" aria-selected="true">दैनिक</button>
       <button type="button" data-cp="weekly" role="tab" aria-selected="false">साप्ताहिक</button>
       <button type="button" data-cp="monthly" role="tab" aria-selected="false">मासिक</button>
       <button type="button" data-cp="custom" role="tab" aria-selected="false">कस्टम रेंज</button>
       <div id="cumCustom" style="display:flex;align-items:center;gap:8px;margin-left:auto;font-size:12px;color:var(--muted);flex-wrap:wrap">
-        <label>से <input type="date" id="cumFrom" style="background:transparent;border:1px solid var(--rule);color:var(--ink);font:inherit;padding:4px 8px;border-radius:6px;margin-left:4px"></label>
-        <label>तक <input type="date" id="cumTo" style="background:transparent;border:1px solid var(--rule);color:var(--ink);font:inherit;padding:4px 8px;border-radius:6px;margin-left:4px"></label>
+        <label>से <input type="date" id="cumFrom" aria-label="आरंभ तिथि" style="background:transparent;border:1px solid var(--rule);color:var(--ink);font:inherit;padding:4px 8px;border-radius:6px;margin-left:4px"></label>
+        <label>तक <input type="date" id="cumTo" aria-label="अंत तिथि" style="background:transparent;border:1px solid var(--rule);color:var(--ink);font:inherit;padding:4px 8px;border-radius:6px;margin-left:4px"></label>
         <button type="button" id="cumApply" style="background:var(--accent);color:#1a1206;border:0;padding:10px 16px;min-height:44px;border-radius:6px;font-weight:700;cursor:pointer">लागू करें</button>
       </div>
     </div>
@@ -296,7 +302,7 @@ function renderBars(rows,period){
   const gl=v=>`<line x1="${padL}" x2="${W-padR}" y1="${(zeroY-sc(v)).toFixed(1)}" y2="${(zeroY-sc(v)).toFixed(1)}" stroke="var(--rule-soft)"></line>
     <text x="${W-padR}" y="${(zeroY-sc(v)-3).toFixed(1)}" text-anchor="end" font-size="8.5" fill="var(--faint)">${fmtINR(v)}</text>`;
   const step=niceStep(maxAbs/2);
-  document.getElementById('barChart').innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${period} FII and DII net flows">
+  document.getElementById('barChart').innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${period} FII और DII शुद्ध प्रवाह">
     ${gl(step)}${gl(-step)}
     <line x1="${padL}" x2="${W-padR}" y1="${zeroY}" y2="${zeroY}" stroke="var(--rule)" stroke-width="1"></line>
     ${bars}</svg>`;
@@ -453,7 +459,7 @@ function renderCumulative(H){
   _tickIdx.forEach(function(i){
     xTickMarks += '<line x1="' + x(i).toFixed(1) + '" x2="' + x(i).toFixed(1) + '" y1="' + (padT + plotH).toFixed(1) + '" y2="' + (padT + plotH + 3).toFixed(1) + '" stroke="var(--rule)"></line>';
   });
-  document.getElementById('cumChart').innerHTML=`<svg viewBox="0 0 ${W} ${Ht}" role="img" aria-label="Cumulative FII and DII flows">
+  document.getElementById('cumChart').innerHTML=`<svg viewBox="0 0 ${W} ${Ht}" role="img" aria-label="संचयी FII और DII प्रवाह">
     ${yl(mx*0.66)}${yl(0)}${mn<0?yl(mn*0.66):''}
     <line x1="${padL}" x2="${W-padR}" y1="${zero.toFixed(1)}" y2="${zero.toFixed(1)}" stroke="var(--rule)"></line>
     ${xTickMarks}${xTicks}

@@ -574,7 +574,7 @@ document.addEventListener('DOMContentLoaded', function () {
         ' &mdash; may be set off against other capital gains or carried forward for up to 8 years. Consult a qualified tax adviser.';
 
       statGain.textContent      = formatINRShort(gain);
-      statGainExact.textContent = gain !== Math.round(gain / 100) * 100 ? formatINR(gain) : '';
+      statGainExact.textContent = formatINR(gain);
       statTaxable.textContent   = '₹0';
       statTaxableExact.textContent = '';
       statTax.textContent       = '₹0';

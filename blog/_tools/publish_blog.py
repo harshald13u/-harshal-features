@@ -1732,6 +1732,12 @@ def publish_blog(docx_path):
 
     build_rss_feed(f"{BLOG_DIR}/feed.xml", SITE_BASE)
     build_rss_feed(f"{DEPLOYED}/blog/feed.xml", SITE_BASE)
+    # Auto-submit to IndexNow (Bing/Yandex/etc.) — best-effort, no login. Google self-discovers via sitemap.
+    try:
+        from ping_indexnow import ping as _indexnow_ping
+        print("[indexnow]", _indexnow_ping([canonical, f"{SITE_BASE}/blog/", f"{SITE_BASE}/", f"{SITE_BASE}/sitemap.xml"]))
+    except Exception as _e:
+        print("[indexnow] skip:", _e)
 
     return {
         "slug": slug, "title": title, "topic": topic, "date": date_str,

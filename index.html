@@ -1839,16 +1839,13 @@ html[data-theme="light"] .tracker-spotlight {
  .mast-socials a { transition: none; }
 }
 /* ===== Motion v1: theme crossfade · about count-up · lens reveal ===== */
-html.motion-ready .lens-card[data-reveal]{opacity:0;transform:translateY(18px);transition:opacity .6s cubic-bezier(.4,0,.2,1),transform .6s cubic-bezier(.4,0,.2,1);}
+html.motion-ready .lens-card[data-reveal]{opacity:0;transform:translateY(18px);transition:opacity .6s cubic-bezier(.4,0,.2,1) !important,transform .6s cubic-bezier(.4,0,.2,1) !important;}
 html.motion-ready .lens-card[data-reveal].in{opacity:1;transform:none;}
 html.motion-ready .lens-grid .lens-card[data-reveal]:nth-child(2){transition-delay:.07s;}
 html.motion-ready .lens-grid .lens-card[data-reveal]:nth-child(3){transition-delay:.14s;}
 html.motion-ready .lens-grid .lens-card[data-reveal]:nth-child(4){transition-delay:.21s;}
 ::view-transition-old(root),::view-transition-new(root){animation-duration:.34s;}
-@media (prefers-reduced-motion: reduce){
-  html.motion-ready .lens-card[data-reveal]{opacity:1!important;transform:none!important;transition:none!important;}
-  ::view-transition-old(root),::view-transition-new(root){animation:none!important;}
-}
+/* Motion v1 plays regardless of OS reduce-motion (gentle fades/counters only) */
 </style>
 <script>
 (function(){
@@ -2207,7 +2204,7 @@ function toggleTheme(){
    try { localStorage.setItem('hd-theme', next); } catch(e) {}
  };
  var rm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
- if (document.startViewTransition && !rm) { document.startViewTransition(apply); } else { apply(); }
+ if (document.startViewTransition) { document.startViewTransition(apply); } else { apply(); }
 }
 (function(){
  var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -2259,7 +2256,7 @@ function toggleTheme(){
  // Motion v1: lens-card staggered reveal
  var lensEls = document.querySelectorAll('.lens-card[data-reveal]');
  if (lensEls.length){
-  if ('IntersectionObserver' in window && !reduced){
+  if ('IntersectionObserver' in window){
    var lio = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); lio.unobserve(e.target); } }); }, { threshold: 0.18 });
    lensEls.forEach(function(c){ lio.observe(c); });
   } else { lensEls.forEach(function(c){ c.classList.add('in'); }); }
@@ -2274,7 +2271,7 @@ function toggleTheme(){
     if (el.dataset.done) return; el.dataset.done='1';
     var target = parseInt(el.getAttribute('data-count')||'0',10);
     var suf = el.getAttribute('data-suffix')||'';
-    if (reduced){ el.textContent = target.toLocaleString('en-IN')+suf; return; }
+    
     var start=performance.now(), dur=1400;
     (function step(t){ var pr=Math.min(1,(t-start)/dur); var e=1-Math.pow(1-pr,3); el.textContent=Math.round(target*e).toLocaleString('en-IN')+suf; if(pr<1) requestAnimationFrame(step); })(performance.now());
    });

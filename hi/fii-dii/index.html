@@ -3,93 +3,589 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>एफआईआई/डीआईआई गतिविधि — Harshal Dasani</title>
-<meta name="description" content="भारतीय बाज़ारों में विदेशी (FII/FPI) और घरेलू (DII) संस्थागत निवेश प्रवाह — हिंदी में।">
-<meta http-equiv="content-language" content="hi-IN">
+<title>FII / DII गतिविधि — दैनिक प्रवाह | Harshal Dasani</title>
+<meta name="description" content="भारतीय बाज़ारों में दैनिक FII और DII गतिविधि — विदेशी बनाम घरेलू संस्थागत प्रवाह, सरल भाषा में, Harshal Dasani द्वारा।">
+<meta name="keywords" content="FII DII data, FII DII activity, foreign institutional investors, domestic institutional investors, India market flows">
+<meta name="author" content="Harshal Dasani">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<link rel="canonical" href="https://harshaldasani.pages.dev/hi/fii-dii/">
-<link rel="alternate" hreflang="hi-IN" href="https://harshaldasani.pages.dev/hi/fii-dii/">
 <link rel="alternate" hreflang="en-IN" href="https://harshaldasani.pages.dev/fii-dii/">
+<link rel="alternate" hreflang="hi-IN" href="https://harshaldasani.pages.dev/hi/fii-dii/">
 <link rel="alternate" hreflang="x-default" href="https://harshaldasani.pages.dev/fii-dii/">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Harshal Dasani">
-<meta property="og:title" content="एफआईआई/डीआईआई, Harshal Dasani">
-<meta property="og:description" content="विदेशी और घरेलू संस्थागत निवेश प्रवाह, हिंदी में।">
-<meta property="og:url" content="https://harshaldasani.pages.dev/hi/fii-dii/">
-<meta property="og:image" content="https://harshaldasani.pages.dev/harshal-dasani.jpg">
-<meta name="theme-color" content="#0e0c0a">
-<link rel="manifest" href="/manifest.json">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<link rel="canonical" href="https://harshaldasani.pages.dev/hi/fii-dii/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Harshal Dasani">
+<meta property="og:title" content="FII / DII गतिविधि, Harshal Dasani">
+<meta property="og:description" content="भारतीय बाज़ारों में दैनिक विदेशी बनाम घरेलू संस्थागत प्रवाह, सरल भाषा में।">
+<meta property="og:url" content="https://harshaldasani.pages.dev/hi/fii-dii/">
+<meta property="og:image" content="https://harshaldasani.pages.dev/harshal-dasani.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@HarshalDasanii">
+<meta name="theme-color" content="#0e0c0a">
+<link rel="manifest" href="/manifest.json">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <style>
-:root{--bg:#0e0c0a;--bg-2:#15110d;--ink:#ece4d3;--ink-2:#c9c0ad;--muted:#8a8273;--faint:#807866;--rule:rgba(236,228,211,0.10);--rule-soft:rgba(236,228,211,0.06);--accent:#d4a64a;--accent-soft:rgba(212,166,74,0.08)}
-html[data-theme="light"]{--bg:#ebe5d7;--bg-2:#ddd4c1;--ink:#1a3458;--ink-2:#3a527a;--muted:#54687f;--faint:#5f7790;--rule:rgba(26,52,88,0.14);--rule-soft:rgba(26,52,88,0.07);--accent:#b8852b;--accent-soft:rgba(184,133,43,0.10)}
-*{box-sizing:border-box}html,body{margin:0;padding:0}
-html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;background:var(--bg)}
-body{font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink-2);min-height:100vh;line-height:1.55;-webkit-text-size-adjust:100%;overflow-x:hidden}
-body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(1200px 700px at 85% -10%,rgba(212,166,74,0.045),transparent 60%),radial-gradient(900px 600px at -5% 105%,rgba(212,166,74,0.025),transparent 60%)}
-a{color:inherit;text-decoration:none}
-.page{position:relative;z-index:1;max-width:1280px;margin:0 auto;padding:max(26px,env(safe-area-inset-top)) max(48px,env(safe-area-inset-right)) 72px max(48px,env(safe-area-inset-left))}
-.masthead{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:18px;padding:max(12px,env(safe-area-inset-top)) 0 18px;border-bottom:1px solid var(--rule);margin-bottom:40px;position:sticky;top:0;z-index:100;background:var(--bg)}
-@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.masthead{background:rgba(14,12,10,0.88);backdrop-filter:saturate(140%) blur(14px);-webkit-backdrop-filter:saturate(140%) blur(14px)}html[data-theme="light"] .masthead{background:rgba(235,229,215,0.88)}}
-.mast-trail{justify-self:end;text-align:right;font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:var(--muted);font-weight:500;white-space:nowrap}
-.mast-trail a:hover{color:var(--accent)}
-.mast-meta{justify-self:start;font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:var(--muted);font-weight:500}
-.mast-meta a:hover{color:var(--accent)}
-.mast-theme-toggle{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.04);border:1px solid var(--rule);color:var(--ink-2);cursor:pointer;padding:0;margin:0;transition:all .2s ease;position:relative;justify-self:end}
-.mast-theme-toggle:hover{color:var(--accent);border-color:var(--accent);background:rgba(212,166,74,0.08);transform:translateY(-1px)}
-.mast-theme-toggle .icon-sun{display:none}html[data-theme="light"] .mast-theme-toggle .icon-sun{display:block}html[data-theme="light"] .mast-theme-toggle .icon-moon{display:none}
-html[data-theme="light"] .mast-theme-toggle{background:rgba(26,52,88,0.04)}
-.blog-hero{margin-bottom:30px;text-align:center}
-.blog-title{font-family:'Inter',sans-serif;font-weight:800;font-size:clamp(40px,5.2vw,68px);line-height:1.0;letter-spacing:-0.02em;margin:0 0 16px;color:var(--ink)}
-.blog-sub{font-size:15.5px;color:var(--ink-2);max-width:620px;line-height:1.6;margin:0 auto}
-.tools-divider{margin:26px 0 32px;border:0;border-top:1px solid var(--rule)}
-.posts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.tool-card{display:flex;flex-direction:column;background:var(--bg-2);border:1px solid var(--rule);border-radius:8px;overflow:hidden;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
-.tool-card:hover{transform:translateY(-3px);border-color:rgba(212,166,74,0.35);box-shadow:0 18px 40px rgba(0,0,0,0.4)}
-.tool-icon{height:176px;background:#0e0c0a;display:flex;align-items:center;justify-content:center;font-size:40px;color:var(--accent);padding:0}
-html[data-theme="light"] .tool-icon{background:#ebe5d7}
-.tool-logo-img{display:block;width:100%;height:100%;object-fit:cover}
-.tool-logo-light{display:none}html[data-theme="light"] .tool-logo-dark{display:none}html[data-theme="light"] .tool-logo-light{display:block}
-.tool-body{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1;gap:10px}
-.tool-tag{font-size:10px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--accent)}
-.tool-title{font-family:'Inter',sans-serif;font-weight:700;font-size:18px;line-height:1.35;letter-spacing:-0.01em;color:var(--ink);margin:0}
-.tool-desc{font-size:14px;line-height:1.6;color:var(--ink-2);margin:0;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-.tool-meta{margin-top:auto;padding-top:14px;display:flex;justify-content:flex-end;align-items:center;font-size:11px;color:var(--muted);letter-spacing:0.6px}
-.tool-meta .tool-arrow{color:var(--accent);transition:transform .2s ease}
-.tool-card:hover .tool-arrow{transform:translateX(3px)}
-.blog-footer{margin-top:80px;padding-top:28px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;align-items:center;font-size:11px;color:var(--muted);letter-spacing:0.4px}
-.blog-footer a:hover{color:var(--accent)}
-@media (max-width:960px){.page{padding:24px 32px 64px}.posts-grid{grid-template-columns:repeat(2,1fr);gap:18px}}
-@media (max-width:640px){.page{padding:18px 20px 52px}.masthead{padding-bottom:14px;margin-bottom:32px}.mast-trail{display:none}.mast-meta{font-size:9.5px;letter-spacing:1.3px}.blog-title{font-size:clamp(34px,10vw,52px)}.posts-grid{grid-template-columns:1fr;gap:14px}.tool-icon{height:168px}}
-.blog-empty{padding:80px 32px;text-align:center;border:1px dashed var(--rule);border-radius:12px;background:rgba(21,17,13,0.5)}.blog-empty-title{font-family:'Inter',sans-serif;font-weight:700;font-size:22px;color:var(--ink);margin:0 0 8px}.blog-empty-sub{font-size:14px;color:var(--ink-2);max-width:440px;margin:0 auto}
+:root{color-scheme:dark light; --bg:#0e0c0a; --bg-2:#15110d; --ink:#ece4d3; --ink-2:#c9c0ad; --muted:#8a8273; --faint:#807866;
+  --rule:rgba(236,228,211,0.10); --rule-soft:rgba(236,228,211,0.06); --accent:#d4a64a; --accent-soft:rgba(212,166,74,0.08);
+  --fii:#d4a64a; --dii:#ece4d3; --fii-dim:rgba(212,166,74,0.18); --dii-dim:rgba(236,228,211,0.10); --navy-bar:#3a6db0; }
+html[data-theme="light"]{ --bg:#ebe5d7; --bg-2:#ddd4c1; --ink:#1a3458; --ink-2:#3a527a; --muted:#54687f; --faint:#5f7790;
+  --rule:rgba(26,52,88,0.14); --rule-soft:rgba(26,52,88,0.07); --accent:#b8852b; --accent-soft:rgba(184,133,43,0.10);
+  --fii:#b8852b; --dii:#1a3458; --fii-dim:rgba(184,133,43,0.16); --dii-dim:rgba(26,52,88,0.12); --navy-bar:#27548a; }
+*{box-sizing:border-box;} html,body{margin:0;padding:0;} html{-webkit-font-smoothing:antialiased;background:var(--bg);}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink-2);
+  min-height:100vh;line-height:1.55;font-feature-settings:"ss01","cv11";overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(1200px 700px at 85% -10%,rgba(212,166,74,0.045),transparent 60%),radial-gradient(900px 600px at -5% 105%,rgba(212,166,74,0.025),transparent 60%);}
+a{color:inherit;text-decoration:none;} .num{font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1,"lnum" 1;}
+.page{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:max(26px,env(safe-area-inset-top)) max(48px,env(safe-area-inset-right)) 72px max(48px,env(safe-area-inset-left));}
+.masthead{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:18px;padding:max(12px,env(safe-area-inset-top)) 0 18px;
+  border-bottom:1px solid var(--rule);margin-bottom:40px;position:sticky;top:0;z-index:100;background:var(--bg);}
+@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.masthead{background:rgba(14,12,10,0.88);backdrop-filter:saturate(140%) blur(14px);-webkit-backdrop-filter:saturate(140%) blur(14px);}
+  html[data-theme="light"] .masthead{background:rgba(235,229,215,0.88);}}
+.mast-meta{justify-self:start;font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:var(--muted);font-weight:500;}
+.mast-meta a:hover{color:var(--accent);}
+.mast-trail{justify-self:end;text-align:right;font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:var(--muted);font-weight:500;white-space:nowrap;}
+.mast-trail a:hover{color:var(--accent);}
+.mast-theme-toggle{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;
+  background:rgba(255,255,255,0.04);border:1px solid var(--rule);color:var(--ink-2);cursor:pointer;padding:0;justify-self:end;transition:.2s;}
+.mast-theme-toggle:hover{color:var(--accent);border-color:var(--accent);background:rgba(212,166,74,0.08);transform:translateY(-1px);}
+.mast-theme-toggle .icon-sun{display:none;} html[data-theme="light"] .mast-theme-toggle .icon-sun{display:block;} html[data-theme="light"] .mast-theme-toggle .icon-moon{display:none;}
+html[data-theme="light"] .mast-theme-toggle{background:rgba(26,52,88,0.04);}
+.blog-hero{margin-bottom:22px;text-align:center;}
+.blog-title{font-weight:800;font-size:clamp(40px,5.4vw,70px);line-height:0.97;letter-spacing:-0.035em;margin:0 0 14px;color:var(--ink);}
+.blog-sub{font-size:15.5px;color:var(--ink-2);max-width:640px;line-height:1.5;margin:0 auto;}
+.tools-divider{margin:22px 0 24px;border:0;border-top:1px solid var(--rule);}
+.ribbon{display:flex;gap:8px;align-items:center;justify-content:center;flex-wrap:wrap;font-size:12px;color:var(--muted);
+  background:var(--accent-soft);border:1px solid var(--rule);border-radius:8px;padding:8px 14px;margin:0 auto 24px;max-width:780px;text-align:center;}
+.ribbon b{color:var(--accent);font-weight:700;} .ribbon.hide{display:none;}
+
+/* snapshot */
+.snap{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:14px;}
+.snap-card{background:var(--bg-2);border:1px solid var(--rule);border-radius:10px;padding:20px 22px;}
+.snap-card .who{display:flex;align-items:center;gap:9px;font-size:12px;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);font-weight:600;}
+.snap-card .who .dot{width:9px;height:9px;border-radius:50%;}
+.dot.fii{background:var(--fii);} .dot.dii{background:var(--dii);}
+.snap-card .net{font-weight:800;font-size:34px;letter-spacing:-0.025em;line-height:1;margin:12px 0 4px;}
+.snap-card .net.sell{color:var(--fii);} .snap-card .net.buy{color:var(--dii);}
+.snap-card .bs{font-size:12px;color:var(--muted);} .snap-card .bs b{color:var(--ink-2);font-weight:600;}
+.snap-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:12px;color:var(--faint);margin-bottom:26px;}
+.badge-conf{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;color:var(--dii);border:1px solid color-mix(in srgb,var(--dii) 40%,transparent);
+  background:var(--dii-dim);border-radius:99px;padding:3px 9px;}
+.badge-prov{font-size:11px;font-weight:600;color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 40%,transparent);background:var(--accent-soft);border-radius:99px;padding:3px 9px;}
+
+/* narrative */
+.tug{background:var(--bg-2);border:1px solid var(--rule);border-radius:10px;padding:18px 22px;margin-bottom:26px;}
+.tug h3{margin:0 0 6px;font-size:13px;letter-spacing:1.1px;text-transform:uppercase;color:var(--accent);font-weight:700;}
+.tug p{margin:0;font-size:15px;color:var(--ink-2);} .tug p b{color:var(--ink);font-weight:700;}
+
+/* section + charts */
+.sec{margin:28px 0;}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:6px;}
+.sec-title{font-weight:700;font-size:18px;letter-spacing:-0.015em;color:var(--ink);margin:0;}
+.sec-note{font-size:12px;color:var(--muted);}
+.legend{display:flex;gap:16px;font-size:12px;color:var(--muted);}
+.legend span{display:inline-flex;align-items:center;gap:6px;} .legend i{width:11px;height:11px;border-radius:3px;display:inline-block;}
+.chart-wrap{background:var(--bg-2);border:1px solid var(--rule);border-radius:10px;padding:18px 16px 12px;}
+.period-seg{display:inline-flex;gap:4px;margin:0 0 12px;background:var(--bg-2);border:1px solid var(--rule);border-radius:999px;padding:3px;}
+.period-seg button{appearance:none;border:0;background:transparent;color:var(--muted);font:inherit;font-size:12px;font-weight:600;letter-spacing:.3px;padding:6px 14px;border-radius:999px;cursor:pointer;transition:background .15s,color .15s;}
+.period-seg button:hover{color:var(--ink);}
+.period-seg button.active{background:var(--accent);color:#14110c;}
+.chart-tip{position:absolute;pointer-events:none;z-index:5;background:var(--bg-2);border:1px solid var(--rule);border-radius:8px;padding:8px 10px;font-size:12px;line-height:1.5;color:var(--ink);box-shadow:0 8px 22px rgba(0,0,0,.4);white-space:nowrap;transform:translate(-50%,-118%);}
+.chart-tip .tt-d{font-weight:700;margin-bottom:3px;color:var(--ink);}
+.chart-tip .tt-r{display:flex;align-items:center;gap:6px;}
+.chart-tip .tt-r i{width:8px;height:8px;border-radius:2px;display:inline-block;flex:0 0 8px;}
+#barChart svg rect.hit{cursor:crosshair;}
+svg{display:block;width:100%;height:auto;} text{font-family:'Inter',sans-serif;}
+
+/* stat strip */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:8px 0 4px;}
+.stat{background:var(--bg-2);border:1px solid var(--rule);border-radius:9px;padding:15px 16px;}
+.stat .v{font-weight:800;font-size:22px;letter-spacing:-0.02em;color:var(--ink);line-height:1;}
+.stat .v.sell{color:var(--fii);} .stat .v.buy{color:var(--dii);}
+.stat .l{font-size:10.5px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);margin-top:9px;}
+
+.disc{margin:30px 0 0;padding:16px 18px;border:1px solid var(--rule);border-radius:8px;background:var(--bg-2);font-size:11.5px;color:var(--faint);line-height:1.6;}
+.disc b{color:var(--muted);}
+.blog-footer{margin-top:56px;padding-top:28px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;align-items:center;font-size:11px;color:var(--muted);}
+.blog-footer a:hover{color:var(--accent);}
+@media(max-width:820px){.page{padding:24px 28px 60px;} .stats{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.page{padding:18px 18px 50px;} .mast-trail{display:none;} .snap{grid-template-columns:1fr;} .blog-title{font-size:clamp(36px,11vw,54px);} .snap-card .net{font-size:30px;}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
-<script>(function(){function a(){try{var t=localStorage.getItem('hd-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}}a();window.addEventListener('pageshow',a)})();</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"FII/DII Daily & Monthly Activity — Indian Cash Market","description":"Daily (2024-2026) and monthly (2006-2026) Foreign and Domestic Institutional Investor net buy/sell activity in the Indian cash market, compiled from NSE/BSE public data.","creator":{"@type":"Person","name":"Harshal Dasani","url":"https://harshaldasani.pages.dev/"},"temporalCoverage":"2006-04/2026-06","license":"https://creativecommons.org/licenses/by/4.0/","isAccessibleForFree":true,"distribution":[{"@type":"DataDownload","encodingFormat":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","contentUrl":"https://harshaldasani.pages.dev/fii-dii/FII_DII_History.xlsx"},{"@type":"DataDownload","encodingFormat":"text/csv","contentUrl":"https://harshaldasani.pages.dev/fii-dii/fii_dii_history.csv"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"होम","item":"https://harshaldasani.pages.dev/hi/"},{"@type":"ListItem","position":2,"name":"FII / DII","item":"https://harshaldasani.pages.dev/hi/fii-dii/"}]}</script>
+<script>(function(){function a(){try{var t=localStorage.getItem('hd-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);}catch(e){}}a();window.addEventListener('pageshow',a);})();</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"FII/DII Daily & Monthly Activity — Indian Cash Market","description":"Daily (2024-2026) and monthly (2006-2026) Foreign and Domestic Institutional Investor net buy/sell activity in the Indian cash market, compiled from NSE/BSE public data.","creator":{"@type":"Person","name":"Harshal Dasani","url":"https://harshaldasani.pages.dev/"},"temporalCoverage":"2006-04/2026-06","license":"https://creativecommons.org/licenses/by/4.0/","isAccessibleForFree":true,"distribution":[{"@type":"DataDownload","encodingFormat":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","contentUrl":"https://harshaldasani.pages.dev/fii-dii/FII_DII_History.xlsx"},{"@type":"DataDownload","encodingFormat":"text/csv","contentUrl":"https://harshaldasani.pages.dev/fii-dii/fii_dii_history.csv"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://harshaldasani.pages.dev/"},{"@type":"ListItem","position":2,"name":"FII / DII","item":"https://harshaldasani.pages.dev/fii-dii/"}]}</script>
 </head>
 <body>
 <main id="main" class="page">
   <header class="masthead">
     <div class="mast-meta"><a href="https://harshaldasani.pages.dev/hi/">&larr; होम</a></div>
-    <div class="mast-trail"><a href="https://harshaldasani.pages.dev/hi/">Harshal Dasani</a> &middot; <span>एफआईआई/डीआईआई</span></div>
-    <button class="mast-theme-toggle" onclick="toggleBlogTheme()" aria-label="थीम बदलें" title="थीम बदलें" type="button">
+    <div class="mast-trail"><a href="https://harshaldasani.pages.dev/hi/">Harshal Dasani</a> &middot; <span>FII / DII</span></div>
+    <button class="mast-theme-toggle" onclick="toggleBlogTheme()" aria-label="Toggle light / dark theme" title="Toggle theme" type="button">
       <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg>
       <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
     </button>
   </header>
+
   <section class="blog-hero">
-    <h1 class="blog-title">Harshal Dasani, एफआईआई/डीआईआई।</h1>
-    <p class="blog-sub">भारतीय बाज़ारों में विदेशी (FII/FPI) और घरेलू (DII) संस्थागत निवेश प्रवाह।</p>
+    <h1 class="blog-title">FII / DII गतिविधि।</h1>
+    <p class="blog-sub">भारतीय बाज़ारों को कौन चला रहा है — विदेशी बनाम घरेलू संस्थाएँ, ₹ करोड़ में। दैनिक अस्थायी कैश प्रवाह, खींचतान और रुझान। सरल भाषा में।</p>
   </section>
   <hr class="tools-divider">
-  <div class="posts-grid"><div class="blog-empty"><h2 class="blog-empty-title">जल्द आ रहा है</h2><p class="blog-empty-sub">विदेशी (FII/FPI) और घरेलू (DII) संस्थागत निवेश प्रवाह डेटा यहाँ दिखाई देगा।</p></div></div>
-  <footer class="blog-footer"><div>&copy; 2026 Harshal Dasani</div><div><a href="https://harshaldasani.pages.dev/hi/">harshaldasani.pages.dev</a></div></footer>
+
+  <div class="ribbon" id="ribbon">⚙ <b>पूर्वावलोकन / नमूना डेटा</b> — लाइव फ़ीड जुड़ने तक वास्तविक हाल के आँकड़े दिखाए जा रहे हैं। <code>/api/fii-dii</code> लाइव होते ही स्वतः अपडेट हो जाएगा।</div>
+
+  <div class="snap" id="snap"></div>
+  <div class="snap-meta" id="snapMeta"></div>
+
+  <div class="tug" id="tug"></div>
+
+  <div class="sec">
+    <div class="sec-head"><h2 class="sec-title" id="barTitle">दैनिक शुद्ध प्रवाह</h2>
+      <div class="legend"><span><i style="background:var(--fii)"></i>FII / FPI</span><span><i style="background:var(--dii)"></i>DII</span></div></div>
+    <div class="period-seg" id="periodSeg" role="tablist" aria-label="Aggregation period">
+      <button type="button" data-p="daily" class="active" role="tab" aria-selected="true">दैनिक</button>
+      <button type="button" data-p="weekly" role="tab" aria-selected="false">साप्ताहिक</button>
+      <button type="button" data-p="monthly" role="tab" aria-selected="false">मासिक</button>
+      <button type="button" data-p="yearly" role="tab" aria-selected="false">वार्षिक</button>
+    </div>
+    <div class="chart-wrap" style="position:relative"><div id="barChart"></div><div class="chart-tip" id="barTip" hidden></div></div>
+  </div>
+
+  <div class="stats" id="stats"></div>
+
+  <div class="sec">
+    <div class="sec-head"><h2 class="sec-title">संचयी प्रवाह</h2><span class="sec-note" id="cumNote"></span></div>
+    <div class="period-seg cum-seg" id="cumSeg" role="tablist" aria-label="Cumulative chart period" style="margin:8px 0 12px;display:flex;flex-wrap:wrap;gap:8px;align-items:center">
+      <button type="button" data-cp="daily" class="active" role="tab" aria-selected="true">दैनिक</button>
+      <button type="button" data-cp="weekly" role="tab" aria-selected="false">साप्ताहिक</button>
+      <button type="button" data-cp="monthly" role="tab" aria-selected="false">मासिक</button>
+      <button type="button" data-cp="custom" role="tab" aria-selected="false">कस्टम रेंज</button>
+      <div id="cumCustom" style="display:flex;align-items:center;gap:8px;margin-left:auto;font-size:12px;color:var(--muted);flex-wrap:wrap">
+        <label>से <input type="date" id="cumFrom" style="background:transparent;border:1px solid var(--rule);color:var(--ink);font:inherit;padding:4px 8px;border-radius:6px;margin-left:4px"></label>
+        <label>तक <input type="date" id="cumTo" style="background:transparent;border:1px solid var(--rule);color:var(--ink);font:inherit;padding:4px 8px;border-radius:6px;margin-left:4px"></label>
+        <button type="button" id="cumApply" style="background:var(--accent);color:#1a1206;border:0;padding:10px 16px;min-height:44px;border-radius:6px;font-weight:700;cursor:pointer">लागू करें</button>
+      </div>
+    </div>
+    <div class="chart-wrap" style="position:relative"><div id="cumChart"></div><div class="chart-tip" id="cumTip" hidden></div></div>
+  </div>
+  <div class="disc"><b>केवल शैक्षिक जानकारी।</b> FII/DII आँकड़े आधिकारिक सार्वजनिक स्रोतों (NSE · Groww से क्रॉस-चेक · FPI के लिए NSDL) से संकलित अस्थायी कैश-मार्केट गतिविधि हैं और इनमें संशोधन हो सकता है। यह पृष्ठ विवरणात्मक बाज़ार डेटा है — निवेश सलाह या अनुशंसा नहीं; पिछले संस्थागत प्रवाह भविष्य के रिटर्न का अनुमान नहीं देते।</div>
+
+  <footer class="blog-footer"><div>&copy; 2026 Harshal Dasani</div><div><a href="/hi/">harshaldasani.pages.dev</a></div></footer>
 </main>
-<script>function toggleBlogTheme(){var c=document.documentElement.getAttribute('data-theme')||'dark';var n=c==='light'?'dark':'light';document.documentElement.setAttribute('data-theme',n);try{localStorage.setItem('hd-theme',n)}catch(e){}}</script>
+
+<script>
+/* ---------- REAL sample series (NSE/Groww, 11 May–8 Jun 2026) — replaced by /api/fii-dii ---------- */
+const SAMPLE={ lastUpdated:new Date().toISOString(),
+  latest:{date:"2026-06-09",status:"provisional",confidence:"confirmed",sources:["Groww · NSE-compiled data"],
+    fii:{buy:14735.47,sell:19301.50,net:-4566.03},dii:{buy:17664.98,sell:11505.50,net:6159.48}},
+  history:[
+   {date:"2026-05-11",fii:{net:-8437.56},dii:{net:5939.65}},{date:"2026-05-12",fii:{net:-1959.39},dii:{net:7990.32}},
+   {date:"2026-05-13",fii:{net:-4703.15},dii:{net:5869.05}},{date:"2026-05-14",fii:{net:187.46},dii:{net:684.33}},
+   {date:"2026-05-15",fii:{net:1329.17},dii:{net:-1958.82}},{date:"2026-05-18",fii:{net:2813.69},dii:{net:2682.12}},
+   {date:"2026-05-19",fii:{net:-2457.49},dii:{net:3801.68}},{date:"2026-05-20",fii:{net:-1597.35},dii:{net:1968.35}},
+   {date:"2026-05-21",fii:{net:-1891.21},dii:{net:2492.42}},{date:"2026-05-22",fii:{net:-4440.47},dii:{net:6003.53}},
+   {date:"2026-05-25",fii:{net:821.75},dii:{net:3856.88}},{date:"2026-05-26",fii:{net:-2407.87},dii:{net:1361.43}},
+   {date:"2026-05-27",fii:{net:-1042.70},dii:{net:3821.00}},{date:"2026-05-29",fii:{net:-21105.86},dii:{net:16764.14}},
+   {date:"2026-06-01",fii:{net:-3911.68},dii:{net:5109.13}},{date:"2026-06-02",fii:{net:-8362.92},dii:{net:9589.32}},
+   {date:"2026-06-03",fii:{net:-5616.56},dii:{net:5740.89}},{date:"2026-06-04",fii:{net:-4447.06},dii:{net:4360.14}},
+   {date:"2026-06-05",fii:{net:-8776.25},dii:{net:9133.57}},{date:"2026-06-08",fii:{net:-5555.67},dii:{net:5165.24}},{date:"2026-06-09",fii:{net:-4566.03},dii:{net:6159.48}}
+  ]};
+
+const F2=new Intl.NumberFormat('en-IN',{maximumFractionDigits:0});
+const cr=n=>(n>=0?'+':'−')+'₹'+F2.format(Math.abs(Math.round(n)))+' cr';
+const dmon=s=>{const d=new Date(s);return d.toLocaleDateString('en-IN',{day:'numeric',month:'short'});};
+let HISTORY=[], MONTHLY=[], PERIOD='daily';
+
+function render(data,isSample){
+  document.getElementById('ribbon').classList.toggle('hide',!isSample);
+  const H=data.history||[], L=data.latest||{};
+  HISTORY=H;
+  /* Initialize Custom range pickers with dataset bounds once data lands */
+  try {
+    var _ff = document.getElementById('cumFrom'), _tt = document.getElementById('cumTo');
+    if (_ff && H && H.length) {
+      var _lo = H[0].date, _hi = H[H.length-1].date;
+      if (!_ff.value) _ff.value = _lo;
+      if (!_tt.value) _tt.value = _hi;
+      _ff.min = _lo; _ff.max = _hi;
+      _tt.min = _lo; _tt.max = _hi;
+    }
+  } catch(_){}
+  if (data.monthly && data.monthly.length) MONTHLY=data.monthly;
+  const fiiNet=L.fii?L.fii.net:(H.length?H[H.length-1].fii.net:0);
+  const diiNet=L.dii?L.dii.net:(H.length?H[H.length-1].dii.net:0);
+
+  /* snapshot */
+  document.getElementById('snap').innerHTML=`
+   <div class="snap-card"><div class="who"><span class="dot fii"></span>FII / FPI · शुद्ध</div>
+     <div class="net ${fiiNet<0?'sell':'buy'} num">${cr(fiiNet)}</div>
+     <div class="bs">ख़रीदा <b class="num">₹${F2.format(L.fii?L.fii.buy:0)}</b> · बेचा <b class="num">₹${F2.format(L.fii?L.fii.sell:0)}</b> cr</div></div>
+   <div class="snap-card"><div class="who"><span class="dot dii"></span>DII · शुद्ध</div>
+     <div class="net ${diiNet<0?'sell':'buy'} num">${cr(diiNet)}</div>
+     <div class="bs">ख़रीदा <b class="num">₹${F2.format(L.dii?L.dii.buy:0)}</b> · बेचा <b class="num">₹${F2.format(L.dii?L.dii.sell:0)}</b> cr</div></div>`;
+  document.getElementById('snapMeta').innerHTML=`<span>कैश मार्केट · ${L.date?dmon(L.date):'—'} ${new Date(L.date||Date.now()).getFullYear()}</span>`;
+
+  /* tug-of-war narrative (computed) */
+  const mtd=H.filter(d=>d.date>= (H[H.length-1]?H[H.length-1].date.slice(0,7):'')+'-01');
+  const sellerDays=mtd.filter(d=>d.fii.net<0).length;
+  const mFii=mtd.reduce((a,d)=>a+d.fii.net,0), mDii=mtd.reduce((a,d)=>a+d.dii.net,0);
+  let streak=0; for(let i=mtd.length-1;i>=0;i--){if(mtd[i].fii.net<0)streak++;else break;}
+  const monthName=new Date((H[H.length-1]||{}).date||Date.now()).toLocaleDateString('en-IN',{month:'long'});
+  document.getElementById('tug').innerHTML=`<h3>The tug-of-war</h3>
+    <p>So far in ${monthName} (${mtd.length} session${mtd.length===1?'':'s'}), foreign investors were net sellers on <b>${sellerDays}</b> of them, while domestic institutions kept buying. <b>FII have ${mFii<0?'pulled out':'added'} ${cr(mFii).replace(/^[+−]/,'')}</b> while <b>DII have ${mDii>=0?'absorbed':'sold'} ${cr(mDii).replace('+','+')}</b> — the classic domestic-vs-foreign standoff.</p>`;
+
+  drawBars();
+  renderStats({mFii,mDii,sellerDays,mtdLen:mtd.length,streak,monthName});
+  renderCumulative(H);
+  document.getElementById('cumNote').textContent=`running net since ${dmon(H[0].date)}`;
+}
+
+/* ---------- aggregation by period ---------- */
+function bucketKey(date,period){
+  const d=new Date(date+'T00:00:00');
+  if(period==='yearly') return String(d.getFullYear());
+  if(period==='monthly') return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0');
+  if(period==='weekly'){ const t=new Date(d); const day=(t.getDay()+6)%7; t.setDate(t.getDate()-day);
+    return t.getFullYear()+'-'+String(t.getMonth()+1).padStart(2,'0')+'-'+String(t.getDate()).padStart(2,'0'); }
+  return date;
+}
+function aggregate(H,period){
+  if(period==='daily') return H.map(d=>({date:d.date,first:d.date,fii:d.fii.net,dii:d.dii.net}));
+  const m=new Map();
+  H.forEach(d=>{ const k=bucketKey(d.date,period); const o=m.get(k)||{first:d.date,date:d.date,fii:0,dii:0};
+    o.fii+=d.fii.net; o.dii+=d.dii.net; o.date=d.date; m.set(k,o); });
+  return Array.from(m.values());
+}
+function periodLabel(row,period){
+  const d=new Date((row.first||row.date)+'T00:00:00');
+  if(period==='yearly') return String(d.getFullYear());
+  if(period==='monthly') return d.toLocaleDateString('en-IN',{month:'short',year:'2-digit'});
+  return d.toLocaleDateString('en-IN',{day:'numeric',month:'short'});
+}
+function drawBars(){
+  /* daily/weekly use the daily series; monthly/yearly use the 20-year monthly series */
+  var src = (PERIOD==='monthly'||PERIOD==='yearly') && MONTHLY.length ? MONTHLY : HISTORY;
+  let rows=aggregate(src,PERIOD);
+  const cap={daily:30,weekly:26,monthly:24,yearly:12}[PERIOD]||30;
+  if(rows.length>cap) rows=rows.slice(-cap);
+  renderBars(rows,PERIOD);
+}
+
+/* ---------- SVG: grouped net bars (zero baseline) + hover tooltip ---------- */
+function renderBars(rows,period){
+  period=period||'daily';
+  const W=760,H=280,padL=16,padR=10,padT=14,padB=26;
+  const n=rows.length, plotW=W-padL-padR, plotH=H-padT-padB, zeroY=padT+plotH/2, half=plotH/2-6;
+  const maxAbs=Math.max(...rows.flatMap(d=>[Math.abs(d.fii),Math.abs(d.dii)]))||1;
+  const gw=plotW/n, bw=Math.min(9,gw/2-2);
+  const sc=v=>v/maxAbs*half;
+  const TT=[]; let bars='';
+  rows.forEach((d,i)=>{
+    const cx=padL+gw*i+gw/2;
+    const fv=sc(d.fii), dv=sc(d.dii);
+    bars+=`<rect x="${(cx-bw-1).toFixed(1)}" y="${(d.fii>=0?zeroY-fv:zeroY).toFixed(1)}" width="${bw}" height="${Math.max(1,Math.abs(fv)).toFixed(1)}" rx="1.5" fill="var(--fii)"></rect>`;
+    bars+=`<rect x="${(cx+1).toFixed(1)}" y="${(d.dii>=0?zeroY-dv:zeroY).toFixed(1)}" width="${bw}" height="${Math.max(1,Math.abs(dv)).toFixed(1)}" rx="1.5" fill="var(--dii)"></rect>`;
+    const showLbl = n<=14 ? true : (i%Math.ceil(n/8)===0 || i===n-1);
+    if(showLbl) bars+=`<text x="${cx.toFixed(1)}" y="${H-8}" text-anchor="middle" font-size="9" fill="var(--faint)">${periodLabel(d,period)}</text>`;
+    bars+=`<rect class="hit" x="${(padL+gw*i).toFixed(1)}" y="${padT}" width="${gw.toFixed(1)}" height="${plotH}" fill="transparent" data-i="${i}"></rect>`;
+    TT.push({label:periodLabel(d,period),fii:d.fii,dii:d.dii});
+  });
+  const gl=v=>`<line x1="${padL}" x2="${W-padR}" y1="${(zeroY-sc(v)).toFixed(1)}" y2="${(zeroY-sc(v)).toFixed(1)}" stroke="var(--rule-soft)"></line>
+    <text x="${W-padR}" y="${(zeroY-sc(v)-3).toFixed(1)}" text-anchor="end" font-size="8.5" fill="var(--faint)">${fmtINR(v)}</text>`;
+  const step=niceStep(maxAbs/2);
+  document.getElementById('barChart').innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${period} FII and DII net flows">
+    ${gl(step)}${gl(-step)}
+    <line x1="${padL}" x2="${W-padR}" y1="${zeroY}" y2="${zeroY}" stroke="var(--rule)" stroke-width="1"></line>
+    ${bars}</svg>`;
+  attachBarTip(TT);
+}
+
+
+/* nice-number axis ticks (1/2/5 × 10^n) — avoids ±394k style labels */
+function niceStep(rough){
+  if(!isFinite(rough) || rough<=0) return 5000;
+  var exp = Math.floor(Math.log10(rough));
+  var p = Math.pow(10, exp);
+  var f = rough / p;
+  var nice = f < 1.5 ? 1 : f < 3 ? 2 : f < 7 ? 5 : 10;
+  return nice * p;
+}
+
+/* Indian-style currency label: ₹X L Cr / ₹XK Cr / ₹X Cr */
+function fmtINR(v){
+  if(v===0) return '0';
+  var sign = v<0 ? '−' : '+';
+  var a = Math.abs(v);
+  var s;
+  if(a>=100000) s = (a/100000).toFixed(a>=1000000?0:1).replace(/\.0$/,'') + ' L Cr';
+  else if(a>=1000) s = Math.round(a/1000) + 'K Cr';
+  else if(a>=100) s = Math.round(a) + ' Cr';
+  else s = (Math.round(a*10)/10) + ' Cr';
+  return sign+'₹'+s;
+}
+function attachBarTip(TT){
+  const svg=document.querySelector('#barChart svg'); const tip=document.getElementById('barTip');
+  if(!svg||!tip) return; const wrap=tip.parentElement;
+  const fmt=v=>(v>=0?'+':'−')+'₹'+F2.format(Math.abs(Math.round(v)))+' cr';
+  function pos(e){ const wr=wrap.getBoundingClientRect(); const cx=(e.touches?e.touches[0].clientX:e.clientX); const cy=(e.touches?e.touches[0].clientY:e.clientY);
+    tip.style.left=Math.max(60,Math.min(wr.width-60,cx-wr.left))+'px'; tip.style.top=(cy-wr.top)+'px'; }
+  function show(e){ const i=+e.currentTarget.dataset.i; const t=TT[i]; if(!t) return;
+    tip.innerHTML=`<div class="tt-d">${t.label}</div><div class="tt-r"><i style="background:var(--fii)"></i>FII&nbsp;${fmt(t.fii)}</div><div class="tt-r"><i style="background:var(--dii)"></i>DII&nbsp;${fmt(t.dii)}</div>`;
+    tip.hidden=false; pos(e); }
+  function hide(){ tip.hidden=true; }
+  svg.querySelectorAll('rect.hit').forEach(r=>{
+    r.addEventListener('mouseenter',show); r.addEventListener('mousemove',pos); r.addEventListener('mouseleave',hide);
+    r.addEventListener('touchstart',function(e){show(e);},{passive:true}); r.addEventListener('touchend',hide);
+  });
+}
+
+/* ---------- SVG: cumulative dual line + area (interactive) ---------- */
+/* B-cum: period state + period-aware preprocessing */
+var CUM_PERIOD='daily', CUM_FROM='', CUM_TO='';
+function _cumAggregate(H, period){
+  if (period==='daily' || period==='custom') return H;
+  var m = new Map();
+  H.forEach(function(d){
+    var dt = new Date(d.date+'T00:00:00');
+    var key;
+    if (period==='weekly') {
+      var day = (dt.getDay()+6)%7; /* Mon=0..Sun=6 */
+      var monday = new Date(dt); monday.setDate(monday.getDate()-day);
+      /* use local date parts to avoid UTC shift in IST (toISOString rolls back a day) */
+      var yy = monday.getFullYear(), mm = String(monday.getMonth()+1).padStart(2,'0'), dd = String(monday.getDate()).padStart(2,'0');
+      key = yy + '-' + mm + '-' + dd;
+    } else /* monthly */ {
+      key = d.date.slice(0,7)+'-01';
+    }
+    var o = m.get(key) || {date:key, fii:{net:0}, dii:{net:0}};
+    o.fii.net += d.fii.net; o.dii.net += d.dii.net;
+    m.set(key, o);
+  });
+  return Array.from(m.values()).sort(function(a,b){return a.date.localeCompare(b.date);});
+}
+function _cumFilter(H){
+  if (CUM_PERIOD!=='custom') return H;
+  if (!CUM_FROM && !CUM_TO) return H;
+  return H.filter(function(d){
+    if (CUM_FROM && d.date < CUM_FROM) return false;
+    if (CUM_TO && d.date > CUM_TO) return false;
+    return true;
+  });
+}
+function _renderCumNote(H){
+  var el = document.getElementById('cumNote'); if (!el) return;
+  if (!H.length) { el.textContent='no data in range'; return; }
+  var label = ({daily:'daily', weekly:'weekly', monthly:'monthly', custom:'custom range'})[CUM_PERIOD] || 'running net';
+  el.textContent = label + ' · ' + dmon(H[0].date) + ' → ' + dmon(H[H.length-1].date);
+}
+function renderCumulativeForPeriod(){
+  var H = HISTORY||[]; if (!H.length) return;
+  /* B-cum: time-based windows that GROW with the period button so longer tab → longer history.
+     Daily = last 90 days (3 months), Weekly = last 52 weeks (~1 year), Monthly = ALL history.
+     Custom = user-picked range, no extra slicing. This guarantees the Monthly window includes
+     everything the Weekly window has, and Weekly includes everything the Daily window has —
+     so the absolute end-value should be Monthly ≥ Weekly ≥ Daily for monotonic-direction series. */
+  var H_window = H;
+  if (CUM_PERIOD === 'daily' || CUM_PERIOD === 'weekly') {
+    var dayCutoff = (CUM_PERIOD === 'daily') ? 90 : 365;
+    var anchor = new Date(H[H.length-1].date + 'T00:00:00');
+    var floor = new Date(anchor); floor.setDate(floor.getDate() - dayCutoff);
+    var floorStr = floor.toISOString().slice(0,10);
+    H_window = H.filter(function(d){ return d.date > floorStr; });
+  }
+  /* CUM_PERIOD === 'monthly' or 'custom' uses full H_window = H */
+  var processed = _cumAggregate(H_window, CUM_PERIOD);
+  processed = _cumFilter(processed);
+  if (!processed.length) {
+    document.getElementById('cumChart').innerHTML = '<div style="padding:40px 20px;text-align:center;color:var(--muted);font-size:14px">No data in this range.</div>';
+    _renderCumNote([]);
+    return;
+  }
+  renderCumulative(processed);
+  _renderCumNote(processed);
+}
+function renderCumulative(H){
+  const W=760,Ht=260,padL=44,padR=58,padT=16,padB=24, plotW=W-padL-padR, plotH=Ht-padT-padB;
+  let cf=0,cd=0; const fp=[],dp=[];
+  H.forEach(d=>{cf+=d.fii.net;cd+=d.dii.net;fp.push(cf);dp.push(cd);});
+  const all=fp.concat(dp), mn=Math.min(0,...all), mx=Math.max(0,...all), rng=(mx-mn)||1;
+  const n=H.length, x=i=>padL+(plotW*(i/(Math.max(1,n-1))));
+  const y=v=>padT+plotH*(1-(v-mn)/rng);
+  const path=arr=>arr.map((v,i)=>(i?'L':'M')+x(i).toFixed(1)+' '+y(v).toFixed(1)).join(' ');
+  const area=arr=>`${path(arr)} L ${x(arr.length-1).toFixed(1)} ${y(0).toFixed(1)} L ${x(0).toFixed(1)} ${y(0).toFixed(1)} Z`;
+  const yl=v=>`<line x1="${padL}" x2="${W-padR}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}" stroke="var(--rule-soft)"></line>
+    <text x="${padL-6}" y="${(y(v)+3).toFixed(1)}" text-anchor="end" font-size="8.5" fill="var(--faint)">${fmtINR(v)}</text>`;
+  const zero=y(0);
+  const step=plotW/Math.max(1,n-1);
+  const xs=[],dys=[],fys=[]; let hits='';
+  for(let i=0;i<n;i++){ xs.push(x(i)); dys.push(y(dp[i])); fys.push(y(fp[i]));
+    const hx=Math.max(padL, x(i)-step/2);
+    hits+=`<rect class="cum-hit" x="${hx.toFixed(1)}" y="${padT}" width="${Math.min(step, W-padR-hx).toFixed(1)}" height="${plotH.toFixed(1)}" fill="transparent" data-i="${i}"></rect>`; }
+  /* X-axis tick labels (B-cum: month labels under the chart) */
+  function _fmtXTick(d, period){
+    var dt = new Date(d+'T00:00:00');
+    var mo = dt.toLocaleString('en-IN',{month:'short'});
+    var yr = String(dt.getFullYear()).slice(-2);
+    if (period==='monthly' || period==='custom') return mo + ' ' + yr;
+    if (period==='weekly') return dt.getDate() + ' ' + mo;
+    return dt.getDate() + ' ' + mo; /* daily */
+  }
+  var _period = (typeof CUM_PERIOD === 'string') ? CUM_PERIOD : 'daily';
+  var _targetTicks = Math.min(n, 8);
+  var _tickIdx = [];
+  for (var ti = 0; ti < _targetTicks; ti++) {
+    _tickIdx.push(Math.round(ti * (n-1) / Math.max(1, _targetTicks-1)));
+  }
+  /* dedupe consecutive (small datasets) */
+  _tickIdx = _tickIdx.filter(function(v,i,a){ return a.indexOf(v) === i; });
+  /* drop the rightmost tick so it doesn't collide with the end-of-line DII/FII labels */
+  if (_tickIdx.length > 1) _tickIdx = _tickIdx.slice(0, -1);
+  var xTicks = '';
+  _tickIdx.forEach(function(i){
+    var lbl = _fmtXTick(H[i].date, _period);
+    xTicks += '<text x="' + x(i).toFixed(1) + '" y="' + (padT + plotH + 14).toFixed(1) + '" text-anchor="middle" font-size="9" fill="var(--faint)">' + lbl + '</text>';
+  });
+  /* small tick marks at the baseline */
+  var xTickMarks = '';
+  _tickIdx.forEach(function(i){
+    xTickMarks += '<line x1="' + x(i).toFixed(1) + '" x2="' + x(i).toFixed(1) + '" y1="' + (padT + plotH).toFixed(1) + '" y2="' + (padT + plotH + 3).toFixed(1) + '" stroke="var(--rule)"></line>';
+  });
+  document.getElementById('cumChart').innerHTML=`<svg viewBox="0 0 ${W} ${Ht}" role="img" aria-label="Cumulative FII and DII flows">
+    ${yl(mx*0.66)}${yl(0)}${mn<0?yl(mn*0.66):''}
+    <line x1="${padL}" x2="${W-padR}" y1="${zero.toFixed(1)}" y2="${zero.toFixed(1)}" stroke="var(--rule)"></line>
+    ${xTickMarks}${xTicks}
+    <path d="${area(dp)}" fill="var(--dii-dim)"></path><path d="${area(fp)}" fill="var(--fii-dim)"></path>
+    <path d="${path(dp)}" fill="none" stroke="var(--dii)" stroke-width="2"></path>
+    <path d="${path(fp)}" fill="none" stroke="var(--fii)" stroke-width="2"></path>
+    <circle cx="${x(n-1).toFixed(1)}" cy="${y(dp[n-1]).toFixed(1)}" r="3" fill="var(--dii)"></circle>
+    <circle cx="${x(n-1).toFixed(1)}" cy="${y(fp[n-1]).toFixed(1)}" r="3" fill="var(--fii)"></circle>
+    <text x="${(x(n-1)+6).toFixed(1)}" y="${(y(dp[n-1])+4).toFixed(1)}" text-anchor="start" font-size="10" font-weight="700" fill="var(--dii)" stroke="var(--bg)" stroke-width="3" paint-order="stroke">DII ${fmtINR(cd).replace('+','')}</text>
+    <text x="${(x(n-1)+6).toFixed(1)}" y="${(y(fp[n-1])+4).toFixed(1)}" text-anchor="start" font-size="10" font-weight="700" fill="var(--fii)" stroke="var(--bg)" stroke-width="3" paint-order="stroke">FII ${fmtINR(cf).replace('+','')}</text>
+    <g id="cumCross" style="display:none">
+      <line id="cumCrossLine" y1="${padT}" y2="${(padT+plotH).toFixed(1)}" stroke="var(--muted)" stroke-dasharray="3 3" stroke-opacity="0.6"></line>
+      <circle id="cumDotD" r="4" fill="var(--dii)" stroke="var(--bg-2)" stroke-width="2"></circle>
+      <circle id="cumDotF" r="4" fill="var(--fii)" stroke="var(--bg-2)" stroke-width="2"></circle>
+    </g>
+    ${hits}
+  </svg>`;
+  attachCumTip(H, fp, dp, xs, dys, fys);
+}
+function attachCumTip(H, fp, dp, xs, dys, fys){
+  const svg=document.querySelector('#cumChart svg'); const tip=document.getElementById('cumTip');
+  if(!svg||!tip) return; const wrap=tip.parentElement;
+  const cross=svg.querySelector('#cumCross'), line=svg.querySelector('#cumCrossLine'),
+        dotD=svg.querySelector('#cumDotD'), dotF=svg.querySelector('#cumDotF');
+  function pos(e){ const wr=wrap.getBoundingClientRect();
+    const cx=(e.touches&&e.touches[0]?e.touches[0].clientX:e.clientX);
+    const cy=(e.touches&&e.touches[0]?e.touches[0].clientY:e.clientY);
+    tip.style.left=Math.max(72,Math.min(wr.width-72,cx-wr.left))+'px';
+    tip.style.top=Math.max(34,cy-wr.top)+'px'; }
+  function show(e){ const i=+e.currentTarget.dataset.i; if(isNaN(i)||!H[i])return;
+    cross.style.display='inline';
+    line.setAttribute('x1',xs[i].toFixed(1)); line.setAttribute('x2',xs[i].toFixed(1));
+    dotD.setAttribute('cx',xs[i].toFixed(1)); dotD.setAttribute('cy',dys[i].toFixed(1));
+    dotF.setAttribute('cx',xs[i].toFixed(1)); dotF.setAttribute('cy',fys[i].toFixed(1));
+    tip.innerHTML=`<div class="tt-d">${dmon(H[i].date)}</div><div class="tt-r"><i style="background:var(--dii)"></i>DII&nbsp;${cr(dp[i])}</div><div class="tt-r"><i style="background:var(--fii)"></i>FII&nbsp;${cr(fp[i])}</div>`;
+    tip.hidden=false; pos(e); }
+  function hide(){ tip.hidden=true; cross.style.display='none'; }
+  svg.querySelectorAll('rect.cum-hit').forEach(r=>{
+    r.addEventListener('mouseenter',show); r.addEventListener('mousemove',pos); r.addEventListener('mouseleave',hide);
+    r.addEventListener('touchstart',function(e){show(e);},{passive:true});
+    r.addEventListener('touchmove',function(e){const t=e.touches[0];const el=document.elementFromPoint(t.clientX,t.clientY);
+      if(el&&el.dataset&&el.dataset.i!==undefined){show({currentTarget:el,touches:e.touches});}},{passive:true});
+    r.addEventListener('touchend',hide);
+  });
+}
+
+function renderStats(s){
+  document.getElementById('stats').innerHTML=`
+   <div class="stat"><div class="v sell num">${cr(s.mFii)}</div><div class="l">FII net · ${s.monthName} MTD</div></div>
+   <div class="stat"><div class="v buy num">${cr(s.mDii)}</div><div class="l">DII net · ${s.monthName} MTD</div></div>
+   <div class="stat"><div class="v num">${s.sellerDays}/${s.mtdLen}</div><div class="l">FII net-seller days · ${s.monthName} MTD</div></div>
+   <div class="stat"><div class="v sell num">${s.streak}</div><div class="l">FII net-sell streak · ${s.monthName} MTD</div></div>`;
+}
+
+/* Instant paint: render immediately, then swap to live data the moment /api/fii-dii responds.
+   Hard 8s timeout so a slow source can never stall the page. */
+render(SAMPLE,true);
+
+/* B-cum: wire up cumulative period segment */
+(function(){
+  var seg = document.getElementById('cumSeg'); if (!seg) return;
+  seg.addEventListener('click', function(e){
+    var b = e.target.closest('button[data-cp]'); if (!b) return;
+    CUM_PERIOD = b.dataset.cp;
+    seg.querySelectorAll('button[data-cp]').forEach(function(x){
+      var on = (x===b); x.classList.toggle('active', on); x.setAttribute('aria-selected', on?'true':'false');
+    });
+    /* cumCustom is now permanently visible — its values only take effect when 'Custom range' is the active period */
+    /* set default from/to to dataset bounds when first opening custom */
+    if (CUM_PERIOD==='custom' && HISTORY && HISTORY.length) {
+      var ff = document.getElementById('cumFrom'), tt = document.getElementById('cumTo');
+      if (ff && !ff.value) ff.value = HISTORY[0].date;
+      if (tt && !tt.value) tt.value = HISTORY[HISTORY.length-1].date;
+      ff.min = HISTORY[0].date; ff.max = HISTORY[HISTORY.length-1].date;
+      tt.min = HISTORY[0].date; tt.max = HISTORY[HISTORY.length-1].date;
+    }
+    renderCumulativeForPeriod();
+  });
+  var applyBtn = document.getElementById('cumApply');
+  if (applyBtn) applyBtn.addEventListener('click', function(){
+    CUM_FROM = document.getElementById('cumFrom').value;
+    CUM_TO   = document.getElementById('cumTo').value;
+    renderCumulativeForPeriod();
+  });
+})();
+document.getElementById('periodSeg').addEventListener('click',function(e){
+  const b=e.target.closest('button'); if(!b) return;
+  PERIOD=b.dataset.p;
+  this.querySelectorAll('button').forEach(x=>{const on=x===b; x.classList.toggle('active',on); x.setAttribute('aria-selected',on?'true':'false');});
+  document.getElementById('barTitle').textContent=({daily:'दैनिक',weekly:'साप्ताहिक',monthly:'मासिक',yearly:'वार्षिक'}[PERIOD])+' शुद्ध प्रवाह';
+  drawBars();
+});
+(function(){
+  /* 1) OUR own committed dataset first — full ~548 days back to 2024-01 */
+  let _baseData = null;
+  fetch('/fii-dii/history.json?nc='+Date.now())
+    .then(r=>r.ok?r.json():Promise.reject())
+    .then(d=>{
+      if(d&&d.history&&d.history.length){
+        _baseData = d;
+        render(d,false);
+      }
+    })
+    .catch(function(e){console.warn('[fii-dii] fetch failed',e);})
+    .finally(()=>{
+      /* 2) overlay /api/fii-dii ONLY to refresh 'latest' + append newer days; do NOT overwrite the long history */
+      const ctl=new AbortController(); const t=setTimeout(()=>ctl.abort(),8000);
+      fetch('/api/fii-dii?nc='+Date.now(),{signal:ctl.signal})
+        .then(r=>r.ok?r.json():Promise.reject())
+        .then(live=>{
+          if(!live) return;
+          if(!_baseData){
+            /* fallback: history.json failed but live API succeeded — use whatever it has */
+            if(live.history&&live.history.length) render(live,false);
+            return;
+          }
+          /* merge: keep full base history, append any newer dated records, refresh latest */
+          const merged = Object.assign({}, _baseData);
+          if(live.lastUpdated) merged.lastUpdated = live.lastUpdated;
+          if(live.latest) merged.latest = live.latest;
+          if(live.history && live.history.length){
+            const lastBaseDate = _baseData.history[_baseData.history.length-1].date;
+            const newer = live.history.filter(r=>r.date > lastBaseDate);
+            if(newer.length) merged.history = _baseData.history.concat(newer);
+          }
+          if(live.fpi) merged.fpi = live.fpi;
+          render(merged,false);
+        })
+        .catch(function(e){console.warn('[fii-dii] fetch failed',e);}).finally(()=>clearTimeout(t));
+    });
+})();
+</script>
+<script>function toggleBlogTheme(){var c=document.documentElement.getAttribute('data-theme')||'dark';var n=c==='light'?'dark':'light';document.documentElement.setAttribute('data-theme',n);try{localStorage.setItem('hd-theme',n);}catch(e){}}</script>
 <script src="/lang-switch.js" defer></script>
 </body>
 </html>

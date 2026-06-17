@@ -55,34 +55,44 @@
   } else {
     injectSkipLink();
   }
-  /* === Tasteful legal-links strip at bottom of every page === */
+  /* === Footer bar on every page: Home (left) | Legal (center) | Socials (right) === */
   function injectLegalLinks(){
     if (document.getElementById('hd-legal-strip')) return;
     if (!document.body) return;
     var st = document.createElement('style');
     st.id = 'hd-legal-css';
     st.textContent =
-      '.hd-legal-strip{margin:32px 0 16px;padding:14px 0 0;border-top:1px solid var(--rule,rgba(128,128,128,.18));' +
-      'text-align:center;font:500 11px/1.5 Inter,system-ui,sans-serif;color:var(--muted,#8a8273);letter-spacing:.04em}' +
-      '.hd-legal-strip a{color:var(--ink-2,#c9c0ad);text-decoration:none;margin:0 6px;padding:4px 6px}' +
-      '.hd-legal-strip a:hover{color:var(--accent,#d4a64a);text-decoration:underline}' +
-      '.hd-legal-sep{opacity:.5;margin:0 2px}';
+      '.hd-legal-strip{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin:36px 0 18px;padding:14px 0 0;border-top:1px solid var(--rule,rgba(128,128,128,.18));font:500 11px/1.5 Inter,system-ui,sans-serif;color:var(--muted,#8a8273);letter-spacing:.04em}' +
+      '.hd-legal-strip a{color:var(--ink-2,#c9c0ad);text-decoration:none}' +
+      '.hd-foot-home{display:inline-flex;align-items:center;gap:6px;padding:4px 6px;white-space:nowrap}' +
+      '.hd-foot-home:hover{color:var(--accent,#d4a64a);text-decoration:underline}' +
+      '.hd-foot-legal a{margin:0 6px;padding:4px 4px}.hd-foot-legal a:hover{color:var(--accent,#d4a64a);text-decoration:underline}' +
+      '.hd-legal-sep{opacity:.5;margin:0 2px}' +
+      '.hd-foot-social{display:inline-flex;align-items:center;gap:16px}' +
+      '.hd-foot-social a{display:inline-flex;color:var(--ink-2,#c9c0ad)}.hd-foot-social a:hover{color:var(--accent,#d4a64a)}' +
+      '.hd-foot-social svg{width:18px;height:18px;fill:currentColor;display:block}' +
+      '@media(max-width:600px){.hd-legal-strip{justify-content:center;row-gap:10px}}';
     document.head.appendChild(st);
+    var hi = location.pathname.indexOf('/hi/')===0;
+    var p = location.pathname.replace(/index\.html$/,'');
+    var isHome = (p==='/'||p==='/hi/');
+    var homeHref = hi ? '/hi/' : '/';
+    var homeTxt = hi ? 'मुख्य पृष्ठ' : 'Home';
+    var LI='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>';
+    var XI='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.41l-5.8-7.58-6.64 7.58H.47l8.6-9.83L0 1.15h7.59l5.24 6.93zM17.61 20.64h2.04L6.49 3.24H4.3z"/></svg>';
+    var YT='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.81 3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.81zM9.55 15.57V8.43L15.82 12z"/></svg>';
     var d = document.createElement('div');
-    d.id = 'hd-legal-strip';
-    d.className = 'hd-legal-strip';
-    d.innerHTML = '<a href="/legal/disclaimer/">Disclaimer</a>' +
-                  '<span class="hd-legal-sep">·</span>' +
-                  '<a href="/legal/privacy/">Privacy</a>' +
-                  '<span class="hd-legal-sep">·</span>' +
-                  '<a href="/legal/terms/">Terms</a>';
-    // Append to .page or main or body
+    d.id = 'hd-legal-strip'; d.className = 'hd-legal-strip';
+    var home = isHome ? '<span></span>' : '<a class="hd-foot-home" href="'+homeHref+'" aria-label="'+homeTxt+'"><span aria-hidden="true">←</span> '+homeTxt+'</a>';
+    d.innerHTML = home +
+      '<div class="hd-foot-legal"><a href="/legal/disclaimer/">Disclaimer</a><span class="hd-legal-sep">·</span><a href="/legal/privacy/">Privacy</a><span class="hd-legal-sep">·</span><a href="/legal/terms/">Terms</a></div>' +
+      '<div class="hd-foot-social">' +
+        '<a href="https://www.linkedin.com/in/harshal-dasani-/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">'+LI+'</a>' +
+        '<a href="https://x.com/HarshalDasanii" target="_blank" rel="noopener" aria-label="X (Twitter)" title="X (Twitter)">'+XI+'</a>' +
+        '<a href="https://www.youtube.com/@marketswitharshal" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube">'+YT+'</a>' +
+      '</div>';
     var mount = document.querySelector('main.page') || document.querySelector('.page') || document.querySelector('main') || document.body;
-    if (mount && mount.tagName !== 'BODY') {
-      mount.appendChild(d);
-    } else {
-      document.body.appendChild(d);
-    }
+    (mount && mount.tagName !== 'BODY' ? mount : document.body).appendChild(d);
   }
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', injectLegalLinks);

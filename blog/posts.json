@@ -1,6 +1,42 @@
 {
   "posts": [
     {
+      "slug": "rupee-usd-inr-2026-why-falling-where-it-stops",
+      "title": "The rupee’s record low: why USD/INR is falling, where it stops, and what it means for India",
+      "topic": "macros",
+      "date": "2026-06-16",
+      "excerpt": "The rupee hit a record low near 97 in May, then bounced to around 95 as oil cooled. Why USD/INR is really weakening, where the forecasts say it stops, and…",
+      "image": "https://harshaldasani.pages.dev/blog/posts/rupee-usd-inr-2026-why-falling-where-it-stops/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/rupee-usd-inr-2026-why-falling-where-it-stops/"
+    },
+    {
+      "slug": "copper-2026-electrification-deficit",
+      "title": "Copper: the metal the electric, AI-powered century will be built from",
+      "topic": "commodities",
+      "date": "2026-06-16",
+      "excerpt": "Copper hit record highs in 2026 as electrification, EVs and now AI data centres pull on supply that mines cannot expand fast enough. The near-term balance…",
+      "image": "https://harshaldasani.pages.dev/blog/posts/copper-2026-electrification-deficit/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/copper-2026-electrification-deficit/"
+    },
+    {
+      "slug": "silver-2026-deficit-bull-case",
+      "title": "Silver’s two engines: the deficit metal that finally broke its old ceiling",
+      "topic": "commodities",
+      "date": "2026-06-16",
+      "excerpt": "Silver smashed its 45-year ceiling in 2026, touched $121, then cooled to about $70. Underneath sits a sixth straight year of supply deficit, record-low…",
+      "image": "https://harshaldasani.pages.dev/blog/posts/silver-2026-deficit-bull-case/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/silver-2026-deficit-bull-case/"
+    },
+    {
+      "slug": "gold-2026-structural-bull-case",
+      "title": "Gold’s second wind: the structural case behind the world’s oldest money",
+      "topic": "commodities",
+      "date": "2026-06-16",
+      "excerpt": "Gold had its best year since 1979, touched nearly $5,600, then paused near $4,350. Look past the price wobble and the engine, record central-bank buying,…",
+      "image": "https://harshaldasani.pages.dev/blog/posts/gold-2026-structural-bull-case/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/gold-2026-structural-bull-case/"
+    },
+    {
       "slug": "kospi-2026-korea-rally-reform-explained",
       "title": "Two engines behind Korea’s 100% year: reform, a chip mania, and a mirror for India",
       "topic": "stock-market",

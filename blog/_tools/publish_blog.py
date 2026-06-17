@@ -642,6 +642,9 @@ def article_jsonld(title, excerpt, slug, topic, date_str, canonical, light_cover
             "width": 1600,
             "height": 900,
             "caption": image_alt or title,
+            "creditText": "Harshal Dasani",
+            "creator": {"@type": "Person", "name": "Harshal Dasani"},
+            "copyrightNotice": "© 2026 Harshal Dasani",
             "license": f"{SITE_BASE}/",
             "acquireLicensePage": f"{SITE_BASE}/"
         },

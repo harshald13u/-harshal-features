@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>गोपनीयता नीति — Harshal Dasani</title>
+<meta property="og:site_name" content="Harshal Dasani">
+<meta name="description" content="harshaldasani.pages.dev के लिए गोपनीयता नीति — साइट क्या एकत्र करती है, क्या नहीं करती, और भारत के DPDP Act 2023 के तहत आपके अधिकार।">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://harshaldasani.pages.dev/hi/legal/privacy/">
+<link rel="alternate" hreflang="en-IN" href="https://harshaldasani.pages.dev/legal/privacy/">
+<link rel="alternate" hreflang="hi-IN" href="https://harshaldasani.pages.dev/hi/legal/privacy/">
+<link rel="alternate" hreflang="x-default" href="https://harshaldasani.pages.dev/legal/privacy/">
+<meta name="theme-color" content="#0e0c0a">
+
+<link rel="manifest" href="/manifest.json">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('hd-theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+  function HDtoggleTheme() {
+    var cur = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', cur);
+    try { localStorage.setItem('hd-theme', cur); } catch (e) {}
+  }
+</script>
+
+<style>
+:root {
+  --bg: #0e0c0a; --bg-2: #15110d;
+  --ink: #ece4d3; --ink-2: #c9c0ad; --muted: #8a8273; --faint: #807866;
+  --rule: rgba(236,228,211,0.10); --rule-soft: rgba(236,228,211,0.06);
+  --accent: #d4a64a; --accent-soft: rgba(212,166,74,0.08);
+}
+html[data-theme="light"] {
+  --bg: #ebe5d7; --bg-2: #ddd4c1;
+  --ink: #1a3458; --ink-2: #3a527a; --muted: #54687f; --faint: #5f7790;
+  --rule: rgba(26,52,88,0.14); --rule-soft: rgba(26,52,88,0.07);
+  --accent: #b8852b; --accent-soft: rgba(184,133,43,0.10);
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--ink); font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.page { max-width: 760px; margin: 0 auto; padding: 0 24px 80px; }
+.masthead { position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; padding: 14px 0; margin-bottom: 32px; background: rgba(14,12,10,0.82); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--rule); }
+html[data-theme="light"] .masthead { background: rgba(235,229,215,0.85); }
+.mast-back { color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 0.02em; min-height: 44px; display: inline-flex; align-items: center; padding: 0 6px; }
+.mast-back:hover { color: var(--accent); }
+.mast-trail { color: var(--muted); font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; }
+.mast-trail a { color: var(--ink-2); text-decoration: none; }
+.mast-trail a:hover { color: var(--accent); }
+.theme-toggle { background: transparent; border: 1px solid var(--rule); border-radius: 50%; width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; color: var(--ink-2); }
+.theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
+html[data-theme="light"] .icon-moon { display: none; }
+html[data-theme="dark"] .icon-sun { display: none; }
+h1 { font-family: 'Spectral', Georgia, serif; font-weight: 600; font-size: clamp(34px, 5vw, 48px); line-height: 1.15; letter-spacing: -0.01em; margin: 8px 0 8px; }
+.dek { color: var(--ink-2); font-size: 17px; line-height: 1.55; margin: 0 0 8px; max-width: 60ch; }
+.meta { color: var(--muted); font-size: 13px; letter-spacing: 0.02em; margin: 0 0 36px; padding-bottom: 24px; border-bottom: 1px solid var(--rule); }
+.meta b { color: var(--ink-2); font-weight: 600; }
+h2 { font-family: 'Spectral', Georgia, serif; font-weight: 600; font-size: 22px; margin: 40px 0 12px; letter-spacing: -0.005em; }
+h3 { font-size: 15px; font-weight: 700; letter-spacing: 0.02em; margin: 28px 0 8px; color: var(--ink); }
+p { margin: 0 0 14px; color: var(--ink-2); }
+p strong { color: var(--ink); font-weight: 600; }
+ul { margin: 0 0 14px; padding-left: 22px; color: var(--ink-2); }
+ul li { margin-bottom: 6px; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.callout { margin: 24px 0; padding: 18px 20px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 4px; }
+.callout p { margin: 0 0 8px; color: var(--ink); }
+.callout p:last-child { margin: 0; }
+.callout strong { color: var(--ink); }
+.data-table { width: 100%; margin: 18px 0; border-collapse: collapse; font-size: 14px; }
+.data-table th, .data-table td { padding: 12px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--rule); }
+.data-table th { font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; font-size: 11px; }
+.data-table td:first-child { color: var(--ink); font-weight: 500; white-space: nowrap; }
+.legal-nav { margin: 48px 0 24px; padding: 18px 20px; border: 1px solid var(--rule); border-radius: 6px; display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: 13px; }
+.legal-nav span { color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+.legal-nav a { color: var(--ink-2); font-weight: 500; }
+.legal-nav a:hover { color: var(--accent); }
+.legal-nav .here { color: var(--accent); font-weight: 600; }
+footer.colophon { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 13px; display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; align-items: center; }
+footer.colophon a { color: var(--ink-2); }
+footer.colophon a:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<main id="main" class="page">
+
+  <header class="masthead">
+    <a class="mast-back" href="/hi/">&larr; होम</a>
+    <div class="mast-trail">
+      <a href="/hi/">Harshal Dasani</a> &middot;
+      <a href="/legal/">कानूनी</a> &middot;
+      <span>गोपनीयता</span>
+    </div>
+    <button class="theme-toggle" onclick="HDtoggleTheme()" aria-label="थीम बदलें" type="button">
+      <svg class="icon-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      <svg class="icon-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </header>
+
+  <h1>गोपनीयता नीति</h1>
+  <p class="dek">यह साइट क्या एकत्र करती है, क्या नहीं करती, और आपके अधिकारों का एक छोटा, ईमानदार सारांश।</p>
+  <p class="meta">अंतिम अद्यतन: <b>8 जून 2026</b></p>
+
+  <div class="callout">
+    <p><strong>संक्षिप्त संस्करण।</strong> यह एक स्थैतिक व्यक्तिगत वेबसाइट है। यह आपका नाम, ईमेल या फ़ोन नंबर नहीं माँगती। इसमें कोई लॉगिन, फ़ॉर्म या खाते नहीं हैं। यह कोई विज्ञापन ट्रैकर नहीं चलाती। यह केवल वही डेटा छूती है जो कार्यात्मक है &mdash; पेज पहुँचाने और आपकी थीम व भाषा की पसंद याद रखने के लिए जो आवश्यक है।</p>
+  </div>
+
+  <h2>1. इस साइट को कौन चलाता है</h2>
+  <p><strong>harshaldasani.pages.dev</strong> पर मौजूद साइट को भारत में स्थित Harshal Dasani व्यक्तिगत रूप से संचालित करते हैं। भारत के <strong>Digital Personal Data Protection Act, 2023 (DPDP Act)</strong> के अंतर्गत डेटा फ़िड्यूशियरी के रूप में कार्य करते हुए, लेखक इस नीति के लिए ज़िम्मेदार हैं।</p>
+
+  <h2>2. साइट क्या एकत्र करती है</h2>
+  <table class="data-table">
+    <thead>
+      <tr><th>डेटा</th><th>क्यों</th><th>प्रतिधारण</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>IP पता और बुनियादी रिक्वेस्ट मेटाडेटा</td>
+        <td>पेज पहुँचाने, दुरुपयोग रोकने और कुल ट्रैफ़िक गणना तैयार करने के लिए होस्टिंग प्रदाता (Cloudflare Pages) द्वारा लॉग किया जाता है</td>
+        <td>Cloudflare की नीति के अनुसार</td>
+      </tr>
+      <tr>
+        <td>थीम वरीयता (<code>hd-theme</code>)</td>
+        <td>आपके ब्राउज़र के <code>localStorage</code> में संग्रहीत ताकि साइट विज़िट के दौरान लाइट/डार्क याद रखे</td>
+        <td>जब तक आप इसे साफ़ न करें</td>
+      </tr>
+      <tr>
+        <td>भाषा वरीयता (<code>hd-lang</code>)</td>
+        <td>आपके ब्राउज़र के <code>localStorage</code> में संग्रहीत ताकि साइट विज़िट के दौरान English/Hindi याद रखे</td>
+        <td>जब तक आप इसे साफ़ न करें</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>3. साइट क्या एकत्र नहीं करती</h2>
+  <ul>
+    <li>कोई नाम, ईमेल, फ़ोन नंबर या पता नहीं।</li>
+    <li>कोई खाता, लॉगिन या पासवर्ड नहीं।</li>
+    <li>कोई संपर्क फ़ॉर्म या साइन-अप नहीं।</li>
+    <li>कोई विज्ञापन कुकीज़, रीटार्गेटिंग पिक्सेल या व्यवहारिक प्रोफ़ाइल नहीं।</li>
+    <li>कोई Google Analytics, Meta Pixel या इसी तरह की तृतीय-पक्ष एनालिटिक्स स्क्रिप्ट नहीं।</li>
+    <li>कोई भुगतान जानकारी नहीं।</li>
+    <li>होस्ट द्वारा लॉग की गई देश-स्तरीय IP जियोलोकेशन से परे कोई स्थान डेटा नहीं।</li>
+  </ul>
+
+  <h2>4. कुकीज़ और लोकल स्टोरेज</h2>
+  <p>साइट स्वयं कोई ट्रैकिंग कुकीज़ सेट नहीं करती। यह केवल दो वरीयताओं के लिए आपके ब्राउज़र के <code>localStorage</code> का उपयोग करती है: <strong>थीम</strong> (लाइट/डार्क) और <strong>भाषा</strong> (en/hi)। ये कभी आपके डिवाइस से बाहर नहीं जातीं।</p>
+  <p>आपका ब्राउज़र होस्टिंग प्रदाता (<strong>Cloudflare</strong>) से कार्यात्मक कुकीज़ प्राप्त कर सकता है जो साइट पहुँचाने के लिए आवश्यक हैं &mdash; उदाहरण के लिए, बॉट का पता लगाने के लिए एक सुरक्षा कुकी। ये प्रकृति में फर्स्ट-पार्टी हैं और Cloudflare की <a href="https://www.cloudflare.com/cookie-policy/" rel="noopener noreferrer">Cookie Policy</a> में वर्णित हैं।</p>
+  <p>आप harshaldasani.pages.dev के लिए अपने ब्राउज़र का साइट डेटा साफ़ करके किसी भी समय थीम और भाषा वरीयताओं को साफ़ कर सकते हैं।</p>
+
+  <h2>5. साइट पर एम्बेड की गई तृतीय-पक्ष सामग्री</h2>
+  <p>कुछ पेज तृतीय पक्षों से सामग्री एम्बेड या लोड करते हैं। वे तृतीय पक्ष अपनी कुकीज़ सेट कर सकते हैं और अपनी नीतियों के अंतर्गत डेटा एकत्र कर सकते हैं। इस साइट पर उपयोग किए गए तृतीय पक्ष हैं:</p>
+  <ul>
+    <li><strong>Cloudflare Pages</strong> &mdash; होस्टिंग और CDN। <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener noreferrer">Cloudflare Privacy Policy</a>।</li>
+    <li><strong>Google Fonts</strong> &mdash; वेब फ़ॉन्ट (Inter, Spectral)। <a href="https://policies.google.com/privacy" rel="noopener noreferrer">Google Privacy Policy</a>।</li>
+    <li><strong>YouTube</strong> &mdash; ब्लॉग और मीडिया पेजों पर वीडियो एम्बेड। <a href="https://policies.google.com/privacy" rel="noopener noreferrer">YouTube/Google Privacy Policy</a>।</li>
+    <li><strong>X (पूर्व में Twitter)</strong> &mdash; यदि कोई पोस्ट ट्वीट एम्बेड करती है। <a href="https://x.com/en/privacy" rel="noopener noreferrer">X Privacy Policy</a>।</li>
+    <li><strong>TradingView</strong> &mdash; यदि कोई पोस्ट चार्ट या विजेट एम्बेड करती है। <a href="https://www.tradingview.com/policies/" rel="noopener noreferrer">TradingView Privacy Policy</a>।</li>
+  </ul>
+  <p>यदि आप इनसे बचना चाहते हैं, तो अपने ब्राउज़र के गोपनीयता नियंत्रणों (तृतीय-पक्ष कुकी ब्लॉकिंग, "do not track", या गोपनीयता-केंद्रित ब्राउज़र) का उपयोग करें।</p>
+
+  <h2>6. सर्वर लॉग</h2>
+  <p>होस्टिंग प्रदाता (Cloudflare Pages) परिचालन, सुरक्षा और कुल-एनालिटिक्स उद्देश्यों के लिए रिक्वेस्ट लॉग करता है। लेखक Cloudflare के डिफ़ॉल्ट के ऊपर कोई अलग लॉगिंग या एनालिटिक्स परत नहीं रखते। कोई व्यक्तिगत रूप से पहचान योग्य उपयोगकर्ता प्रोफ़ाइल नहीं बनाई जाती।</p>
+
+  <h2>7. बच्चे</h2>
+  <p>यह साइट <strong>18</strong> वर्ष से कम आयु के बच्चों के लिए निर्देशित नहीं है। नाबालिगों से जानबूझकर कोई व्यक्तिगत डेटा एकत्र नहीं किया जाता।</p>
+
+  <h2>8. आपके अधिकार</h2>
+  <p>चूँकि यह साइट आपके बारे में कोई व्यक्तिगत डेटा संग्रहीत नहीं करती, अधिकांश डेटा-विषय अधिकार डिज़ाइन के अनुसार ही पूरे हो जाते हैं। हालाँकि, जहाँ आप <strong>DPDP Act, 2023</strong>, GDPR, या समान कानूनों के अंतर्गत डेटा प्रिंसिपल हैं, वहाँ आप:</p>
+  <ul>
+    <li>पुष्टि कर सकते हैं कि आपके बारे में क्या (यदि कुछ है) रखा गया है;</li>
+    <li>ग़लत डेटा के सुधार का अनुरोध कर सकते हैं;</li>
+    <li>मिटाने का अनुरोध कर सकते हैं;</li>
+    <li>पहले दी गई कोई भी सहमति वापस ले सकते हैं;</li>
+    <li>Data Protection Board of India या अपने स्थानीय पर्यवेक्षी प्राधिकरण के पास शिकायत दर्ज कर सकते हैं।</li>
+  </ul>
+  <p>इन अधिकारों का प्रयोग करने के लिए, होम पेज पर सूचीबद्ध माध्यमों से लेखक से संपर्क करें।</p>
+
+  <h2>9. इस नीति में परिवर्तन</h2>
+  <p>साइट के व्यवहार में बदलाव होने पर यह नीति अद्यतन की जा सकती है (उदाहरण के लिए, यदि कोई नया तृतीय-पक्ष एम्बेड जोड़ा जाता है)। अद्यतन इस पेज के शीर्ष पर "अंतिम अद्यतन" तिथि बदलकर दर्शाए जाएँगे।</p>
+
+  <h2>10. संपर्क</h2>
+  <p>गोपनीयता संबंधी प्रश्नों के लिए, होम पेज पर सूचीबद्ध माध्यमों से लेखक से संपर्क करें। उचित अनुरोधों का उत्तर आमतौर पर <strong>30 दिनों</strong> के भीतर दिया जाता है।</p>
+
+  <div class="legal-nav">
+    <span>कानूनी:</span>
+    <a href="/hi/legal/disclaimer/">अस्वीकरण</a>
+    <a class="here">गोपनीयता</a>
+    <a href="/hi/legal/terms/">उपयोग की शर्तें</a>
+  </div>
+
+  <footer class="colophon">
+    <div>&copy; 2026 <a href="/hi/">Harshal Dasani</a></div>
+    <div><a href="/hi/">harshaldasani.pages.dev</a></div>
+  </footer>
+
+</main>
+
+<script src="/lang-switch.js" defer></script>
+</body>
+</html>

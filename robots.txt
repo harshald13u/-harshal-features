@@ -1,0 +1,40 @@
+# Robots policy for the Harshal Dasani official website
+User-agent: *
+Allow: /
+Disallow:
+
+# AI / LLM crawlers — explicitly allowed (this is content meant to be cited)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+Sitemap: https://harshaldasani.pages.dev/sitemap.xml
+Sitemap: https://harshaldasani.pages.dev/news-sitemap.xml
+
+# site live at https://harshaldasani.pages.dev (migrated 2026-06-08)

@@ -1931,8 +1931,10 @@ html.motion-ready .lens-grid .lens-card[data-reveal]:nth-child(4){transition-del
 </script>
 <style id="hd-interactive-v4">
 @media (hover:hover) and (pointer:fine){
-  .lens-card.hd-tilt,.latest-card.hd-tilt{position:relative;transform-style:preserve-3d;transition:opacity .95s cubic-bezier(.22,1,.36,1),transform .45s cubic-bezier(.22,1,.36,1)!important;}
-  .lens-card.hd-tilt::after,.latest-card.hd-tilt::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:4;background:radial-gradient(180px circle at var(--gx,50%) var(--gy,50%),rgba(240,210,138,.28),transparent 60%);opacity:var(--gloss,0);transition:opacity .35s cubic-bezier(.22,1,.36,1);}
+  .hd-tilt{position:relative;transform-style:preserve-3d;transition:transform .45s cubic-bezier(.22,1,.36,1);}
+  .lens-card.hd-tilt,.latest-card.hd-tilt{transition:opacity .95s cubic-bezier(.22,1,.36,1),transform .45s cubic-bezier(.22,1,.36,1)!important;}
+  .hd-tilt::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:4;background:radial-gradient(180px circle at var(--gx,50%) var(--gy,50%),rgba(240,210,138,.28),transparent 60%);opacity:var(--gloss,0);transition:opacity .35s cubic-bezier(.22,1,.36,1);}
+  .hd-tilt:hover{box-shadow:0 0 0 1px rgba(212,166,74,.5),0 16px 40px -14px rgba(212,166,74,.42);}
   .ts-cta.hd-magnetic{transition:transform .45s cubic-bezier(.22,1,.36,1)!important;}
 }
 </style>
@@ -2555,7 +2557,7 @@ function isInteractive(el) {
 <script>
 (function(){
   if(!window.matchMedia || !matchMedia('(hover:hover) and (pointer:fine)').matches) return;
-  var TILT='.lens-card,.latest-card', MAG='.ts-cta';
+  var TILT='.lens-card,.latest-card,.ts-kpi,.snap-kpi,.ts-sf', MAG='.ts-cta';
   function tilt(el){ el.classList.add('hd-tilt');
     el.addEventListener('pointermove',function(e){ var r=el.getBoundingClientRect(); if(!r.width) return; var px=(e.clientX-r.left)/r.width,py=(e.clientY-r.top)/r.height;
       el.style.setProperty('transform','perspective(700px) rotateX('+((0.5-py)*7).toFixed(2)+'deg) rotateY('+((px-0.5)*9).toFixed(2)+'deg) translateY(-3px)','important');

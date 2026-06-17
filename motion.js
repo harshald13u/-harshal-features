@@ -49,7 +49,7 @@
 /* v4: cursor 3D tilt + gold gloss + magnetic buttons (fine pointers only). */
 (function(){
   if(!window.matchMedia || !matchMedia('(hover:hover) and (pointer:fine)').matches) return;
-  var TILT='.lens-card,.latest-card,.tile,.post-card,.ipo-card,.snap-card,.snap-feature,.sf-card,.sf-img-card,.photo,.tool-card,.stat-card,.wl-card';
+  var TILT='.lens-card,.latest-card,.tile,.post-card,.ipo-card,.snap-card,.snap-feature,.sf-card,.sf-img-card,.photo,.tool-card,.stat-card,.wl-card,.r-tile,.ts-kpi,.snap-kpi,.ipo-stat,.ts-sf';
   var MAG='.ts-cta,.btn,.btn-gold,.kit-btn,.dl-btn';
   function tilt(el){
     el.classList.add('hd-tilt');

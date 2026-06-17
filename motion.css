@@ -25,3 +25,6 @@ html.motion-ready [data-draw].in{stroke-dashoffset:0!important;}
     opacity:var(--gloss,0);transition:opacity .35s var(--hd-ease);}
   html.motion-ready .hd-magnetic{transition:transform .45s var(--hd-ease),background-color .3s ease,color .3s ease,border-color .3s ease!important;}
 }
+@media (hover:hover) and (pointer:fine){
+  html.motion-ready .hd-tilt:hover{box-shadow:0 0 0 1px rgba(212,166,74,.5),0 16px 40px -14px rgba(212,166,74,.42)!important;}
+}

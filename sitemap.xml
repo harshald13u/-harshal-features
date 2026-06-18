@@ -618,9 +618,21 @@
     <lastmod>2026-06-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://harshaldasani.pages.dev/blog/posts/spacex-three-businesses-stacked/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://harshaldasani.pages.dev/hi/blog/posts/spacex-three-businesses-stacked/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://harshaldasani.pages.dev/blog/posts/spacex-three-businesses-stacked/"/>
     <image:image>
       <image:loc>https://harshaldasani.pages.dev/blog/posts/spacex-three-businesses-stacked/cover.jpg</image:loc>
       <image:title></image:title>
     </image:image>
+  </url>
+  <url>
+    <loc>https://harshaldasani.pages.dev/hi/blog/posts/spacex-three-businesses-stacked/</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://harshaldasani.pages.dev/hi/blog/posts/spacex-three-businesses-stacked/"/>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://harshaldasani.pages.dev/blog/posts/spacex-three-businesses-stacked/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://harshaldasani.pages.dev/blog/posts/spacex-three-businesses-stacked/"/>
   </url>
 </urlset>

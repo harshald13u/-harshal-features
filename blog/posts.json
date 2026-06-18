@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "spacex-three-businesses-stacked",
+      "title": "SpaceX is not a rocket company. It’s three.",
+      "topic": "stock-market",
+      "date": "2026-06-17",
+      "excerpt": "Launch, network, planet: SpaceX is three businesses stacked on top of each other, each one big enough to be the most important company in its own industry.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/spacex-three-businesses-stacked/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/spacex-three-businesses-stacked/"
+    },
+    {
       "slug": "first-millionaire-billionaire-trillionaire",
       "title": "Three men, three centuries: the first millionaire, the first billionaire, the first trillionaire",
       "topic": "stock-market",

@@ -613,4 +613,14 @@
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://harshaldasani.pages.dev/blog/posts/first-millionaire-billionaire-trillionaire/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://harshaldasani.pages.dev/blog/posts/first-millionaire-billionaire-trillionaire/"/>
   </url>
+  <url>
+    <loc>https://harshaldasani.pages.dev/blog/posts/spacex-three-businesses-stacked/</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://harshaldasani.pages.dev/blog/posts/spacex-three-businesses-stacked/cover.jpg</image:loc>
+      <image:title></image:title>
+    </image:image>
+  </url>
 </urlset>

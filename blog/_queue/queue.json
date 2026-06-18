@@ -12,11 +12,13 @@
   },
   {
     "file": "2026-06-17_2_spacex-is-three-businesses.docx",
-    "status": "pending",
-    "title": "SpaceX Is Three Businesses Stacked: Launch, Starlink and Starship",
+    "status": "done",
+    "title": "SpaceX is not a rocket company. It’s three.",
     "slug": "spacex-three-businesses-stacked",
     "topic": "stock-market",
-    "excerpt": "Launch, network, planet: SpaceX is three businesses stacked on top of each other, each one big enough to be the most important company in its own industry."
+    "excerpt": "Launch, network, planet: SpaceX is three businesses stacked on top of each other, each one big enough to be the most important company in its own industry.",
+    "published_at": "2026-06-18T19:08:46+05:30",
+    "lang_en": true
   },
   {
     "file": "2026-06-17_5_spacex-journey-in-numbers.docx",

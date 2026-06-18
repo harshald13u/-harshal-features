@@ -2,26 +2,52 @@
   {
     "file": "2026-06-17_first-millionaire-billionaire-trillionaire.docx",
     "status": "done",
-    "slug": "first-millionaire-billionaire-trillionaire"
+    "slug": "first-millionaire-billionaire-trillionaire",
+    "title": "Three men, three centuries: the first millionaire, the first billionaire, the first trillionaire",
+    "topic": "stock-market",
+    "excerpt": "John Jacob Astor, John D. Rockefeller, Elon Musk — three men who each built the infrastructure of their age, and the one pattern that links a fur trader, an oil refiner and a rocket builder.",
+    "published_at": "2026-06-17",
+    "lang_en": true,
+    "lang_hi": false
   },
   {
     "file": "2026-06-17_2_spacex-is-three-businesses.docx",
-    "status": "pending"
+    "status": "pending",
+    "title": "SpaceX Is Three Businesses Stacked: Launch, Starlink and Starship",
+    "slug": "spacex-three-businesses-stacked",
+    "topic": "stock-market",
+    "excerpt": "Launch, network, planet: SpaceX is three businesses stacked on top of each other, each one big enough to be the most important company in its own industry."
   },
   {
     "file": "2026-06-17_5_spacex-journey-in-numbers.docx",
-    "status": "pending"
+    "status": "pending",
+    "title": "SpaceX’s Journey in Numbers: From Russia’s Missiles to 80% of Global Launch",
+    "slug": "spacex-journey-in-numbers",
+    "topic": "stock-market",
+    "excerpt": "From buying refurbished missiles in Russia to running 80% of the world’s launches — SpaceX’s twenty-four-year climb, year by year."
   },
   {
     "file": "2026-06-17_3_elon-musk-journey-in-numbers.docx",
-    "status": "pending"
+    "status": "pending",
+    "title": "Elon Musk’s Journey in Numbers: From Pretoria to the First Trillionaire",
+    "slug": "elon-musk-journey-in-numbers",
+    "topic": "stock-market",
+    "excerpt": "From a bullied schoolboy in Pretoria to the world’s first trillionaire — Elon Musk’s life as a sequence of bets, failures and comebacks."
   },
   {
     "file": "2026-06-17_4_musk-empire-every-hard-problem.docx",
-    "status": "pending"
+    "status": "pending",
+    "title": "The Musk Empire: One Founder and Every Hard Problem of the Century",
+    "slug": "musk-empire-every-hard-problem",
+    "topic": "stock-market",
+    "excerpt": "Launch, cars, AI, brain interfaces, tunnels, energy — Elon Musk’s companies look scattered until you see the single thesis that connects them."
   },
   {
     "file": "2026-06-17_6_nvidia-journey-in-numbers.docx",
-    "status": "pending"
+    "status": "pending",
+    "title": "NVIDIA’s Journey in Numbers: From a Denny’s Booth to $4 Trillion",
+    "slug": "nvidia-journey-in-numbers",
+    "topic": "stock-market",
+    "excerpt": "From three engineers at a Denny’s to a four-trillion-dollar company — how NVIDIA’s most ridiculed bet became the most valuable software platform in the world."
   }
 ]

@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Blog Publishing Schedule — Markets with Harshal</title>
+<style>
+:root{--bg:#0e0c0a;--bg2:#15110d;--panel:#181309;--ink:#ece4d3;--ink2:#c9c0ad;--muted:#8a8273;--rule:rgba(236,228,211,.10);--gold:#d4a64a;--green:#67c79b;--amber:#e0a93b}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:radial-gradient(1200px 600px at 50% -10%,#1b150d 0%,var(--bg) 55%) fixed,var(--bg);color:var(--ink);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.topbar{height:3px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.wrap{max-width:940px;margin:0 auto;padding:38px 20px 70px}
+.head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap}
+.kicker{color:var(--gold);font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;margin:0 0 8px}
+h1{font-family:Georgia,"Times New Roman",serif;font-weight:600;font-size:clamp(26px,4.4vw,38px);margin:0 0 6px;line-height:1.15}
+.sub{color:var(--muted);font-size:14.5px;margin:0}
+.btn{cursor:pointer;border:1px solid var(--rule);background:var(--panel);color:var(--ink2);border-radius:999px;padding:9px 16px;font-size:13px;font-weight:600;display:inline-flex;gap:7px;align-items:center;transition:.15s}
+.btn:hover{border-color:var(--gold);color:var(--gold)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:26px 0 8px}
+.stat{background:var(--panel);border:1px solid var(--rule);border-radius:14px;padding:16px 18px}
+.stat .n{font-family:Georgia,serif;font-size:32px;color:var(--gold);line-height:1}
+.stat .l{color:var(--muted);font-size:12.5px;letter-spacing:.04em;margin-top:6px}
+.next{margin:22px 0 10px;background:linear-gradient(180deg,rgba(212,166,74,.08),rgba(212,166,74,.02));border:1px solid rgba(212,166,74,.32);border-left:3px solid var(--gold);border-radius:14px;padding:18px 20px}
+.next .lab{color:var(--gold);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:700}
+.next .t{font-family:Georgia,serif;font-size:20px;margin:7px 0 10px;color:var(--ink)}
+.next .when{display:flex;gap:18px;flex-wrap:wrap;align-items:baseline}
+.next .clock{font-variant-numeric:tabular-nums;font-size:22px;color:var(--ink);font-weight:600}
+.next .cd{color:var(--amber);font-weight:700;font-size:14px}
+.sec{margin:34px 0 12px;display:flex;align-items:center;gap:10px}
+.sec h2{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink2);margin:0;font-weight:700}
+.sec .dot{width:9px;height:9px;border-radius:50%}
+.dg{background:var(--gold);box-shadow:0 0 0 3px rgba(212,166,74,.18)}
+.dgr{background:var(--green);box-shadow:0 0 0 3px rgba(103,199,155,.16)}
+.sec .ct{color:var(--muted);font-size:12.5px;margin-left:auto}
+.row{display:grid;grid-template-columns:150px 1fr auto;gap:16px;align-items:center;padding:14px 16px;border:1px solid var(--rule);border-radius:12px;background:rgba(255,255,255,.012);margin-bottom:9px;transition:.15s}
+.row:hover{border-color:rgba(212,166,74,.34);background:rgba(212,166,74,.03)}
+.when2{font-size:13px;color:var(--ink2);line-height:1.35}
+.when2 b{color:var(--ink);font-weight:600;display:block;font-size:13.5px}
+.when2 .r{color:var(--amber);font-size:12px;font-weight:600}
+.when2 .d{color:var(--muted);font-size:12px}
+.ttl{font-size:15px;color:var(--ink);font-weight:500;line-height:1.35}
+.ttl a{color:var(--ink);text-decoration:none;border-bottom:1px solid transparent}
+.ttl a:hover{color:var(--gold);border-color:rgba(212,166,74,.5)}
+.chips{margin-top:6px;display:flex;gap:7px;flex-wrap:wrap}
+.chip{font-size:11px;letter-spacing:.03em;padding:3px 9px;border-radius:999px;border:1px solid var(--rule);color:var(--muted);text-transform:capitalize}
+.badges{display:flex;gap:7px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.b{font-size:11.5px;font-weight:700;padding:4px 9px;border-radius:7px;letter-spacing:.03em;white-space:nowrap}
+.b.en{background:rgba(103,199,155,.14);color:var(--green);border:1px solid rgba(103,199,155,.3)}
+.b.hi{background:rgba(103,199,155,.14);color:var(--green);border:1px solid rgba(103,199,155,.3)}
+.b.hiw{background:rgba(224,169,59,.12);color:var(--amber);border:1px solid rgba(224,169,59,.32)}
+.b.au{background:rgba(212,166,74,.1);color:var(--gold);border:1px solid rgba(212,166,74,.28)}
+.b.up{background:rgba(212,166,74,.1);color:var(--gold);border:1px solid rgba(212,166,74,.28)}
+.foot{margin-top:40px;padding-top:22px;border-top:1px solid var(--rule);color:var(--muted);font-size:13px;line-height:1.7}
+.foot b{color:var(--ink2)}
+.foot code{background:var(--panel);border:1px solid var(--rule);border-radius:5px;padding:1px 6px;color:var(--ink2);font-size:12px}
+.gen{margin-top:14px;font-size:12px;color:var(--muted)}
+.live{display:inline-flex;align-items:center;gap:6px}
+.live i{width:7px;height:7px;border-radius:50%;background:var(--green);display:inline-block;animation:p 2s infinite}
+@keyframes p{0%,100%{opacity:1}50%{opacity:.35}}
+@media(max-width:620px){.stats{grid-template-columns:1fr 1fr}.row{grid-template-columns:1fr;gap:9px}.badges{justify-content:flex-start}.when2{display:flex;gap:12px;align-items:baseline}}
+</style>
+</head>
+<body>
+<div class="topbar"></div>
+<div class="wrap">
+  <div class="head">
+    <div>
+      <p class="kicker">Markets with Harshal · Auto-Publisher</p>
+      <h1>Blog Publishing Schedule</h1>
+      <p class="sub">2 posts per day · 9:00&nbsp;AM &amp; 7:00&nbsp;PM IST · published automatically (English + Hindi)</p>
+    </div>
+    <button class="btn" id="refresh">&#8635; Refresh</button>
+  </div>
+
+  <div class="stats" id="stats"></div>
+  <div id="nextwrap"></div>
+
+  <div class="sec"><span class="dot dg"></span><h2>Upcoming — auto-scheduled</h2><span class="ct" id="upct"></span></div>
+  <div id="upcoming"></div>
+
+  <div class="sec"><span class="dot dgr"></span><h2>Published — live</h2><span class="ct" id="pubct"></span></div>
+  <div id="published"></div>
+
+  <div class="foot">
+    <b>How it works.</b> A scheduled task publishes the next queued post twice a day at <b>9:00&nbsp;AM</b> and <b>7:00&nbsp;PM IST</b> — full on-page SEO, cover image and narrated audio, in English and Hindi, then it goes live on its own.<br>
+    <b>To add more posts:</b> drop the <code>.docx</code> into <code>blog/_queue/</code> and add a line to <code>queue.json</code>. They auto-publish on the next free slot, in order.<br>
+    <b>Note:</b> scheduled runs happen while the Cowork desktop app is open; if it's closed at a slot, that post publishes on the next launch. Upcoming times are projected.
+    <div class="gen"><span class="live" id="livestate"><i></i> Live data</span> · snapshot generated <span id="gen"></span></div>
+  </div>
+</div>
+
+<script>
+const SNAP={
+ "generated": "18 Jun 2026, 04:53 PM IST",
+ "published": [
+  {
+   "slug": "silver-2026-deficit-bull-case",
+   "title": "Silver’s two engines: the deficit metal that finally broke its old ceiling",
+   "date": "2026-06-17",
+   "url": "https://harshaldasani.pages.dev/blog/posts/silver-2026-deficit-bull-case/",
+   "hi": true,
+   "audio": true,
+   "topic": "commodities"
+  },
+  {
+   "slug": "rupee-usd-inr-2026-why-falling-where-it-stops",
+   "title": "The rupee’s record low: why USD/INR is falling, where it stops, and what it means for India",
+   "date": "2026-06-17",
+   "url": "https://harshaldasani.pages.dev/blog/posts/rupee-usd-inr-2026-why-falling-where-it-stops/",
+   "hi": true,
+   "audio": true,
+   "topic": "macros"
+  },
+  {
+   "slug": "gold-2026-structural-bull-case",
+   "title": "Gold’s second wind: the structural case behind the world’s oldest money",
+   "date": "2026-06-17",
+   "url": "https://harshaldasani.pages.dev/blog/posts/gold-2026-structural-bull-case/",
+   "hi": true,
+   "audio": true,
+   "topic": "commodities"
+  },
+  {
+   "slug": "first-millionaire-billionaire-trillionaire",
+   "title": "Three men, three centuries: the first millionaire, the first billionaire, the first trillionaire",
+   "date": "2026-06-17",
+   "url": "https://harshaldasani.pages.dev/blog/posts/first-millionaire-billionaire-trillionaire/",
+   "hi": false,
+   "audio": true,
+   "topic": "stock-market"
+  },
+  {
+   "slug": "copper-2026-electrification-deficit",
+   "title": "Copper: the metal the electric, AI-powered century will be built from",
+   "date": "2026-06-17",
+   "url": "https://harshaldasani.pages.dev/blog/posts/copper-2026-electrification-deficit/",
+   "hi": true,
+   "audio": true,
+   "topic": "commodities"
+  },
+  {
+   "slug": "spacex-ipo-1-75-trillion-explained",
+   "title": "Three companies, one ticker: what you’re actually buying in the SpaceX IPO",
+   "date": "2026-06-16",
+   "url": "https://harshaldasani.pages.dev/blog/posts/spacex-ipo-1-75-trillion-explained/",
+   "hi": true,
+   "audio": true,
+   "topic": "stock-market"
+  },
+  {
+   "slug": "kospi-2026-korea-rally-reform-explained",
+   "title": "Two engines behind Korea’s 100% year: reform, a chip mania, and a mirror for India",
+   "date": "2026-06-16",
+   "url": "https://harshaldasani.pages.dev/blog/posts/kospi-2026-korea-rally-reform-explained/",
+   "hi": true,
+   "audio": true,
+   "topic": "stock-market"
+  },
+  {
+   "slug": "rbi-mpc-june-2026-rate-pause",
+   "title": "The end of the easing cycle: what the RBI’s June pause means for investors",
+   "date": "2026-06-08",
+   "url": "https://harshaldasani.pages.dev/blog/posts/rbi-mpc-june-2026-rate-pause/",
+   "hi": true,
+   "audio": true,
+   "topic": "macros"
+  },
+  {
+   "slug": "iran-israel-us-war-2026-explained",
+   "title": "The 2026 Iran War: one unsigned page stands between the world and cheaper oil",
+   "date": "2026-06-08",
+   "url": "https://harshaldasani.pages.dev/blog/posts/iran-israel-us-war-2026-explained/",
+   "hi": true,
+   "audio": true,
+   "topic": "geopolitics"
+  },
+  {
+   "slug": "crude-oil-india-markets-rupee-inflation",
+   "title": "The Oil Shock and India: Crude, the Rupee, and Inflation",
+   "date": "2026-06-05",
+   "url": "https://harshaldasani.pages.dev/blog/posts/crude-oil-india-markets-rupee-inflation/",
+   "hi": true,
+   "audio": true,
+   "topic": "commodities"
+  },
+  {
+   "slug": "indian-it-stocks-whats-breaking",
+   "title": "Indian IT Stocks: What’s Actually Breaking, and Why the Market Stopped Paying Up",
+   "date": "2026-06-04",
+   "url": "https://harshaldasani.pages.dev/blog/posts/indian-it-stocks-whats-breaking/",
+   "hi": true,
+   "audio": true,
+   "topic": "stock-market"
+  }
+ ],
+ "upcoming": [
+  {
+   "slug": "spacex-three-businesses-stacked",
+   "title": "SpaceX Is Three Businesses Stacked: Launch, Starlink and Starship",
+   "topic": "stock-market",
+   "excerpt": "Launch, network, planet: SpaceX is three businesses stacked on top of each other, each one big enough to be the most important company in its own industry."
+  },
+  {
+   "slug": "spacex-journey-in-numbers",
+   "title": "SpaceX’s Journey in Numbers: From Russia’s Missiles to 80% of Global Launch",
+   "topic": "stock-market",
+   "excerpt": "From buying refurbished missiles in Russia to running 80% of the world’s launches — SpaceX’s twenty-four-year climb, year by year."
+  },
+  {
+   "slug": "elon-musk-journey-in-numbers",
+   "title": "Elon Musk’s Journey in Numbers: From Pretoria to the First Trillionaire",
+   "topic": "stock-market",
+   "excerpt": "From a bullied schoolboy in Pretoria to the world’s first trillionaire — Elon Musk’s life as a sequence of bets, failures and comebacks."
+  },
+  {
+   "slug": "musk-empire-every-hard-problem",
+   "title": "The Musk Empire: One Founder and Every Hard Problem of the Century",
+   "topic": "stock-market",
+   "excerpt": "Launch, cars, AI, brain interfaces, tunnels, energy — Elon Musk’s companies look scattered until you see the single thesis that connects them."
+  },
+  {
+   "slug": "nvidia-journey-in-numbers",
+   "title": "NVIDIA’s Journey in Numbers: From a Denny’s Booth to $4 Trillion",
+   "topic": "stock-market",
+   "excerpt": "From three engineers at a Denny’s to a four-trillion-dollar company — how NVIDIA’s most ridiculed bet became the most valuable software platform in the world."
+  }
+ ],
+ "counts": {
+  "published": 11,
+  "upcoming": 5,
+  "hi_done": 10
+ }
+};
+const BASE="https://harshaldasani.pages.dev";
+const SLOTS=[[3,30],[13,30]]; // UTC == 9:00 & 19:00 IST
+function upcomingSlots(n){const out=[],now=Date.now();const b=new Date();b.setUTCHours(0,0,0,0);
+  for(let d=0;d<120&&out.length<n;d++){for(const[h,m]of SLOTS){const t=new Date(b);t.setUTCDate(b.getUTCDate()+d);t.setUTCHours(h,m,0,0);if(t.getTime()>now)out.push(t);}}return out;}
+function fmtIST(d){return d.toLocaleString('en-IN',{timeZone:'Asia/Kolkata',weekday:'short',day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit',hour12:true});}
+function dateIST(d){return d.toLocaleString('en-IN',{timeZone:'Asia/Kolkata',weekday:'short',day:'2-digit',month:'short'});}
+function timeIST(d){return d.toLocaleString('en-IN',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit',hour12:true});}
+function rel(ms){if(ms<=0)return'due now';const m=Math.floor(ms/60000),h=Math.floor(m/60),dd=Math.floor(h/24);
+  if(dd>0)return'in '+dd+'d '+(h%24)+'h';if(h>0)return'in '+h+'h '+(m%60)+'m';return'in '+m+'m';}
+function esc(s){return(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+function fmtDate(s){if(!s)return'';const d=new Date(s+'T00:00:00');return isNaN(d)?s:d.toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'});}
+
+async function load(){
+  try{
+    const j=async u=>{const r=await fetch(u,{cache:'no-store'});if(!r.ok)throw 0;return r.json();};
+    const [q,en,hi]=await Promise.all([j('../_queue/queue.json'),j('../posts.json'),j('../../hi/blog/posts.json')]);
+    const hiset=new Set((hi.posts||hi).map(p=>p.slug));
+    const enArr=(en.posts||en).slice().sort((a,b)=>((b.date||'').localeCompare(a.date||''))||((b.slug||'').localeCompare(a.slug||'')));
+    const published=enArr.map(p=>({slug:p.slug,title:p.title,date:p.date||'',url:p.url||(BASE+'/blog/posts/'+p.slug+'/'),hi:hiset.has(p.slug),audio:true,topic:p.topic||''}));
+    const upcoming=q.filter(x=>x.status==='pending').map(it=>({slug:it.slug||'',title:it.title||it.file||'',topic:it.topic||'',excerpt:it.excerpt||''}));
+    return {published,upcoming,generated:'just now (live)',live:true,
+            counts:{published:published.length,upcoming:upcoming.length,hi_done:published.filter(p=>p.hi).length}};
+  }catch(e){const s=JSON.parse(JSON.stringify(SNAP));s.live=false;return s;}
+}
+
+let SLOTSCACHE=[];
+function render(D){
+  document.getElementById('gen').textContent=D.generated||SNAP.generated;
+  const ls=document.getElementById('livestate');
+  ls.innerHTML=D.live?'<i></i> Live data':'<i style="background:var(--muted);animation:none"></i> Snapshot';
+  // stats
+  document.getElementById('stats').innerHTML=
+    cardN(D.counts.published,'Published &amp; live')+
+    cardN(D.counts.upcoming,'Queued to publish')+
+    cardN('2 / day','9 AM &amp; 7 PM IST');
+  // upcoming + slots
+  const slots=upcomingSlots(D.upcoming.length); SLOTSCACHE=slots;
+  document.getElementById('upct').textContent=D.upcoming.length+' queued';
+  document.getElementById('pubct').textContent=D.counts.published+' posts · '+D.counts.hi_done+' with Hindi';
+  document.getElementById('upcoming').innerHTML = D.upcoming.length? D.upcoming.map((u,i)=>{
+    const t=slots[i];
+    return '<div class="row"><div class="when2" data-slot="'+(t?t.getTime():'')+'">'+
+      (t?('<b>'+esc(dateIST(t))+'</b><span class="d">'+esc(timeIST(t))+' IST</span> <span class="r">'+rel(t-Date.now())+'</span>'):'<b>TBD</b>')+
+      '</div><div><div class="ttl">'+esc(u.title)+'</div>'+chip(u.topic)+'</div>'+
+      '<div class="badges"><span class="b up">EN + HI</span></div></div>';
+  }).join(''):'<div class="row"><div class="ttl" style="grid-column:1/-1;color:var(--muted)">Queue is empty — all posts published. Drop new .docx files into blog/_queue/ to schedule more.</div></div>';
+  // next up
+  const nw=document.getElementById('nextwrap');
+  if(D.upcoming.length&&slots[0]){const u=D.upcoming[0];
+    nw.innerHTML='<div class="next"><div class="lab">Next to publish</div><div class="t">'+esc(u.title)+'</div>'+
+      '<div class="when"><span class="clock">'+esc(fmtIST(slots[0]))+' IST</span><span class="cd" id="cd"></span></div></div>';
+  }else nw.innerHTML='';
+  // published
+  document.getElementById('published').innerHTML=D.published.map(p=>{
+    const hi=p.hi?'<span class="b hi">HI &#10003;</span>':'<span class="b hiw">Hindi pending</span>';
+    const au=p.audio?'<span class="b au">&#127911; Audio</span>':'';
+    const url=p.url.indexOf('http')===0?p.url:(BASE+p.url);
+    return '<div class="row"><div class="when2"><b>'+esc(fmtDate(p.date))+'</b><span class="d">published</span></div>'+
+      '<div><div class="ttl"><a href="'+esc(url)+'" target="_blank" rel="noopener">'+esc(p.title)+'</a></div>'+chip(p.topic)+'</div>'+
+      '<div class="badges"><span class="b en">EN &#10003;</span>'+hi+au+'</div></div>';
+  }).join('');
+  tick();
+}
+function cardN(n,l){return '<div class="stat"><div class="n">'+n+'</div><div class="l">'+l+'</div></div>';}
+function chip(t){if(!t)return'';return '<div class="chips"><span class="chip">'+esc(t.replace(/-/g,' '))+'</span></div>';}
+function tick(){
+  const cd=document.getElementById('cd');
+  if(cd&&SLOTSCACHE[0]){const ms=SLOTSCACHE[0]-Date.now();
+    if(ms<=0){cd.textContent='publishing…';}
+    else{const s=Math.floor(ms/1000),h=Math.floor(s/3600),m=Math.floor(s%3600/60),ss=s%60,dd=Math.floor(h/24);
+      cd.textContent=dd>0?('in '+dd+'d '+(h%24)+'h '+m+'m'):('in '+String(h).padStart(2,'0')+':'+String(m).padStart(2,'0')+':'+String(ss).padStart(2,'0'));}}
+  document.querySelectorAll('.when2[data-slot]').forEach(el=>{const t=+el.getAttribute('data-slot');const r=el.querySelector('.r');if(t&&r)r.textContent=rel(t-Date.now());});
+}
+async function go(){render(await load());}
+document.getElementById('refresh').addEventListener('click',go);
+setInterval(tick,1000);
+go();
+</script>
+</body>
+</html>

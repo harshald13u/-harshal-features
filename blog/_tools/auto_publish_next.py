@@ -30,7 +30,15 @@ def main():
     except Exception as e:
         print("[auto] EN audio note:",repr(e)[:140])
     item["status"]="done"; item["slug"]=slug
-    json.dump(q,open(QJSON,"w"),indent=2)
+    import datetime
+    IST=datetime.timezone(datetime.timedelta(hours=5,minutes=30))
+    item["published_at"]=datetime.datetime.now(IST).strftime("%Y-%m-%dT%H:%M:%S+05:30")
+    try:
+        pj={p["slug"]:p for p in json.load(open(os.path.join(ROOT,"blog","posts.json")))["posts"]}
+        if pj.get(slug,{}).get("title"): item["title"]=pj[slug]["title"]
+    except Exception: pass
+    item["lang_en"]=True
+    json.dump(q,open(QJSON,"w"),ensure_ascii=False,indent=2)
     print("PUBLISHED_SLUG="+slug)
 
 if __name__=="__main__": main()

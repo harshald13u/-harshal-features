@@ -39,6 +39,9 @@ def main():
     except Exception: pass
     item["lang_en"]=True
     json.dump(q,open(QJSON,"w"),ensure_ascii=False,indent=2)
+    try:
+        import update_schedule_snapshot; update_schedule_snapshot.update(ROOT)
+    except Exception as e: print("[auto] snapshot note:",repr(e)[:120])
     print("PUBLISHED_SLUG="+slug)
 
 if __name__=="__main__": main()

@@ -2,6 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://harshaldasani.pages.dev/blog/posts/spacex-journey-in-numbers/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Harshal Dasani</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-06-17T09:00:00+05:30</news:publication_date>
+      <news:title>SpaceX’s journey, in numbers</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://harshaldasani.pages.dev/blog/posts/spacex-three-businesses-stacked/</loc>
     <news:news>
       <news:publication>
@@ -65,28 +76,6 @@
       </news:publication>
       <news:publication_date>2026-06-17T09:00:00+05:30</news:publication_date>
       <news:title>Gold’s second wind: the structural case behind the world’s oldest money</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://harshaldasani.pages.dev/blog/posts/spacex-ipo-1-75-trillion-explained/</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Harshal Dasani</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-06-16T09:00:00+05:30</news:publication_date>
-      <news:title>Three companies, one ticker: what you’re actually buying in the SpaceX IPO</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://harshaldasani.pages.dev/blog/posts/kospi-2026-korea-rally-reform-explained/</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Harshal Dasani</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-06-16T09:00:00+05:30</news:publication_date>
-      <news:title>Two engines behind Korea’s 100% year: reform, a chip mania, and a mirror for India</news:title>
     </news:news>
   </url>
 </urlset>

@@ -635,4 +635,14 @@
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://harshaldasani.pages.dev/blog/posts/spacex-three-businesses-stacked/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://harshaldasani.pages.dev/blog/posts/spacex-three-businesses-stacked/"/>
   </url>
+  <url>
+    <loc>https://harshaldasani.pages.dev/blog/posts/spacex-journey-in-numbers/</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://harshaldasani.pages.dev/blog/posts/spacex-journey-in-numbers/cover.jpg</image:loc>
+      <image:title></image:title>
+    </image:image>
+  </url>
 </urlset>

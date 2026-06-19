@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "spacex-journey-in-numbers",
+      "title": "SpaceX’s journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-06-17",
+      "excerpt": "From buying refurbished missiles in Russia to running 80% of the world’s launches, SpaceX’s twenty-four-year climb, year by year.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/spacex-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/spacex-journey-in-numbers/"
+    },
+    {
       "slug": "spacex-three-businesses-stacked",
       "title": "SpaceX is not a rocket company. It’s three.",
       "topic": "stock-market",

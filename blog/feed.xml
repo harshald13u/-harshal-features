@@ -7,7 +7,7 @@
     <description>Long-form notes on Indian equity markets, commodities, macros and geopolitics by Harshal Dasani, over a decade in Indian markets, currently Markets professional, Mumbai.</description>
     <language>en-IN</language>
     <copyright>(c) Harshal Dasani</copyright>
-    <lastBuildDate>Thu, 18 Jun 2026 13:37:49 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 19 Jun 2026 03:42:14 +0000</lastBuildDate>
     <generator>publish_blog.py v2</generator>
     <managingEditor>noreply@harshaldasani.pages.dev (Harshal Dasani)</managingEditor>
     <webMaster>noreply@harshaldasani.pages.dev (Harshal Dasani)</webMaster>
@@ -17,6 +17,16 @@
       <title>Harshal Dasani</title>
       <link>https://harshaldasani.pages.dev/blog/</link>
     </image>
+    <item>
+      <title>SpaceX’s journey, in numbers</title>
+      <link>https://harshaldasani.pages.dev/blog/posts/spacex-journey-in-numbers/</link>
+      <guid isPermaLink="true">https://harshaldasani.pages.dev/blog/posts/spacex-journey-in-numbers/</guid>
+      <pubDate>Wed, 17 Jun 2026 09:00:00 +0530</pubDate>
+      <description><![CDATA[From buying refurbished missiles in Russia to running 80% of the world’s launches, SpaceX’s twenty-four-year climb, year by year.]]></description>
+      <category>Stock Market</category>
+      <enclosure url="https://harshaldasani.pages.dev/blog/posts/spacex-journey-in-numbers/cover.jpg" type="image/jpeg"/>
+      <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Harshal Dasani</dc:creator>
+    </item>
     <item>
       <title>SpaceX is not a rocket company. It’s three.</title>
       <link>https://harshaldasani.pages.dev/blog/posts/spacex-three-businesses-stacked/</link>

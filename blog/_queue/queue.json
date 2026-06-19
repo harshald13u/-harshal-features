@@ -22,11 +22,13 @@
   },
   {
     "file": "2026-06-17_5_spacex-journey-in-numbers.docx",
-    "status": "pending",
-    "title": "SpaceX’s Journey in Numbers: From Russia’s Missiles to 80% of Global Launch",
+    "status": "done",
+    "title": "SpaceX’s journey, in numbers",
     "slug": "spacex-journey-in-numbers",
     "topic": "stock-market",
-    "excerpt": "From buying refurbished missiles in Russia to running 80% of the world’s launches — SpaceX’s twenty-four-year climb, year by year."
+    "excerpt": "From buying refurbished missiles in Russia to running 80% of the world’s launches — SpaceX’s twenty-four-year climb, year by year.",
+    "published_at": "2026-06-19T09:12:39+05:30",
+    "lang_en": true
   },
   {
     "file": "2026-06-17_3_elon-musk-journey-in-numbers.docx",

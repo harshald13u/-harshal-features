@@ -24,6 +24,11 @@ def main():
     slug=slug_of(docx)
     print(f"[auto] publishing {item['file']}  slug={slug}")
     publish_blog.publish_blog(docx)
+    try:
+        import set_post_date, datetime as _dt
+        _today=_dt.datetime.now(_dt.timezone(_dt.timedelta(hours=5,minutes=30))).strftime("%Y-%m-%d")
+        set_post_date.set_post_date(ROOT,slug,_today)
+    except Exception as e: print("[auto] date note:",repr(e)[:120])
     post_dir=os.path.join(ROOT,"blog","posts",slug)
     try:
         gen_audio_pro.generate(post_dir,"en","en-IN-NeerjaExpressiveNeural")

@@ -1,121 +1,649 @@
 {
   "posts": [
     {
+      "slug": "nvidia-journey-in-numbers",
+      "title": "NVIDIA की यात्रा, संख्याओं में",
+      "topic": "stock-market",
+      "date": "2026-08-11",
+      "excerpt": "NVIDIA की साल-दर-साल कहानी, 1997 की मौत के क़रीब का दौर, CUDA पर एक दशक का उपहास, AlexNet, H100 और 2026 में $5 ट्रिलियन मार्केट कैप के पार चढ़ाई।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/nvidia-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/nvidia-journey-in-numbers/",
+      "publishAt": "2026-08-11T09:15:00+05:30"
+    },
+    {
+      "slug": "astra-microwave-journey-in-numbers",
+      "title": "एस्ट्रा माइक्रोवेव प्रोडक्ट्स की यात्रा, संख्याओं में",
+      "topic": "stock-market",
+      "date": "2026-08-10",
+      "excerpt": "कैसे एस्ट्रा माइक्रोवेव ने 35 वर्षों में भारत के रडारों और मिसाइलों के लिए RF और माइक्रोवेव डिज़ाइन IP बनाई, फिर defence स्वदेशीकरण आने पर री-रेट हुई।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/astra-microwave-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/astra-microwave-journey-in-numbers/",
+      "publishAt": "2026-08-10T09:15:00+05:30"
+    },
+    {
+      "slug": "sai-life-sciences-journey-in-numbers",
+      "title": "साई लाइफ साइंसेज़ की यात्रा, संख्याओं में",
+      "topic": "stock-market",
+      "date": "2026-08-09",
+      "excerpt": "कैसे साई लाइफ साइंसेज़ ने बीस साल तक एक CRDMO प्लेटफ़ॉर्म बनाया, TPG के ज़रिए वित्तपोषित रही, और चाइना-प्लस-वन आउटसोर्सिंग लहर में IPO लाया।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/sai-life-sciences-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/sai-life-sciences-journey-in-numbers/",
+      "publishAt": "2026-08-09T09:15:00+05:30"
+    },
+    {
+      "slug": "shriram-pistons-journey-in-numbers",
+      "title": "श्रीराम पिस्टन्स एंड रिंग्स की यात्रा, संख्याओं में",
+      "topic": "stock-market",
+      "date": "2026-08-08",
+      "excerpt": "कैसे श्रीराम पिस्टन्स एंड रिंग्स ने टू-व्हीलर, जेनसेट और निर्यात में इंटरनल-कंबशन माँग की वापसी पर सवार होकर एक मल्टीबैगर दौड़ हासिल की।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/shriram-pistons-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/shriram-pistons-journey-in-numbers/",
+      "publishAt": "2026-08-08T09:15:00+05:30"
+    },
+    {
+      "slug": "aditya-birla-sun-life-amc-journey-in-numbers",
+      "title": "आदित्य बिड़ला सन लाइफ AMC की यात्रा, संख्याओं में",
+      "topic": "stock-market",
+      "date": "2026-08-07",
+      "excerpt": "कैसे आदित्य बिड़ला सन लाइफ AMC, ₹4 लाख करोड़+ AUM और SIP बूम पर 65%+ मार्जिन के साथ भारत के टॉप-6 एसेट मैनेजरों में से एक बन गया।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/aditya-birla-sun-life-amc-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/aditya-birla-sun-life-amc-journey-in-numbers/",
+      "publishAt": "2026-08-07T09:15:00+05:30"
+    },
+    {
+      "slug": "nippon-life-india-amc-journey-in-numbers",
+      "title": "निप्पॉन लाइफ इंडिया एसेट मैनेजमेंट की यात्रा, संख्याओं में",
+      "topic": "stock-market",
+      "date": "2026-08-06",
+      "excerpt": "कैसे रिलायंस म्यूचुअल फंड, निप्पॉन लाइफ इंडिया AMC बना, अपनी मूल कंपनी के पतन से उबरा, जापानी स्वामित्व के तहत स्थिर हुआ और SIP बूम पर सवार हुआ।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/nippon-life-india-amc-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/nippon-life-india-amc-journey-in-numbers/",
+      "publishAt": "2026-08-06T09:15:00+05:30"
+    },
+    {
+      "slug": "craftsman-automation-journey-in-numbers",
+      "title": "क्राफ्ट्समैन ऑटोमेशन की यात्रा, संख्याओं में",
+      "topic": "stock-market",
+      "date": "2026-08-05",
+      "excerpt": "कैसे क्राफ्ट्समैन ऑटोमेशन ने नई क्षमताएँ अर्जित करके ऑटो पावरट्रेन, इंडस्ट्रियल मशीनिंग, स्टोरेज और अब EV कंपोनेंट्स के पार कंपाउंड किया।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/craftsman-automation-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/craftsman-automation-journey-in-numbers/",
+      "publishAt": "2026-08-05T09:15:00+05:30"
+    },
+    {
+      "slug": "laurus-labs-journey-in-numbers",
+      "title": "लॉरस लैब्स की यात्रा, संख्याओं में",
+      "topic": "stock-market",
+      "date": "2026-08-04",
+      "excerpt": "कैसे लॉरस लैब्स ने भारतीय फार्मा के सबसे मज़बूत साइंस प्लेटफ़ॉर्मों में से एक बनाया, एंटी-रेट्रोवायरल APIs से CDMO, सिंथेसिस और बायोलॉजिक्स तक।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/laurus-labs-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/laurus-labs-journey-in-numbers/",
+      "publishAt": "2026-08-04T09:15:00+05:30"
+    },
+    {
+      "slug": "federal-bank-journey-in-numbers",
+      "title": "फेडरल बैंक की यात्रा, संख्याओं में",
+      "topic": "stock-market",
+      "date": "2026-08-03",
+      "excerpt": "कैसे फेडरल बैंक, 1931 का एक केरल का बैंक, ने अपना NRI और जमा फ्रैंचाइज़ी बनाए रखा, डिजिटल-फ़र्स्ट बना, और पुराने प्राइवेट बैंकों के बीच री-रेटिंग के लिए ख़ुद को तैयार किया।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/federal-bank-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/federal-bank-journey-in-numbers/",
+      "publishAt": "2026-08-03T09:15:00+05:30"
+    },
+    {
+      "slug": "reliance-industries-journey-in-numbers",
+      "title": "रिलायंस इंडस्ट्रीज़ की यात्रा, संख्याओं में",
+      "topic": "stock-market",
+      "date": "2026-08-02",
+      "excerpt": "रिलायंस कैसे धीरूभाई अंबानी के $700 के धागे के कारोबार से भारत की सबसे मूल्यवान कंपनी बनी, जामनगर, Jio, रिटेल और नई ऊर्जा, साल-दर-साल।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/reliance-industries-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/reliance-industries-journey-in-numbers/",
+      "publishAt": "2026-08-02T09:15:00+05:30"
+    },
+    {
+      "slug": "ntpc-journey-in-numbers",
+      "title": "NTPC की यात्रा, संख्याओं में",
+      "topic": "stock-market",
+      "date": "2026-08-01",
+      "excerpt": "NTPC कैसे 90 GW से अधिक क्षमता के साथ भारत की सबसे बड़ी बिजली उत्पादक बनी, और अब NTPC Green Energy के ज़रिए ऊर्जा संक्रमण का नेतृत्व इसके इर्द-गिर्द नहीं बल्कि इसके माध्यम से कर रही है।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/ntpc-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/ntpc-journey-in-numbers/",
+      "publishAt": "2026-08-01T09:15:00+05:30"
+    },
+    {
+      "slug": "ge-vernova-td-india-journey-in-numbers",
+      "title": "GE वर्नोवा T&D इंडिया की यात्रा, संख्याओं में",
+      "topic": "stock-market",
+      "date": "2026-07-31",
+      "excerpt": "कैसे 1957 का एक एल्सटॉम T&D कारोबार GE वर्नोवा T&D इंडिया बना, भारत के अक्षय ग्रिड पुनर्निर्माण के लिए बड़े पैमाने पर HVDC बना सकने वाले केवल दो नामों में से एक।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/ge-vernova-td-india-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/ge-vernova-td-india-journey-in-numbers/",
+      "publishAt": "2026-07-31T09:15:00+05:30"
+    },
+    {
+      "slug": "sandisk-journey-in-numbers",
+      "title": "सैनडिस्क की यात्रा, संख्याओं में",
+      "topic": "stock-market",
+      "date": "2026-07-30",
+      "excerpt": "कैसे सैनडिस्क ने NAND फ्लैश का बीड़ा उठाया, दुनिया के मेमोरी कार्ड बनाए, वेस्टर्न डिजिटल में समा गई, और 2025 में एक शुद्ध फ्लैश कारोबार के रूप में फिर अलग हो गई।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/sandisk-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/sandisk-journey-in-numbers/",
+      "publishAt": "2026-07-30T09:15:00+05:30"
+    },
+    {
+      "slug": "sk-hynix-journey-in-numbers",
+      "title": "SK हाइनिक्स की यात्रा, संख्याओं में",
+      "topic": "stock-market",
+      "date": "2026-07-29",
+      "excerpt": "कैसे SK हाइनिक्स लेनदारों के नियंत्रण वाली लगभग मृत चिप निर्माता से दुनिया की HBM अग्रणी और AI चक्र को शक्ति देने वाली $1 ट्रिलियन कंपनी बनी।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/sk-hynix-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/sk-hynix-journey-in-numbers/",
+      "publishAt": "2026-07-29T09:15:00+05:30"
+    },
+    {
+      "slug": "samsung-journey-in-numbers",
+      "title": "सैमसंग की यात्रा, संख्याओं में",
+      "topic": "stock-market",
+      "date": "2026-07-28",
+      "excerpt": "कैसे सैमसंग 1938 की एक ट्रेडिंग कंपनी से दुनिया की नंबर-एक DRAM निर्माता बनी, चिप तालिका में शीर्ष पर पहुँची, और SK हाइनिक्स के ख़िलाफ़ फिर से HBM की दौड़ में लौटी।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/samsung-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/samsung-journey-in-numbers/",
+      "publishAt": "2026-07-28T09:15:00+05:30"
+    },
+    {
+      "slug": "tsmc-journey-in-numbers",
+      "title": "TSMC की यात्रा, संख्याओं में",
+      "topic": "stock-market",
+      "date": "2026-07-27",
+      "excerpt": "मॉरिस चांग ने TSMC को एक ही विचार पर खड़ा किया, चिप डिज़ाइन को निर्माण से अलग करना, और इसे दुनिया की लगभग ~90% leading-edge चिप्स बनाने वाली कंपनी बना दिया।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/tsmc-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/tsmc-journey-in-numbers/",
+      "publishAt": "2026-07-27T09:15:00+05:30"
+    },
+    {
+      "slug": "apar-industries-journey-in-numbers",
+      "title": "अपार इंडस्ट्रीज़ का सफर, आंकड़ों में",
+      "topic": "stock-market",
+      "date": "2026-07-26",
+      "excerpt": "कैसे अपार इंडस्ट्रीज़ एक ग्रिड सुपर-साइकिल दांव बन गई जब इसके ट्रांसफ़ॉर्मर-ऑयल, कंडक्टर और स्पेशलिटी-केबल कारोबार सभी एक साथ ऑर्डर देने लगे।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/apar-industries-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/apar-industries-journey-in-numbers/",
+      "publishAt": "2026-07-26T09:15:00+05:30"
+    },
+    {
+      "slug": "torrent-pharmaceuticals-journey-in-numbers",
+      "title": "टॉरंट फार्मास्युटिकल्स का सफर, आंकड़ों में",
+      "topic": "stock-market",
+      "date": "2026-07-25",
+      "excerpt": "कैसे टॉरंट फार्मा ने श्रृंखलाबद्ध अधिग्रहणों के ज़रिए भारत की सबसे मज़बूत ब्रांडेड-जेनेरिक्स फ़्रैंचाइज़ियों में से एक खड़ी की, 30%+ मार्जिन और एक रक्षात्मक प्रोफ़ाइल के साथ।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/torrent-pharmaceuticals-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/torrent-pharmaceuticals-journey-in-numbers/",
+      "publishAt": "2026-07-25T09:15:00+05:30"
+    },
+    {
+      "slug": "strides-pharma-journey-in-numbers",
+      "title": "स्ट्राइड्स फार्मा साइंस का सफर, आंकड़ों में",
+      "topic": "stock-market",
+      "date": "2026-07-24",
+      "excerpt": "कैसे स्ट्राइड्स ने अपना इंजेक्टेबल्स कारोबार Mylan को $1.75bn में बेचा, दो बार पुनर्गठन किया, और एक केंद्रित जेनेरिक्स प्लेटफ़ॉर्म फिर से खड़ा किया जो मल्टीबैगर बन गया।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/strides-pharma-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/strides-pharma-journey-in-numbers/",
+      "publishAt": "2026-07-24T09:15:00+05:30"
+    },
+    {
+      "slug": "welspun-corp-journey-in-numbers",
+      "title": "वेलस्पन कॉर्प का सफर, आंकड़ों में",
+      "topic": "stock-market",
+      "date": "2026-07-23",
+      "excerpt": "कैसे वेलस्पन कॉर्प एक वैश्विक लाइन-पाइप निर्माता से बढ़कर तेल, गैस और जल पाइपलाइन चक्रों में फैली एक राष्ट्रीय इंफ्रास्ट्रक्चर फ़्रैंचाइज़ी बनी।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/welspun-corp-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/welspun-corp-journey-in-numbers/",
+      "publishAt": "2026-07-23T09:15:00+05:30"
+    },
+    {
+      "slug": "cummins-india-journey-in-numbers",
+      "title": "कमिंस इंडिया का सफर, आंकड़ों में",
+      "topic": "stock-market",
+      "date": "2026-07-22",
+      "excerpt": "कैसे कमिंस इंडिया, 60 वर्षों से देश की सबसे बड़ी डीज़ल-इंजन निर्माता, ने डेटा-सेंटर बूम के ज़रिए अपने जेनसेट कारोबार को चक्रीय से संरचनात्मक में बदलते देखा।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/cummins-india-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/cummins-india-journey-in-numbers/",
+      "publishAt": "2026-07-22T09:15:00+05:30"
+    },
+    {
+      "slug": "hitachi-energy-india-journey-in-numbers",
+      "title": "Hitachi Energy India की सफ़र, संख्याओं में",
+      "topic": "stock-market",
+      "date": "2026-07-21",
+      "excerpt": "कैसे ABB India का पावर-ग्रिड कारोबार Hitachi Energy India बना, उन केवल दो नामों में से एक जो भारत के नवीकरणीय ग्रिड के लिए बड़े पैमाने पर HVDC बना सकते हैं।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/hitachi-energy-india-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/hitachi-energy-india-journey-in-numbers/",
+      "publishAt": "2026-07-21T09:15:00+05:30"
+    },
+    {
+      "slug": "adani-power-journey-in-numbers",
+      "title": "अडानी पावर की सफ़र, संख्याओं में",
+      "topic": "stock-market",
+      "date": "2026-07-20",
+      "excerpt": "कैसे अडानी पावर सेक्टर के सबसे बुरे वर्षों में भी संकटग्रस्त थर्मल परिसंपत्तियाँ खरीदता रहा और ~18 GW क्षमता तथा रिकॉर्ड मुनाफ़े के साथ उभरा।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/adani-power-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/adani-power-journey-in-numbers/",
+      "publishAt": "2026-07-20T09:15:00+05:30"
+    },
+    {
+      "slug": "avalon-technologies-journey-in-numbers",
+      "title": "Avalon Technologies की सफ़र, संख्याओं में",
+      "topic": "stock-market",
+      "date": "2026-07-19",
+      "excerpt": "कैसे अवलॉन ने एक US क्लीन-एनर्जी और defence EMS राजस्व आधार बनाया जो अधिकांश भारतीय प्रतिस्पर्धियों के पास नहीं है, फिर उसमें एक घरेलू PLI वृद्धि-पाँव जोड़ा।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/avalon-technologies-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/avalon-technologies-journey-in-numbers/",
+      "publishAt": "2026-07-19T09:15:00+05:30"
+    },
+    {
+      "slug": "navin-fluorine-journey-in-numbers",
+      "title": "Navin Fluorine International की सफ़र, संख्याओं में",
+      "topic": "stock-market",
+      "date": "2026-07-18",
+      "excerpt": "कैसे नविन फ्लोरीन कमोडिटी फ्लोरोकेमिकल्स से हटकर उच्च-मूल्य वाली स्पेशलिटी, CDMO और इलेक्ट्रॉनिक्स/बैटरी फ्लोरीन की ओर बढ़ा, और इस कारोबार को री-रेट किया।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/navin-fluorine-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/navin-fluorine-journey-in-numbers/",
+      "publishAt": "2026-07-18T09:15:00+05:30"
+    },
+    {
+      "slug": "bse-limited-journey-in-numbers",
+      "title": "BSE Limited की सफ़र, संख्याओं में",
+      "topic": "stock-market",
+      "date": "2026-07-17",
+      "excerpt": "कैसे BSE एक सुस्त एक्सचेंज से, जिसे NSE ने पीछे छोड़ दिया था, अपने Sensex ऑप्शंस रीसेट के बाद लगभग 60% मार्जिन के साथ एक भरोसेमंद डेरिवेटिव्स द्वैध-प्रतिस्पर्धी बन गया।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/bse-limited-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/bse-limited-journey-in-numbers/",
+      "publishAt": "2026-07-17T09:15:00+05:30"
+    },
+    {
+      "slug": "sansera-engineering-journey-in-numbers",
+      "title": "संसेरा इंजीनियरिंग का सफ़र, आँकड़ों में",
+      "topic": "stock-market",
+      "date": "2026-07-16",
+      "excerpt": "कैसे संसेरा ने सटीक ऑटो-कंपोनेंट क्षमता को EV पुर्ज़ों और एयरोस्पेस फोर्जिंग में बदला, और उसी संक्रमण से बची रही जिसे उसके लिए ख़तरा माना जा रहा था।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/sansera-engineering-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/sansera-engineering-journey-in-numbers/",
+      "publishAt": "2026-07-16T09:15:00+05:30"
+    },
+    {
+      "slug": "black-box-journey-in-numbers",
+      "title": "ब्लैक बॉक्स का सफ़र, आँकड़ों में",
+      "topic": "stock-market",
+      "date": "2026-07-15",
+      "excerpt": "कैसे AGC नेटवर्क्स ने अमेरिका-आधारित ब्लैक बॉक्स को ख़रीदा, उसे भारत में लिस्ट किया, और रिकॉर्ड ऑर्डर बुक के साथ एक हाइपरस्केलर-डेटा-सेंटर इंफ्रास्ट्रक्चर दांव में बदल दिया।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/black-box-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/black-box-journey-in-numbers/",
+      "publishAt": "2026-07-15T09:15:00+05:30"
+    },
+    {
+      "slug": "paras-defence-journey-in-numbers",
+      "title": "पारस डिफेंस एंड स्पेस टेक्नोलॉजीज़ का सफ़र, आँकड़ों में",
+      "topic": "stock-market",
+      "date": "2026-07-14",
+      "excerpt": "कैसे पारस डिफेंस ने दो दशकों में ऑप्टिकल और इलेक्ट्रोमैग्नेटिक क्षमता खड़ी की, और फिर एक रिकॉर्ड IPO के बाद, जब स्वदेशीकरण नीति बनी, तो री-रेट हुई।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/paras-defence-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/paras-defence-journey-in-numbers/",
+      "publishAt": "2026-07-14T09:15:00+05:30"
+    },
+    {
+      "slug": "kirloskar-oil-engines-journey-in-numbers",
+      "title": "किर्लोस्कर ऑयल इंजन्स का सफ़र, आँकड़ों में",
+      "topic": "stock-market",
+      "date": "2026-07-13",
+      "excerpt": "कैसे किर्लोस्कर ऑयल इंजन्स खेती के डीज़ल इंजनों से डेटा-सेंटर जेनसेट तक पहुँची, और 130 साल पुराना नाम होते हुए भी हर चक्र में प्रासंगिक बनी रही।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/kirloskar-oil-engines-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/kirloskar-oil-engines-journey-in-numbers/",
+      "publishAt": "2026-07-13T09:15:00+05:30"
+    },
+    {
+      "slug": "inox-india-journey-in-numbers",
+      "title": "INOX इंडिया का सफ़र, आँकड़ों में",
+      "topic": "stock-market",
+      "date": "2026-07-12",
+      "excerpt": "कैसे INOX इंडिया ने 45 साल तक भारत की क्रायोजेनिक इंजीनियरिंग क्षमता खड़ी की, और फिर LNG, हाइड्रोजन और औद्योगिक गैसों पर सबसे शुद्ध लिस्टेड दांव बन गई।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/inox-india-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/inox-india-journey-in-numbers/",
+      "publishAt": "2026-07-12T09:15:00+05:30"
+    },
+    {
+      "slug": "hfcl-journey-in-numbers",
+      "title": "HFCL की यात्रा, आँकड़ों में",
+      "topic": "stock-market",
+      "date": "2026-07-11",
+      "excerpt": "कैसे HFCL टेलीकॉम के पतन और एक दशक के पुनर्गठन से बची, फिर ऑप्टिकल फ़ाइबर, स्वदेशी 5G उपकरण और defence इलेक्ट्रॉनिक्स के साथ दोबारा उभरी।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/hfcl-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/hfcl-journey-in-numbers/",
+      "publishAt": "2026-07-11T09:15:00+05:30"
+    },
+    {
+      "slug": "td-power-systems-journey-in-numbers",
+      "title": "TD पावर सिस्टम्स की यात्रा, आँकड़ों में",
+      "topic": "stock-market",
+      "date": "2026-07-10",
+      "excerpt": "कैसे TD पावर सिस्टम्स वैश्विक OEMs के लिए टर्बाइन जनरेटर बनाने वाली एकमात्र सूचीबद्ध भारतीय कंपनी बनी, जब रिन्यूएबल्स और डेटा-सेंटर चक्र एक साथ आ मिले।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/td-power-systems-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/td-power-systems-journey-in-numbers/",
+      "publishAt": "2026-07-10T09:15:00+05:30"
+    },
+    {
+      "slug": "syrma-sgs-technology-journey-in-numbers",
+      "title": "सिरमा SGS टेक्नोलॉजी की यात्रा, आँकड़ों में",
+      "topic": "stock-market",
+      "date": "2026-07-09",
+      "excerpt": "कैसे सिरमा SGS ने ऑटोमोटिव, defence, हेल्थकेयर और IT हार्डवेयर में एक डिज़ाइन-प्रधान इलेक्ट्रॉनिक्स-निर्माण फ़्रैंचाइज़ी खड़ी की, जब भारत की EMS लहर आई।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/syrma-sgs-technology-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/syrma-sgs-technology-journey-in-numbers/",
+      "publishAt": "2026-07-09T09:15:00+05:30"
+    },
+    {
+      "slug": "thangamayil-jewellery-journey-in-numbers",
+      "title": "तंगमयिल ज्वेलरी की यात्रा, आँकड़ों में",
+      "topic": "stock-market",
+      "date": "2026-07-08",
+      "excerpt": "कैसे तंगमयिल ने 60+ शोरूम वाली एक तमिलनाडु ज्वेलरी फ़्रैंचाइज़ी खड़ी की, और गोल्ड रैली के दौरान दक्षिण भारतीय परिवारों की बैलेंस शीट के साथ कम्पाउंड होती रही।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/thangamayil-jewellery-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/thangamayil-jewellery-journey-in-numbers/",
+      "publishAt": "2026-07-08T09:15:00+05:30"
+    },
+    {
+      "slug": "cupid-journey-in-numbers",
+      "title": "क्यूपिड की यात्रा, आँकड़ों में",
+      "topic": "stock-market",
+      "date": "2026-07-07",
+      "excerpt": "कैसे क्यूपिड दुनिया की एकमात्र सूचीबद्ध शुद्ध फ़ीमेल-condom निर्माता बनी, WHO प्रीक्वालिफ़िकेशन हासिल किया, और UN एजेंसियों को सेवा देने वाली एक कर्ज़-मुक्त फ़्रैंचाइज़ी खड़ी की।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/cupid-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/cupid-journey-in-numbers/",
+      "publishAt": "2026-07-07T09:15:00+05:30"
+    },
+    {
+      "slug": "acutaas-chemicals-journey-in-numbers",
+      "title": "Acutaas Chemicals की यात्रा, संख्याओं में",
+      "topic": "stock-market",
+      "date": "2026-07-06",
+      "excerpt": "कैसे Ami Organics, Acutaas Chemicals बनी, फार्मा इंटरमीडिएट्स से लिथियम-आयन इलेक्ट्रोलाइट एडिटिव्स तक, बाज़ार के ध्यान देने से पहले ही तैयार।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/acutaas-chemicals-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/acutaas-chemicals-journey-in-numbers/",
+      "publishAt": "2026-07-06T09:15:00+05:30"
+    },
+    {
+      "slug": "mtar-technologies-journey-in-numbers",
+      "title": "MTAR Technologies की यात्रा, संख्याओं में",
+      "topic": "stock-market",
+      "date": "2026-07-05",
+      "excerpt": "कैसे MTAR भारत के परमाणु, अंतरिक्ष, defence और स्वच्छ-ऊर्जा कार्यक्रमों, और Bloom Energy के फ्यूल सेल्स के पीछे का परिशुद्धता-इंजीनियरिंग आपूर्तिकर्ता बना।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/mtar-technologies-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/mtar-technologies-journey-in-numbers/",
+      "publishAt": "2026-07-05T09:15:00+05:30"
+    },
+    {
+      "slug": "anand-rathi-wealth-journey-in-numbers",
+      "title": "आनंद राठी वेल्थ की यात्रा, संख्याओं में",
+      "topic": "stock-market",
+      "date": "2026-07-04",
+      "excerpt": "कैसे आनंद राठी वेल्थ ने एक HNI वेल्थ प्लेटफ़ॉर्म बनाया जो भारत के वित्तीयकरण के साथ ₹93,000 करोड़ तक कंपाउंड हुआ और IPO के बाद से स्टॉक 6-7 गुना चढ़ा।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/anand-rathi-wealth-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/anand-rathi-wealth-journey-in-numbers/",
+      "publishAt": "2026-07-04T09:15:00+05:30"
+    },
+    {
+      "slug": "polycab-india-journey-in-numbers",
+      "title": "पॉलीकैब इंडिया की यात्रा, संख्याओं में",
+      "topic": "stock-market",
+      "date": "2026-07-03",
+      "excerpt": "कैसे पॉलीकैब ने तारों और केबल में साठ साल की वितरण खाई बनाई, उपभोक्ता इलेक्ट्रिकल्स जोड़े, और सोलर व डेटा-सेंटर मांग की सवारी की।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/polycab-india-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/polycab-india-journey-in-numbers/",
+      "publishAt": "2026-07-03T09:15:00+05:30"
+    },
+    {
+      "slug": "solar-industries-journey-in-numbers",
+      "title": "सोलर इंडस्ट्रीज़ की यात्रा, संख्याओं में",
+      "topic": "stock-market",
+      "date": "2026-07-02",
+      "excerpt": "कैसे सोलर इंडस्ट्रीज़ कोयला-खनन विस्फोटकों से बढ़कर एक वैश्विक विस्फोटक निर्माता और बड़े defence राजस्व वाली भारत की एकमात्र विस्फोटक कंपनी बनी।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/solar-industries-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/solar-industries-journey-in-numbers/",
+      "publishAt": "2026-07-02T09:15:00+05:30"
+    },
+    {
+      "slug": "cg-power-journey-in-numbers",
+      "title": "CG Power की यात्रा, संख्याओं में",
+      "topic": "stock-market",
+      "date": "2026-07-01",
+      "excerpt": "CG Power ने कैसे Avantha की धोखाधड़ी से उबरकर, Murugappa Group द्वारा बचाई गई, और दो कैपेक्स चक्रों के मिलन-बिंदु पर एक सेमीकंडक्टर कारोबार जोड़ा।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/cg-power-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/cg-power-journey-in-numbers/",
+      "publishAt": "2026-07-01T09:15:00+05:30"
+    },
+    {
+      "slug": "netweb-technologies-journey-in-numbers",
+      "title": "नेटवेब टेक्नोलॉजीज़ की यात्रा, संख्याओं में",
+      "topic": "stock-market",
+      "date": "2026-06-30",
+      "excerpt": "नेटवेब ने कैसे 24 साल लगाकर भारत की HPC और AI-सर्वर OEM बनी, AI बूम से कुछ महीने पहले IPO लाई, और सॉवरेन AI-कंप्यूट ऑर्डर जीते।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/netweb-technologies-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/netweb-technologies-journey-in-numbers/",
+      "publishAt": "2026-06-30T09:15:00+05:30"
+    },
+    {
+      "slug": "vedanta-journey-in-numbers",
+      "title": "वेदांता की यात्रा, संख्याओं में",
+      "topic": "stock-market",
+      "date": "2026-06-29",
+      "excerpt": "अनिल अग्रवाल ने कैसे Sterlite केबल से वेदांता को एक मेटल्स-और-ऑयल साम्राज्य बनाया, Cairn, हिंदुस्तान ज़िंक, तूतीकोरिन, और अब इसका पाँच हिस्सों में विभाजन।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/vedanta-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/vedanta-journey-in-numbers/",
+      "publishAt": "2026-06-29T09:15:00+05:30"
+    },
+    {
+      "slug": "bajaj-finance-journey-in-numbers",
+      "title": "बजाज फाइनेंस की यात्रा, संख्याओं में",
+      "topic": "stock-market",
+      "date": "2026-06-28",
+      "excerpt": "बजाज फाइनेंस ने कैसे एक ऑटो-फाइनेंस इकाई को 10 करोड़ ग्राहकों वाली भारत की सबसे मूल्यवान NBFC में बदला, अठारह साल की क्रॉस-सेल और ऑटोमेशन।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/bajaj-finance-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/bajaj-finance-journey-in-numbers/",
+      "publishAt": "2026-06-28T09:15:00+05:30"
+    },
+    {
+      "slug": "eternal-zomato-journey-in-numbers",
+      "title": "इटरनल (ज़ोमैटो) की यात्रा, संख्याओं में",
+      "topic": "stock-market",
+      "date": "2026-06-27",
+      "excerpt": "ज़ोमैटो कैसे बना इटरनल, 2008 के एक मेन्यू एग्रीगेटर से फूड डिलीवरी तक, Blinkit का ‘घाटे का सौदा’ और भारत का सबसे मूल्यवान क्विक-कॉमर्स कारोबार।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/eternal-zomato-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/eternal-zomato-journey-in-numbers/",
+      "publishAt": "2026-06-27T09:15:00+05:30"
+    },
+    {
+      "slug": "bel-journey-in-numbers",
+      "title": "BEL का सफर, आंकड़ों में",
+      "topic": "stock-market",
+      "date": "2026-06-26",
+      "excerpt": "कैसे भारत इलेक्ट्रॉनिक्स सत्तर वर्षों तक एक ही क्षेत्र, रडार, सोनार और मिसाइल इलेक्ट्रॉनिक्स, में टिका रहा और ₹74,000 करोड़ की ऑर्डर बुक बनाई।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/bel-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/bel-journey-in-numbers/",
+      "publishAt": "2026-06-26T09:15:00+05:30"
+    },
+    {
+      "slug": "hal-journey-in-numbers",
+      "title": "HAL का सफर, आंकड़ों में",
+      "topic": "stock-market",
+      "date": "2026-06-25",
+      "excerpt": "कैसे हिंदुस्तान एयरोनॉटिक्स विदेशी जेट लाइसेंस पर बनाने से तेजस, ₹1.8 लाख करोड़ की ऑर्डर बुक और एक पाँचवीं पीढ़ी के लड़ाकू विमान तक पहुँचा।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/hal-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/hal-journey-in-numbers/",
+      "publishAt": "2026-06-25T09:15:00+05:30"
+    },
+    {
+      "slug": "adani-enterprises-journey-in-numbers",
+      "title": "अडानी एंटरप्राइज़ेज़ का सफर, आंकड़ों में",
+      "topic": "stock-market",
+      "date": "2026-06-24",
+      "excerpt": "कैसे गौतम अडानी ने भारत का सबसे बड़ा इंफ्रास्ट्रक्चर समूह बनाया, बंदरगाह, बिजली, हवाई अड्डे, सीमेंट, नवीकरणीय ऊर्जा, और 2023 के हिंडनबर्ग संकट से बचकर निकले।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/adani-enterprises-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/adani-enterprises-journey-in-numbers/",
+      "publishAt": "2026-06-24T09:15:00+05:30"
+    },
+    {
+      "slug": "hdfc-bank-journey-in-numbers",
+      "title": "HDFC बैंक का सफर, आंकड़ों में",
+      "topic": "stock-market",
+      "date": "2026-06-23",
+      "excerpt": "कैसे HDFC बैंक 1994 के एक लाइसेंस से भारत का सबसे बड़ा निजी बैंक बना, सबसे साफ बही-खाते के साथ हर चक्र से गुज़रा, और 2023 में HDFC Ltd के साथ विलय किया।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/hdfc-bank-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/hdfc-bank-journey-in-numbers/",
+      "publishAt": "2026-06-23T09:15:00+05:30"
+    },
+    {
+      "slug": "tata-motors-journey-in-numbers",
+      "title": "टाटा मोटर्स का सफ़र, आँकड़ों में",
+      "topic": "stock-market",
+      "date": "2026-06-22",
+      "excerpt": "1945 की भाप वाली रेल इंजनों से जैगुआर लैंड रोवर और 70% EV हिस्सेदारी तक — टाटा मोटर्स का सफ़र, और वे दाँव जो लापरवाह लगे पर दूरदर्शी साबित हुए।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/tata-motors-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/tata-motors-journey-in-numbers/",
+      "publishAt": "2026-06-22T09:15:00+05:30"
+    },
+    {
+      "slug": "musk-empire-every-hard-problem",
+      "title": "एक संस्थापक, हर कठिन समस्या: मस्क साम्राज्य के भीतर",
+      "topic": "stock-market",
+      "date": "2026-06-20",
+      "excerpt": "SpaceX, Tesla, xAI, Neuralink, The Boring Company और Tesla Energy असंबद्ध लगती हैं, जब तक आप नीचे छिपा वह एक दाँव नहीं देख लेते — अगली सदी की सबसे कठिन भौतिक समस्याएँ, सात बार लगाई गईं।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/musk-empire-every-hard-problem/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/musk-empire-every-hard-problem/"
+    },
+    {
       "slug": "spacex-journey-in-numbers",
-      "title": "SpaceX’s journey, in numbers",
+      "title": "SpaceX का सफ़र, आँकड़ों में",
       "topic": "stock-market",
       "date": "2026-06-19",
-      "excerpt": "From buying refurbished missiles in Russia to running 80% of the world’s launches, SpaceX’s twenty-four-year climb, year by year.",
+      "excerpt": "SpaceX की साल-दर-साल कहानी — Falcon 1 की तीन विफलताएँ, वह NASA अनुबंध जिसने इसे बचाया, पहली खड़ी लैंडिंग, Starlink और Starship, और कैसे एक कंपनी दुनिया का लॉन्च बुनियादी ढाँचा चलाने लगी।",
       "image": "https://harshaldasani.pages.dev/blog/posts/spacex-journey-in-numbers/cover.jpg",
       "url": "https://harshaldasani.pages.dev/hi/blog/posts/spacex-journey-in-numbers/"
     },
     {
+      "slug": "elon-musk-journey-in-numbers",
+      "title": "एलन मस्क का सफ़र, आँकड़ों में",
+      "topic": "stock-market",
+      "date": "2026-06-19",
+      "excerpt": "प्रिटोरिया के एक सताए गए स्कूली बच्चे से दुनिया के पहले खरबपति तक — एलन मस्क का जीवन दाँवों, विफलताओं और वापसियों की एक श्रृंखला के रूप में।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/elon-musk-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/elon-musk-journey-in-numbers/"
+    },
+    {
       "slug": "spacex-three-businesses-stacked",
-      "title": "SpaceX Is Three Businesses Stacked: Launch, Starlink and Starship",
+      "title": "SpaceX एक रॉकेट कंपनी नहीं है। यह तीन हैं।",
       "topic": "stock-market",
       "date": "2026-06-18",
-      "excerpt": "Launch, network, planet: SpaceX is three businesses stacked on top of each other, each one big enough to be the most important company in its own industry.",
+      "excerpt": "SpaceX को तीन कंपनियों के रूप में समझना सबसे सही क्यों है — Falcon 9 का लॉन्च कारोबार, Starlink नेटवर्क, और Starship का मंगल पर दाँव — और इसका खरब-डॉलर मूल्यांकन असल में किस चीज़ की कीमत लगा रहा है।",
       "image": "https://harshaldasani.pages.dev/blog/posts/spacex-three-businesses-stacked/cover.jpg",
       "url": "https://harshaldasani.pages.dev/hi/blog/posts/spacex-three-businesses-stacked/"
     },
     {
       "slug": "first-millionaire-billionaire-trillionaire",
-      "title": "Three men, three centuries: the first millionaire, the first billionaire, the first trillionaire",
+      "title": "तीन आदमी, तीन सदियाँ: पहला करोड़पति, पहला अरबपति, पहला खरबपति",
       "topic": "stock-market",
       "date": "2026-06-18",
-      "excerpt": "John Jacob Astor, John D. Rockefeller, Elon Musk, three men who each built the infrastructure of their age, and the one pattern that links a fur trader, an oil refiner and a rocket builder.",
+      "excerpt": "जॉन जैकब एस्टर, जॉन डी. रॉकफेलर और एलन मस्क — तीनों ने अपने-अपने युग का वह बुनियादी ढाँचा खड़ा करके अपनी सदी के सबसे अमीर व्यक्ति का दर्जा पाया, जिस पर बाकी ज़माना चलता रहा।",
       "image": "https://harshaldasani.pages.dev/blog/posts/first-millionaire-billionaire-trillionaire/cover.jpg",
       "url": "https://harshaldasani.pages.dev/hi/blog/posts/first-millionaire-billionaire-trillionaire/"
     },
     {
       "slug": "rupee-usd-inr-2026-why-falling-where-it-stops",
-      "title": "The rupee’s record low: why USD/INR is falling, where it stops, and what it means for India",
+      "title": "रुपये का रिकॉर्ड निचला स्तर: USD/INR क्यों गिर रहा है, कहाँ रुकता है, और भारत के लिए इसका क्या मतलब है",
       "topic": "macros",
       "date": "2026-06-17",
-      "excerpt": "The rupee hit a record low near 97 in May, then bounced to around 95 as oil cooled. Why USD/INR is really weakening, where the forecasts say it stops, and…",
+      "excerpt": "USD/INR 2026 में रिकॉर्ड निचले स्तर ~97 पर पहुँचा। गिरावट के असली कारण, रुपया कहाँ रुकता है, और कमज़ोर रुपये का भारत के लिए क्या मतलब है।",
       "image": "https://harshaldasani.pages.dev/blog/posts/rupee-usd-inr-2026-why-falling-where-it-stops/cover.jpg",
-      "url": "https://harshaldasani.pages.dev/blog/posts/rupee-usd-inr-2026-why-falling-where-it-stops/"
-    },
-    {
-      "slug": "gold-2026-structural-bull-case",
-      "title": "Gold’s second wind: the structural case behind the world’s oldest money",
-      "topic": "commodities",
-      "date": "2026-06-17",
-      "excerpt": "Gold had its best year since 1979, touched nearly $5,600, then paused near $4,350. Look past the price wobble and the engine, record central-bank buying,…",
-      "image": "https://harshaldasani.pages.dev/blog/posts/gold-2026-structural-bull-case/cover.jpg",
-      "url": "https://harshaldasani.pages.dev/blog/posts/gold-2026-structural-bull-case/"
-    },
-    {
-      "slug": "silver-2026-deficit-bull-case",
-      "title": "Silver’s two engines: the deficit metal that finally broke its old ceiling",
-      "topic": "commodities",
-      "date": "2026-06-17",
-      "excerpt": "Silver smashed its 45-year ceiling in 2026, touched $121, then cooled to about $70. Underneath sits a sixth straight year of supply deficit, record-low…",
-      "image": "https://harshaldasani.pages.dev/blog/posts/silver-2026-deficit-bull-case/cover.jpg",
-      "url": "https://harshaldasani.pages.dev/blog/posts/silver-2026-deficit-bull-case/"
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/rupee-usd-inr-2026-why-falling-where-it-stops/"
     },
     {
       "slug": "copper-2026-electrification-deficit",
-      "title": "Copper: the metal the electric, AI-powered century will be built from",
+      "title": "कॉपर: वह धातु जिससे बिजली और AI से चलने वाली यह सदी बनेगी",
       "topic": "commodities",
       "date": "2026-06-17",
-      "excerpt": "Copper hit record highs in 2026 as electrification, EVs and now AI data centres pull on supply that mines cannot expand fast enough. The near-term balance…",
+      "excerpt": "कॉपर 2026: रिकॉर्ड कीमतें, इलेक्ट्रिफिकेशन और AI data centre माँग बनाम तंग खदान आपूर्ति, US टैरिफ, $15,000/t बैंक अनुमान और भारत की आयात कहानी।",
       "image": "https://harshaldasani.pages.dev/blog/posts/copper-2026-electrification-deficit/cover.jpg",
-      "url": "https://harshaldasani.pages.dev/blog/posts/copper-2026-electrification-deficit/"
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/copper-2026-electrification-deficit/"
+    },
+    {
+      "slug": "silver-2026-deficit-bull-case",
+      "title": "चाँदी के दो इंजन: वह घाटे वाली धातु जिसने आख़िरकार अपनी पुरानी छत तोड़ दी",
+      "topic": "commodities",
+      "date": "2026-06-17",
+      "excerpt": "चाँदी 2026: लगातार छठा आपूर्ति घाटा, रिकॉर्ड-निचला London float, solar माँग, gold-silver ratio, बैंक लक्ष्य और India का रिकॉर्ड आयात।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/silver-2026-deficit-bull-case/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/silver-2026-deficit-bull-case/"
+    },
+    {
+      "slug": "gold-2026-structural-bull-case",
+      "title": "सोने की दूसरी हवा: दुनिया के सबसे पुराने पैसे के पीछे का संरचनात्मक तर्क",
+      "topic": "commodities",
+      "date": "2026-06-17",
+      "excerpt": "2026 में gold: रिकॉर्ड central-bank खरीद, de-dollarisation, peak-gold आपूर्ति, $6,000+ बैंक लक्ष्य, और कमज़ोर रुपया भारतीयों के लिए रिटर्न को कैसे बढ़ाता है।",
+      "image": "https://harshaldasani.pages.dev/blog/posts/gold-2026-structural-bull-case/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/gold-2026-structural-bull-case/"
     },
     {
       "slug": "kospi-2026-korea-rally-reform-explained",
-      "title": "Two engines behind Korea’s 100% year: reform, a chip mania, and a mirror for India",
+      "title": "Korea के 100% साल के पीछे दो इंजन: सुधार, एक chip उन्माद, और भारत के लिए एक आईना",
       "topic": "stock-market",
       "date": "2026-06-16",
-      "excerpt": "KOSPI 2026 has doubled on Value-up reforms and an AI-chip boom. But Samsung and SK Hynix hide a narrower rally and a lesson for India.",
+      "excerpt": "KOSPI 2026 Value-up सुधार और एक AI-chip उन्माद पर दोगुना हुआ। Samsung, SK Hynix और विदेशी निकासी भारतीय निवेशकों के लिए क्या सबक रखते हैं।",
       "image": "https://harshaldasani.pages.dev/blog/posts/kospi-2026-korea-rally-reform-explained/cover.jpg",
-      "url": "https://harshaldasani.pages.dev/blog/posts/kospi-2026-korea-rally-reform-explained/"
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/kospi-2026-korea-rally-reform-explained/"
     },
     {
       "slug": "spacex-ipo-1-75-trillion-explained",
-      "title": "Three companies, one ticker: what you’re actually buying in the SpaceX IPO",
+      "title": "तीन कंपनियाँ, एक टिकर: SpaceX IPO में आप असल में क्या खरीद रहे हैं",
       "topic": "stock-market",
       "date": "2026-06-16",
-      "excerpt": "SpaceX is the biggest IPO ever, yet under 7% of its $1.75 trillion price is backed by profit. The three very different companies hiding inside one ticker.",
+      "excerpt": "$1.75 ट्रिलियन का SpaceX IPO (SPCX) असल में किसकी कीमत है: Starlink का कैश इंजन, ग्राउंडेड Starship, xAI दांव, बुल-बनाम-बेयर बहस और भारत का पहलू।",
       "image": "https://harshaldasani.pages.dev/blog/posts/spacex-ipo-1-75-trillion-explained/cover.jpg",
-      "url": "https://harshaldasani.pages.dev/blog/posts/spacex-ipo-1-75-trillion-explained/"
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/spacex-ipo-1-75-trillion-explained/"
     },
     {
       "slug": "iran-israel-us-war-2026-explained",
-      "title": "The 2026 Iran War: one unsigned page stands between the world and cheaper oil",
+      "title": "2026 का ईरान युद्ध: दुनिया और सस्ते तेल के बीच एक अहस्ताक्षरित पन्ना",
       "topic": "geopolitics",
       "date": "2026-06-08",
-      "excerpt": "A near-finished peace deal sits unsigned while US and Iranian forces still trade fire and 325 tankers wait behind a minefield. Inside the 2026 Iran war, and the one strait holding the world’s oil hostage.",
+      "excerpt": "2026 का ईरान युद्ध समझाया: अमेरिका-इज़राइल हमले, ख़ामेनेई की मृत्यु, होर्मुज़ जलडमरूमध्य में बिछाई गई बारूदी सुरंगें, और वह अहस्ताक्षरित समझौता जो भारत के लिए तेल की कीमतें कम कर सकता है।",
       "image": "https://harshaldasani.pages.dev/blog/posts/iran-israel-us-war-2026-explained/cover.jpeg",
-      "url": "https://harshaldasani.pages.dev/blog/posts/iran-israel-us-war-2026-explained/"
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/iran-israel-us-war-2026-explained/"
     },
     {
       "slug": "rbi-mpc-june-2026-rate-pause",
-      "title": "The end of the easing cycle: what the RBI’s June pause means for investors",
+      "title": "ईज़िंग साइकिल का अंत: RBI के जून विराम का निवेशकों के लिए क्या मतलब है",
       "topic": "macros",
       "date": "2026-06-05",
-      "excerpt": "The RBI held the repo rate at 5.25% for a third meeting, quietly closing the easing cycle. What the June pause means for the rupee, bonds and your portfolio.",
+      "excerpt": "RBI ने लगातार तीसरी बैठक में रेपो रेट 5.25% पर बनाए रखा, जिससे ईज़िंग साइकिल समाप्त हो गई। जून MPC के विराम का रुपये, बॉन्ड यील्ड और निवेशकों पर क्या असर पड़ेगा।",
       "image": "https://harshaldasani.pages.dev/blog/posts/rbi-mpc-june-2026-rate-pause/cover.jpg",
-      "url": "https://harshaldasani.pages.dev/blog/posts/rbi-mpc-june-2026-rate-pause/"
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/rbi-mpc-june-2026-rate-pause/"
     },
     {
       "slug": "crude-oil-india-markets-rupee-inflation",
-      "title": "The Oil Shock and India: Crude, the Rupee, and Inflation",
+      "title": "तेल का झटका और भारत: कच्चा तेल, रुपया और महँगाई",
       "topic": "commodities",
       "date": "2026-06-05",
-      "excerpt": "Brent above $100 on the Hormuz crisis, the rupee at record lows, the CAD set to double, how the oil shock is hitting India's markets, rupee and inflation.",
+      "excerpt": "Hormuz संकट में Brent $100 के पार, रुपया रिकॉर्ड निचले स्तर पर, CAD चौड़ा होता हुआ — तेल का झटका भारत के बाज़ारों, रुपये और महँगाई को कैसे प्रभावित करता है।",
       "image": "https://harshaldasani.pages.dev/blog/posts/crude-oil-india-markets-rupee-inflation/cover.jpg",
-      "url": "https://harshaldasani.pages.dev/blog/posts/crude-oil-india-markets-rupee-inflation/"
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/crude-oil-india-markets-rupee-inflation/"
     },
     {
       "slug": "indian-it-stocks-whats-breaking",
-      "title": "Indian IT Stocks: What’s Actually Breaking, and Why the Market Stopped Paying Up",
+      "title": "भारतीय IT शेयर: असल में क्या टूट रहा है, और बाज़ार ने प्रीमियम देना क्यों बंद किया",
       "topic": "stock-market",
       "date": "2026-06-04",
-      "excerpt": "TCS, Infosys and Wipro returned ₹1.09 lakh crore to shareholders since 2020 and spend under 1% of revenue on R&D. Why the market is repricing Indian IT.",
+      "excerpt": "भारतीय IT की री-प्राइसिंग हो रही है — धीमी ग्रोथ, AI से लेबर आर्बिट्राज पर दबाव, FII आउटफ्लो और R&amp;D की जगह बायबैक। IT शेयरों में असल में क्या टूट रहा है।",
       "image": "https://harshaldasani.pages.dev/blog/posts/indian-it-stocks-whats-breaking/cover.jpg",
-      "url": "https://harshaldasani.pages.dev/blog/posts/indian-it-stocks-whats-breaking/"
+      "url": "https://harshaldasani.pages.dev/hi/blog/posts/indian-it-stocks-whats-breaking/"
     }
   ]
 }

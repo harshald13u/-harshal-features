@@ -1,6 +1,515 @@
 {
   "posts": [
     {
+      "slug": "astra-microwave-journey-in-numbers",
+      "title": "Astra Microwave Products’ journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-08-10",
+      "excerpt": "Indigenisation does not happen overnight, it happens on the back of three decades of unglamorous design work. Astra Microwave’s journey in numbers.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/astra-microwave-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/astra-microwave-journey-in-numbers/",
+      "publishAt": "2026-08-10T09:15:00+05:30"
+    },
+    {
+      "slug": "sai-life-sciences-journey-in-numbers",
+      "title": "Sai Life Sciences’ journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-08-09",
+      "excerpt": "The capability built before the theme is the capability paid for after it, Sai Life Sciences’ journey in numbers, twenty years of CRDMO build before the IPO.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/sai-life-sciences-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/sai-life-sciences-journey-in-numbers/",
+      "publishAt": "2026-08-09T09:15:00+05:30"
+    },
+    {
+      "slug": "shriram-pistons-journey-in-numbers",
+      "title": "Shriram Pistons and Rings’ journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-08-08",
+      "excerpt": "The patient component-maker collects when three cycles arrive together, Shriram Pistons and Rings’ journey in numbers.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/shriram-pistons-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/shriram-pistons-journey-in-numbers/",
+      "publishAt": "2026-08-08T09:15:00+05:30"
+    },
+    {
+      "slug": "aditya-birla-sun-life-amc-journey-in-numbers",
+      "title": "Aditya Birla Sun Life AMC’s journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-08-07",
+      "excerpt": "Asset management in India is a compounding business attached to a compounding household-savings pool, Aditya Birla Sun Life AMC’s journey in numbers.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/aditya-birla-sun-life-amc-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/aditya-birla-sun-life-amc-journey-in-numbers/",
+      "publishAt": "2026-08-07T09:15:00+05:30"
+    },
+    {
+      "slug": "nippon-life-india-amc-journey-in-numbers",
+      "title": "Nippon Life India Asset Management’s journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-08-06",
+      "excerpt": "It survived a parent crisis few asset managers ever have, Nippon Life India AMC’s journey in numbers, a clean way to own India’s savings.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/nippon-life-india-amc-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/nippon-life-india-amc-journey-in-numbers/",
+      "publishAt": "2026-08-06T09:15:00+05:30"
+    },
+    {
+      "slug": "craftsman-automation-journey-in-numbers",
+      "title": "Craftsman Automation’s journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-08-05",
+      "excerpt": "A picks-and-shovels manufacturer can compound through more than one cycle if it earns the right capabilities, Craftsman Automation’s journey in numbers.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/craftsman-automation-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/craftsman-automation-journey-in-numbers/",
+      "publishAt": "2026-08-05T09:15:00+05:30"
+    },
+    {
+      "slug": "laurus-labs-journey-in-numbers",
+      "title": "Laurus Labs’ journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-08-04",
+      "excerpt": "The compounders earn the right to a second chapter on the back of the first, Laurus Labs’ journey in numbers, from HIV APIs to CDMO and biologics.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/laurus-labs-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/laurus-labs-journey-in-numbers/",
+      "publishAt": "2026-08-04T09:15:00+05:30"
+    },
+    {
+      "slug": "federal-bank-journey-in-numbers",
+      "title": "Federal Bank’s journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-08-03",
+      "excerpt": "The boring bank, in the right state, with the right customer, is the bank that gets re-rated when the cycle turns, Federal Bank’s journey in numbers.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/federal-bank-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/federal-bank-journey-in-numbers/",
+      "publishAt": "2026-08-03T09:15:00+05:30"
+    },
+    {
+      "slug": "reliance-industries-journey-in-numbers",
+      "title": "Reliance Industries’ journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-08-02",
+      "excerpt": "From $700 in yarn to India’s most valuable company, Reliance Industries’ journey in numbers, and the strategy that rebuilt its core three times.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/reliance-industries-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/reliance-industries-journey-in-numbers/",
+      "publishAt": "2026-08-02T09:15:00+05:30"
+    },
+    {
+      "slug": "ntpc-journey-in-numbers",
+      "title": "NTPC’s journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-08-01",
+      "excerpt": "India built its base load on NTPC’s coal for forty years; the same balance sheet is now building its renewable base. NTPC’s journey in numbers, coal to solar.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/ntpc-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/ntpc-journey-in-numbers/",
+      "publishAt": "2026-08-01T09:15:00+05:30"
+    },
+    {
+      "slug": "ge-vernova-td-india-journey-in-numbers",
+      "title": "GE Vernova T&D India’s journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-07-31",
+      "excerpt": "A duopoly inside the largest grid spend India has ever attempted, GE Vernova T&D India’s journey in numbers, from Alstom transformers to HVDC corridors.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/ge-vernova-td-india-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/ge-vernova-td-india-journey-in-numbers/",
+      "publishAt": "2026-07-31T09:15:00+05:30"
+    },
+    {
+      "slug": "sandisk-journey-in-numbers",
+      "title": "SanDisk’s journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-07-30",
+      "excerpt": "Right about flash before the world believed it, then spun out for a second life just as AI demanded more storage than ever, SanDisk’s journey in numbers.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/sandisk-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/sandisk-journey-in-numbers/",
+      "publishAt": "2026-07-30T09:15:00+05:30"
+    },
+    {
+      "slug": "sk-hynix-journey-in-numbers",
+      "title": "SK Hynix’s journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-07-29",
+      "excerpt": "From insolvent in 2001 to the trillion-dollar club in 2026, SK Hynix’s journey in numbers, turning the memory cycle into a structural AI rent.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/sk-hynix-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/sk-hynix-journey-in-numbers/",
+      "publishAt": "2026-07-29T09:15:00+05:30"
+    },
+    {
+      "slug": "samsung-journey-in-numbers",
+      "title": "Samsung’s journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-07-28",
+      "excerpt": "From dried fish to DRAM to HBM, follower to leader to follower again, in one century. Samsung’s journey in numbers, always staying on the table.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/samsung-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/samsung-journey-in-numbers/",
+      "publishAt": "2026-07-28T09:15:00+05:30"
+    },
+    {
+      "slug": "tsmc-journey-in-numbers",
+      "title": "TSMC’s journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-07-27",
+      "excerpt": "The pure-play foundry the industry rejected in 1987 is now the only one at scale. TSMC’s journey in numbers, strategic clarity for forty years.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/tsmc-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/tsmc-journey-in-numbers/",
+      "publishAt": "2026-07-27T09:15:00+05:30"
+    },
+    {
+      "slug": "apar-industries-journey-in-numbers",
+      "title": "Apar Industries’ journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-07-26",
+      "excerpt": "Diversification looks like a discount until every line runs, Apar Industries’ journey in numbers, transformer oil to a grid super-cycle play.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/apar-industries-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/apar-industries-journey-in-numbers/",
+      "publishAt": "2026-07-26T09:15:00+05:30"
+    },
+    {
+      "slug": "torrent-pharmaceuticals-journey-in-numbers",
+      "title": "Torrent Pharmaceuticals’ journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-07-25",
+      "excerpt": "It did not chase US generics pricing, it chased Indian and emerging-market brand value through serial bolt-ons. Torrent Pharmaceuticals’ journey in numbers.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/torrent-pharmaceuticals-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/torrent-pharmaceuticals-journey-in-numbers/",
+      "publishAt": "2026-07-25T09:15:00+05:30"
+    },
+    {
+      "slug": "strides-pharma-journey-in-numbers",
+      "title": "Strides Pharma Science’s journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-07-24",
+      "excerpt": "It sold two of its best businesses, raised cash, and rebuilt around a focused platform, Strides Pharma Science’s journey in numbers.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/strides-pharma-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/strides-pharma-journey-in-numbers/",
+      "publishAt": "2026-07-24T09:15:00+05:30"
+    },
+    {
+      "slug": "welspun-corp-journey-in-numbers",
+      "title": "Welspun Corp’s journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-07-23",
+      "excerpt": "Long-cycle engineering pays out when three end markets order at once, Welspun Corp’s journey in numbers, from line pipes to infrastructure.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/welspun-corp-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/welspun-corp-journey-in-numbers/",
+      "publishAt": "2026-07-23T09:15:00+05:30"
+    },
+    {
+      "slug": "cummins-india-journey-in-numbers",
+      "title": "Cummins India’s journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-07-22",
+      "excerpt": "The same engine, in a different cycle, gets a different multiple, Cummins India’s journey in numbers, as data centres turn gensets structural.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/cummins-india-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/cummins-india-journey-in-numbers/",
+      "publishAt": "2026-07-22T09:15:00+05:30"
+    },
+    {
+      "slug": "hitachi-energy-india-journey-in-numbers",
+      "title": "Hitachi Energy India’s journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-07-21",
+      "excerpt": "A near-monopoly inside the largest grid spend India has ever attempted, Hitachi Energy India’s journey in numbers, from ABB to HVDC leadership.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/hitachi-energy-india-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/hitachi-energy-india-journey-in-numbers/",
+      "publishAt": "2026-07-21T09:15:00+05:30"
+    },
+    {
+      "slug": "adani-power-journey-in-numbers",
+      "title": "Adani Power’s journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-07-20",
+      "excerpt": "Cyclical commodity assets bought at the bottom by the most patient buyer, Adani Power’s journey in numbers, buying distressed thermal cheap.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/adani-power-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/adani-power-journey-in-numbers/",
+      "publishAt": "2026-07-20T09:15:00+05:30"
+    },
+    {
+      "slug": "avalon-technologies-journey-in-numbers",
+      "title": "Avalon Technologies’ journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-07-19",
+      "excerpt": "A small cap with global exposure is the most leveraged EMS thesis, Avalon Technologies’ journey in numbers, dollar revenue at Indian cost.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/avalon-technologies-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/avalon-technologies-journey-in-numbers/",
+      "publishAt": "2026-07-19T09:15:00+05:30"
+    },
+    {
+      "slug": "navin-fluorine-journey-in-numbers",
+      "title": "Navin Fluorine International’s journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-07-18",
+      "excerpt": "Specialty-chemical compounders turn molecules into multi-year contracts, Navin Fluorine’s journey in numbers, refrigerants to specialty fluorine.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/navin-fluorine-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/navin-fluorine-journey-in-numbers/",
+      "publishAt": "2026-07-18T09:15:00+05:30"
+    },
+    {
+      "slug": "bse-limited-journey-in-numbers",
+      "title": "BSE Limited’s journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-07-17",
+      "excerpt": "Owning the second player when it wakes up is the trade, BSE Limited’s journey in numbers, from an 1875 banyan tree to a derivatives duopolist.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/bse-limited-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/bse-limited-journey-in-numbers/",
+      "publishAt": "2026-07-17T09:15:00+05:30"
+    },
+    {
+      "slug": "sansera-engineering-journey-in-numbers",
+      "title": "Sansera Engineering’s journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-07-16",
+      "excerpt": "The same hands, the same tolerances, the next powertrain, Sansera Engineering’s journey in numbers, from connecting rods to EV parts and aerospace forgings.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/sansera-engineering-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/sansera-engineering-journey-in-numbers/",
+      "publishAt": "2026-07-16T09:15:00+05:30"
+    },
+    {
+      "slug": "black-box-journey-in-numbers",
+      "title": "Black Box’s journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-07-15",
+      "excerpt": "A global services franchise, listed in India, plugged into the data-centre cycle, Black Box’s journey in numbers, and a reverse migration of value.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/black-box-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/black-box-journey-in-numbers/",
+      "publishAt": "2026-07-15T09:15:00+05:30"
+    },
+    {
+      "slug": "paras-defence-journey-in-numbers",
+      "title": "Paras Defence and Space Technologies’ journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-07-14",
+      "excerpt": "The early bet on indigenisation, made before the policy turned, paid the most, Paras Defence’s journey in numbers, optics to counter-drones.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/paras-defence-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/paras-defence-journey-in-numbers/",
+      "publishAt": "2026-07-14T09:15:00+05:30"
+    },
+    {
+      "slug": "kirloskar-oil-engines-journey-in-numbers",
+      "title": "Kirloskar Oil Engines’ journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-07-13",
+      "excerpt": "Kirloskar Oil Engines’ journey in numbers, a 130-year-old name still compounding, from irrigation pumps to data-centre gensets.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/kirloskar-oil-engines-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/kirloskar-oil-engines-journey-in-numbers/",
+      "publishAt": "2026-07-13T09:15:00+05:30"
+    },
+    {
+      "slug": "inox-india-journey-in-numbers",
+      "title": "INOX India’s journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-07-12",
+      "excerpt": "The winners built the hardware decades before the energy mix changed, INOX India’s journey in numbers, from cryogenic tanks to hydrogen.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/inox-india-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/inox-india-journey-in-numbers/",
+      "publishAt": "2026-07-12T09:15:00+05:30"
+    },
+    {
+      "slug": "hfcl-journey-in-numbers",
+      "title": "HFCL’s journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-07-11",
+      "excerpt": "The wilderness is part of every multibagger; the trick is owning it before it ends, HFCL’s journey in numbers, from telecom bust to 5G.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/hfcl-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/hfcl-journey-in-numbers/",
+      "publishAt": "2026-07-11T09:15:00+05:30"
+    },
+    {
+      "slug": "td-power-systems-journey-in-numbers",
+      "title": "TD Power Systems’ journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-07-10",
+      "excerpt": "It needed the world to start needing generators again, TD Power Systems’ journey in numbers, and the cycles that all arrived at once.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/td-power-systems-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/td-power-systems-journey-in-numbers/",
+      "publishAt": "2026-07-10T09:15:00+05:30"
+    },
+    {
+      "slug": "syrma-sgs-technology-journey-in-numbers",
+      "title": "Syrma SGS Technology’s journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-07-09",
+      "excerpt": "The verticals nobody else wanted are the ones that scale when policy and demand finally arrive together, Syrma SGS Technology’s journey in numbers.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/syrma-sgs-technology-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/syrma-sgs-technology-journey-in-numbers/",
+      "publishAt": "2026-07-09T09:15:00+05:30"
+    },
+    {
+      "slug": "thangamayil-jewellery-journey-in-numbers",
+      "title": "Thangamayil Jewellery’s journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-07-08",
+      "excerpt": "Not Titan, what happens when a family picks one state and owns it. Thangamayil Jewellery’s journey in numbers, with the South Indian household.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/thangamayil-jewellery-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/thangamayil-jewellery-journey-in-numbers/",
+      "publishAt": "2026-07-08T09:15:00+05:30"
+    },
+    {
+      "slug": "cupid-journey-in-numbers",
+      "title": "Cupid’s journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-07-07",
+      "excerpt": "A small Nashik maker that became the world’s go-to supplier for a niche the world cannot do without, Cupid’s journey in numbers.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/cupid-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/cupid-journey-in-numbers/",
+      "publishAt": "2026-07-07T09:15:00+05:30"
+    },
+    {
+      "slug": "acutaas-chemicals-journey-in-numbers",
+      "title": "Acutaas Chemicals’ journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-07-06",
+      "excerpt": "A quiet specialty-chemicals franchise built for fifteen years, then a pivot to battery materials. Acutaas Chemicals’ journey in numbers.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/acutaas-chemicals-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/acutaas-chemicals-journey-in-numbers/",
+      "publishAt": "2026-07-06T09:15:00+05:30"
+    },
+    {
+      "slug": "mtar-technologies-journey-in-numbers",
+      "title": "MTAR Technologies’ journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-07-05",
+      "excerpt": "Not in any single trend, sitting in the picks-and-shovels layer of five strategic cycles at once. MTAR Technologies’ journey in numbers.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/mtar-technologies-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/mtar-technologies-journey-in-numbers/",
+      "publishAt": "2026-07-05T09:15:00+05:30"
+    },
+    {
+      "slug": "anand-rathi-wealth-journey-in-numbers",
+      "title": "Anand Rathi Wealth’s journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-07-04",
+      "excerpt": "It needed a country with rising household wealth and shrinking love of fixed income, Anand Rathi Wealth’s journey in numbers.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/anand-rathi-wealth-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/anand-rathi-wealth-journey-in-numbers/",
+      "publishAt": "2026-07-04T09:15:00+05:30"
+    },
+    {
+      "slug": "polycab-india-journey-in-numbers",
+      "title": "Polycab India’s journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-07-03",
+      "excerpt": "A distribution-led wires business the Jaisinghani family compounded privately for sixty years, then let the market join. Polycab India’s journey in numbers.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/polycab-india-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/polycab-india-journey-in-numbers/",
+      "publishAt": "2026-07-03T09:15:00+05:30"
+    },
+    {
+      "slug": "solar-industries-journey-in-numbers",
+      "title": "Solar Industries’ journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-07-02",
+      "excerpt": "The picks-and-shovels of Indian defence are the explosives and warheads inside every projectile, Solar Industries’ journey in numbers.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/solar-industries-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/solar-industries-journey-in-numbers/",
+      "publishAt": "2026-07-02T09:15:00+05:30"
+    },
+    {
+      "slug": "cg-power-journey-in-numbers",
+      "title": "CG Power’s journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-07-01",
+      "excerpt": "From a 90-year-old franchise nearly destroyed by fraud to a 50-bagger turnaround with a brand-new semiconductor leg, CG Power’s journey in numbers.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/cg-power-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/cg-power-journey-in-numbers/",
+      "publishAt": "2026-07-01T09:15:00+05:30"
+    },
+    {
+      "slug": "netweb-technologies-journey-in-numbers",
+      "title": "Netweb Technologies’ journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-06-30",
+      "excerpt": "Twenty-four years building India’s only credible AI-server maker, then an IPO months before ChatGPT. Netweb Technologies’ journey in numbers.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/netweb-technologies-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/netweb-technologies-journey-in-numbers/",
+      "publishAt": "2026-06-30T09:15:00+05:30"
+    },
+    {
+      "slug": "vedanta-journey-in-numbers",
+      "title": "Vedanta’s journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-06-29",
+      "excerpt": "Cyclical commodity assets bought at the bottom and held through crises that ended others, Vedanta’s journey in numbers, toward a five-way demerger.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/vedanta-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/vedanta-journey-in-numbers/",
+      "publishAt": "2026-06-29T09:15:00+05:30"
+    },
+    {
+      "slug": "bajaj-finance-journey-in-numbers",
+      "title": "Bajaj Finance’s journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-06-28",
+      "excerpt": "From a captive two-wheeler financier to a continent-scale lender, Bajaj Finance’s journey in numbers, and the repetition that compounded for years.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/bajaj-finance-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/bajaj-finance-journey-in-numbers/",
+      "publishAt": "2026-06-28T09:15:00+05:30"
+    },
+    {
+      "slug": "eternal-zomato-journey-in-numbers",
+      "title": "Eternal’s (Zomato’s) journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-06-27",
+      "excerpt": "From an office menu PDF to India’s most valuable quick-commerce franchise, Eternal’s journey in numbers, and how each pivot bought a decade.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/eternal-zomato-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/eternal-zomato-journey-in-numbers/",
+      "publishAt": "2026-06-27T09:15:00+05:30"
+    },
+    {
+      "slug": "bel-journey-in-numbers",
+      "title": "BEL’s journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-06-26",
+      "excerpt": "Seventy years in one niche, defence electronics, made BEL a quiet monopoly the market now pays for. BEL’s journey in numbers, radar to drones.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/bel-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/bel-journey-in-numbers/",
+      "publishAt": "2026-06-26T09:15:00+05:30"
+    },
+    {
+      "slug": "hal-journey-in-numbers",
+      "title": "HAL’s journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-06-25",
+      "excerpt": "From British bombers under licence to India’s own stealth fighter, HAL’s journey in numbers, and the defence-indigenisation story in its order book.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/hal-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/hal-journey-in-numbers/",
+      "publishAt": "2026-06-25T09:15:00+05:30"
+    },
+    {
+      "slug": "adani-enterprises-journey-in-numbers",
+      "title": "Adani Enterprises’ journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-06-24",
+      "excerpt": "From ₹100 and a diamond-sorting job to India’s biggest infrastructure group, Adani Enterprises’ journey in numbers, through crisis and recovery.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/adani-enterprises-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/adani-enterprises-journey-in-numbers/",
+      "publishAt": "2026-06-24T09:15:00+05:30"
+    },
+    {
+      "slug": "hdfc-bank-journey-in-numbers",
+      "title": "HDFC Bank’s journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-06-23",
+      "excerpt": "From a 1994 start-up to India’s largest private lender and a record merger, HDFC Bank’s journey in numbers, and why the boring institution wins.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/hdfc-bank-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/hdfc-bank-journey-in-numbers/",
+      "publishAt": "2026-06-23T09:15:00+05:30"
+    },
+    {
+      "slug": "tata-motors-journey-in-numbers",
+      "title": "Tata Motors’ journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-06-22",
+      "excerpt": "From steam locomotives to Jaguar Land Rover to EV leader, Tata Motors’ journey in numbers, and the patience of owning the right business early.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/tata-motors-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/tata-motors-journey-in-numbers/",
+      "publishAt": "2026-06-22T09:15:00+05:30"
+    },
+    {
+      "slug": "musk-empire-every-hard-problem",
+      "title": "One founder, every hard problem: inside the Musk empire",
+      "topic": "stock-market",
+      "date": "2026-06-20",
+      "excerpt": "Launch, cars, AI, brain interfaces, tunnels, energy, Elon Musk’s companies look scattered until you see the single thesis that connects them.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/musk-empire-every-hard-problem/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/musk-empire-every-hard-problem/"
+    },
+    {
       "slug": "spacex-journey-in-numbers",
       "title": "SpaceX’s journey, in numbers",
       "topic": "stock-market",
@@ -8,6 +517,15 @@
       "excerpt": "From buying refurbished missiles in Russia to running 80% of the world’s launches, SpaceX’s twenty-four-year climb, year by year.",
       "image": "https://harshaldasani.pages.dev/blog/posts/spacex-journey-in-numbers/cover.jpg",
       "url": "https://harshaldasani.pages.dev/blog/posts/spacex-journey-in-numbers/"
+    },
+    {
+      "slug": "elon-musk-journey-in-numbers",
+      "title": "Elon Musk’s journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-06-19",
+      "excerpt": "From a bullied schoolboy in Pretoria to the world’s first trillionaire, Elon Musk’s life as a sequence of bets, failures and comebacks.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/elon-musk-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/elon-musk-journey-in-numbers/"
     },
     {
       "slug": "spacex-three-businesses-stacked",
@@ -26,6 +544,16 @@
       "excerpt": "John Jacob Astor, John D. Rockefeller, Elon Musk, three men who each built the infrastructure of their age, and the one pattern that links a fur trader, an oil refiner and a rocket builder.",
       "image": "https://harshaldasani.pages.dev/blog/posts/first-millionaire-billionaire-trillionaire/cover.jpg",
       "url": "https://harshaldasani.pages.dev/blog/posts/first-millionaire-billionaire-trillionaire/"
+    },
+    {
+      "slug": "nvidia-journey-in-numbers",
+      "title": "NVIDIA’s journey, in numbers",
+      "topic": "stock-market",
+      "date": "2026-08-11",
+      "excerpt": "From three engineers at a Denny’s to a five-trillion-dollar company, how NVIDIA’s most ridiculed bet became the most valuable software platform in the world.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/nvidia-journey-in-numbers/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/nvidia-journey-in-numbers/",
+      "publishAt": "2026-08-11T09:15:00+05:30"
     },
     {
       "slug": "rupee-usd-inr-2026-why-falling-where-it-stops",
@@ -94,7 +622,7 @@
       "slug": "rbi-mpc-june-2026-rate-pause",
       "title": "The end of the easing cycle: what the RBI’s June pause means for investors",
       "topic": "macros",
-      "date": "2026-06-08",
+      "date": "2026-06-05",
       "excerpt": "The RBI held the repo rate at 5.25% for a third meeting, quietly closing the easing cycle. What the June pause means for the rupee, bonds and your portfolio.",
       "image": "https://harshaldasani.pages.dev/blog/posts/rbi-mpc-june-2026-rate-pause/cover.jpg",
       "url": "https://harshaldasani.pages.dev/blog/posts/rbi-mpc-june-2026-rate-pause/"

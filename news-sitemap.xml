@@ -2,80 +2,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
-    <loc>https://harshaldasani.pages.dev/blog/posts/spacex-journey-in-numbers/</loc>
+    <loc>https://harshaldasani.pages.dev/blog/posts/sansera-engineering-journey-in-numbers/</loc>
     <news:news>
       <news:publication>
         <news:name>Harshal Dasani</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-06-19T09:00:00+05:30</news:publication_date>
-      <news:title>SpaceX’s journey, in numbers</news:title>
+      <news:publication_date>2026-07-16T09:15:00+05:30</news:publication_date>
+      <news:title>Sansera Engineering’s journey, in numbers</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://harshaldasani.pages.dev/blog/posts/spacex-three-businesses-stacked/</loc>
+    <loc>https://harshaldasani.pages.dev/hi/blog/posts/sansera-engineering-journey-in-numbers/</loc>
     <news:news>
       <news:publication>
         <news:name>Harshal Dasani</news:name>
-        <news:language>en</news:language>
+        <news:language>hi</news:language>
       </news:publication>
-      <news:publication_date>2026-06-18T09:00:00+05:30</news:publication_date>
-      <news:title>SpaceX is not a rocket company. It’s three.</news:title>
+      <news:publication_date>2026-07-16T09:15:00+05:30</news:publication_date>
+      <news:title>संसेरा इंजीनियरिंग का सफ़र, आँकड़ों में</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://harshaldasani.pages.dev/blog/posts/first-millionaire-billionaire-trillionaire/</loc>
+    <loc>https://harshaldasani.pages.dev/blog/posts/black-box-journey-in-numbers/</loc>
     <news:news>
       <news:publication>
         <news:name>Harshal Dasani</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-06-18T09:00:00+05:30</news:publication_date>
-      <news:title>Three men, three centuries: the first millionaire, the first billionaire, the first trillionaire</news:title>
+      <news:publication_date>2026-07-15T09:15:00+05:30</news:publication_date>
+      <news:title>Black Box’s journey, in numbers</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://harshaldasani.pages.dev/blog/posts/rupee-usd-inr-2026-why-falling-where-it-stops/</loc>
+    <loc>https://harshaldasani.pages.dev/hi/blog/posts/black-box-journey-in-numbers/</loc>
     <news:news>
       <news:publication>
         <news:name>Harshal Dasani</news:name>
-        <news:language>en</news:language>
+        <news:language>hi</news:language>
       </news:publication>
-      <news:publication_date>2026-06-17T09:00:00+05:30</news:publication_date>
-      <news:title>The rupee’s record low: why USD/INR is falling, where it stops, and what it means for India</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://harshaldasani.pages.dev/blog/posts/copper-2026-electrification-deficit/</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Harshal Dasani</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-06-17T09:00:00+05:30</news:publication_date>
-      <news:title>Copper: the metal the electric, AI-powered century will be built from</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://harshaldasani.pages.dev/blog/posts/silver-2026-deficit-bull-case/</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Harshal Dasani</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-06-17T09:00:00+05:30</news:publication_date>
-      <news:title>Silver’s two engines: the deficit metal that finally broke its old ceiling</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://harshaldasani.pages.dev/blog/posts/gold-2026-structural-bull-case/</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Harshal Dasani</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-06-17T09:00:00+05:30</news:publication_date>
-      <news:title>Gold’s second wind: the structural case behind the world’s oldest money</news:title>
+      <news:publication_date>2026-07-15T09:15:00+05:30</news:publication_date>
+      <news:title>ब्लैक बॉक्स का सफ़र, आँकड़ों में</news:title>
     </news:news>
   </url>
 </urlset>

@@ -1,0 +1,7 @@
+# Photos/press-kit page is crawl-bait only (images indexed via sitemap, attributed to home).
+# Send any human who lands on the page to the home page. Image FILES (/photos/*.jpg etc.)
+# are exact-path-excluded here, so they keep serving 200 for Googlebot.
+/photos      /      301
+/photos/     /      301
+/hi/photos   /hi/   301
+/hi/photos/  /hi/   301

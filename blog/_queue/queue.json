@@ -32,23 +32,27 @@
   },
   {
     "file": "2026-06-17_3_elon-musk-journey-in-numbers.docx",
-    "status": "pending",
-    "title": "Elon Musk’s Journey in Numbers: From Pretoria to the First Trillionaire",
+    "status": "done",
+    "title": "Elon Musk’s journey, in numbers",
     "slug": "elon-musk-journey-in-numbers",
     "topic": "stock-market",
-    "excerpt": "From a bullied schoolboy in Pretoria to the world’s first trillionaire — Elon Musk’s life as a sequence of bets, failures and comebacks."
+    "excerpt": "From a bullied schoolboy in Pretoria to the world’s first trillionaire — Elon Musk’s life as a sequence of bets, failures and comebacks.",
+    "published_at": "2026-06-19T19:09:54+05:30",
+    "lang_en": true
   },
   {
     "file": "2026-06-17_4_musk-empire-every-hard-problem.docx",
-    "status": "pending",
-    "title": "The Musk Empire: One Founder and Every Hard Problem of the Century",
+    "status": "done",
+    "title": "One founder, every hard problem: inside the Musk empire",
     "slug": "musk-empire-every-hard-problem",
     "topic": "stock-market",
-    "excerpt": "Launch, cars, AI, brain interfaces, tunnels, energy — Elon Musk’s companies look scattered until you see the single thesis that connects them."
+    "excerpt": "Launch, cars, AI, brain interfaces, tunnels, energy — Elon Musk’s companies look scattered until you see the single thesis that connects them.",
+    "published_at": "2026-06-20T09:07:32+05:30",
+    "lang_en": true
   },
   {
     "file": "2026-06-17_6_nvidia-journey-in-numbers.docx",
-    "status": "pending",
+    "status": "done",
     "title": "NVIDIA’s Journey in Numbers: From a Denny’s Booth to $4 Trillion",
     "slug": "nvidia-journey-in-numbers",
     "topic": "stock-market",

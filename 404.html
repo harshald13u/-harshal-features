@@ -12,10 +12,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Spectral:wght@600&display=swap" rel="stylesheet">
 
-<script>
-  (function(){ try { var t = localStorage.getItem('hd-theme') || 'dark'; document.documentElement.setAttribute('data-theme', t); } catch(e){} })();
-  function HDtoggleTheme(){ var c = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light'; document.documentElement.setAttribute('data-theme', c); try { localStorage.setItem('hd-theme', c); } catch(e){} }
-</script>
+<script>(function(){function _a(){(function(){ try { var t = localStorage.getItem('hd-theme') || 'dark'; document.documentElement.setAttribute('data-theme', t); } catch(e){} })();
+  function HDtoggleTheme(){ var c = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light'; document.documentElement.setAttribute('data-theme', c); try { localStorage.setItem('hd-theme', c); } catch(e){} };}_a();window.addEventListener("pageshow",_a);})();</script>
 
 <style>
 :root {

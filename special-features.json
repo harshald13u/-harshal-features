@@ -1,6 +1,14 @@
 {
   "special": [
     {
+      "pub": "Business Today TV",
+      "date": "2026-06-22",
+      "title": "Jio IPO, NSE Listing & The ₹4 Lakh Crore Question Every Investor Must Watch",
+      "url": "https://www.businesstoday.in/bt-tv/market-today/video/jio-ipo-nse-listing-the-rs4-lakh-crore-question-every-investor-must-watch-538401-2026-06-22",
+      "image": "special-features-assets/bttv-jio-ipo-jun2026.jpg",
+      "alt": "Business Today TV - Jio IPO, NSE listing, Harshal Dasani interview"
+    },
+    {
       "pub": "Business Standard",
       "date": "2026-06-05",
       "title": "‘Tax exemption on G-Secs may succeed where RBI liquidity cannot’, authored op-ed by Harshal Dasani",

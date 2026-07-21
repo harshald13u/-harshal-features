@@ -39,7 +39,7 @@ async function ipoSnapshot(H){
   }catch(e){}
   return null;
 }
-export async function onRequest(context){
+async function handle(context){
   const url = new URL(context.request.url);
   const fresh = url.searchParams.has('fresh');
   const H = { 'content-type':'application/json; charset=utf-8', 'access-control-allow-origin':'*',
@@ -165,4 +165,21 @@ export async function onRequest(context){
     const fb=await ipoSnapshot(H); if(fb) return fb;
     return new Response(JSON.stringify({ lastUpdated:new Date().toISOString(), ipos:[], error:String(e&&e.message||e) }), { status:200, headers:H });
   }
+}
+
+
+// Edge-cache the whole response so the heavy upstream scraping runs at most once
+// per cache-TTL per edge node (everyone else gets it instantly). ?fresh bypasses.
+// Cache TTL is taken from the response's own Cache-Control (30 min while an IPO is
+// open, 6 h when quiet). Invisible to the page — same JSON, just served fast.
+export async function onRequest(context){
+  const url = new URL(context.request.url);
+  if(url.searchParams.has('fresh')) return handle(context);
+  const cache = caches.default;
+  const key = new Request(url.origin + url.pathname);   // ignore ?nc= cache-buster
+  const hit = await cache.match(key);
+  if(hit) return hit;
+  const resp = await handle(context);
+  try { if(resp && resp.status===200) context.waitUntil(cache.put(key, resp.clone())); } catch(e){}
+  return resp;
 }

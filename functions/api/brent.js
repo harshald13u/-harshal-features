@@ -14,7 +14,10 @@ export async function onRequest(context) {
   };
   const cfOpt = fresh ? { cacheTtl: 0, cacheEverything: false }
                       : { cacheTtl: 900, cacheEverything: true };
-  const bust = fresh ? ('&_=' + Date.now()) : '';
+  // Time-bucketed buster: the edge was serving a stuck cached copy of the constant
+  // upstream URL far past cacheTtl (frozen since 08-Jun-2026). Rotating the URL every
+  // 15 min guarantees a genuinely fresh upstream fetch per bucket.
+  const bust = '&_=' + (fresh ? Date.now() : Math.floor(Date.now() / 9e5));
 
   // 1) Yahoo Finance — Brent front-month future (BZ=F)
   for (const host of ['query1', 'query2']) {

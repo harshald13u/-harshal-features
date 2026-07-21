@@ -4,148 +4,171 @@
     <title>Harshal Dasani, Blog</title>
     <link>https://harshaldasani.pages.dev/blog/</link>
     <atom:link href="https://harshaldasani.pages.dev/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <description>Long-form notes on Indian equity markets, commodities, macros and geopolitics by Harshal Dasani, over a decade in Indian markets, currently Markets professional, Mumbai.</description>
+    <description>Long-form notes on Indian equity markets, commodities, macro and geopolitics by Harshal Dasani, Business Head, INVasset PMS &amp; AIF, Mumbai.</description>
     <language>en-IN</language>
     <copyright>(c) Harshal Dasani</copyright>
-    <lastBuildDate>Fri, 19 Jun 2026 03:42:14 +0000</lastBuildDate>
-    <generator>publish_blog.py v2</generator>
-    <managingEditor>noreply@harshaldasani.pages.dev (Harshal Dasani)</managingEditor>
-    <webMaster>noreply@harshaldasani.pages.dev (Harshal Dasani)</webMaster>
+    <lastBuildDate>Thu, 16 Jul 2026 05:08:32 +0000</lastBuildDate>
+    <generator>regen_feeds.py</generator>
     <ttl>60</ttl>
-    <image>
-      <url>https://harshaldasani.pages.dev/harshal-dasani.jpg</url>
-      <title>Harshal Dasani</title>
-      <link>https://harshaldasani.pages.dev/blog/</link>
-    </image>
     <item>
-      <title>SpaceX’s journey, in numbers</title>
-      <link>https://harshaldasani.pages.dev/blog/posts/spacex-journey-in-numbers/</link>
-      <guid isPermaLink="true">https://harshaldasani.pages.dev/blog/posts/spacex-journey-in-numbers/</guid>
-      <pubDate>Wed, 17 Jun 2026 09:00:00 +0530</pubDate>
-      <description><![CDATA[From buying refurbished missiles in Russia to running 80% of the world’s launches, SpaceX’s twenty-four-year climb, year by year.]]></description>
-      <category>Stock Market</category>
-      <enclosure url="https://harshaldasani.pages.dev/blog/posts/spacex-journey-in-numbers/cover.jpg" type="image/jpeg"/>
-      <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Harshal Dasani</dc:creator>
+      <title>Sansera Engineering’s journey, in numbers</title>
+      <link>https://harshaldasani.pages.dev/blog/posts/sansera-engineering-journey-in-numbers/</link>
+      <guid isPermaLink="true">https://harshaldasani.pages.dev/blog/posts/sansera-engineering-journey-in-numbers/</guid>
+      <pubDate>Thu, 16 Jul 2026 03:45:00 +0000</pubDate>
+      <description>The same hands, the same tolerances, the next powertrain, Sansera Engineering’s journey in numbers, from connecting rods to EV parts and aerospace forgings.</description>
+      <dc:creator>Harshal Dasani</dc:creator>
     </item>
     <item>
-      <title>SpaceX is not a rocket company. It’s three.</title>
-      <link>https://harshaldasani.pages.dev/blog/posts/spacex-three-businesses-stacked/</link>
-      <guid isPermaLink="true">https://harshaldasani.pages.dev/blog/posts/spacex-three-businesses-stacked/</guid>
-      <pubDate>Wed, 17 Jun 2026 09:00:00 +0530</pubDate>
-      <description><![CDATA[Launch, network, planet: SpaceX is three businesses stacked on top of each other, each one big enough to be the most important company in its own industry.]]></description>
-      <category>Stock Market</category>
-      <enclosure url="https://harshaldasani.pages.dev/blog/posts/spacex-three-businesses-stacked/cover.jpg" type="image/jpeg"/>
-      <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Harshal Dasani</dc:creator>
+      <title>Black Box’s journey, in numbers</title>
+      <link>https://harshaldasani.pages.dev/blog/posts/black-box-journey-in-numbers/</link>
+      <guid isPermaLink="true">https://harshaldasani.pages.dev/blog/posts/black-box-journey-in-numbers/</guid>
+      <pubDate>Wed, 15 Jul 2026 03:45:00 +0000</pubDate>
+      <description>A global services franchise, listed in India, plugged into the data-centre cycle, Black Box’s journey in numbers, and a reverse migration of value.</description>
+      <dc:creator>Harshal Dasani</dc:creator>
     </item>
     <item>
-      <title>Three men, three centuries: the first millionaire, the first billionaire, the first trillionaire</title>
-      <link>https://harshaldasani.pages.dev/blog/posts/first-millionaire-billionaire-trillionaire/</link>
-      <guid isPermaLink="true">https://harshaldasani.pages.dev/blog/posts/first-millionaire-billionaire-trillionaire/</guid>
-      <pubDate>Wed, 17 Jun 2026 09:00:00 +0530</pubDate>
-      <description><![CDATA[John Jacob Astor, John D. Rockefeller, Elon Musk, three men who each built the infrastructure of their age, and the one pattern that links a fur trader, an oil refiner and a rocket builder.]]></description>
-      <category>Stock Market</category>
-      <enclosure url="https://harshaldasani.pages.dev/blog/posts/first-millionaire-billionaire-trillionaire/cover.jpg" type="image/jpeg"/>
-      <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Harshal Dasani</dc:creator>
+      <title>Paras Defence and Space Technologies’ journey, in numbers</title>
+      <link>https://harshaldasani.pages.dev/blog/posts/paras-defence-journey-in-numbers/</link>
+      <guid isPermaLink="true">https://harshaldasani.pages.dev/blog/posts/paras-defence-journey-in-numbers/</guid>
+      <pubDate>Tue, 14 Jul 2026 03:45:00 +0000</pubDate>
+      <description>The early bet on indigenisation, made before the policy turned, paid the most, Paras Defence’s journey in numbers, optics to counter-drones.</description>
+      <dc:creator>Harshal Dasani</dc:creator>
     </item>
     <item>
-      <title>The rupee’s record low: why USD/INR is falling, where it stops, and what it means for India</title>
-      <link>https://harshaldasani.pages.dev/blog/posts/rupee-usd-inr-2026-why-falling-where-it-stops/</link>
-      <guid isPermaLink="true">https://harshaldasani.pages.dev/blog/posts/rupee-usd-inr-2026-why-falling-where-it-stops/</guid>
-      <pubDate>Wed, 17 Jun 2026 09:00:00 +0530</pubDate>
-      <description><![CDATA[The rupee hit a record low near 97 in May, then bounced to around 95 as oil cooled. Why USD/INR is really weakening, where the forecasts say it stops, and…]]></description>
-      <category>Macros</category>
-      <enclosure url="https://harshaldasani.pages.dev/blog/posts/rupee-usd-inr-2026-why-falling-where-it-stops/cover.jpg" type="image/jpeg"/>
-      <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Harshal Dasani</dc:creator>
+      <title>Kirloskar Oil Engines’ journey, in numbers</title>
+      <link>https://harshaldasani.pages.dev/blog/posts/kirloskar-oil-engines-journey-in-numbers/</link>
+      <guid isPermaLink="true">https://harshaldasani.pages.dev/blog/posts/kirloskar-oil-engines-journey-in-numbers/</guid>
+      <pubDate>Mon, 13 Jul 2026 03:45:00 +0000</pubDate>
+      <description>Kirloskar Oil Engines’ journey in numbers, a 130-year-old name still compounding, from irrigation pumps to data-centre gensets.</description>
+      <dc:creator>Harshal Dasani</dc:creator>
     </item>
     <item>
-      <title>Copper: the metal the electric, AI-powered century will be built from</title>
-      <link>https://harshaldasani.pages.dev/blog/posts/copper-2026-electrification-deficit/</link>
-      <guid isPermaLink="true">https://harshaldasani.pages.dev/blog/posts/copper-2026-electrification-deficit/</guid>
-      <pubDate>Wed, 17 Jun 2026 09:00:00 +0530</pubDate>
-      <description><![CDATA[Copper hit record highs in 2026 as electrification, EVs and now AI data centres pull on supply that mines cannot expand fast enough. The near-term balance…]]></description>
-      <category>Commodities</category>
-      <enclosure url="https://harshaldasani.pages.dev/blog/posts/copper-2026-electrification-deficit/cover.jpg" type="image/jpeg"/>
-      <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Harshal Dasani</dc:creator>
+      <title>INOX India’s journey, in numbers</title>
+      <link>https://harshaldasani.pages.dev/blog/posts/inox-india-journey-in-numbers/</link>
+      <guid isPermaLink="true">https://harshaldasani.pages.dev/blog/posts/inox-india-journey-in-numbers/</guid>
+      <pubDate>Sun, 12 Jul 2026 03:45:00 +0000</pubDate>
+      <description>The winners built the hardware decades before the energy mix changed, INOX India’s journey in numbers, from cryogenic tanks to hydrogen.</description>
+      <dc:creator>Harshal Dasani</dc:creator>
     </item>
     <item>
-      <title>Silver’s two engines: the deficit metal that finally broke its old ceiling</title>
-      <link>https://harshaldasani.pages.dev/blog/posts/silver-2026-deficit-bull-case/</link>
-      <guid isPermaLink="true">https://harshaldasani.pages.dev/blog/posts/silver-2026-deficit-bull-case/</guid>
-      <pubDate>Wed, 17 Jun 2026 09:00:00 +0530</pubDate>
-      <description><![CDATA[Silver smashed its 45-year ceiling in 2026, touched $121, then cooled to about $70. Underneath sits a sixth straight year of supply deficit, record-low…]]></description>
-      <category>Commodities</category>
-      <enclosure url="https://harshaldasani.pages.dev/blog/posts/silver-2026-deficit-bull-case/cover.jpg" type="image/jpeg"/>
-      <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Harshal Dasani</dc:creator>
+      <title>HFCL’s journey, in numbers</title>
+      <link>https://harshaldasani.pages.dev/blog/posts/hfcl-journey-in-numbers/</link>
+      <guid isPermaLink="true">https://harshaldasani.pages.dev/blog/posts/hfcl-journey-in-numbers/</guid>
+      <pubDate>Sat, 11 Jul 2026 03:45:00 +0000</pubDate>
+      <description>The wilderness is part of every multibagger; the trick is owning it before it ends, HFCL’s journey in numbers, from telecom bust to 5G.</description>
+      <dc:creator>Harshal Dasani</dc:creator>
     </item>
     <item>
-      <title>Gold’s second wind: the structural case behind the world’s oldest money</title>
-      <link>https://harshaldasani.pages.dev/blog/posts/gold-2026-structural-bull-case/</link>
-      <guid isPermaLink="true">https://harshaldasani.pages.dev/blog/posts/gold-2026-structural-bull-case/</guid>
-      <pubDate>Wed, 17 Jun 2026 09:00:00 +0530</pubDate>
-      <description><![CDATA[Gold had its best year since 1979, touched nearly $5,600, then paused near $4,350. Look past the price wobble and the engine, record central-bank buying,…]]></description>
-      <category>Commodities</category>
-      <enclosure url="https://harshaldasani.pages.dev/blog/posts/gold-2026-structural-bull-case/cover.jpg" type="image/jpeg"/>
-      <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Harshal Dasani</dc:creator>
+      <title>TD Power Systems’ journey, in numbers</title>
+      <link>https://harshaldasani.pages.dev/blog/posts/td-power-systems-journey-in-numbers/</link>
+      <guid isPermaLink="true">https://harshaldasani.pages.dev/blog/posts/td-power-systems-journey-in-numbers/</guid>
+      <pubDate>Fri, 10 Jul 2026 03:45:00 +0000</pubDate>
+      <description>It needed the world to start needing generators again, TD Power Systems’ journey in numbers, and the cycles that all arrived at once.</description>
+      <dc:creator>Harshal Dasani</dc:creator>
     </item>
     <item>
-      <title>Two engines behind Korea’s 100% year: reform, a chip mania, and a mirror for India</title>
-      <link>https://harshaldasani.pages.dev/blog/posts/kospi-2026-korea-rally-reform-explained/</link>
-      <guid isPermaLink="true">https://harshaldasani.pages.dev/blog/posts/kospi-2026-korea-rally-reform-explained/</guid>
-      <pubDate>Tue, 16 Jun 2026 09:00:00 +0530</pubDate>
-      <description><![CDATA[KOSPI 2026 has doubled on Value-up reforms and an AI-chip boom. But Samsung and SK Hynix hide a narrower rally and a lesson for India.]]></description>
-      <category>Stock Market</category>
-      <enclosure url="https://harshaldasani.pages.dev/blog/posts/kospi-2026-korea-rally-reform-explained/cover.jpg" type="image/jpeg"/>
-      <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Harshal Dasani</dc:creator>
+      <title>Syrma SGS Technology’s journey, in numbers</title>
+      <link>https://harshaldasani.pages.dev/blog/posts/syrma-sgs-technology-journey-in-numbers/</link>
+      <guid isPermaLink="true">https://harshaldasani.pages.dev/blog/posts/syrma-sgs-technology-journey-in-numbers/</guid>
+      <pubDate>Thu, 09 Jul 2026 03:45:00 +0000</pubDate>
+      <description>The verticals nobody else wanted are the ones that scale when policy and demand finally arrive together, Syrma SGS Technology’s journey in numbers.</description>
+      <dc:creator>Harshal Dasani</dc:creator>
     </item>
     <item>
-      <title>Three companies, one ticker: what you’re actually buying in the SpaceX IPO</title>
-      <link>https://harshaldasani.pages.dev/blog/posts/spacex-ipo-1-75-trillion-explained/</link>
-      <guid isPermaLink="true">https://harshaldasani.pages.dev/blog/posts/spacex-ipo-1-75-trillion-explained/</guid>
-      <pubDate>Tue, 16 Jun 2026 09:00:00 +0530</pubDate>
-      <description><![CDATA[SpaceX is the biggest IPO ever, yet under 7% of its $1.75 trillion price is backed by profit. The three very different companies hiding inside one ticker.]]></description>
-      <category>Stock Market</category>
-      <enclosure url="https://harshaldasani.pages.dev/blog/posts/spacex-ipo-1-75-trillion-explained/cover.jpg" type="image/jpeg"/>
-      <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Harshal Dasani</dc:creator>
+      <title>Thangamayil Jewellery’s journey, in numbers</title>
+      <link>https://harshaldasani.pages.dev/blog/posts/thangamayil-jewellery-journey-in-numbers/</link>
+      <guid isPermaLink="true">https://harshaldasani.pages.dev/blog/posts/thangamayil-jewellery-journey-in-numbers/</guid>
+      <pubDate>Wed, 08 Jul 2026 03:45:00 +0000</pubDate>
+      <description>Not Titan, what happens when a family picks one state and owns it. Thangamayil Jewellery’s journey in numbers, with the South Indian household.</description>
+      <dc:creator>Harshal Dasani</dc:creator>
     </item>
     <item>
-      <title>The 2026 Iran War: one unsigned page stands between the world and cheaper oil</title>
-      <link>https://harshaldasani.pages.dev/blog/posts/iran-israel-us-war-2026-explained/</link>
-      <guid isPermaLink="true">https://harshaldasani.pages.dev/blog/posts/iran-israel-us-war-2026-explained/</guid>
-      <pubDate>Mon, 08 Jun 2026 09:00:00 +0530</pubDate>
-      <description><![CDATA[A near-finished peace deal sits unsigned while US and Iranian forces still trade fire and 325 tankers wait behind a minefield. Inside the 2026 Iran war, and the one strait holding the world’s oil hostage.]]></description>
-      <category>Geopolitics</category>
-      <enclosure url="https://harshaldasani.pages.dev/blog/posts/iran-israel-us-war-2026-explained/cover.jpeg" type="image/jpeg"/>
-      <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Harshal Dasani</dc:creator>
+      <title>Cupid’s journey, in numbers</title>
+      <link>https://harshaldasani.pages.dev/blog/posts/cupid-journey-in-numbers/</link>
+      <guid isPermaLink="true">https://harshaldasani.pages.dev/blog/posts/cupid-journey-in-numbers/</guid>
+      <pubDate>Tue, 07 Jul 2026 03:45:00 +0000</pubDate>
+      <description>A small Nashik maker that became the world’s go-to supplier for a niche the world cannot do without, Cupid’s journey in numbers.</description>
+      <dc:creator>Harshal Dasani</dc:creator>
     </item>
     <item>
-      <title>The end of the easing cycle: what the RBI’s June pause means for investors</title>
-      <link>https://harshaldasani.pages.dev/blog/posts/rbi-mpc-june-2026-rate-pause/</link>
-      <guid isPermaLink="true">https://harshaldasani.pages.dev/blog/posts/rbi-mpc-june-2026-rate-pause/</guid>
-      <pubDate>Mon, 08 Jun 2026 09:00:00 +0530</pubDate>
-      <description><![CDATA[The RBI held the repo rate at 5.25% for a third meeting, quietly closing the easing cycle. What the June pause means for the rupee, bonds and your portfolio.]]></description>
-      <category>Macros</category>
-      <enclosure url="https://harshaldasani.pages.dev/blog/posts/rbi-mpc-june-2026-rate-pause/cover.jpg" type="image/jpeg"/>
-      <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Harshal Dasani</dc:creator>
+      <title>Acutaas Chemicals’ journey, in numbers</title>
+      <link>https://harshaldasani.pages.dev/blog/posts/acutaas-chemicals-journey-in-numbers/</link>
+      <guid isPermaLink="true">https://harshaldasani.pages.dev/blog/posts/acutaas-chemicals-journey-in-numbers/</guid>
+      <pubDate>Mon, 06 Jul 2026 03:45:00 +0000</pubDate>
+      <description>A quiet specialty-chemicals franchise built for fifteen years, then a pivot to battery materials. Acutaas Chemicals’ journey in numbers.</description>
+      <dc:creator>Harshal Dasani</dc:creator>
     </item>
     <item>
-      <title>The Oil Shock and India: Crude, the Rupee, and Inflation</title>
-      <link>https://harshaldasani.pages.dev/blog/posts/crude-oil-india-markets-rupee-inflation/</link>
-      <guid isPermaLink="true">https://harshaldasani.pages.dev/blog/posts/crude-oil-india-markets-rupee-inflation/</guid>
-      <pubDate>Fri, 05 Jun 2026 09:00:00 +0530</pubDate>
-      <description><![CDATA[Brent above $100 on the Hormuz crisis, the rupee at record lows, the CAD set to double, how the oil shock is hitting India's markets, rupee and inflation.]]></description>
-      <category>Commodities</category>
-      <enclosure url="https://harshaldasani.pages.dev/blog/posts/crude-oil-india-markets-rupee-inflation/cover.jpg" type="image/jpeg"/>
-      <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Harshal Dasani</dc:creator>
+      <title>MTAR Technologies’ journey, in numbers</title>
+      <link>https://harshaldasani.pages.dev/blog/posts/mtar-technologies-journey-in-numbers/</link>
+      <guid isPermaLink="true">https://harshaldasani.pages.dev/blog/posts/mtar-technologies-journey-in-numbers/</guid>
+      <pubDate>Sun, 05 Jul 2026 03:45:00 +0000</pubDate>
+      <description>Not in any single trend, sitting in the picks-and-shovels layer of five strategic cycles at once. MTAR Technologies’ journey in numbers.</description>
+      <dc:creator>Harshal Dasani</dc:creator>
     </item>
     <item>
-      <title>Indian IT Stocks: What’s Actually Breaking, and Why the Market Stopped Paying Up</title>
-      <link>https://harshaldasani.pages.dev/blog/posts/indian-it-stocks-whats-breaking/</link>
-      <guid isPermaLink="true">https://harshaldasani.pages.dev/blog/posts/indian-it-stocks-whats-breaking/</guid>
-      <pubDate>Thu, 04 Jun 2026 09:00:00 +0530</pubDate>
-      <description><![CDATA[TCS, Infosys and Wipro returned ₹1.09 lakh crore to shareholders since 2020 and spend under 1% of revenue on R&amp;D. Why the market is repricing Indian IT.]]></description>
-      <category>Stock Market</category>
-      <enclosure url="https://harshaldasani.pages.dev/blog/posts/indian-it-stocks-whats-breaking/cover.jpg" type="image/jpeg"/>
-      <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Harshal Dasani</dc:creator>
+      <title>Anand Rathi Wealth’s journey, in numbers</title>
+      <link>https://harshaldasani.pages.dev/blog/posts/anand-rathi-wealth-journey-in-numbers/</link>
+      <guid isPermaLink="true">https://harshaldasani.pages.dev/blog/posts/anand-rathi-wealth-journey-in-numbers/</guid>
+      <pubDate>Sat, 04 Jul 2026 03:45:00 +0000</pubDate>
+      <description>It needed a country with rising household wealth and shrinking love of fixed income, Anand Rathi Wealth’s journey in numbers.</description>
+      <dc:creator>Harshal Dasani</dc:creator>
+    </item>
+    <item>
+      <title>Polycab India’s journey, in numbers</title>
+      <link>https://harshaldasani.pages.dev/blog/posts/polycab-india-journey-in-numbers/</link>
+      <guid isPermaLink="true">https://harshaldasani.pages.dev/blog/posts/polycab-india-journey-in-numbers/</guid>
+      <pubDate>Fri, 03 Jul 2026 03:45:00 +0000</pubDate>
+      <description>A distribution-led wires business the Jaisinghani family compounded privately for sixty years, then let the market join. Polycab India’s journey in numbers.</description>
+      <dc:creator>Harshal Dasani</dc:creator>
+    </item>
+    <item>
+      <title>Solar Industries’ journey, in numbers</title>
+      <link>https://harshaldasani.pages.dev/blog/posts/solar-industries-journey-in-numbers/</link>
+      <guid isPermaLink="true">https://harshaldasani.pages.dev/blog/posts/solar-industries-journey-in-numbers/</guid>
+      <pubDate>Thu, 02 Jul 2026 03:45:00 +0000</pubDate>
+      <description>The picks-and-shovels of Indian defence are the explosives and warheads inside every projectile, Solar Industries’ journey in numbers.</description>
+      <dc:creator>Harshal Dasani</dc:creator>
+    </item>
+    <item>
+      <title>CG Power’s journey, in numbers</title>
+      <link>https://harshaldasani.pages.dev/blog/posts/cg-power-journey-in-numbers/</link>
+      <guid isPermaLink="true">https://harshaldasani.pages.dev/blog/posts/cg-power-journey-in-numbers/</guid>
+      <pubDate>Wed, 01 Jul 2026 03:45:00 +0000</pubDate>
+      <description>From a 90-year-old franchise nearly destroyed by fraud to a 50-bagger turnaround with a brand-new semiconductor leg, CG Power’s journey in numbers.</description>
+      <dc:creator>Harshal Dasani</dc:creator>
+    </item>
+    <item>
+      <title>Netweb Technologies’ journey, in numbers</title>
+      <link>https://harshaldasani.pages.dev/blog/posts/netweb-technologies-journey-in-numbers/</link>
+      <guid isPermaLink="true">https://harshaldasani.pages.dev/blog/posts/netweb-technologies-journey-in-numbers/</guid>
+      <pubDate>Tue, 30 Jun 2026 03:45:00 +0000</pubDate>
+      <description>Twenty-four years building India’s only credible AI-server maker, then an IPO months before ChatGPT. Netweb Technologies’ journey in numbers.</description>
+      <dc:creator>Harshal Dasani</dc:creator>
+    </item>
+    <item>
+      <title>Vedanta’s journey, in numbers</title>
+      <link>https://harshaldasani.pages.dev/blog/posts/vedanta-journey-in-numbers/</link>
+      <guid isPermaLink="true">https://harshaldasani.pages.dev/blog/posts/vedanta-journey-in-numbers/</guid>
+      <pubDate>Mon, 29 Jun 2026 03:45:00 +0000</pubDate>
+      <description>Cyclical commodity assets bought at the bottom and held through crises that ended others, Vedanta’s journey in numbers, toward a five-way demerger.</description>
+      <dc:creator>Harshal Dasani</dc:creator>
+    </item>
+    <item>
+      <title>Bajaj Finance’s journey, in numbers</title>
+      <link>https://harshaldasani.pages.dev/blog/posts/bajaj-finance-journey-in-numbers/</link>
+      <guid isPermaLink="true">https://harshaldasani.pages.dev/blog/posts/bajaj-finance-journey-in-numbers/</guid>
+      <pubDate>Sun, 28 Jun 2026 03:45:00 +0000</pubDate>
+      <description>From a captive two-wheeler financier to a continent-scale lender, Bajaj Finance’s journey in numbers, and the repetition that compounded for years.</description>
+      <dc:creator>Harshal Dasani</dc:creator>
+    </item>
+    <item>
+      <title>Eternal’s (Zomato’s) journey, in numbers</title>
+      <link>https://harshaldasani.pages.dev/blog/posts/eternal-zomato-journey-in-numbers/</link>
+      <guid isPermaLink="true">https://harshaldasani.pages.dev/blog/posts/eternal-zomato-journey-in-numbers/</guid>
+      <pubDate>Sat, 27 Jun 2026 03:45:00 +0000</pubDate>
+      <description>From an office menu PDF to India’s most valuable quick-commerce franchise, Eternal’s journey in numbers, and how each pivot bought a decade.</description>
+      <dc:creator>Harshal Dasani</dc:creator>
     </item>
   </channel>
 </rss>

@@ -33,10 +33,10 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <style>
-:root{color-scheme:dark light; --bg:#0e0c0a; --bg-2:#15110d; --ink:#ece4d3; --ink-2:#c9c0ad; --muted:#8a8273; --faint:#807866;
+:root{color-scheme:dark light; --bg:#0e0c0a; --bg-2:#15110d; --ink:#ece4d3; --ink-2:#c9c0ad; --muted:#8a8273; --faint:#8a8273;
   --rule:rgba(236,228,211,0.10); --rule-soft:rgba(236,228,211,0.06); --accent:#d4a64a; --accent-soft:rgba(212,166,74,0.08);
   --fii:#d4a64a; --dii:#ece4d3; --fii-dim:rgba(212,166,74,0.18); --dii-dim:rgba(236,228,211,0.10); --navy-bar:#3a6db0; }
-html[data-theme="light"]{ --bg:#ebe5d7; --bg-2:#ddd4c1; --ink:#1a3458; --ink-2:#3a527a; --muted:#54687f; --faint:#5f7790;
+html[data-theme="light"]{ --bg:#ebe5d7; --bg-2:#ddd4c1; --ink:#1a3458; --ink-2:#3a527a; --muted:#54687f; --faint:#4a5d72;
   --rule:rgba(26,52,88,0.14); --rule-soft:rgba(26,52,88,0.07); --accent:#b8852b; --accent-soft:rgba(184,133,43,0.10);
   --fii:#b8852b; --dii:#1a3458; --fii-dim:rgba(184,133,43,0.16); --dii-dim:rgba(26,52,88,0.12); --navy-bar:#27548a; }
 *{box-sizing:border-box;} html,body{margin:0;padding:0;} html{-webkit-font-smoothing:antialiased;background:var(--bg);}
@@ -83,7 +83,7 @@ html[data-theme="light"] .mast-theme-toggle{background:rgba(26,52,88,0.04);}
 
 /* narrative */
 .tug{background:var(--bg-2);border:1px solid var(--rule);border-radius:10px;padding:18px 22px;margin-bottom:26px;}
-.tug h3{margin:0 0 6px;font-size:13px;letter-spacing:1.1px;text-transform:uppercase;color:var(--accent);font-weight:700;}
+.tug h2{margin:0 0 6px;font-size:13px;letter-spacing:1.1px;text-transform:uppercase;color:var(--accent);font-weight:700;}
 .tug p{margin:0;font-size:15px;color:var(--ink-2);} .tug p b{color:var(--ink);font-weight:700;}
 
 /* section + charts */
@@ -240,7 +240,7 @@ function render(data,isSample){
   const mFii=mtd.reduce((a,d)=>a+d.fii.net,0), mDii=mtd.reduce((a,d)=>a+d.dii.net,0);
   let streak=0; for(let i=mtd.length-1;i>=0;i--){if(mtd[i].fii.net<0)streak++;else break;}
   const monthName=new Date((H[H.length-1]||{}).date||Date.now()).toLocaleDateString('en-IN',{month:'long'});
-  document.getElementById('tug').innerHTML=`<h3>The tug-of-war</h3>
+  document.getElementById('tug').innerHTML=`<h2>The tug-of-war</h2>
     <p>So far in ${monthName} (${mtd.length} session${mtd.length===1?'':'s'}), foreign investors were net sellers on <b>${sellerDays}</b> of them, while domestic institutions kept buying. <b>FII have ${mFii<0?'pulled out':'added'} ${cr(mFii).replace(/^[+−]/,'')}</b> while <b>DII have ${mDii>=0?'absorbed':'sold'} ${cr(mDii).replace('+','+')}</b> — the classic domestic-vs-foreign standoff.</p>`;
 
   drawBars();
@@ -555,7 +555,7 @@ document.getElementById('periodSeg').addEventListener('click',function(e){
 (function(){
   /* 1) OUR own committed dataset first — full ~548 days back to 2024-01 */
   let _baseData = null;
-  fetch('/fii-dii/history.json?nc='+Date.now())
+  fetch('/fii-dii/history.json?v='+new Date().toISOString().slice(0,10))
     .then(r=>r.ok?r.json():Promise.reject())
     .then(d=>{
       if(d&&d.history&&d.history.length){
@@ -567,7 +567,7 @@ document.getElementById('periodSeg').addEventListener('click',function(e){
     .finally(()=>{
       /* 2) overlay /api/fii-dii ONLY to refresh 'latest' + append newer days; do NOT overwrite the long history */
       const ctl=new AbortController(); const t=setTimeout(()=>ctl.abort(),8000);
-      fetch('/api/fii-dii?nc='+Date.now(),{signal:ctl.signal})
+      fetch('/api/fii-dii',{signal:ctl.signal})
         .then(r=>r.ok?r.json():Promise.reject())
         .then(live=>{
           if(!live) return;

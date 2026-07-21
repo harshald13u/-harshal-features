@@ -8,7 +8,7 @@ Usage: python3 gen_audio_pro.py <en|hi> <post_dir> --voice <V> [--out P] [--limi
 import os, re, sys, json, shutil, html as _h, asyncio, subprocess, tempfile
 from html.parser import HTMLParser
 
-RATE="-5%"; HEAD_PAUSE=0.70; SEC_PAUSE=0.42; PRE_DISC_PAUSE=0.55; CHUNK=2400
+RATE_EN="-4%"; RATE_HI="-3%"; HEAD_PAUSE=0.72; SEC_PAUSE=0.46; PRE_DISC_PAUSE=0.60; CHUNK=2400
 EN_DISC="This is general information, not investment advice."
 HI_DISC="यह सामान्य जानकारी है, कोई निवेश सलाह नहीं।"
 
@@ -16,15 +16,21 @@ class Prose(HTMLParser):
     SKIP_CLASS=("key-takeaways","post-faq","related","share","crumb","byline","audio","reading-time",
                 "tag","footer","colophon","hd-legal","post-meta","mast","lang","nav","toc","source")
     SKIP_TAGS={"script","style","nav","footer","aside","figure","figcaption","button","header"}
-    def __init__(s): super().__init__(); s.cap=None; s.buf=[]; s.out=[]; s.skip=[]
+    VOID={"img","br","hr","meta","link","input","source","col","area","base","wbr","embed","track"}
+    def __init__(s): super().__init__(); s.cap=None; s.buf=[]; s.out=[]; s.skip=False; s.depth=0
     def handle_starttag(s,t,a):
+        if s.skip:
+            if t not in s.VOID: s.depth+=1
+            return
         d=dict(a); cls=d.get("class","") or ""
-        if t in s.SKIP_TAGS or any(k in cls for k in s.SKIP_CLASS): s.skip.append(t); return
-        if s.skip: return
+        if t in s.SKIP_TAGS or any(k in cls for k in s.SKIP_CLASS): s.skip=True; s.depth=1; return
         if t in ("h1","h2","h3","p","li"): s.cap=t; s.buf=[]
     def handle_endtag(s,t):
-        if s.skip and t==s.skip[-1]: s.skip.pop(); return
-        if s.skip: return
+        if s.skip:
+            if t not in s.VOID:
+                s.depth-=1
+                if s.depth<=0: s.skip=False
+            return
         if t==s.cap:
             x=re.sub(r"\s+"," ",_h.unescape("".join(s.buf))).strip()
             if x and len(x)>1: s.out.append(x)
@@ -89,13 +95,25 @@ def build_segments(post_dir,lang):
     if len(segs)>=2: segs[-2]=(segs[-2][0],PRE_DISC_PAUSE)
     return segs
 
-async def synth_missing(missing,files,voice):
+def _hq_format():
+    """Bump edge-tts source to 24kHz/96kbps (2x the 48k default) before it is imported."""
+    try:
+        import importlib.util
+        spec=importlib.util.find_spec("edge_tts")
+        cf=os.path.join(os.path.dirname(spec.origin),"communicate.py")
+        s=open(cf,encoding="utf-8").read()
+        if "audio-24khz-96kbitrate-mono-mp3" not in s and "audio-24khz-48kbitrate-mono-mp3" in s:
+            open(cf,"w",encoding="utf-8").write(s.replace("audio-24khz-48kbitrate-mono-mp3","audio-24khz-96kbitrate-mono-mp3"))
+    except Exception as e: print("  [hq] note:",repr(e)[:90])
+
+async def synth_missing(missing,files,voice,rate):
+    _hq_format()
     import edge_tts
     sem=asyncio.Semaphore(4)
     async def one(i,text):
         async with sem:
             part=files[i]+".part"
-            await edge_tts.Communicate(text,voice,rate=RATE).save(part)
+            await edge_tts.Communicate(text,voice,rate=rate).save(part)
             os.replace(part,files[i])
     await asyncio.gather(*[one(i,t) for i,t in missing])
 
@@ -106,9 +124,14 @@ def master(files,pauses,out):
         if i<len(files)-1 and pauses[i]>0:
             inp+=["-f","lavfi","-t",f"{pauses[i]:.2f}","-i","anullsrc=r=24000:cl=mono"]; order.append(idx); idx+=1
     streams="".join(f"[{k}:a]" for k in order)
-    fc=f"{streams}concat=n={len(order)}:v=0:a=1[c];[c]highpass=f=80,loudnorm=I=-16:TP=-1.5:LRA=11[a]"
+    fc=(f"{streams}concat=n={len(order)}:v=0:a=1[c];"
+        "[c]highpass=f=70,treble=g=1.5:f=6000,"
+        "acompressor=threshold=-18dB:ratio=2.5:attack=10:release=200,"
+        "loudnorm=I=-14:TP=-1.5:LRA=11[a]")
+    _tmp=out+".tmp.mp3"
     subprocess.run(["ffmpeg","-y","-loglevel","error",*inp,"-filter_complex",fc,"-map","[a]",
-                    "-c:a","libmp3lame","-b:a","128k","-ar","44100","-ac","1",out],check=True)
+                    "-c:a","libmp3lame","-b:a","160k","-ar","48000","-ac","1",_tmp],check=True)
+    os.replace(_tmp,out)
 
 def generate(post_dir,lang,voice,out=None,limit=None):
     segs=build_segments(post_dir,lang)
@@ -119,7 +142,7 @@ def generate(post_dir,lang,voice,out=None,limit=None):
     files=[os.path.join(cache,f"s{i:03d}.mp3") for i in range(len(segs))]
     def have(f): return os.path.exists(f) and os.path.getsize(f)>0
     missing=[(i,segs[i][0]) for i in range(len(segs)) if not have(files[i])]
-    if missing: asyncio.run(synth_missing(missing,files,voice))
+    if missing: asyncio.run(synth_missing(missing,files,voice,(RATE_EN if lang=="en" else RATE_HI)))
     if not all(have(f) for f in files):
         rem=[i for i,f in enumerate(files) if not have(f)]
         print(f"  ... {len(rem)}/{len(files)} chunks remaining in {post_dir} — re-run"); return False

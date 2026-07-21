@@ -43,7 +43,7 @@
 /* ============ SITE TOKENS (verbatim from the live page) ============ */
 :root {
   --bg:#0e0c0a; --bg-2:#15110d; --ink:#ece4d3; --ink-2:#c9c0ad;
-  --muted:#8a8273; --faint:#807866;
+  --muted:#8a8273; --faint:#8a8273;
   --rule:rgba(236,228,211,0.10); --rule-soft:rgba(236,228,211,0.06);
   --accent:#d4a64a; --accent-soft:rgba(212,166,74,0.08);
   /* dashboard semantics (added; tuned to the palette) */
@@ -52,7 +52,7 @@
 }
 html[data-theme="light"] {
   --bg:#ebe5d7; --bg-2:#ddd4c1; --ink:#1a3458; --ink-2:#3a527a;
-  --muted:#54687f; --faint:#5f7790;
+  --muted:#54687f; --faint:#4a5d72;
   --rule:rgba(26,52,88,0.14); --rule-soft:rgba(26,52,88,0.07);
   --accent:#b8852b; --accent-soft:rgba(184,133,43,0.10);
   --pos:#2f7d56; --neg:#bb4a32; --warn:#b8852b; --navy-bar:#27548a;
@@ -285,7 +285,7 @@ body { min-height:100dvh; }
   </header>
 
   <section class="blog-hero">
-    <h1 class="blog-title">Harshal Dasani, IPO.</h1>
+    <h1 class="blog-title">IPO.</h1>
     <p class="blog-sub">Open, upcoming and recently listed Indian IPOs — official exchange data, subscription by investor category, and an honest listing record. No grey-market noise.</p>
   </section>
 
@@ -503,7 +503,7 @@ if(_ipoModal){ _ipoModal.addEventListener('click',e=>{ if(e.target.hasAttribute(
 })();
 
 /* fetch live data; fall back to sample so the page is never blank */
-fetch('/api/ipo?nc='+Date.now()).then(r=>r.ok?r.json():Promise.reject()).then(d=>{
+fetch('/api/ipo').then(r=>r.ok?r.json():Promise.reject()).then(d=>{
   if(d&&((d.ipos&&d.ipos.length)||(d.items&&d.items.length))) boot(d,false); else boot(SAMPLE,true);
 }).catch(()=>boot(SAMPLE,true));
 </script>

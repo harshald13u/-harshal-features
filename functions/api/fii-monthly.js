@@ -9,13 +9,16 @@ const SOURCES = [
   'https://www.fpi.nsdl.co.in/web/Reports/Latest.aspx',
 ];
 async function grab(u, fresh){
-  const r = await fetch(u, { headers:{ 'User-Agent':UA, 'Accept':'text/html,application/xhtml+xml,*/*',
+  // Time-bucketed buster (12h): the edge served a stuck cached NSDL copy far past
+  // cacheTtl (frozen since 10-Jun-2026); rotating the URL guarantees real refreshes.
+  const _u = u + (u.includes('?') ? '&' : '?') + '_b=' + (fresh ? Date.now() : Math.floor(Date.now()/432e5));
+  const r = await fetch(_u, { headers:{ 'User-Agent':UA, 'Accept':'text/html,application/xhtml+xml,*/*',
     'Accept-Language':'en-US,en;q=0.9', 'Referer':'https://www.fpi.nsdl.co.in/' },
     signal: AbortSignal.timeout(12000),
     cf: fresh?{cacheTtl:0}:{ cacheTtl:43200, cacheEverything:true } });
   return { ok:r.ok, status:r.status, url:u, html: await r.text() };
 }
-export async function onRequest(context){
+async function handle(context){
   const url = new URL(context.request.url);
   const fresh = url.searchParams.has('fresh');
   const debug = url.searchParams.has('debug');
@@ -81,4 +84,20 @@ function parseNSDL(html, year){
     out[ym] = { ym, eq: Math.round(nums[0]), tot: Math.round(nums[nums.length-1]) };
   }
   return Object.values(out).sort((a,b)=>a.ym<b.ym?-1:1);
+}
+
+
+// Edge-cache the whole response (Cache API) so the upstream aggregation runs at most
+// once per cache-TTL per edge node; everyone else gets it instantly. ?fresh bypasses.
+// TTL comes from the response's own Cache-Control. Invisible to the page.
+export async function onRequest(context){
+  const url = new URL(context.request.url);
+  if(url.searchParams.has('fresh')) return handle(context);
+  const cache = caches.default;
+  const key = new Request(url.origin + url.pathname);
+  const hit = await cache.match(key);
+  if(hit) return hit;
+  const resp = await handle(context);
+  try { if(resp && resp.status===200) context.waitUntil(cache.put(key, resp.clone())); } catch(e){}
+  return resp;
 }

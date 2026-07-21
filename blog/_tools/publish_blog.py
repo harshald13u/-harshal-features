@@ -14,7 +14,7 @@ per the spec in Blogs/_system/blog-system.md, and produces:
 
 Word file format (strict — see Blogs/_system/blog-system.md):
     [Heading 1]   Title
-    [Normal]      By Harshal Dasani — Markets professional · DD Mon YYYY
+    [Normal]      By Harshal Dasani — Business Head, INVasset PMS &amp; AIF · DD Mon YYYY
     [Normal]      Topic: <stock-market|commodities|macros|geopolitics>
     [Normal]      Date: YYYY-MM-DD
     [Normal]      Slug: <kebab-case-slug>
@@ -43,7 +43,7 @@ or as a module:
 import os, sys, json, re, shutil, zipfile
 from urllib.parse import quote_plus
 import xml.etree.ElementTree as ET
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 
 # ---------------------------------------------------------------------------
 # Paths
@@ -630,7 +630,7 @@ def article_jsonld(title, excerpt, slug, topic, date_str, canonical, light_cover
     keywords_list = [k.strip() for k in focus_keywords.split(",") if k.strip()] if focus_keywords else []
 
     article = {
-        "@type": "NewsArticle",
+        "@type": "BlogPosting",
         "@id": f"{canonical}#article",
         "headline": title[:110],
         "alternativeHeadline": title,
@@ -692,7 +692,7 @@ def article_jsonld(title, excerpt, slug, topic, date_str, canonical, light_cover
         "url": f"{SITE_BASE}/",
         "image": f"{SITE_BASE}/harshal-dasani.jpg",
         "jobTitle": "Markets professional",
-        "description": "Harshal Dasani — markets professional and writer with over a decade in Indian equity markets. Markets professional, Mumbai. CFA candidate; CA Level II.",
+        "description": "Harshal Dasani — markets professional and writer with over a decade in Indian equity markets. Business Head, INVasset PMS & AIF, Mumbai. CFA candidate; CA Level II.",
         "knowsAbout": ["Indian equity markets", "Portfolio Management Services", "Macroeconomics", "Commodities", "Geopolitics"],
         "alumniOf": "The Institute of Chartered Accountants of India",
         "sameAs": [
@@ -898,7 +898,7 @@ POST_TEMPLATE = """<!DOCTYPE html>
 <meta name="twitter:image" content="{light_cover_url}">
 <meta name="twitter:image:alt" content="{image_alt}">
 <meta name="twitter:label1" content="Author">
-<meta name="twitter:data1" content="Harshal Dasani — Markets professional">
+<meta name="twitter:data1" content="Harshal Dasani — Business Head, INVasset PMS &amp; AIF">
 <meta name="twitter:label2" content="Section">
 <meta name="twitter:data2" content="{topic_label}">
 
@@ -921,7 +921,7 @@ POST_TEMPLATE = """<!DOCTYPE html>
 
 <style>
 :root{{--bg:#0e0c0a;--bg-2:#15110d;--ink:#ece4d3;--ink-2:#c9c0ad;--muted:#8a8273;--rule:rgba(236,228,211,0.10);--accent:#d4a64a;}}
-html[data-theme="light"]{{--bg:#ebe5d7;--bg-2:#ddd4c1;--ink:#1a3458;--ink-2:#3a527a;--muted:#54687f;--rule:rgba(26,52,88,0.18);--accent:#b8852b;}}
+html[data-theme="light"]{{--bg:#ebe5d7;--bg-2:#ddd4c1;--ink:#1a3458;--ink-2:#3a527a;--muted:#54687f;--rule:rgba(26,52,88,0.18);--accent:#7a5310;}}
 *{{box-sizing:border-box}}
 html,body{{margin:0;padding:0;background:var(--bg);color:var(--ink-2);transition:background-color .3s,color .3s;overflow-x:hidden}}
 body{{font-family:'Inter',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;font-size:16.5px}}
@@ -1161,14 +1161,14 @@ strong{{color:var(--ink);font-weight:700}}
 </style>
 </head>
 <body>
-<main class="page" itemscope itemtype="https://schema.org/NewsArticle">
+<main class="page" itemscope itemtype="https://schema.org/BlogPosting">
   <nav class="crumb" aria-label="Breadcrumb"><a class="crumb-back" href="../../">&larr; Back to Blogs</a><span class="crumb-right"><span class="crumb-trail"><a href="../../../">Harshal Dasani</a> &middot; <a href="../../">Blogs</a> &middot; <span>{topic_label}</span></span><button class="theme-toggle" aria-label="Toggle light / dark theme" title="Toggle theme" type="button" onclick="(function(){{var c=document.documentElement.getAttribute('data-theme')||'dark';var n=c==='light'?'dark':'light';document.documentElement.setAttribute('data-theme',n);try{{localStorage.setItem('hd-theme',n)}}catch(e){{}}}})()"><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></button></span></nav>
   <span class="topic-pill">{topic_label}</span>
   <h1 itemprop="headline">{title_html}</h1>
   <p class="subtitle" itemprop="description">{excerpt_html}</p>
-  <p class="byline">By <strong itemprop="author"><a href="/" class="name-home">Harshal Dasani</a></strong> &middot; <span>Markets professional</span> &middot; <time itemprop="datePublished" datetime="{date_iso}">{date_pretty}</time> &middot; <span class="reading-time" aria-label="Reading time">{reading_minutes} min read &middot; {word_count_pretty} words</span></p>
+  <p class="byline">By <strong itemprop="author"><a href="/" class="name-home">Harshal Dasani</a></strong> &middot; <span>Business Head, INVasset PMS &amp; AIF</span> &middot; <time itemprop="datePublished" datetime="{date_iso}">{date_pretty}</time> &middot; <span class="reading-time" aria-label="Reading time">{reading_minutes} min read &middot; {word_count_pretty} words</span></p>
   <figure class="cover" role="button" tabindex="0" aria-label="Open cover in full resolution" data-light="{light_cover_filename}" data-dark="{dark_cover_filename}">
-    <img src="{light_cover_filename}" alt="{image_alt}" width="1600" height="900" loading="eager" fetchpriority="high" itemprop="image" class="light-only">
+    <img src="{light_cover_filename}" alt="{image_alt}" width="1600" height="900" loading="lazy" itemprop="image" class="light-only">
     <img src="{dark_cover_filename}" alt="{image_alt}" width="1600" height="900" loading="eager" fetchpriority="high" class="dark-only">
   </figure>
   <figcaption>{image_caption_html}</figcaption>
@@ -1226,7 +1226,7 @@ var S=[1,1.25,1.5],i=0;sp.addEventListener('click',function(){{i=(i+1)%S.length;
     </a>
   </div>
   <aside class="author-bio" itemscope itemtype="https://schema.org/Person">
-    <img src="../../../harshal-dasani.jpg" alt="Harshal Dasani — Markets professional" loading="lazy" itemprop="image" width="72" height="72">
+    <img src="../../../harshal-dasani.jpg" alt="Harshal Dasani — Business Head, INVasset PMS &amp; AIF" loading="lazy" itemprop="image" width="72" height="72">
     <div class="author-bio-body">
       <h3 itemprop="name">About <a href="/" class="name-home">Harshal Dasani</a></h3>
       <p itemprop="description">Over a decade in Indian equity markets — equity research, portfolio strategy, capital flows. Currently Business Head at <span itemprop="worksFor">INVasset PMS</span>, Mumbai. CFA candidate · CA Level II. Long-form notes on equities, commodities, macros and geopolitics. <a href="../../../tracker/">See media features &rarr;</a></p>
@@ -1340,7 +1340,12 @@ def build_rss_feed(feed_path, site_base):
         return
     with open(POSTS_JSON, encoding="utf-8") as f:
         data = json.load(f)
-    posts = sorted(data.get("posts", []), key=lambda p: p.get("date",""), reverse=True)[:30]
+    def _live(p):
+        pa=p.get("publishAt")
+        if not pa: return True
+        try: return datetime.fromisoformat(pa) <= datetime.now(timezone(timedelta(hours=5,minutes=30)))
+        except Exception: return True
+    posts = sorted([p for p in data.get("posts", []) if _live(p)], key=lambda p: p.get("date",""), reverse=True)[:30]
     now_rfc822 = datetime.now(timezone.utc).strftime("%a, %d %b %Y %H:%M:%S +0000")
 
     items = []
@@ -1373,7 +1378,7 @@ def build_rss_feed(feed_path, site_base):
     <title>Harshal Dasani — Blog</title>
     <link>{site_base}/blog/</link>
     <atom:link href="{site_base}/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <description>Long-form notes on Indian equity markets, commodities, macros and geopolitics by Harshal Dasani — over a decade in Indian markets, currently Markets professional, Mumbai.</description>
+    <description>Long-form notes on Indian equity markets, commodities, macros and geopolitics by Harshal Dasani — over a decade in Indian markets, currently Business Head, INVasset PMS & AIF, Mumbai.</description>
     <language>en-IN</language>
     <copyright>(c) Harshal Dasani</copyright>
     <lastBuildDate>{now_rfc822}</lastBuildDate>
@@ -1706,6 +1711,18 @@ def publish_blog(docx_path):
     )
 
     html = normalize_dashes(html)
+    try:
+        import fix_journey_layout
+        html, _jf = fix_journey_layout.fix_html(html)
+        _am=re.search(r'<article[^>]*>(.*?)</article>',html,re.S)
+        if _am:
+            _w=len(re.sub(r'<[^>]+>',' ',_am.group(1)).split()); _m=max(1,round(_w/220))
+            html=re.sub(r'\d+ min read &middot; \d+ words', f'{_m} min read &middot; {_w} words', html)
+            html=re.sub(r'"wordCount":\s*\d+', f'"wordCount": {_w}', html)
+            html=re.sub(r'"timeRequired":\s*"PT\d+M"', f'"timeRequired": "PT{_m}M"', html)
+        if _jf: print("[publish] journey layout applied (takeaways + year timeline)")
+    except Exception as _e:
+        print("[publish] journey-layout note:", repr(_e)[:120])
     with open(os.path.join(post_dir, "index.html"), "w", encoding="utf-8") as f:
         f.write(html)
     print(f"[publish] wrote {post_dir}/index.html  ({len(html)} bytes)")
@@ -1742,12 +1759,15 @@ def publish_blog(docx_path):
 
     build_rss_feed(f"{BLOG_DIR}/feed.xml", SITE_BASE)
     build_rss_feed(f"{DEPLOYED}/blog/feed.xml", SITE_BASE)
-    # Auto-submit to IndexNow (Bing/Yandex/etc.) — best-effort, no login. Google self-discovers via sitemap.
-    try:
-        from ping_indexnow import ping as _indexnow_ping
-        print("[indexnow]", _indexnow_ping([canonical, f"{SITE_BASE}/blog/", f"{SITE_BASE}/", f"{SITE_BASE}/sitemap.xml"]))
-    except Exception as _e:
-        print("[indexnow] skip:", _e)
+    # Auto-submit to IndexNow (Bing/Yandex/etc.) — best-effort. Skipped for staged posts (SKIP_INDEXNOW).
+    if os.environ.get("SKIP_INDEXNOW"):
+        print("[indexnow] skipped (staging)")
+    else:
+        try:
+            from ping_indexnow import ping as _indexnow_ping
+            print("[indexnow]", _indexnow_ping([canonical, f"{SITE_BASE}/blog/", f"{SITE_BASE}/", f"{SITE_BASE}/sitemap.xml"]))
+        except Exception as _e:
+            print("[indexnow] skip:", _e)
 
     return {
         "slug": slug, "title": title, "topic": topic, "date": date_str,

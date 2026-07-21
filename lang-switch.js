@@ -30,15 +30,18 @@
     st.id = 'hd-skip-css';
     st.textContent =
       '.hd-skip-link{position:absolute;left:-9999px;top:0;z-index:9999;padding:10px 16px;' +
-      'background:var(--accent,#d4a64a);color:#1a1530;text-decoration:none;font-weight:700;' +
+      'background:#1a3458;color:#fff;text-decoration:none;font-weight:700;' +
       'font:700 14px/1 Inter,system-ui,sans-serif;border-radius:0 0 8px 0;}' +
-      '.hd-skip-link:focus{left:0;outline:2px solid #fff;outline-offset:2px;}';
+      '.hd-skip-link:focus{left:0;outline:2px solid #fff;outline-offset:2px;}' +
+      'html[data-theme="light"]{--accent:#7a5310 !important}' +
+      ':root{--faint:#8a8273 !important}html[data-theme="light"]{--faint:#4a5d72 !important}';
     document.head.appendChild(st);
     var a = document.createElement('a');
     a.id = 'hd-skip-link';
     a.className = 'hd-skip-link';
     a.href = '#main';
     a.textContent = 'Skip to content';
+    try{var _mc=document.querySelector('main, .page, article.post, .post, #content, .content, .wrap, .shell');if(_mc){if(!_mc.id){_mc.id='main';}a.setAttribute('href','#'+_mc.id);}}catch(_e){}
     a.addEventListener('click', function(e){
       var target = document.getElementById('main') || document.querySelector('main') || document.querySelector('.page');
       if (target) { 
@@ -62,15 +65,15 @@
     var st = document.createElement('style');
     st.id = 'hd-legal-css';
     st.textContent =
-      '.hd-legal-strip{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin:36px 0 18px;padding:14px 0 0;border-top:1px solid var(--rule,rgba(128,128,128,.18));font:500 11px/1.5 Inter,system-ui,sans-serif;color:var(--muted,#8a8273);letter-spacing:.04em}' +
+      '.hd-legal-strip{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin:36px 0 18px;padding:14px 0 0;border-top:1px solid var(--rule,rgba(128,128,128,.18));font:500 12px/1.5 Inter,system-ui,sans-serif;color:var(--muted,#8a8273);letter-spacing:.04em}' +
       '.hd-legal-strip a{color:var(--ink-2,#c9c0ad);text-decoration:none}' +
-      '.hd-foot-home{display:inline-flex;align-items:center;gap:6px;padding:4px 6px;white-space:nowrap}' +
+      '.hd-foot-home{display:inline-flex;align-items:center;gap:6px;padding:8px 8px;white-space:nowrap}' +
       '.hd-foot-home:hover{color:var(--accent,#d4a64a);text-decoration:underline}' +
-      '.hd-foot-legal a{margin:0 6px;padding:4px 4px}.hd-foot-legal a:hover{color:var(--accent,#d4a64a);text-decoration:underline}' +
+      '.hd-foot-legal a{margin:0 4px;padding:8px 7px}.hd-foot-legal a:hover{color:var(--accent,#d4a64a);text-decoration:underline}' +
       '.hd-legal-sep{opacity:.5;margin:0 2px}' +
       '.hd-foot-social{display:inline-flex;align-items:center;gap:16px}' +
-      '.hd-foot-social a{display:inline-flex;color:var(--ink-2,#c9c0ad)}.hd-foot-social a:hover{color:var(--accent,#d4a64a)}' +
-      '.hd-foot-social svg{width:18px;height:18px;fill:currentColor;display:block}' +
+      '.hd-foot-social a{display:inline-flex;color:var(--ink-2,#c9c0ad);padding:6px}.hd-foot-social a:hover{color:var(--accent,#d4a64a)}' +
+      '.hd-foot-social svg{width:20px;height:20px;fill:currentColor;display:block}' +
       '@media(max-width:600px){.hd-legal-strip{justify-content:center;row-gap:10px}}';
     document.head.appendChild(st);
     var hi = location.pathname.indexOf('/hi/')===0;
@@ -145,7 +148,9 @@
       '.lang-dd-menu a{display:block !important;padding:7px 12px !important;margin:0 !important;border:0 !important;border-radius:7px;background:transparent !important;color:var(--ink,var(--espresso,#222)) !important;text-decoration:none !important;font:700 12px/1 "Inter",system-ui,sans-serif !important;letter-spacing:.6px !important;text-transform:none !important;text-align:left}'+
       '.lang-dd-menu a:hover{background:var(--bg,rgba(128,128,128,.12)) !important;color:var(--accent,var(--gold,#c69a4a)) !important}'+
       '.lang-dd-menu a.on{color:var(--accent,var(--gold,#c69a4a)) !important}'+
-      '.hd-mk-toggle{width:32px;height:32px;border-radius:50%;border:1px solid var(--accent,var(--gold,#c69a4a));background:transparent;color:var(--accent,var(--gold,#c69a4a));font-size:14px;line-height:1;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;padding:0;vertical-align:middle}'+
+      '.hd-mk-toggle{width:44px;height:44px;border-radius:50%;border:1px solid var(--accent,var(--gold,#c69a4a));background:transparent;color:var(--accent,var(--gold,#c69a4a));font-size:15px;line-height:1;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;padding:0;vertical-align:middle}'+
+
+      'a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--accent,var(--gold,#c69a4a));outline-offset:2px}'+
       '.hd-mk-toggle:hover{background:rgba(198,154,74,.12)}';
     document.head.appendChild(st);
   }
@@ -166,10 +171,10 @@
   function makeDropdown(){
     var path = location.pathname || '/';
     var isHi = (path === '/hi' || path.indexOf('/hi/') === 0);
-    var HI_PAGES = ['/', '/tools/', '/ipo/', '/fii-dii/', '/tools/oil-impact-estimator/', '/tools/sip-calculator/', '/tools/returns-calculator/', '/tools/capital-gains-tax-calculator/', '/blog/', '/blog/posts/spacex-three-businesses-stacked/', '/blog/posts/spacex-journey-in-numbers/', '/blog/posts/rupee-usd-inr-2026-why-falling-where-it-stops/', '/blog/posts/gold-2026-structural-bull-case/', '/blog/posts/silver-2026-deficit-bull-case/', '/blog/posts/copper-2026-electrification-deficit/', '/blog/posts/kospi-2026-korea-rally-reform-explained/', '/blog/posts/spacex-ipo-1-75-trillion-explained/', '/blog/posts/iran-israel-us-war-2026-explained/', '/blog/posts/rbi-mpc-june-2026-rate-pause/', '/blog/posts/crude-oil-india-markets-rupee-inflation/', '/blog/posts/indian-it-stocks-whats-breaking/', '/blog/posts/first-millionaire-billionaire-trillionaire/', '/tracker/', '/tools/fii-flows/', '/blog/posts/harshal-dasani-interviews/', '/blog/posts/harshal-dasani-media-features/', '/blog/posts/markets-with-harshal/', '/photos/', '/legal/disclaimer/', '/legal/privacy/', '/legal/terms/'];
+    var HI_PAGES = ['/', '/tools/', '/ipo/', '/fii-dii/', '/tools/oil-impact-estimator/', '/tools/sip-calculator/', '/tools/returns-calculator/', '/tools/capital-gains-tax-calculator/', '/blog/', '/blog/posts/spacex-three-businesses-stacked/', '/blog/posts/spacex-journey-in-numbers/', '/blog/posts/elon-musk-journey-in-numbers/', '/blog/posts/musk-empire-every-hard-problem/', '/blog/posts/rupee-usd-inr-2026-why-falling-where-it-stops/', '/blog/posts/gold-2026-structural-bull-case/', '/blog/posts/silver-2026-deficit-bull-case/', '/blog/posts/copper-2026-electrification-deficit/', '/blog/posts/kospi-2026-korea-rally-reform-explained/', '/blog/posts/spacex-ipo-1-75-trillion-explained/', '/blog/posts/iran-israel-us-war-2026-explained/', '/blog/posts/rbi-mpc-june-2026-rate-pause/', '/blog/posts/crude-oil-india-markets-rupee-inflation/', '/blog/posts/indian-it-stocks-whats-breaking/', '/blog/posts/first-millionaire-billionaire-trillionaire/', '/tracker/', '/tools/fii-flows/', '/blog/posts/harshal-dasani-interviews/', '/blog/posts/harshal-dasani-media-features/', '/blog/posts/markets-with-harshal/', '/photos/', '/legal/disclaimer/', '/legal/privacy/', '/legal/terms/'];
     var enPath, hiPath;
     if (isHi){ enPath = path.replace(/^\/hi/, '') || '/'; hiPath = path; }
-    else { enPath = path; hiPath = (HI_PAGES.indexOf(path) !== -1) ? ('/hi'+path) : '/hi/'; }
+    else { enPath = path; hiPath = (path.indexOf('/blog/posts/')===0 || HI_PAGES.indexOf(path) !== -1) ? ('/hi'+path) : '/hi/'; }
     var cur = isHi ? 'HI' : 'EN';
     var dd = document.createElement('div'); dd.className='lang-dd';
     dd.innerHTML =

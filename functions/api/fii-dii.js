@@ -47,7 +47,8 @@ const detail = r => (r.f.buy!=null?1:0)+(r.f.sell!=null?1:0)+(r.d.buy!=null?1:0)
 async function getText(u, opt){ const r=await fetch(u, opt); if(!r.ok) throw new Error(u.split('?')[0]+' '+r.status); return r.text(); }
 
 async function growwRows(fresh, today){
-  const html=await getText('https://groww.in/fii-dii-data',
+  const _b = fresh ? Date.now() : Math.floor(Date.now()/18e5); // 30-min bucket busts stuck edge cache
+  const html=await getText('https://groww.in/fii-dii-data?_b='+_b,
     { headers:{'User-Agent':UA,'Accept':'text/html,*/*','Accept-Language':'en-US,en;q=0.9'},
       signal:AbortSignal.timeout(8000), cf: fresh?{cacheTtl:0}:{cacheTtl:1800,cacheEverything:true} });
   const m=html.match(/<script id="__NEXT_DATA__"[^>]*>([\s\S]*?)<\/script>/); if(!m) throw new Error('groww no __NEXT_DATA__');
@@ -57,7 +58,8 @@ async function growwRows(fresh, today){
 }
 function stripTags(s){ return s.replace(/<[^>]+>/g,' ').replace(/&nbsp;/g,' ').replace(/&amp;/g,'&').replace(/\s+/g,' ').trim(); }
 async function upstoxRows(fresh, today){
-  const html=await getText('https://upstox.com/fii-dii-data/',
+  const _b = fresh ? Date.now() : Math.floor(Date.now()/18e5); // 30-min bucket busts stuck edge cache
+  const html=await getText('https://upstox.com/fii-dii-data/?_b='+_b,
     { headers:{'User-Agent':UA,'Accept':'text/html,*/*','Accept-Language':'en-US,en;q=0.9'},
       signal:AbortSignal.timeout(8000), cf: fresh?{cacheTtl:0}:{cacheTtl:1800,cacheEverything:true} });
   const tables=html.match(/<table[\s\S]*?<\/table>/gi)||[];
@@ -85,7 +87,7 @@ async function nseRow(fresh, today){
       const boot=await fetch('https://www.nseindia.com/',{headers:{'User-Agent':UA,'Accept':'text/html,*/*','Accept-Language':'en-US,en;q=0.9'},signal:AbortSignal.timeout(4000),cf:{cacheTtl:0}});
       const sc=(boot.headers.getSetCookie?boot.headers.getSetCookie():[boot.headers.get('set-cookie')]).filter(Boolean);
       const cookie=sc.map(s=>String(s).split(';')[0]).join('; ');
-      const nr=await fetch('https://www.nseindia.com/api/fiidiiTradeReact',{headers:{'User-Agent':UA,'Accept':'application/json','Referer':'https://www.nseindia.com/','Cookie':cookie},signal:AbortSignal.timeout(4000),cf:fresh?{cacheTtl:0}:{cacheTtl:1800}});
+      const nr=await fetch('https://www.nseindia.com/api/fiidiiTradeReact?_b='+(fresh?Date.now():Math.floor(Date.now()/18e5)),{headers:{'User-Agent':UA,'Accept':'application/json','Referer':'https://www.nseindia.com/','Cookie':cookie},signal:AbortSignal.timeout(4000),cf:fresh?{cacheTtl:0}:{cacheTtl:1800}});
       if(!nr.ok){ lastErr=new Error('nse '+nr.status); continue; }
       const arr=await nr.json(); const A=Array.isArray(arr)?arr:[];
       const pick=re=>A.find(x=>re.test(x.category||''));
@@ -99,7 +101,7 @@ async function nseRow(fresh, today){
   throw lastErr||new Error('nse failed');
 }
 
-export async function onRequest(context){
+async function handle(context){
   const url=new URL(context.request.url); const fresh=url.searchParams.has('fresh'); const debug=url.searchParams.has('debug');
   const H={ 'content-type':'application/json; charset=utf-8','access-control-allow-origin':'*',
     'cache-control': fresh?'no-store':'public, max-age=1800, s-maxage=1800' };
@@ -140,4 +142,20 @@ export async function onRequest(context){
       fii:{buy:last.f.buy,sell:last.f.sell,net:last.f.net}, dii:{buy:last.d.buy,sell:last.d.sell,net:last.d.net} },
     history, fpi:null };
   return new Response(JSON.stringify(body),{headers:H});
+}
+
+
+// Edge-cache the whole response (Cache API) so the upstream aggregation runs at most
+// once per cache-TTL per edge node; everyone else gets it instantly. ?fresh bypasses.
+// TTL comes from the response's own Cache-Control. Invisible to the page.
+export async function onRequest(context){
+  const url = new URL(context.request.url);
+  if(url.searchParams.has('fresh')) return handle(context);
+  const cache = caches.default;
+  const key = new Request(url.origin + url.pathname);
+  const hit = await cache.match(key);
+  if(hit) return hit;
+  const resp = await handle(context);
+  try { if(resp && resp.status===200) context.waitUntil(cache.put(key, resp.clone())); } catch(e){}
+  return resp;
 }

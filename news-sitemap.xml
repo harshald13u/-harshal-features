@@ -2,47 +2,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
-    <loc>https://harshaldasani.pages.dev/blog/posts/sansera-engineering-journey-in-numbers/</loc>
+    <loc>https://harshaldasani.pages.dev/blog/posts/hitachi-energy-india-journey-in-numbers/</loc>
     <news:news>
       <news:publication>
         <news:name>Harshal Dasani</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-07-16T09:15:00+05:30</news:publication_date>
-      <news:title>Sansera Engineering’s journey, in numbers</news:title>
+      <news:publication_date>2026-07-21T09:15:00+05:30</news:publication_date>
+      <news:title>Hitachi Energy India’s journey, in numbers</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://harshaldasani.pages.dev/hi/blog/posts/sansera-engineering-journey-in-numbers/</loc>
+    <loc>https://harshaldasani.pages.dev/hi/blog/posts/hitachi-energy-india-journey-in-numbers/</loc>
     <news:news>
       <news:publication>
         <news:name>Harshal Dasani</news:name>
         <news:language>hi</news:language>
       </news:publication>
-      <news:publication_date>2026-07-16T09:15:00+05:30</news:publication_date>
-      <news:title>संसेरा इंजीनियरिंग का सफ़र, आँकड़ों में</news:title>
+      <news:publication_date>2026-07-21T09:15:00+05:30</news:publication_date>
+      <news:title>Hitachi Energy India की सफ़र, संख्याओं में</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://harshaldasani.pages.dev/blog/posts/black-box-journey-in-numbers/</loc>
+    <loc>https://harshaldasani.pages.dev/blog/posts/adani-power-journey-in-numbers/</loc>
     <news:news>
       <news:publication>
         <news:name>Harshal Dasani</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>2026-07-15T09:15:00+05:30</news:publication_date>
-      <news:title>Black Box’s journey, in numbers</news:title>
+      <news:publication_date>2026-07-20T09:15:00+05:30</news:publication_date>
+      <news:title>Adani Power’s journey, in numbers</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://harshaldasani.pages.dev/hi/blog/posts/black-box-journey-in-numbers/</loc>
+    <loc>https://harshaldasani.pages.dev/hi/blog/posts/adani-power-journey-in-numbers/</loc>
     <news:news>
       <news:publication>
         <news:name>Harshal Dasani</news:name>
         <news:language>hi</news:language>
       </news:publication>
-      <news:publication_date>2026-07-15T09:15:00+05:30</news:publication_date>
-      <news:title>ब्लैक बॉक्स का सफ़र, आँकड़ों में</news:title>
+      <news:publication_date>2026-07-20T09:15:00+05:30</news:publication_date>
+      <news:title>अडानी पावर की सफ़र, संख्याओं में</news:title>
     </news:news>
   </url>
 </urlset>

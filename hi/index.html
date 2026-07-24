@@ -2319,11 +2319,8 @@ function toggleTheme(){
  }
  }
  function fromDashboard(){
- fetch('Harshal_Dasani_Dashboard.html?v='+new Date().toISOString().slice(0,10)).then(function(r){ return r.ok ? r.text() : ''; }).then(function(t){
- if (!t) return;
- var m = t.match(/EMBEDDED_SNAPSHOT_ROWS\s*=\s*(\[[\s\S]*?\])\s*;/);
- if (!m) return;
- var rows; try { rows = JSON.parse(m[1]); } catch(e){ return; }
+ fetch('/tracker-rows.json?v='+new Date().toISOString().slice(0,10)).then(function(r){ return r.ok ? r.json() : null; }).then(function(rows){
+ if (!rows || !rows.length) return;
  var seen={}, n=0;
  for (var i=0;i<rows.length;i++){ var c=canonHome(rows[i] && rows[i].Link); if(c && !seen[c]){seen[c]=1;n++;} }
  var EPAPER_RE=/news\s?paper|\bepaper\b|e[\s-]?paper|magazine|\bedition\b|\.pdf$|true point news|outlook business december|outlook business november|wall street cn|stcn article|bhopal english edition|cn article|detailnews|\.shtml/i;

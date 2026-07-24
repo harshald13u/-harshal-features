@@ -21,13 +21,23 @@ async function handle(context){
               'cache-control':'public, max-age=1800, s-maxage=1800',
               'access-control-allow-origin':'*' };
   try {
-    const src = new URL('/Harshal_Dasani_Dashboard.html', context.request.url);
-    const r = await fetch(src, { cf:{ cacheTtl:1800, cacheEverything:true } });
-    if(!r.ok) throw new Error('dashboard ' + r.status);
-    const t = await r.text();
-    const m = t.match(/EMBEDDED_SNAPSHOT_ROWS\s*=\s*(\[[\s\S]*?\])\s*;/);
-    if(!m) throw new Error('EMBEDDED_SNAPSHOT_ROWS not found');
-    const rows = JSON.parse(m[1]);
+    // Primary: the externalized data file (tiny vs the old 750KB dashboard HTML parse).
+    // Bucketed buster so a stuck edge copy can never freeze us (see 06-Jul cache incident).
+    let rows = null;
+    try {
+      const rj = await fetch(new URL('/tracker-rows.json?_b='+Math.floor(Date.now()/18e5), context.request.url), { cf:{ cacheTtl:1800 } });
+      if (rj.ok) rows = await rj.json();
+    } catch(_){}
+    if (!rows || !rows.length) {
+      // Fallback: legacy inline-array parse (works if a parallel chat re-inlined data).
+      const src = new URL('/Harshal_Dasani_Dashboard.html', context.request.url);
+      const r = await fetch(src, { cf:{ cacheTtl:1800, cacheEverything:true } });
+      if(!r.ok) throw new Error('dashboard ' + r.status);
+      const t = await r.text();
+      const m = t.match(/EMBEDDED_SNAPSHOT_ROWS\s*=\s*(\[[\s\S]*?\])\s*;/);
+      if(!m) throw new Error('rows not found in dashboard');
+      rows = JSON.parse(m[1]);
+    }
     const seen = Object.create(null); let count = 0, epaper = 0;
     for(const row of rows){
       const c = canon(row && row.Link);
@@ -39,7 +49,7 @@ async function handle(context){
       .slice(0,3)
       .map(x => ({ Heading:x.Heading, Link:x.Link, Topic:x.Topic, Publication:x.Publication, Date:x.Date }));
     return new Response(JSON.stringify({ count, epaper, latest,
-      generated:new Date().toISOString(), source:'live:Harshal_Dasani_Dashboard.html' }), { headers:H });
+      generated:new Date().toISOString(), source:'live:tracker-rows.json' }), { headers:H });
   } catch(e){
     try {
       const r = await fetch(new URL('/tracker-summary.json', context.request.url), { cf:{ cacheTtl:300 } });

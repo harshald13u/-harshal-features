@@ -39,3 +39,6 @@
 
 /*.mp3
   Cache-Control: public, max-age=31536000, immutable
+
+/tracker-rows.json
+  Cache-Control: public, max-age=31536000, immutable

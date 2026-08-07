@@ -110,6 +110,18 @@
 .preset-chip.is-active .preset-chip-val { color: #1a1530; }
 
 </style>
+<script>
+(function(){
+  function applyTheme(){
+    try {
+      var t = localStorage.getItem('hd-theme');
+      if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch(e) {}
+  }
+  applyTheme();
+  window.addEventListener('pageshow', applyTheme);
+})();
+</script>
 </head>
 <body>
 

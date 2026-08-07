@@ -152,6 +152,18 @@
   .tool-grid { align-items: stretch; }
 }
 </style>
+<script>
+(function(){
+  function applyTheme(){
+    try {
+      var t = localStorage.getItem('hd-theme');
+      if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch(e) {}
+  }
+  applyTheme();
+  window.addEventListener('pageshow', applyTheme);
+})();
+</script>
 </head>
 <body>
 

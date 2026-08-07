@@ -197,6 +197,18 @@
   .cgt-grid { grid-template-columns: 1fr; grid-template-areas: "inputs" "results" "notes"; grid-template-rows: auto; }
 }
 </style>
+<script>
+(function(){
+  function applyTheme(){
+    try {
+      var t = localStorage.getItem('hd-theme');
+      if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch(e) {}
+  }
+  applyTheme();
+  window.addEventListener('pageshow', applyTheme);
+})();
+</script>
 </head>
 <body>
 

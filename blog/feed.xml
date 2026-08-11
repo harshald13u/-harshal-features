@@ -7,9 +7,17 @@
     <description>Long-form notes on Indian equity markets, commodities, macro and geopolitics by Harshal Dasani, Business Head, INVasset PMS &amp; AIF, Mumbai.</description>
     <language>en-IN</language>
     <copyright>(c) Harshal Dasani</copyright>
-    <lastBuildDate>Mon, 10 Aug 2026 07:14:58 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 11 Aug 2026 06:39:36 +0000</lastBuildDate>
     <generator>regen_feeds.py</generator>
     <ttl>60</ttl>
+    <item>
+      <title>NVIDIA’s journey, in numbers</title>
+      <link>https://harshaldasani.pages.dev/blog/posts/nvidia-journey-in-numbers/</link>
+      <guid isPermaLink="true">https://harshaldasani.pages.dev/blog/posts/nvidia-journey-in-numbers/</guid>
+      <pubDate>Tue, 11 Aug 2026 03:45:00 +0000</pubDate>
+      <description>From three engineers at a Denny’s to a five-trillion-dollar company, how NVIDIA’s most ridiculed bet became the most valuable software platform in the world.</description>
+      <dc:creator>Harshal Dasani</dc:creator>
+    </item>
     <item>
       <title>Astra Microwave Products’ journey, in numbers</title>
       <link>https://harshaldasani.pages.dev/blog/posts/astra-microwave-journey-in-numbers/</link>
@@ -160,14 +168,6 @@
       <guid isPermaLink="true">https://harshaldasani.pages.dev/blog/posts/welspun-corp-journey-in-numbers/</guid>
       <pubDate>Thu, 23 Jul 2026 03:45:00 +0000</pubDate>
       <description>Long-cycle engineering pays out when three end markets order at once, Welspun Corp’s journey in numbers, from line pipes to infrastructure.</description>
-      <dc:creator>Harshal Dasani</dc:creator>
-    </item>
-    <item>
-      <title>Cummins India’s journey, in numbers</title>
-      <link>https://harshaldasani.pages.dev/blog/posts/cummins-india-journey-in-numbers/</link>
-      <guid isPermaLink="true">https://harshaldasani.pages.dev/blog/posts/cummins-india-journey-in-numbers/</guid>
-      <pubDate>Wed, 22 Jul 2026 03:45:00 +0000</pubDate>
-      <description>The same engine, in a different cycle, gets a different multiple, Cummins India’s journey in numbers, as data centres turn gensets structural.</description>
       <dc:creator>Harshal Dasani</dc:creator>
     </item>
   </channel>

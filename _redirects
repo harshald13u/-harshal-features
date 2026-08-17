@@ -5,3 +5,5 @@
 /photos/     /      301
 /hi/photos   /hi/   301
 /hi/photos/  /hi/   301
+/blog/posts/gold-silver-technicals-supertrend-breakout/* /blog/posts/gold-and-silver-just-flipped-their-trend/:splat 301
+/hi/blog/posts/gold-silver-technicals-supertrend-breakout/* /hi/blog/posts/gold-and-silver-just-flipped-their-trend/:splat 301

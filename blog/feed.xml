@@ -7,9 +7,17 @@
     <description>Long-form notes on Indian equity markets, commodities, macro and geopolitics by Harshal Dasani, Business Head, INVasset PMS &amp; AIF, Mumbai.</description>
     <language>en-IN</language>
     <copyright>(c) Harshal Dasani</copyright>
-    <lastBuildDate>Tue, 11 Aug 2026 06:39:36 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 17 Aug 2026 08:44:01 +0000</lastBuildDate>
     <generator>regen_feeds.py</generator>
     <ttl>60</ttl>
+    <item>
+      <title>Gold and silver just flipped their trend. Here are the levels that matter</title>
+      <link>https://harshaldasani.pages.dev/blog/posts/gold-silver-technicals-supertrend-breakout/</link>
+      <guid isPermaLink="true">https://harshaldasani.pages.dev/blog/posts/gold-silver-technicals-supertrend-breakout/</guid>
+      <pubDate>Mon, 17 Aug 2026 08:30:00 +0000</pubDate>
+      <description>After months of lower highs, gold and silver have closed back above their daily supertrend. The EMA stack, the falling trendlines, and the exact resistance ladders to watch.</description>
+      <dc:creator>Harshal Dasani</dc:creator>
+    </item>
     <item>
       <title>NVIDIA’s journey, in numbers</title>
       <link>https://harshaldasani.pages.dev/blog/posts/nvidia-journey-in-numbers/</link>
@@ -160,14 +168,6 @@
       <guid isPermaLink="true">https://harshaldasani.pages.dev/blog/posts/strides-pharma-journey-in-numbers/</guid>
       <pubDate>Fri, 24 Jul 2026 03:45:00 +0000</pubDate>
       <description>It sold two of its best businesses, raised cash, and rebuilt around a focused platform, Strides Pharma Science’s journey in numbers.</description>
-      <dc:creator>Harshal Dasani</dc:creator>
-    </item>
-    <item>
-      <title>Welspun Corp’s journey, in numbers</title>
-      <link>https://harshaldasani.pages.dev/blog/posts/welspun-corp-journey-in-numbers/</link>
-      <guid isPermaLink="true">https://harshaldasani.pages.dev/blog/posts/welspun-corp-journey-in-numbers/</guid>
-      <pubDate>Thu, 23 Jul 2026 03:45:00 +0000</pubDate>
-      <description>Long-cycle engineering pays out when three end markets order at once, Welspun Corp’s journey in numbers, from line pipes to infrastructure.</description>
       <dc:creator>Harshal Dasani</dc:creator>
     </item>
   </channel>

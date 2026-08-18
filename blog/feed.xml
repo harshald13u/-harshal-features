@@ -7,9 +7,17 @@
     <description>Long-form notes on Indian equity markets, commodities, macro and geopolitics by Harshal Dasani, Business Head, INVasset PMS &amp; AIF, Mumbai.</description>
     <language>en-IN</language>
     <copyright>(c) Harshal Dasani</copyright>
-    <lastBuildDate>Mon, 17 Aug 2026 09:27:36 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 18 Aug 2026 11:41:05 +0000</lastBuildDate>
     <generator>regen_feeds.py</generator>
     <ttl>60</ttl>
+    <item>
+      <title>Eight superstar portfolios, 227 holdings, ₹29,878 crore: what the sheet actually shows</title>
+      <link>https://harshaldasani.pages.dev/blog/posts/superstar-investor-portfolios-decoded/</link>
+      <guid isPermaLink="true">https://harshaldasani.pages.dev/blog/posts/superstar-investor-portfolios-decoded/</guid>
+      <pubDate>Tue, 18 Aug 2026 10:30:00 +0000</pubDate>
+      <description>Eight well-known investors, 227 disclosed positions, ₹29,878 crore, every holding as a percentage of its own book, plus the 13 stocks more than one of them owns.</description>
+      <dc:creator>Harshal Dasani</dc:creator>
+    </item>
     <item>
       <title>Gold and silver just flipped their trend. Here are the levels that matter</title>
       <link>https://harshaldasani.pages.dev/blog/posts/gold-and-silver-just-flipped-their-trend/</link>
@@ -160,14 +168,6 @@
       <guid isPermaLink="true">https://harshaldasani.pages.dev/blog/posts/torrent-pharmaceuticals-journey-in-numbers/</guid>
       <pubDate>Sat, 25 Jul 2026 03:45:00 +0000</pubDate>
       <description>It did not chase US generics pricing, it chased Indian and emerging-market brand value through serial bolt-ons. Torrent Pharmaceuticals’ journey in numbers.</description>
-      <dc:creator>Harshal Dasani</dc:creator>
-    </item>
-    <item>
-      <title>Strides Pharma Science’s journey, in numbers</title>
-      <link>https://harshaldasani.pages.dev/blog/posts/strides-pharma-journey-in-numbers/</link>
-      <guid isPermaLink="true">https://harshaldasani.pages.dev/blog/posts/strides-pharma-journey-in-numbers/</guid>
-      <pubDate>Fri, 24 Jul 2026 03:45:00 +0000</pubDate>
-      <description>It sold two of its best businesses, raised cash, and rebuilt around a focused platform, Strides Pharma Science’s journey in numbers.</description>
       <dc:creator>Harshal Dasani</dc:creator>
     </item>
   </channel>

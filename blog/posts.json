@@ -1,6 +1,16 @@
 {
   "posts": [
     {
+      "slug": "superstar-investor-portfolios-decoded",
+      "title": "Eight superstar portfolios, 227 holdings, ₹29,878 crore: what the sheet actually shows",
+      "topic": "stock-market",
+      "date": "2026-08-18",
+      "excerpt": "Eight well-known investors, 227 disclosed positions, ₹29,878 crore, every holding as a percentage of its own book, plus the 13 stocks more than one of them owns.",
+      "image": "https://harshaldasani.pages.dev/blog/posts/superstar-investor-portfolios-decoded/cover.jpg",
+      "url": "https://harshaldasani.pages.dev/blog/posts/superstar-investor-portfolios-decoded/",
+      "publishAt": "2026-08-18T16:00:00+05:30"
+    },
+    {
       "slug": "gold-and-silver-just-flipped-their-trend",
       "title": "Gold and silver just flipped their trend. Here are the levels that matter",
       "topic": "commodities",

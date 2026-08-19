@@ -380,23 +380,28 @@ a.addEventListener('ended',function(){fl.style.width='0%';cu.textContent='0:00';
 br.addEventListener('click',function(e){if(!a.duration)return;var r=br.getBoundingClientRect();a.currentTime=(e.clientX-r.left)/r.width*a.duration;});
 var S=[1,1.25,1.5],i=0;sp.addEventListener('click',function(){i=(i+1)%S.length;a.playbackRate=S[i];sp.innerHTML=S[i]+'&times;';});})();
 </script>
-  <article itemprop="articleBody">
+  <article itemprop="articleBody"><style>
+.disc-note{border-left:3px solid var(--accent);background:var(--bg-2);padding:12px 14px;border-radius:8px;font-size:15px;margin:0 0 22px}
+.table-wrap{-webkit-overflow-scrolling:touch;position:relative}
+.post-table td:first-child,.post-table th:first-child{white-space:normal;overflow-wrap:anywhere}
+.post-table td:not(:first-child),.post-table th:not(:first-child){white-space:nowrap;text-align:right;font-variant-numeric:tabular-nums}
+@media (max-width:640px){
+  .table-wrap{margin-left:-20px;margin-right:-20px;width:calc(100% + 40px);border-radius:0;border-left:0;border-right:0}
+  .post-table{font-size:13.5px}
+  .post-table thead th{padding:10px 12px;font-size:10px;letter-spacing:.5px}
+  .post-table td{padding:9px 12px}
+  .post-table td:first-child,.post-table th:first-child{min-width:44vw;position:sticky;left:0;background:var(--bg-2);z-index:1}
+  .post-table thead th:first-child{background:var(--ink);color:var(--bg);z-index:2}
+  .table-wrap::after{content:"";position:absolute;top:0;right:0;bottom:0;width:24px;pointer-events:none;background:linear-gradient(to right,rgba(0,0,0,0),var(--bg-2))}
+}
+@media (max-width:400px){.post-table{font-size:12.5px}.post-table td:first-child,.post-table th:first-child{min-width:47vw}}
+</style>
+
 <p>Someone shares a screenshot of a famous investor's holdings and the reaction is always the same: which one do I buy. That is the least interesting question you can ask of this data. The interesting question is what the shape of each book tells you about how that investor actually operates, because on that, the data is unusually revealing.</p>
 <p>What follows is the full set, eight investors, <strong>227 disclosed positions</strong>, <strong>₹29,878 crore</strong> of disclosed value, with every holding shown as a percentage of that investor's own book. The percentages are the point. A ₹100 crore position means something completely different in a five-stock portfolio than in a seventy-stock one.</p>
-<div class="key-takeaways" style="border-color:var(--accent)"><div class="kt-label">Important &mdash; read this before the tables</div><ul>
-<li><strong>This is not a buy or sell recommendation.</strong> Nothing here is investment advice, a recommendation, or a suggestion to act on any stock named below. It is a data exercise, nothing more.</li>
-<li><strong>These holdings may already have changed.</strong> Disclosed shareholdings are a snapshot from public filings and are reported with a lag. Investors buy and sell continuously. By the time you read this, any position here may have been added to, trimmed, or exited entirely.</li>
-<li><strong>Only disclosures above the threshold are visible.</strong> Indian companies disclose individual shareholders only above 1% of equity. Every book below is therefore incomplete, positions under that line simply do not appear, so no investor's real portfolio is what you see here.</li>
-<li><strong>Values move with the market.</strong> Rupee values are a function of price on a given day. The percentages change every session even when the underlying holding does not.</li>
-<li><strong>Copying anyone is a bad plan.</strong> These investors have different capital, time horizons, risk tolerance and information than you. A name on this list tells you nothing about whether it suits your circumstances.</li>
-</ul></div>
-<div class="key-takeaways" style="border-color:var(--accent)"><div class="kt-label">Source, as-of, and author disclosure</div><ul>
-<li><strong>Where this comes from.</strong> The holdings are compiled from company shareholding disclosures as they appeared in a publicly circulated compilation reviewed on 18 August 2026. Rupee values reflect market prices around that date and will differ on any other day. This compilation is the author&rsquo;s own presentation of that data; it has not been verified against each company&rsquo;s filings line by line, and it has not been checked or endorsed by any of the individuals named.</li>
-<li><strong>Author disclosure.</strong> The author is Business Head at INVasset PMS, a SEBI-registered portfolio manager. This post is published in his personal capacity, it is not issued by or on behalf of INVasset PMS, and it is not a research report. The author, his family, his employer and its clients may hold, buy or sell positions in any of the securities named here at any time, without notice. Consult a SEBI-registered investment adviser before acting on anything you read.</li>
-<li><strong>No connection to the individuals named.</strong> None of the eight investors has been contacted about this post, has reviewed it, or is associated with it or with the author. Their names are used only to identify the source of the public disclosures being described.</li>
-<li><strong>Entity note.</strong> Where a holding is disclosed by an entity, a fund, an LLP or a family vehicle, rather than by the individual personally, it is shown under that individual&rsquo;s name for readability. The tables do not distinguish between personal, family and managed holdings. Company names follow the source compilation and are abbreviated in places.</li>
-<li><strong>Spotted an error?</strong> Corrections are welcome and will be made, write to the author via the links at the foot of this page.</li>
-</ul></div>
+<p class="disc-note"><strong>Not a recommendation.</strong> This is a data exercise on public disclosures, not investment advice, and these holdings may already have changed. The full disclaimer, source note and author disclosure are <a href="#disclaimer">at the end of this post</a>, please read them.</p>
+
+
 <h2>The eight books at a glance</h2>
 <p>Before the individual tables, the summary. Note the spread in the number of holdings: from five to seventy-two. These are not variations on one style, they are different games entirely.</p>
 <div class="table-wrap"><table class="post-table"><thead><tr><th>Investor</th><th>Holdings</th><th>Disclosed (₹ Cr)</th><th>Share of all eight</th><th>Largest position</th></tr></thead><tbody><tr><td>Akash Bhansali</td><td>17</td><td>7,985</td><td>26.7%</td><td>31.0%</td></tr><tr><td>Mukul Agarwal</td><td>72</td><td>7,476</td><td>25.0%</td><td>10.2%</td></tr><tr><td>Nemish Shah</td><td>5</td><td>3,531</td><td>11.8%</td><td>49.0%</td></tr><tr><td>Ashish Kacholia</td><td>48</td><td>2,933</td><td>9.8%</td><td>25.0%</td></tr><tr><td>Madhu Kela</td><td>19</td><td>2,666</td><td>8.9%</td><td>48.4%</td></tr><tr><td>Sunil Singhania</td><td>31</td><td>2,489</td><td>8.3%</td><td>9.0%</td></tr><tr><td>Vanaja Sundar Iyer</td><td>14</td><td>1,418</td><td>4.7%</td><td>40.8%</td></tr><tr><td>Vijay Kedia</td><td>21</td><td>1,381</td><td>4.6%</td><td>22.0%</td></tr></tbody></table></div>
@@ -439,7 +444,22 @@ var S=[1,1.25,1.5],i=0;sp.addEventListener('click',function(){i=(i+1)%S.length;a
 <h2>The honest conclusion</h2>
 <p>The useful takeaway from a sheet like this is not a shopping list. It is the reminder that position sizing is the decision that actually separates these investors, and it is the part that gets stripped out when a screenshot circulates with only company names on it. Anyone can copy a name. Nobody can copy conviction, holding period, or the ability to sit through a 40% drawdown in a position that is 30% of the book.</p>
 <p>And it bears repeating, because the format of this post invites exactly the wrong reaction: these are disclosures from a point in time, they may be stale, they are incomplete by construction, and none of it is a recommendation to buy or sell anything.</p>
-  </article>
+<h2 id="disclaimer">Disclaimer, source and disclosures</h2>
+<div class="key-takeaways" style="border-color:var(--accent)"><div class="kt-label">Important &mdash; read this before the tables</div><ul>
+<li><strong>This is not a buy or sell recommendation.</strong> Nothing here is investment advice, a recommendation, or a suggestion to act on any stock named below. It is a data exercise, nothing more.</li>
+<li><strong>These holdings may already have changed.</strong> Disclosed shareholdings are a snapshot from public filings and are reported with a lag. Investors buy and sell continuously. By the time you read this, any position here may have been added to, trimmed, or exited entirely.</li>
+<li><strong>Only disclosures above the threshold are visible.</strong> Indian companies disclose individual shareholders only above 1% of equity. Every book below is therefore incomplete, positions under that line simply do not appear, so no investor's real portfolio is what you see here.</li>
+<li><strong>Values move with the market.</strong> Rupee values are a function of price on a given day. The percentages change every session even when the underlying holding does not.</li>
+<li><strong>Copying anyone is a bad plan.</strong> These investors have different capital, time horizons, risk tolerance and information than you. A name on this list tells you nothing about whether it suits your circumstances.</li>
+</ul></div>
+<div class="key-takeaways" style="border-color:var(--accent)"><div class="kt-label">Source, as-of, and author disclosure</div><ul>
+<li><strong>Where this comes from.</strong> The holdings are compiled from company shareholding disclosures as they appeared in a publicly circulated compilation reviewed on 18 August 2026. Rupee values reflect market prices around that date and will differ on any other day. This compilation is the author&rsquo;s own presentation of that data; it has not been verified against each company&rsquo;s filings line by line, and it has not been checked or endorsed by any of the individuals named.</li>
+<li><strong>Author disclosure.</strong> The author is Business Head at INVasset PMS, a SEBI-registered portfolio manager. This post is published in his personal capacity, it is not issued by or on behalf of INVasset PMS, and it is not a research report. The author, his family, his employer and its clients may hold, buy or sell positions in any of the securities named here at any time, without notice. Consult a SEBI-registered investment adviser before acting on anything you read.</li>
+<li><strong>No connection to the individuals named.</strong> None of the eight investors has been contacted about this post, has reviewed it, or is associated with it or with the author. Their names are used only to identify the source of the public disclosures being described.</li>
+<li><strong>Entity note.</strong> Where a holding is disclosed by an entity, a fund, an LLP or a family vehicle, rather than by the individual personally, it is shown under that individual&rsquo;s name for readability. The tables do not distinguish between personal, family and managed holdings. Company names follow the source compilation and are abbreviated in places.</li>
+<li><strong>Spotted an error?</strong> Corrections are welcome and will be made, write to the author via the links at the foot of this page.</li>
+</ul></div>
+</article>
   <section class="post-faq" aria-labelledby="faq-heading">
     <h2 id="faq-heading">Frequently asked questions</h2>
     <div class="faq-q"><h3>Is this a buy or sell recommendation?</h3><p>No. This post is a data exercise on public shareholding disclosures. Nothing in it is investment advice or a recommendation to buy, sell or hold any security.</p></div>
